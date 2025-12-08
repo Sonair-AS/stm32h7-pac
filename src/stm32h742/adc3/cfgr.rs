@@ -6,7 +6,8 @@ pub type W = crate::W<CFGRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DMNGT {
     ///0: Store output data in DR only
@@ -95,7 +96,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum RES {
     ///0: 16-bit resolution
@@ -197,7 +199,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum EXTSEL {
     ///0: Timer 1 CC1 event
@@ -507,7 +510,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum EXTEN {
     ///0: Trigger detection disabled
@@ -596,7 +600,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum OVRMOD {
     ///0: Preserve DR register when an overrun is detected
     Preserve = 0,
@@ -652,7 +657,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CONT {
     ///0: Single conversion mode
     Single = 0,
@@ -708,7 +714,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum AUTDLY {
     ///0: Auto delayed conversion mode off
     Off = 0,
@@ -764,7 +771,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum DISCEN {
     ///0: Discontinuous mode on regular channels disabled
     Disabled = 0,
@@ -824,7 +832,8 @@ pub type DISCNUM_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum JDISCEN {
     ///0: Discontinuous mode on injected channels disabled
     Disabled = 0,
@@ -880,7 +889,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum JQM {
     ///0: JSQR Mode 0: Queue maintains the last written configuration into JSQR
     Mode0 = 0,
@@ -936,7 +946,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum AWD1SGL {
     ///0: Analog watchdog 1 enabled on all channels
     All = 0,
@@ -992,7 +1003,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum AWD1EN {
     ///0: Analog watchdog 1 disabled on regular channels
     Disabled = 0,
@@ -1048,7 +1060,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum JAWD1EN {
     ///0: Analog watchdog 1 disabled on injected channels
     Disabled = 0,
@@ -1104,7 +1117,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum JAUTO {
     ///0: Automatic injected group conversion disabled
     Disabled = 0,
@@ -1164,7 +1178,8 @@ pub type AWD1CH_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum JQDIS {
     ///0: Injected Queue enabled
     Enabled = 0,

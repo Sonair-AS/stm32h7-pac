@@ -35,7 +35,8 @@ impl From<crate::W<CFGR_SPEC>> for W {
     }
 }
 #[doc = "ADC group injected contexts queue disable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JQDIS_A {
     #[doc = "0: Injected Queue enabled"]
     Enabled = 0,
@@ -89,7 +90,8 @@ pub type AWD1CH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `AWD1CH` writer - ADC analog watchdog 1 monitored channel selection"]
 pub type AWD1CH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFGR_SPEC, u8, u8, 5, O>;
 #[doc = "ADC group injected automatic trigger mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JAUTO_A {
     #[doc = "0: Automatic injected group conversion disabled"]
     Disabled = 0,
@@ -139,7 +141,8 @@ impl<'a, const O: u8> JAUTO_W<'a, O> {
     }
 }
 #[doc = "ADC analog watchdog 1 enable on scope ADC group injected\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JAWD1EN_A {
     #[doc = "0: Analog watchdog 1 disabled on injected channels"]
     Disabled = 0,
@@ -189,7 +192,8 @@ impl<'a, const O: u8> JAWD1EN_W<'a, O> {
     }
 }
 #[doc = "ADC analog watchdog 1 enable on scope ADC group regular\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum AWD1EN_A {
     #[doc = "0: Analog watchdog 1 disabled on regular channels"]
     Disabled = 0,
@@ -239,7 +243,8 @@ impl<'a, const O: u8> AWD1EN_W<'a, O> {
     }
 }
 #[doc = "ADC analog watchdog 1 monitoring a single channel or all channels\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum AWD1SGL_A {
     #[doc = "0: Analog watchdog 1 enabled on all channels"]
     All = 0,
@@ -289,7 +294,8 @@ impl<'a, const O: u8> AWD1SGL_W<'a, O> {
     }
 }
 #[doc = "ADC group injected contexts queue mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JQM_A {
     #[doc = "0: JSQR Mode 0: Queue maintains the last written configuration into JSQR"]
     Mode0 = 0,
@@ -339,7 +345,8 @@ impl<'a, const O: u8> JQM_W<'a, O> {
     }
 }
 #[doc = "ADC group injected sequencer discontinuous mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JDISCEN_A {
     #[doc = "0: Discontinuous mode on injected channels disabled"]
     Disabled = 0,
@@ -393,7 +400,8 @@ pub type DISCNUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DISCNUM` writer - ADC group regular sequencer discontinuous number of ranks"]
 pub type DISCNUM_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, CFGR_SPEC, u8, u8, 3, O>;
 #[doc = "ADC group regular sequencer discontinuous mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DISCEN_A {
     #[doc = "0: Discontinuous mode on regular channels disabled"]
     Disabled = 0,
@@ -443,7 +451,8 @@ impl<'a, const O: u8> DISCEN_W<'a, O> {
     }
 }
 #[doc = "ADC low power auto wait\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum AUTDLY_A {
     #[doc = "0: Auto delayed conversion mode off"]
     Off = 0,
@@ -493,7 +502,8 @@ impl<'a, const O: u8> AUTDLY_W<'a, O> {
     }
 }
 #[doc = "ADC group regular continuous conversion mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CONT_A {
     #[doc = "0: Single conversion mode"]
     Single = 0,
@@ -543,7 +553,8 @@ impl<'a, const O: u8> CONT_W<'a, O> {
     }
 }
 #[doc = "ADC group regular overrun configuration\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OVRMOD_A {
     #[doc = "0: Preserve DR register when an overrun is detected"]
     Preserve = 0,
@@ -593,7 +604,8 @@ impl<'a, const O: u8> OVRMOD_W<'a, O> {
     }
 }
 #[doc = "ADC group regular external trigger polarity\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum EXTEN_A {
     #[doc = "0: Trigger detection disabled"]
@@ -671,7 +683,8 @@ impl<'a, const O: u8> EXTEN_W<'a, O> {
     }
 }
 #[doc = "ADC group regular external trigger source\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum EXTSEL_A {
     #[doc = "0: Timer 1 CC1 event"]
@@ -970,7 +983,8 @@ impl<'a, const O: u8> EXTSEL_W<'a, O> {
     }
 }
 #[doc = "ADC data resolution\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum RES_A {
     #[doc = "0: 16-bit resolution"]
@@ -1087,7 +1101,8 @@ impl<'a, const O: u8> RES_W<'a, O> {
     }
 }
 #[doc = "ADC DMA transfer enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum DMNGT_A {
     #[doc = "0: Store output data in DR only"]

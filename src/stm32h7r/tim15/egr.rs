@@ -6,7 +6,8 @@ pub type W = crate::W<EGRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum UG {
     ///1: Re-initializes the timer counter and generates an update of the registers.
     Update = 1,
@@ -33,7 +34,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CC1GW {
     ///1: If CC1 is an output: CC1IF flag is set, Corresponding interrupt or DMA request is sent if enabled. If CC1 is an input: The current value of the counter is captured in TIMx_CCR1 register.
     Trigger = 1,
@@ -60,7 +62,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum COMGW {
     ///1: When CCPC bit is set, it allows CCxE, CCxNE and OCxM bits to be updated
     Trigger = 1,
@@ -104,7 +107,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum TGW {
     ///1: The TIF flag is set in TIMx_SR register. Related interrupt or DMA transfer can occur if enabled.
     Trigger = 1,
@@ -131,7 +135,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum BGW {
     ///1: A break event is generated. MOE bit is cleared and BIF flag is set. Related interrupt or DMA transfer can occur if enabled
     Trigger = 1,

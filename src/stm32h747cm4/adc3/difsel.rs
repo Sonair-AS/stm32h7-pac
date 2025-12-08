@@ -35,7 +35,8 @@ impl From<crate::W<DIFSEL_SPEC>> for W {
     }
 }
 #[doc = "ADC channel differential or single-ended mode for channel\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DIFSEL0_A {
     #[doc = "0: Input channel is configured in single-ended mode"]
     SingleEnded = 0,

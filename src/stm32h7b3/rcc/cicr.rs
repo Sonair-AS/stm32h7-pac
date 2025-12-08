@@ -35,7 +35,8 @@ impl From<crate::W<CICR_SPEC>> for W {
     }
 }
 #[doc = "LSI ready interrupt clear Set by software to clear LSIRDYF. Reset by hardware when clear done.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSIRDYC_A {
     #[doc = "1: Clear interrupt flag"]
     Clear = 1,

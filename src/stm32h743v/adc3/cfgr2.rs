@@ -35,7 +35,8 @@ impl From<crate::W<CFGR2_SPEC>> for W {
     }
 }
 #[doc = "ADC oversampler enable on scope ADC group regular\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ROVSE_A {
     #[doc = "0: Regular oversampling disabled"]
     Disabled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> ROVSE_W<'a, O> {
     }
 }
 #[doc = "ADC oversampler enable on scope ADC group injected\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JOVSE_A {
     #[doc = "0: Injected oversampling disabled"]
     Disabled = 0,
@@ -139,7 +141,8 @@ pub type OVSS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OVSS` writer - ADC oversampling shift"]
 pub type OVSS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFGR2_SPEC, u8, u8, 4, O>;
 #[doc = "ADC oversampling discontinuous mode (triggered mode) for ADC group regular\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TROVS_A {
     #[doc = "0: All oversampled conversions for a channel are run following a trigger"]
     Automatic = 0,
@@ -189,7 +192,8 @@ impl<'a, const O: u8> TROVS_W<'a, O> {
     }
 }
 #[doc = "Regular Oversampling mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ROVSM_A {
     #[doc = "0: Oversampling is temporary stopped and continued after injection sequence"]
     Continued = 0,
@@ -239,7 +243,8 @@ impl<'a, const O: u8> ROVSM_W<'a, O> {
     }
 }
 #[doc = "Right-shift data after Offset 1 correction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RSHIFT1_A {
     #[doc = "0: Right-shifting disabled"]
     Disabled = 0,

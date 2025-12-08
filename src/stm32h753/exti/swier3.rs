@@ -35,7 +35,8 @@ impl From<crate::W<SWIER3_SPEC>> for W {
     }
 }
 #[doc = "Software interrupt on line x+64\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SWIER82_A {
     #[doc = "1: Generates an interrupt request"]
     Pend = 1,

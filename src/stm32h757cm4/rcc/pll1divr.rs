@@ -10,7 +10,8 @@ pub type DIVN1_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 
 Value on reset: 1*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DIVP1 {
     ///0: pll_p_ck = vco_ck

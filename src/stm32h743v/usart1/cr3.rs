@@ -55,7 +55,8 @@ pub type TXFTIE_R = crate::BitReader<bool>;
 #[doc = "Field `TXFTIE` writer - TXFIFO threshold interrupt enable"]
 pub type TXFTIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR3_SPEC, bool, O>;
 #[doc = "Wakeup from Stop mode interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WUFIE_A {
     #[doc = "0: Interrupt is inhibited"]
     Disabled = 0,
@@ -105,7 +106,8 @@ impl<'a, const O: u8> WUFIE_W<'a, O> {
     }
 }
 #[doc = "Wakeup from Stop mode interrupt flag selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum WUS_A {
     #[doc = "0: WUF active on address match"]
@@ -174,7 +176,8 @@ pub type SCARCNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCARCNT` writer - Smartcard auto-retry count"]
 pub type SCARCNT_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, CR3_SPEC, u8, u8, 3, O>;
 #[doc = "Driver enable polarity selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DEP_A {
     #[doc = "0: DE signal is active high"]
     High = 0,
@@ -224,7 +227,8 @@ impl<'a, const O: u8> DEP_W<'a, O> {
     }
 }
 #[doc = "Driver enable mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DEM_A {
     #[doc = "0: DE function is disabled"]
     Disabled = 0,
@@ -274,7 +278,8 @@ impl<'a, const O: u8> DEM_W<'a, O> {
     }
 }
 #[doc = "DMA Disable on Reception Error\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DDRE_A {
     #[doc = "0: DMA is not disabled in case of reception error"]
     NotDisabled = 0,
@@ -324,7 +329,8 @@ impl<'a, const O: u8> DDRE_W<'a, O> {
     }
 }
 #[doc = "Overrun Disable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OVRDIS_A {
     #[doc = "0: Overrun Error Flag, ORE, is set when received data is not read before receiving new data"]
     Enabled = 0,
@@ -374,7 +380,8 @@ impl<'a, const O: u8> OVRDIS_W<'a, O> {
     }
 }
 #[doc = "One sample bit method enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ONEBIT_A {
     #[doc = "0: Three sample bit method"]
     Sample3 = 0,
@@ -424,7 +431,8 @@ impl<'a, const O: u8> ONEBIT_W<'a, O> {
     }
 }
 #[doc = "CTS interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CTSIE_A {
     #[doc = "0: Interrupt is inhibited"]
     Disabled = 0,
@@ -474,7 +482,8 @@ impl<'a, const O: u8> CTSIE_W<'a, O> {
     }
 }
 #[doc = "CTS enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CTSE_A {
     #[doc = "0: CTS hardware flow control disabled"]
     Disabled = 0,
@@ -524,7 +533,8 @@ impl<'a, const O: u8> CTSE_W<'a, O> {
     }
 }
 #[doc = "RTS enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RTSE_A {
     #[doc = "0: RTS hardware flow control disabled"]
     Disabled = 0,
@@ -574,7 +584,8 @@ impl<'a, const O: u8> RTSE_W<'a, O> {
     }
 }
 #[doc = "DMA enable transmitter\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DMAT_A {
     #[doc = "0: DMA mode is disabled for transmission"]
     Disabled = 0,
@@ -624,7 +635,8 @@ impl<'a, const O: u8> DMAT_W<'a, O> {
     }
 }
 #[doc = "DMA enable receiver\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DMAR_A {
     #[doc = "0: DMA mode is disabled for reception"]
     Disabled = 0,
@@ -674,7 +686,8 @@ impl<'a, const O: u8> DMAR_W<'a, O> {
     }
 }
 #[doc = "Smartcard mode enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SCEN_A {
     #[doc = "0: Smartcard Mode disabled"]
     Disabled = 0,
@@ -724,7 +737,8 @@ impl<'a, const O: u8> SCEN_W<'a, O> {
     }
 }
 #[doc = "Smartcard NACK enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum NACK_A {
     #[doc = "0: NACK transmission in case of parity error is disabled"]
     Disabled = 0,
@@ -774,7 +788,8 @@ impl<'a, const O: u8> NACK_W<'a, O> {
     }
 }
 #[doc = "Half-duplex selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HDSEL_A {
     #[doc = "0: Half duplex mode is not selected"]
     NotSelected = 0,
@@ -824,7 +839,8 @@ impl<'a, const O: u8> HDSEL_W<'a, O> {
     }
 }
 #[doc = "Ir low-power\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum IRLP_A {
     #[doc = "0: Normal mode"]
     Normal = 0,
@@ -874,7 +890,8 @@ impl<'a, const O: u8> IRLP_W<'a, O> {
     }
 }
 #[doc = "Ir mode enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum IREN_A {
     #[doc = "0: IrDA disabled"]
     Disabled = 0,
@@ -924,7 +941,8 @@ impl<'a, const O: u8> IREN_W<'a, O> {
     }
 }
 #[doc = "Error interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EIE_A {
     #[doc = "0: Interrupt is inhibited"]
     Disabled = 0,

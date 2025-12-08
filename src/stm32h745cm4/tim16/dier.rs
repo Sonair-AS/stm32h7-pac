@@ -6,7 +6,8 @@ pub type W = crate::W<DIERrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum UIE {
     ///0: Update interrupt disabled
     Disabled = 0,
@@ -62,7 +63,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CC1IE {
     ///0: CCx interrupt disabled
     Disabled = 0,
@@ -118,7 +120,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum COMIE {
     ///0: COM interrupt disabled
     Disabled = 0,
@@ -174,7 +177,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum BIE {
     ///0: Break interrupt disabled
     Disabled = 0,
@@ -230,7 +234,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum UDE {
     ///0: Update DMA request disabled
     Disabled = 0,
@@ -286,7 +291,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CC1DE {
     ///0: CCx DMA request disabled
     Disabled = 0,

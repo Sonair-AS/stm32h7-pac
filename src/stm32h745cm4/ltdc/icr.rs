@@ -4,7 +4,8 @@ pub type W = crate::W<ICRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CLIFW {
     ///1: Clears the LIF flag in the ISR register
     Clear = 1,
@@ -31,7 +32,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CFUIFW {
     ///1: Clears the FUIF flag in the ISR register
     Clear = 1,
@@ -58,7 +60,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CTERRIFW {
     ///1: Clears the TERRIF flag in the ISR register
     Clear = 1,
@@ -85,7 +88,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CRRIFW {
     ///1: Clears the RRIF flag in the ISR register
     Clear = 1,

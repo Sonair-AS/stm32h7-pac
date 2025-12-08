@@ -35,7 +35,8 @@ impl From<crate::W<SR_SPEC>> for W {
     }
 }
 #[doc = "Early wakeup interrupt flag This bit is set by hardware when the counter has reached the value 0x40. It must be cleared by software by writing 0. A write of 1 has no effect. This bit is also set if the interrupt is not enabled.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EWIF_A {
     #[doc = "0: The EWI Interrupt Service Routine has been serviced"]
     Finished = 0,
@@ -71,7 +72,8 @@ impl EWIF_R {
     }
 }
 #[doc = "Early wakeup interrupt flag This bit is set by hardware when the counter has reached the value 0x40. It must be cleared by software by writing 0. A write of 1 has no effect. This bit is also set if the interrupt is not enabled.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EWIF_AW {
     #[doc = "0: The EWI Interrupt Service Routine has been serviced"]
     Finished = 0,

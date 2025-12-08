@@ -35,7 +35,8 @@ impl From<crate::W<SMCR_SPEC>> for W {
     }
 }
 #[doc = "Slave mode selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SMS_A {
     #[doc = "0: Slave mode disabled - if CEN = ‘1 then the prescaler is clocked directly by the internal clock."]
@@ -165,7 +166,8 @@ impl<'a, const O: u8> SMS_W<'a, O> {
     }
 }
 #[doc = "Trigger selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum TS_A {
     #[doc = "0: Internal Trigger 0 (ITR0)"]
@@ -282,7 +284,8 @@ impl<'a, const O: u8> TS_W<'a, O> {
     }
 }
 #[doc = "Master/Slave mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MSM_A {
     #[doc = "0: No action"]
     NoSync = 0,
@@ -332,7 +335,8 @@ impl<'a, const O: u8> MSM_W<'a, O> {
     }
 }
 #[doc = "External trigger filter\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum ETF_A {
     #[doc = "0: No filter, sampling is done at fDTS"]
@@ -566,7 +570,8 @@ impl<'a, const O: u8> ETF_W<'a, O> {
     }
 }
 #[doc = "External trigger prescaler\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum ETPS_A {
     #[doc = "0: Prescaler OFF"]
@@ -644,7 +649,8 @@ impl<'a, const O: u8> ETPS_W<'a, O> {
     }
 }
 #[doc = "External clock enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ECE_A {
     #[doc = "0: External clock mode 2 disabled"]
     Disabled = 0,
@@ -694,7 +700,8 @@ impl<'a, const O: u8> ECE_W<'a, O> {
     }
 }
 #[doc = "External trigger polarity\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ETP_A {
     #[doc = "0: ETR is noninverted, active at high level or rising edge"]
     NotInverted = 0,

@@ -6,7 +6,8 @@ pub type W = crate::W<FLTRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum FLT1EN {
     ///0: Fault input ignored
     Ignored = 0,
@@ -62,7 +63,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum FLTLCK {
     ///0: FLT1EN..FLT5EN bits are read/write
     Unlocked = 0,

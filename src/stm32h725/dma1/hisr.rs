@@ -4,7 +4,8 @@ pub type R = crate::R<HISRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum FEIF4 {
     ///0: No FIFO error event on stream x
     NoError = 0,
@@ -43,7 +44,8 @@ impl FEIF4_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum DMEIF4 {
     ///0: No Direct Mode error on stream x
     NoError = 0,
@@ -82,7 +84,8 @@ impl DMEIF4_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum TEIF4 {
     ///0: No transfer error on stream x
     NoError = 0,
@@ -121,7 +124,8 @@ impl TEIF4_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum HTIF4 {
     ///0: No half transfer event on stream x
     NotHalf = 0,
@@ -160,7 +164,8 @@ impl HTIF4_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum TCIF4 {
     ///0: No transfer complete event on stream x
     NotComplete = 0,

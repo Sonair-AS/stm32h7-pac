@@ -35,7 +35,8 @@ impl From<crate::W<FTSR2_SPEC>> for W {
     }
 }
 #[doc = "Falling trigger event configuration bit of Configurable Event input x+32\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TR49_A {
     #[doc = "0: Falling edge trigger is disabled"]
     Disabled = 0,

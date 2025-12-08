@@ -35,7 +35,8 @@ impl From<crate::W<RSR_SPEC>> for W {
     }
 }
 #[doc = "Remove reset flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RMVF_A {
     #[doc = "0: Not clearing the the reset flags"]
     NotActive = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> RMVF_W<'a, O> {
     }
 }
 #[doc = "CPU reset flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CPURSTF_A {
     #[doc = "0: No reset occoured for block"]
     NoResetOccoured = 0,

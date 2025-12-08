@@ -14,7 +14,8 @@ impl From<crate::R<ISR_SPEC>> for R {
     }
 }
 #[doc = "Register Reload Interrupt Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RRIF_A {
     #[doc = "0: No register reload"]
     NoReload = 0,
@@ -50,7 +51,8 @@ impl RRIF_R {
     }
 }
 #[doc = "Transfer Error interrupt flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TERRIF_A {
     #[doc = "0: No transfer error"]
     NoError = 0,
@@ -86,7 +88,8 @@ impl TERRIF_R {
     }
 }
 #[doc = "FIFO Underrun Interrupt flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum FUIF_A {
     #[doc = "0: No FIFO underrun"]
     NoUnderrun = 0,
@@ -122,7 +125,8 @@ impl FUIF_R {
     }
 }
 #[doc = "Line Interrupt flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LIF_A {
     #[doc = "0: Programmed line not reached"]
     NotReached = 0,

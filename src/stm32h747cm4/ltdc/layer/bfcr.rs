@@ -35,7 +35,8 @@ impl From<crate::W<BFCR_SPEC>> for W {
     }
 }
 #[doc = "Blending Factor 1\n\nValue on reset: 6"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum BF1_A {
     #[doc = "4: BF1 = constant alpha"]
@@ -87,7 +88,8 @@ impl<'a, const O: u8> BF1_W<'a, O> {
     }
 }
 #[doc = "Blending Factor 2\n\nValue on reset: 7"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum BF2_A {
     #[doc = "5: BF2 = 1 - constant alpha"]

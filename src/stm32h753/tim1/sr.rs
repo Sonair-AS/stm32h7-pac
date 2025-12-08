@@ -79,7 +79,8 @@ pub use CC1OF_W as CC3OF_W;
 #[doc = "Field `CC2OF` writer - Capture/compare 2 overcapture flag"]
 pub use CC1OF_W as CC2OF_W;
 #[doc = "Capture/Compare 1 overcapture flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CC1OF_A {
     #[doc = "1: The counter value has been captured in TIMx_CCRx register while CCxIF flag was already set"]
     Overcapture = 1,
@@ -108,7 +109,8 @@ impl CC1OF_R {
     }
 }
 #[doc = "Capture/Compare 1 overcapture flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CC1OF_AW {
     #[doc = "0: Clear flag"]
     Clear = 0,
@@ -137,7 +139,8 @@ pub type BIF_R = crate::BitReader<bool>;
 #[doc = "Field `BIF` writer - Break interrupt flag"]
 pub type BIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, SR_SPEC, bool, O>;
 #[doc = "Trigger interrupt flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TIF_A {
     #[doc = "0: No trigger event occurred"]
     NoTrigger = 0,
@@ -173,7 +176,8 @@ impl TIF_R {
     }
 }
 #[doc = "Trigger interrupt flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TIF_AW {
     #[doc = "0: Clear flag"]
     Clear = 0,
@@ -222,7 +226,8 @@ pub use CC1IF_W as CC3IF_W;
 #[doc = "Field `CC2IF` writer - Capture/Compare 2 interrupt flag"]
 pub use CC1IF_W as CC2IF_W;
 #[doc = "Capture/compare 1 interrupt flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CC1IF_A {
     #[doc = "1: If CC1 is an output: The content of the counter TIMx_CNT matches the content of the TIMx_CCR1 register. If CC1 is an input: The counter value has been captured in TIMx_CCR1 register."]
     Match = 1,
@@ -251,7 +256,8 @@ impl CC1IF_R {
     }
 }
 #[doc = "Capture/compare 1 interrupt flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CC1IF_AW {
     #[doc = "0: Clear flag"]
     Clear = 0,
@@ -272,7 +278,8 @@ impl<'a, const O: u8> CC1IF_W<'a, O> {
     }
 }
 #[doc = "Update interrupt flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UIF_A {
     #[doc = "0: No update occurred"]
     Clear = 0,

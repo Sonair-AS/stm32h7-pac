@@ -43,7 +43,8 @@ pub type OC5PE_R = crate::BitReader<bool>;
 #[doc = "Field `OC5PE` writer - Output compare 5 preload enable"]
 pub type OC5PE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CCMR3_OUTPUT_SPEC, bool, O>;
 #[doc = "Output compare 5 mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum OC5M_A {
     #[doc = "0: The comparison between the output compare register TIMx_CCRy and the counter TIMx_CNT has no effect on the outputs / OpmMode1: Retriggerable OPM mode 1 - In up-counting mode, the channel is active until a trigger event is detected (on TRGI signal). In down-counting mode, the channel is inactive"]
@@ -196,7 +197,8 @@ pub type OC6CE_R = crate::BitReader<bool>;
 #[doc = "Field `OC6CE` writer - Output compare 6 clear enable"]
 pub type OC6CE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CCMR3_OUTPUT_SPEC, bool, O>;
 #[doc = "Output Compare 5 mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OC5M_3_A {
     #[doc = "0: Normal output compare mode (modes 0-7)"]
     Normal = 0,

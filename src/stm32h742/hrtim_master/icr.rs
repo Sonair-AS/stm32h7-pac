@@ -4,7 +4,8 @@ pub type W = crate::W<ICRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CMP1CW {
     ///1: Clears associated flag in ISR register
     Clear = 1,

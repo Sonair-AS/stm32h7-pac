@@ -6,7 +6,8 @@ pub type W = crate::W<PCSELrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u32)]
 pub enum PCSEL {
     ///0: Input channel x is not pre-selected

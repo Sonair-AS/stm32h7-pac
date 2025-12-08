@@ -14,7 +14,8 @@ impl From<crate::R<ISR_SPEC>> for R {
     }
 }
 #[doc = "Channel x global interrupt flag (x = 1..8) This bit is set by hardware. It is cleared by software writing 1 to the corresponding bit in the DMA_IFCR register.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum GIF1_A {
     #[doc = "0: No TE, HT or TC event on channel x"]
     NoEvent = 0,
@@ -50,7 +51,8 @@ impl GIF1_R {
     }
 }
 #[doc = "Channel x transfer complete flag (x = 1..8) This bit is set by hardware. It is cleared by software writing 1 to the corresponding bit in the DMA_IFCR register.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TCIF1_A {
     #[doc = "0: No transfer complete event on channel x"]
     NotComplete = 0,
@@ -86,7 +88,8 @@ impl TCIF1_R {
     }
 }
 #[doc = "Channel x half transfer flag (x = 1..8) This bit is set by hardware. It is cleared by software writing 1 to the corresponding bit in the DMA_IFCR register.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HTIF1_A {
     #[doc = "0: No half transfer event on channel x"]
     NotHalf = 0,
@@ -122,7 +125,8 @@ impl HTIF1_R {
     }
 }
 #[doc = "Channel x transfer error flag (x = 1..8) This bit is set by hardware. It is cleared by software writing 1 to the corresponding bit in the DMA_IFCR register.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TEIF1_A {
     #[doc = "0: No transfer error on channel x"]
     NoError = 0,

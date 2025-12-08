@@ -51,7 +51,8 @@ pub type JSQ1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `JSQ1` writer - ADC group injected sequencer rank 1"]
 pub type JSQ1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, JSQR_SPEC, u8, u8, 5, O>;
 #[doc = "ADC group injected external trigger polarity\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum JEXTEN_A {
     #[doc = "0: Trigger detection disabled"]
@@ -129,7 +130,8 @@ impl<'a, const O: u8> JEXTEN_W<'a, O> {
     }
 }
 #[doc = "ADC group injected external trigger source\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum JEXTSEL_A {
     #[doc = "0: Timer 1 TRGO event"]

@@ -6,7 +6,8 @@ pub type W = crate::W<AWCFRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CLRAWLTF0W {
     ///1: Clear the corresponding AWLTF\[y\] bit
     Clear = 1,
@@ -50,7 +51,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CLRAWHTF0W {
     ///1: Clear the corresponding AWHTF\[y\] bit
     Clear = 1,

@@ -20,7 +20,8 @@ impl From<crate::W<ICR_SPEC>> for W {
     }
 }
 #[doc = "Wakeup from Stop mode clear flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WUCF_AW {
     #[doc = "1: Clears the WUF flag in the ISR register"]
     Clear = 1,
@@ -41,7 +42,8 @@ impl<'a, const O: u8> WUCF_W<'a, O> {
     }
 }
 #[doc = "Character match clear flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CMCF_AW {
     #[doc = "1: Clears the CMF flag in the ISR register"]
     Clear = 1,
@@ -64,7 +66,8 @@ impl<'a, const O: u8> CMCF_W<'a, O> {
 #[doc = "Field `UDRCF` writer - SPI slave underrun clear flag"]
 pub type UDRCF_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 #[doc = "End of block clear flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOBCF_AW {
     #[doc = "1: Clears the EOBF flag in the ISR register"]
     Clear = 1,
@@ -85,7 +88,8 @@ impl<'a, const O: u8> EOBCF_W<'a, O> {
     }
 }
 #[doc = "Receiver timeout clear flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RTOCF_AW {
     #[doc = "1: Clears the RTOF flag in the ISR register"]
     Clear = 1,
@@ -106,7 +110,8 @@ impl<'a, const O: u8> RTOCF_W<'a, O> {
     }
 }
 #[doc = "CTS clear flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CTSCF_AW {
     #[doc = "1: Clears the CTSIF flag in the ISR register"]
     Clear = 1,
@@ -127,7 +132,8 @@ impl<'a, const O: u8> CTSCF_W<'a, O> {
     }
 }
 #[doc = "LIN break detection clear flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LBDCF_AW {
     #[doc = "1: Clears the LBDF flag in the ISR register"]
     Clear = 1,
@@ -150,7 +156,8 @@ impl<'a, const O: u8> LBDCF_W<'a, O> {
 #[doc = "Field `TCBGTC` writer - Transmission complete before Guard time clear flag"]
 pub type TCBGTC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 #[doc = "Transmission complete clear flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TCCF_AW {
     #[doc = "1: Clears the TC flag in the ISR register"]
     Clear = 1,
@@ -173,7 +180,8 @@ impl<'a, const O: u8> TCCF_W<'a, O> {
 #[doc = "Field `TXFECF` writer - TXFIFO empty clear flag"]
 pub type TXFECF_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
 #[doc = "Idle line detected clear flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum IDLECF_AW {
     #[doc = "1: Clears the IDLE flag in the ISR register"]
     Clear = 1,
@@ -194,7 +202,8 @@ impl<'a, const O: u8> IDLECF_W<'a, O> {
     }
 }
 #[doc = "Overrun error clear flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ORECF_AW {
     #[doc = "1: Clears the ORE flag in the ISR register"]
     Clear = 1,
@@ -215,7 +224,8 @@ impl<'a, const O: u8> ORECF_W<'a, O> {
     }
 }
 #[doc = "Noise detected clear flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum NCF_AW {
     #[doc = "1: Clears the NF flag in the ISR register"]
     Clear = 1,
@@ -236,7 +246,8 @@ impl<'a, const O: u8> NCF_W<'a, O> {
     }
 }
 #[doc = "Framing error clear flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum FECF_AW {
     #[doc = "1: Clears the FE flag in the ISR register"]
     Clear = 1,
@@ -257,7 +268,8 @@ impl<'a, const O: u8> FECF_W<'a, O> {
     }
 }
 #[doc = "Parity error clear flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PECF_AW {
     #[doc = "1: Clears the PE flag in the ISR register"]
     Clear = 1,

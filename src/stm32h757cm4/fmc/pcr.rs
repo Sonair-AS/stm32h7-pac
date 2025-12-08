@@ -6,7 +6,8 @@ pub type W = crate::W<PCRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum PWAITEN {
     ///0: Wait feature disabled
     Disabled = 0,
@@ -62,7 +63,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum PBKEN {
     ///0: Corresponding memory bank is disabled
     Disabled = 0,
@@ -118,7 +120,8 @@ where
 
 Value on reset: 1*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum PWID {
     ///0: External memory device width 8 bits
@@ -181,7 +184,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum ECCEN {
     ///0: ECC logic is disabled and reset
     Disabled = 0,
@@ -245,7 +249,8 @@ pub type TAR_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum ECCPS {
     ///0: ECC page size 256 bytes

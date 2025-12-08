@@ -39,7 +39,8 @@ pub type FBOFF_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FBOFF` writer - First bit offset These bits are set and cleared by software. The value set in this bitfield defines the position of the first data transfer bit in the slot. It represents an offset value. In transmission mode, the bits outside the data field are forced to 0. In reception mode, the extra received bits are discarded. These bits must be set when the audio block is disabled. They are ignored in AC97 or SPDIF mode."]
 pub type FBOFF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SLOTR_SPEC, u8, u8, 5, O>;
 #[doc = "Slot size This bits is set and cleared by software. The slot size must be higher or equal to the data size. If this condition is not respected, the behavior of the SAI will be undetermined. Refer to Section: Output data line management on an inactive slot for information on how to drive SD line. These bits must be set when the audio block is disabled. They are ignored in AC97 or SPDIF mode.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SLOTSZ_A {
     #[doc = "0: The slot size is equivalent to the data size (specified in DS\\[3:0\\]
@@ -110,7 +111,8 @@ pub type NBSLOT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `NBSLOT` writer - Number of slots in an audio frame. These bits are set and cleared by software. The value set in this bitfield represents the number of slots + 1 in the audio frame (including the number of inactive slots). The maximum number of slots is 16. The number of slots should be even if FSDEF bit in the SAI_xFRCR register is set. The number of slots must be configured when the audio block is disabled. They are ignored in AC97 or SPDIF mode."]
 pub type NBSLOT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SLOTR_SPEC, u8, u8, 4, O>;
 #[doc = "Slot enable. These bits are set and cleared by software. Each SLOTEN bit corresponds to a slot position from 0 to 15 (maximum 16 slots). The slot must be enabled when the audio block is disabled. They are ignored in AC97 or SPDIF mode.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u16)]
 pub enum SLOTEN_A {
     #[doc = "0: Inactive slot"]

@@ -35,7 +35,8 @@ impl From<crate::W<APB1LENR_SPEC>> for W {
     }
 }
 #[doc = "TIM2 peripheral clock enable Set and reset by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TIM2EN_A {
     #[doc = "0: The selected clock is disabled"]
     Disabled = 0,

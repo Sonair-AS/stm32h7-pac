@@ -6,7 +6,8 @@ pub type W = crate::W<CR1rs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum MUDIS {
     ///0: Timer update enabled
     Enabled = 0,
@@ -66,7 +67,8 @@ pub use MUDIS_W as TUDIS_W;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum AD1USRC {
     ///0: ADC trigger update from master timer

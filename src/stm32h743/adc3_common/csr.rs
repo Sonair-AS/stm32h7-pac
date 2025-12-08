@@ -14,7 +14,8 @@ impl From<crate::R<CSR_SPEC>> for R {
     }
 }
 #[doc = "Master ADC ready\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADRDY_MST_A {
     #[doc = "0: ADC is not ready to start conversion"]
     NotReady = 0,
@@ -50,7 +51,8 @@ impl ADRDY_MST_R {
     }
 }
 #[doc = "End of Sampling phase flag of the master ADC\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOSMP_MST_A {
     #[doc = "0: End of sampling phase no yet reached"]
     NotEnded = 0,
@@ -86,7 +88,8 @@ impl EOSMP_MST_R {
     }
 }
 #[doc = "End of regular conversion of the master ADC\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOC_MST_A {
     #[doc = "0: Regular conversion is not complete"]
     NotComplete = 0,
@@ -122,7 +125,8 @@ impl EOC_MST_R {
     }
 }
 #[doc = "End of regular sequence flag of the master ADC\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOS_MST_A {
     #[doc = "0: Regular sequence is not complete"]
     NotComplete = 0,
@@ -158,7 +162,8 @@ impl EOS_MST_R {
     }
 }
 #[doc = "Overrun flag of the master ADC\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OVR_MST_A {
     #[doc = "0: No overrun occurred"]
     NoOverrun = 0,
@@ -194,7 +199,8 @@ impl OVR_MST_R {
     }
 }
 #[doc = "End of injected conversion flag of the master ADC\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JEOC_MST_A {
     #[doc = "0: Injected conversion is not complete"]
     NotComplete = 0,
@@ -230,7 +236,8 @@ impl JEOC_MST_R {
     }
 }
 #[doc = "End of injected sequence flag of the master ADC\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JEOS_MST_A {
     #[doc = "0: Injected sequence is not complete"]
     NotComplete = 0,
@@ -266,7 +273,8 @@ impl JEOS_MST_R {
     }
 }
 #[doc = "Analog watchdog 1 flag of the master ADC\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum AWD1_MST_A {
     #[doc = "0: No analog watchdog event occurred"]
     NoEvent = 0,
@@ -310,7 +318,8 @@ pub use AWD1_MST_R as AWD2_MST_R;
 #[doc = "Field `AWD3_MST` reader - Analog watchdog 3 flag of the master ADC"]
 pub use AWD1_MST_R as AWD3_MST_R;
 #[doc = "Injected Context Queue Overflow flag of the master ADC\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JQOVF_MST_A {
     #[doc = "0: No injected context queue overflow has occurred"]
     NoOverflow = 0,

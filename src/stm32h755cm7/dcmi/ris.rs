@@ -4,7 +4,8 @@ pub type R = crate::R<RISrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum FRAME_RIS {
     ///0: No new capture
     NoNewCapture = 0,
@@ -43,7 +44,8 @@ impl FRAME_RIS_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum OVR_RIS {
     ///0: No data buffer overrun occurred
     NoOverrun = 0,
@@ -82,7 +84,8 @@ impl OVR_RIS_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum ERR_RIS {
     ///0: No synchronization error detected
     NoError = 0,
@@ -121,7 +124,8 @@ impl ERR_RIS_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum VSYNC_RIS {
     ///0: Interrupt cleared
     Cleared = 0,
@@ -160,7 +164,8 @@ impl VSYNC_RIS_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum LINE_RIS {
     ///0: Interrupt cleared
     Cleared = 0,

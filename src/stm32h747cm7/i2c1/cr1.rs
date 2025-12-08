@@ -35,7 +35,8 @@ impl From<crate::W<CR1_SPEC>> for W {
     }
 }
 #[doc = "Peripheral enable Note: When PE=0, the I2C SCL and SDA lines are released. Internal state machines and status bits are put back to their reset value. When cleared, PE must be kept low for at least 3 APB clock cycles.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PE_A {
     #[doc = "0: Peripheral disabled"]
     Disabled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> PE_W<'a, O> {
     }
 }
 #[doc = "TX Interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TXIE_A {
     #[doc = "0: Transmit (TXIS) interrupt disabled"]
     Disabled = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> TXIE_W<'a, O> {
     }
 }
 #[doc = "RX Interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RXIE_A {
     #[doc = "0: Receive (RXNE) interrupt disabled"]
     Disabled = 0,
@@ -185,7 +188,8 @@ impl<'a, const O: u8> RXIE_W<'a, O> {
     }
 }
 #[doc = "Address match Interrupt enable (slave only)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADDRIE_A {
     #[doc = "0: Address match (ADDR) interrupts disabled"]
     Disabled = 0,
@@ -235,7 +239,8 @@ impl<'a, const O: u8> ADDRIE_W<'a, O> {
     }
 }
 #[doc = "Not acknowledge received Interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum NACKIE_A {
     #[doc = "0: Not acknowledge (NACKF) received interrupts disabled"]
     Disabled = 0,
@@ -285,7 +290,8 @@ impl<'a, const O: u8> NACKIE_W<'a, O> {
     }
 }
 #[doc = "STOP detection Interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum STOPIE_A {
     #[doc = "0: Stop detection (STOPF) interrupt disabled"]
     Disabled = 0,
@@ -335,7 +341,8 @@ impl<'a, const O: u8> STOPIE_W<'a, O> {
     }
 }
 #[doc = "Transfer Complete interrupt enable Note: Any of these events will generate an interrupt: Transfer Complete (TC) Transfer Complete Reload (TCR)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TCIE_A {
     #[doc = "0: Transfer Complete interrupt disabled"]
     Disabled = 0,
@@ -385,7 +392,8 @@ impl<'a, const O: u8> TCIE_W<'a, O> {
     }
 }
 #[doc = "Error interrupts enable Note: Any of these errors generate an interrupt: Arbitration Loss (ARLO) Bus Error detection (BERR) Overrun/Underrun (OVR) Timeout detection (TIMEOUT) PEC error detection (PECERR) Alert pin event detection (ALERT)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ERRIE_A {
     #[doc = "0: Error detection interrupts disabled"]
     Disabled = 0,
@@ -436,7 +444,8 @@ impl<'a, const O: u8> ERRIE_W<'a, O> {
 }
 #[doc = "Digital noise filter These bits are used to configure the digital noise filter on SDA and SCL input. The digital filter will filter spikes with a length of up to DNF\\[3:0\\]
 * tI2CCLK ... Note: If the analog filter is also enabled, the digital filter is added to the analog filter. This filter can only be programmed when the I2C is disabled (PE = 0).\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum DNF_A {
     #[doc = "0: Digital filter disabled"]
@@ -672,7 +681,8 @@ impl<'a, const O: u8> DNF_W<'a, O> {
     }
 }
 #[doc = "Analog noise filter OFF Note: This bit can only be programmed when the I2C is disabled (PE = 0).\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ANFOFF_A {
     #[doc = "0: Analog noise filter enabled"]
     Enabled = 0,
@@ -722,7 +732,8 @@ impl<'a, const O: u8> ANFOFF_W<'a, O> {
     }
 }
 #[doc = "DMA transmission requests enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TXDMAEN_A {
     #[doc = "0: DMA mode disabled for transmission"]
     Disabled = 0,
@@ -772,7 +783,8 @@ impl<'a, const O: u8> TXDMAEN_W<'a, O> {
     }
 }
 #[doc = "DMA reception requests enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RXDMAEN_A {
     #[doc = "0: DMA mode disabled for reception"]
     Disabled = 0,
@@ -822,7 +834,8 @@ impl<'a, const O: u8> RXDMAEN_W<'a, O> {
     }
 }
 #[doc = "Slave byte control This bit is used to enable hardware byte control in slave mode.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SBC_A {
     #[doc = "0: Slave byte control disabled"]
     Disabled = 0,
@@ -872,7 +885,8 @@ impl<'a, const O: u8> SBC_W<'a, O> {
     }
 }
 #[doc = "Clock stretching disable This bit is used to disable clock stretching in slave mode. It must be kept cleared in master mode. Note: This bit can only be programmed when the I2C is disabled (PE = 0).\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum NOSTRETCH_A {
     #[doc = "0: Clock stretching enabled"]
     Enabled = 0,
@@ -922,7 +936,8 @@ impl<'a, const O: u8> NOSTRETCH_W<'a, O> {
     }
 }
 #[doc = "Wakeup from Stop mode enable Note: If the Wakeup from Stop mode feature is not supported, this bit is reserved and forced by hardware to 0. Please refer to Section25.3: I2C implementation. Note: WUPEN can be set only when DNF = 0000\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WUPEN_A {
     #[doc = "0: Wakeup from Stop mode disabled"]
     Disabled = 0,
@@ -972,7 +987,8 @@ impl<'a, const O: u8> WUPEN_W<'a, O> {
     }
 }
 #[doc = "General call enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum GCEN_A {
     #[doc = "0: General call disabled. Address 0b00000000 is NACKed"]
     Disabled = 0,
@@ -1022,7 +1038,8 @@ impl<'a, const O: u8> GCEN_W<'a, O> {
     }
 }
 #[doc = "SMBus Host address enable Note: If the SMBus feature is not supported, this bit is reserved and forced by hardware to 0. Please refer to Section25.3: I2C implementation.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SMBHEN_A {
     #[doc = "0: Host address disabled. Address 0b0001000x is NACKed"]
     Disabled = 0,
@@ -1072,7 +1089,8 @@ impl<'a, const O: u8> SMBHEN_W<'a, O> {
     }
 }
 #[doc = "SMBus Device Default address enable Note: If the SMBus feature is not supported, this bit is reserved and forced by hardware to 0. Please refer to Section25.3: I2C implementation.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SMBDEN_A {
     #[doc = "0: Device default address disabled. Address 0b1100001x is NACKed"]
     Disabled = 0,
@@ -1122,7 +1140,8 @@ impl<'a, const O: u8> SMBDEN_W<'a, O> {
     }
 }
 #[doc = "SMBus alert enable Device mode (SMBHEN=0): Host mode (SMBHEN=1): Note: When ALERTEN=0, the SMBA pin can be used as a standard GPIO. If the SMBus feature is not supported, this bit is reserved and forced by hardware to 0. Please refer to Section25.3: I2C implementation.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ALERTEN_A {
     #[doc = "0: In device mode (SMBHEN=Disabled) Releases SMBA pin high and Alert Response Address Header disabled (0001100x) followed by NACK. In host mode (SMBHEN=Enabled) SMBus Alert pin (SMBA) not supported"]
     Disabled = 0,
@@ -1172,7 +1191,8 @@ impl<'a, const O: u8> ALERTEN_W<'a, O> {
     }
 }
 #[doc = "PEC enable Note: If the SMBus feature is not supported, this bit is reserved and forced by hardware to 0. Please refer to Section25.3: I2C implementation.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PECEN_A {
     #[doc = "0: PEC calculation disabled"]
     Disabled = 0,

@@ -39,7 +39,8 @@ pub type W_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `W` writer - 7-bit window value These bits contain the window value to be compared to the downcounter."]
 pub type W_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, CFR_SPEC, u8, u8, 7, O>;
 #[doc = "Early wakeup interrupt When set, an interrupt occurs whenever the counter reaches the value 0x40. This interrupt is only cleared by hardware after a reset.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EWI_A {
     #[doc = "1: interrupt occurs whenever the counter reaches the value 0x40"]
     Enable = 1,
@@ -77,7 +78,8 @@ impl<'a, const O: u8> EWI_W<'a, O> {
     }
 }
 #[doc = "Timer base The time base of the prescaler can be modified as follows:\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum WDGTB_A {
     #[doc = "0: Counter clock (PCLK1 div 4096) div 1"]

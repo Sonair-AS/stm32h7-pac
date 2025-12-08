@@ -35,7 +35,8 @@ impl From<crate::W<CCMR1_OUTPUT_SPEC>> for W {
     }
 }
 #[doc = "Capture/Compare 1 selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum CC1S_A {
     #[doc = "0: CC1 channel is configured as output"]
@@ -78,7 +79,8 @@ pub type OC1FE_R = crate::BitReader<bool>;
 #[doc = "Field `OC1FE` writer - Output Compare 1 fast enable"]
 pub type OC1FE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CCMR1_OUTPUT_SPEC, bool, O>;
 #[doc = "Output Compare 1 preload enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OC1PE_A {
     #[doc = "0: Preload register on CCR1 disabled. New values written to CCR1 are taken into account immediately"]
     Disabled = 0,
@@ -128,7 +130,8 @@ impl<'a, const O: u8> OC1PE_W<'a, O> {
     }
 }
 #[doc = "Output Compare 1 mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum OC1M_A {
     #[doc = "0: The comparison between the output compare register TIMx_CCRy and the counter TIMx_CNT has no effect on the outputs"]

@@ -20,7 +20,8 @@ impl From<crate::W<EGR_SPEC>> for W {
     }
 }
 #[doc = "Trigger generation\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TG_AW {
     #[doc = "1: The TIF flag is set in TIMx_SR register. Related interrupt or DMA transfer can occur if enabled."]
     Trigger = 1,
@@ -53,7 +54,8 @@ pub use CC1G_W as CC3G_W;
 #[doc = "Field `CC2G` writer - Capture/compare 2 generation"]
 pub use CC1G_W as CC2G_W;
 #[doc = "Capture/compare 1 generation\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CC1G_AW {
     #[doc = "1: If CC1 is an output: CC1IF flag is set, Corresponding interrupt or DMA request is sent if enabled. If CC1 is an input: The current value of the counter is captured in TIMx_CCR1 register."]
     Trigger = 1,
@@ -74,7 +76,8 @@ impl<'a, const O: u8> CC1G_W<'a, O> {
     }
 }
 #[doc = "Update generation\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UG_AW {
     #[doc = "1: Re-initializes the timer counter and generates an update of the registers."]
     Update = 1,

@@ -35,7 +35,8 @@ impl From<crate::W<CR2_SPEC>> for W {
     }
 }
 #[doc = "Receiver timeout enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RTOEN_A {
     #[doc = "0: Receiver timeout feature disabled"]
     Disabled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> RTOEN_W<'a, O> {
     }
 }
 #[doc = "Auto baud rate enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ABREN_A {
     #[doc = "0: Auto baud rate detection is disabled"]
     Disabled = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> ABREN_W<'a, O> {
     }
 }
 #[doc = "Most significant bit first\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MSBFIRST_A {
     #[doc = "0: data is transmitted/received with data bit 0 first, following the start bit"]
     Lsb = 0,
@@ -185,7 +188,8 @@ impl<'a, const O: u8> MSBFIRST_W<'a, O> {
     }
 }
 #[doc = "Binary data inversion\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DATAINV_A {
     #[doc = "0: Logical data from the data register are send/received in positive/direct logic"]
     Positive = 0,
@@ -235,7 +239,8 @@ impl<'a, const O: u8> DATAINV_W<'a, O> {
     }
 }
 #[doc = "TX pin active level inversion\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TXINV_A {
     #[doc = "0: TX pin signal works using the standard logic levels"]
     Standard = 0,
@@ -285,7 +290,8 @@ impl<'a, const O: u8> TXINV_W<'a, O> {
     }
 }
 #[doc = "RX pin active level inversion\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RXINV_A {
     #[doc = "0: RX pin signal works using the standard logic levels"]
     Standard = 0,
@@ -335,7 +341,8 @@ impl<'a, const O: u8> RXINV_W<'a, O> {
     }
 }
 #[doc = "Swap TX/RX pins\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SWAP_A {
     #[doc = "0: TX/RX pins are used as defined in standard pinout"]
     Standard = 0,
@@ -385,7 +392,8 @@ impl<'a, const O: u8> SWAP_W<'a, O> {
     }
 }
 #[doc = "LIN mode enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LINEN_A {
     #[doc = "0: LIN mode disabled"]
     Disabled = 0,
@@ -435,7 +443,8 @@ impl<'a, const O: u8> LINEN_W<'a, O> {
     }
 }
 #[doc = "STOP bits\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum STOP_A {
     #[doc = "0: 1 stop bit"]
@@ -513,7 +522,8 @@ impl<'a, const O: u8> STOP_W<'a, O> {
     }
 }
 #[doc = "Clock enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CLKEN_A {
     #[doc = "0: CK pin disabled"]
     Disabled = 0,
@@ -563,7 +573,8 @@ impl<'a, const O: u8> CLKEN_W<'a, O> {
     }
 }
 #[doc = "Clock polarity\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CPOL_A {
     #[doc = "0: Steady low value on CK pin outside transmission window"]
     Low = 0,
@@ -613,7 +624,8 @@ impl<'a, const O: u8> CPOL_W<'a, O> {
     }
 }
 #[doc = "Clock phase\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CPHA_A {
     #[doc = "0: The first clock transition is the first data capture edge"]
     First = 0,
@@ -663,7 +675,8 @@ impl<'a, const O: u8> CPHA_W<'a, O> {
     }
 }
 #[doc = "Last bit clock pulse\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LBCL_A {
     #[doc = "0: The clock pulse of the last data bit is not output to the CK pin"]
     NotOutput = 0,
@@ -713,7 +726,8 @@ impl<'a, const O: u8> LBCL_W<'a, O> {
     }
 }
 #[doc = "LIN break detection interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LBDIE_A {
     #[doc = "0: Interrupt is inhibited"]
     Disabled = 0,
@@ -763,7 +777,8 @@ impl<'a, const O: u8> LBDIE_W<'a, O> {
     }
 }
 #[doc = "LIN break detection length\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LBDL_A {
     #[doc = "0: 10-bit break detection"]
     Bit10 = 0,
@@ -813,7 +828,8 @@ impl<'a, const O: u8> LBDL_W<'a, O> {
     }
 }
 #[doc = "7-bit Address Detection/4-bit Address Detection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADDM7_A {
     #[doc = "0: 4-bit address detection"]
     Bit4 = 0,
@@ -871,7 +887,8 @@ pub type SLVEN_R = crate::BitReader<bool>;
 #[doc = "Field `SLVEN` writer - Synchronous Slave mode enable"]
 pub type SLVEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR2_SPEC, bool, O>;
 #[doc = "Auto baud rate mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum ABRMOD_A {
     #[doc = "0: Measurement of the start bit is used to detect the baud rate"]

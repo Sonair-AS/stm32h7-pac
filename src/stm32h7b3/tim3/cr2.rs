@@ -35,7 +35,8 @@ impl From<crate::W<CR2_SPEC>> for W {
     }
 }
 #[doc = "TI1 selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TI1S_A {
     #[doc = "0: The TIMx_CH1 pin is connected to TI1 input"]
     Normal = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> TI1S_W<'a, O> {
     }
 }
 #[doc = "Master mode selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum MMS_A {
     #[doc = "0: The UG bit from the TIMx_EGR register is used as trigger output"]
@@ -215,7 +217,8 @@ impl<'a, const O: u8> MMS_W<'a, O> {
     }
 }
 #[doc = "Capture/compare DMA selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CCDS_A {
     #[doc = "0: CCx DMA request sent when CCx event occurs"]
     OnCompare = 0,

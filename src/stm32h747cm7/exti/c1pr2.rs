@@ -35,7 +35,8 @@ impl From<crate::W<C1PR2_SPEC>> for W {
     }
 }
 #[doc = "Configurable event inputs x+32 Pending bit\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PR49_A {
     #[doc = "0: No trigger request occurred"]
     NotPending = 0,
@@ -71,7 +72,8 @@ impl PR49_R {
     }
 }
 #[doc = "Configurable event inputs x+32 Pending bit\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PR49_AW {
     #[doc = "1: Clears pending bit"]
     Clear = 1,

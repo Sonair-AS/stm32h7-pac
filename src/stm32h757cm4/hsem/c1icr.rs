@@ -6,7 +6,8 @@ pub type W = crate::W<C1ICRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum ISC0R {
     ///0: Always reads 0
     NoEffect = 0,
@@ -38,7 +39,8 @@ impl ISC_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum ISC0W {
     ///0: Interrupt semaphore x status ISFx and masked status MISFx not affected
     NoEffect = 0,

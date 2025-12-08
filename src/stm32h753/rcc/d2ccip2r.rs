@@ -35,7 +35,8 @@ impl From<crate::W<D2CCIP2R_SPEC>> for W {
     }
 }
 #[doc = "USART2/3, UART4,5, 7/8 (APB1) kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum USART234578SEL_A {
     #[doc = "0: rcc_pclk1 selected as peripheral clock"]
@@ -140,7 +141,8 @@ impl<'a, const O: u8> USART234578SEL_W<'a, O> {
     }
 }
 #[doc = "USART1 and 6 kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum USART16SEL_A {
     #[doc = "0: rcc_pclk2 selected as peripheral clock"]
@@ -245,7 +247,8 @@ impl<'a, const O: u8> USART16SEL_W<'a, O> {
     }
 }
 #[doc = "RNG kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum RNGSEL_A {
     #[doc = "0: HSI48 selected as peripheral clock"]
@@ -324,7 +327,8 @@ impl<'a, const O: u8> RNGSEL_W<'a, O> {
     }
 }
 #[doc = "I2C1,2,3 kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum I2C123SEL_A {
     #[doc = "0: rcc_pclk1 selected as peripheral clock"]
@@ -403,7 +407,8 @@ impl<'a, const O: u8> I2C123SEL_W<'a, O> {
     }
 }
 #[doc = "USBOTG 1 and 2 kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum USBSEL_A {
     #[doc = "0: Disable the kernel clock"]
@@ -482,7 +487,8 @@ impl<'a, const O: u8> USBSEL_W<'a, O> {
     }
 }
 #[doc = "HDMI-CEC kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum CECSEL_A {
     #[doc = "0: LSE selected as peripheral clock"]
@@ -547,7 +553,8 @@ impl<'a, const O: u8> CECSEL_W<'a, O> {
     }
 }
 #[doc = "LPTIM1 kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum LPTIM1SEL_A {
     #[doc = "0: rcc_pclk1 selected as peripheral clock"]

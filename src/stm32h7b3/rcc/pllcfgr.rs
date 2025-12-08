@@ -35,7 +35,8 @@ impl From<crate::W<PLLCFGR_SPEC>> for W {
     }
 }
 #[doc = "PLL1 fractional latch enable Set and reset by software to latch the content of FRACN1 into the sigma-delta modulator. In order to latch the FRACN1 value into the sigma-delta modulator, PLL1FRACEN must be set to 0, then set to 1. The transition 0 to 1 transfers the content of FRACN1 into the modulator. Refer to for additional information.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PLL1FRACEN_A {
     #[doc = "0: Reset latch to tranfer FRACN to the Sigma-Delta modulator"]
     Reset = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> PLL1FRACEN_W<'a, O> {
     }
 }
 #[doc = "PLL1 VCO selection Set and reset by software to select the proper VCO frequency range used for PLL1. These bits must be written before enabling the PLL1.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PLL1VCOSEL_A {
     #[doc = "0: VCO frequency range 192 to 836 MHz"]
     WideVco = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> PLL1VCOSEL_W<'a, O> {
     }
 }
 #[doc = "PLL1 input frequency range Set and reset by software to select the proper reference frequency range used for PLL1. This bit must be written before enabling the PLL1.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum PLL1RGE_A {
     #[doc = "0: Frequency is between 1 and 2 MHz"]
@@ -250,7 +253,8 @@ pub use PLL1VCOSEL_W as PLL2VCOSEL_W;
 #[doc = "Field `PLL3VCOSEL` writer - PLL3 VCO selection Set and reset by software to select the proper VCO frequency range used for PLL3. This bit must be written before enabling the PLL3."]
 pub use PLL1VCOSEL_W as PLL3VCOSEL_W;
 #[doc = "PLL1 DIVP divider output enable Set and reset by software to enable the pll1_p_ck output of the PLL1. This bit can be written only when the PLL1 is disabled (PLL1ON = 0 and PLL1RDY = 0). In order to save power, when the pll1_p_ck output of the PLL1 is not used, the pll1_p_ck must be disabled.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DIVP1EN_A {
     #[doc = "0: Clock ouput is disabled"]
     Disabled = 0,

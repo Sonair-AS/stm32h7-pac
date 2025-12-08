@@ -6,7 +6,8 @@ pub type W = crate::W<RSRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum RMVF {
     ///0: Reset not activated
     NotActivated = 0,
@@ -62,7 +63,8 @@ where
 
 Value on reset: 1*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CDRSTFR {
     ///0: No reset occurred for block
     NoResetOccurred = 0,

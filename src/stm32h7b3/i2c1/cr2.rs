@@ -35,7 +35,8 @@ impl From<crate::W<CR2_SPEC>> for W {
     }
 }
 #[doc = "Transfer direction (master mode) Note: Changing this bit when the START bit is set is not allowed.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RD_WRN_A {
     #[doc = "0: Master requests a write transfer"]
     Write = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> RD_WRN_W<'a, O> {
     }
 }
 #[doc = "10-bit addressing mode (master mode) Note: Changing this bit when the START bit is set is not allowed.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADD10_A {
     #[doc = "0: The master operates in 7-bit addressing mode"]
     Bit7 = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> ADD10_W<'a, O> {
     }
 }
 #[doc = "10-bit address header only read direction (master receiver mode) Note: Changing this bit when the START bit is set is not allowed.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HEAD10R_A {
     #[doc = "0: The master sends the complete 10 bit slave address read sequence"]
     Complete = 0,
@@ -185,7 +188,8 @@ impl<'a, const O: u8> HEAD10R_W<'a, O> {
     }
 }
 #[doc = "Start generation This bit is set by software, and cleared by hardware after the Start followed by the address sequence is sent, by an arbitration loss, by a timeout error detection, or when PE = 0. It can also be cleared by software by writing 1 to the ADDRCF bit in the I2C_ICR register. If the I2C is already in master mode with AUTOEND = 0, setting this bit generates a Repeated Start condition when RELOAD=0, after the end of the NBYTES transfer. Otherwise setting this bit will generate a START condition once the bus is free. Note: Writing 0 to this bit has no effect. The START bit can be set even if the bus is BUSY or I2C is in slave mode. This bit has no effect when RELOAD is set.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum START_A {
     #[doc = "0: No Start generation"]
     NoStart = 0,
@@ -235,7 +239,8 @@ impl<'a, const O: u8> START_W<'a, O> {
     }
 }
 #[doc = "Stop generation (master mode) The bit is set by software, cleared by hardware when a Stop condition is detected, or when PE = 0. In Master Mode: Note: Writing 0 to this bit has no effect.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum STOP_A {
     #[doc = "0: No Stop generation"]
     NoStop = 0,
@@ -285,7 +290,8 @@ impl<'a, const O: u8> STOP_W<'a, O> {
     }
 }
 #[doc = "NACK generation (slave mode) The bit is set by software, cleared by hardware when the NACK is sent, or when a STOP condition or an Address matched is received, or when PE=0. Note: Writing 0 to this bit has no effect. This bit is used in slave mode only: in master receiver mode, NACK is automatically generated after last byte preceding STOP or RESTART condition, whatever the NACK bit value. When an overrun occurs in slave receiver NOSTRETCH mode, a NACK is automatically generated whatever the NACK bit value. When hardware PEC checking is enabled (PECBYTE=1), the PEC acknowledge value does not depend on the NACK value.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum NACK_A {
     #[doc = "0: an ACK is sent after current received byte"]
     Ack = 0,
@@ -339,7 +345,8 @@ pub type NBYTES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `NBYTES` writer - Number of bytes The number of bytes to be transmitted/received is programmed there. This field is dont care in slave mode with SBC=0. Note: Changing these bits when the START bit is set is not allowed."]
 pub type NBYTES_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, CR2_SPEC, u8, u8, 8, O>;
 #[doc = "NBYTES reload mode This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RELOAD_A {
     #[doc = "0: The transfer is completed after the NBYTES data transfer (STOP or RESTART will follow)"]
     Completed = 0,
@@ -389,7 +396,8 @@ impl<'a, const O: u8> RELOAD_W<'a, O> {
     }
 }
 #[doc = "Automatic end mode (master mode) This bit is set and cleared by software. Note: This bit has no effect in slave mode or when the RELOAD bit is set.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum AUTOEND_A {
     #[doc = "0: Software end mode: TC flag is set when NBYTES data are transferred, stretching SCL low"]
     Software = 0,
@@ -439,7 +447,8 @@ impl<'a, const O: u8> AUTOEND_W<'a, O> {
     }
 }
 #[doc = "Packet error checking byte This bit is set by software, and cleared by hardware when the PEC is transferred, or when a STOP condition or an Address matched is received, also when PE=0. Note: Writing 0 to this bit has no effect. This bit has no effect when RELOAD is set. This bit has no effect is slave mode when SBC=0. If the SMBus feature is not supported, this bit is reserved and forced by hardware to 0. Please refer to Section25.3: I2C implementation.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PECBYTE_A {
     #[doc = "0: No PEC transfer"]
     NoPec = 0,

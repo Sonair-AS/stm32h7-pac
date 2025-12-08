@@ -35,7 +35,8 @@ impl From<crate::W<CR_SPEC>> for W {
     }
 }
 #[doc = "HSI clock enable Set and cleared by software. Set by hardware to force the HSI to ON when the product leaves Stop mode, if STOPWUCK = 0 or STOPKERWUCK = 0. Set by hardware to force the HSI to ON when the product leaves Standby mode or in case of a failure of the HSE which is used as the system clock source. This bit cannot be cleared if the HSI is used directly (via SW mux) as system clock, or if the HSI is selected as reference clock for PLL1 with PLL1 enabled (PLL1ON bit set to 1).\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HSION_A {
     #[doc = "0: Clock Off"]
     Off = 0,
@@ -91,7 +92,8 @@ pub use HSION_R as HSIKERON_R;
 #[doc = "Field `HSIKERON` writer - HSI clock enable in Stop mode Set and reset by software to force the HSI to ON, even in Stop mode, in order to be quickly available as kernel clock for peripherals. This bit has no effect on the value of HSION."]
 pub use HSION_W as HSIKERON_W;
 #[doc = "HSI clock ready flag Set by hardware to indicate that the HSI oscillator is stable.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HSIRDY_A {
     #[doc = "0: Clock not ready"]
     NotReady = 0,
@@ -127,7 +129,8 @@ impl HSIRDY_R {
     }
 }
 #[doc = "HSI clock divider Set and reset by software. These bits allow selecting a division ratio in order to configure the wanted HSI clock frequency. The HSIDIV cannot be changed if the HSI is selected as reference clock for at least one enabled PLL (PLLxON bit set to 1). In that case, the new HSIDIV value is ignored.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum HSIDIV_A {
     #[doc = "0: No division"]
@@ -205,7 +208,8 @@ impl<'a, const O: u8> HSIDIV_W<'a, O> {
     }
 }
 #[doc = "HSI divider flag Set and reset by hardware. As a write operation to HSIDIV has not an immediate effect on the frequency, this flag indicates the current status of the HSI divider. HSIDIVF goes immediately to 0 when HSIDIV value is changed, and is set back to 1 when the output frequency matches the value programmed into HSIDIV. clock setting is completed)\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HSIDIVF_A {
     #[doc = "0: New HSIDIV ratio has not yet propagated to hsi_ck"]
     NotPropagated = 0,
@@ -285,7 +289,8 @@ pub use HSIRDY_R as CDCKRDY_R;
 #[doc = "Field `HSERDY` reader - HSE clock ready flag Set by hardware to indicate that the HSE oscillator is stable."]
 pub use HSIRDY_R as HSERDY_R;
 #[doc = "HSE clock bypass Set and cleared by software to bypass the oscillator with an external clock. The external clock must be enabled with the HSEON bit to be used by the device. The HSEBYP bit can be written only if the HSE oscillator is disabled.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HSEBYP_A {
     #[doc = "0: HSE crystal oscillator not bypassed"]
     NotBypassed = 0,

@@ -6,7 +6,8 @@ pub type W = crate::W<SRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum EWIFR {
     ///0: The EWI Interrupt Service Routine has been serviced
     Finished = 0,
@@ -45,7 +46,8 @@ impl EWIF_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum EWIFW {
     ///0: The EWI Interrupt Service Routine has been serviced
     Finished = 0,

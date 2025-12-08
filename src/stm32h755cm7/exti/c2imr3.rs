@@ -6,7 +6,8 @@ pub type W = crate::W<C2IMR3rs>;
 
 Value on reset: 1*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum INTERRUPT_MASK {
     ///0: Interrupt request line is masked
     Masked = 0,

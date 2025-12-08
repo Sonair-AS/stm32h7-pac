@@ -35,7 +35,8 @@ impl From<crate::W<BGPFCCR_SPEC>> for W {
     }
 }
 #[doc = "Color mode These bits define the color format of the foreground image. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only. others: meaningless\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum CM_A {
     #[doc = "0: Color mode ARGB8888"]
@@ -204,7 +205,8 @@ impl<'a, const O: u8> CM_W<'a, O> {
     }
 }
 #[doc = "CLUT Color mode These bits define the color format of the CLUT. This register can only be written when the transfer is disabled. Once the CLUT transfer has started, this bit is read-only.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CCM_A {
     #[doc = "0: CLUT color format ARGB8888"]
     Argb8888 = 0,
@@ -254,7 +256,8 @@ impl<'a, const O: u8> CCM_W<'a, O> {
     }
 }
 #[doc = "Start This bit is set to start the automatic loading of the CLUT. This bit is automatically reset: ** at the end of the transfer ** when the transfer is aborted by the user application by setting the ABORT bit in the DMA2D_CR ** when a transfer error occurs ** when the transfer has not started due to a configuration error or another transfer operation already on going (data transfer or automatic BackGround CLUT transfer).\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum START_A {
     #[doc = "1: Start the automatic loading of the CLUT"]
     Start = 1,
@@ -298,7 +301,8 @@ pub type CS_R = crate::FieldReader<u8, u8>;
 + 1."]
 pub type CS_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, BGPFCCR_SPEC, u8, u8, 8, O>;
 #[doc = "Alpha mode These bits define which alpha channel value to be used for the background image. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only. others: meaningless\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum AM_A {
     #[doc = "0: No modification of alpha channel"]
@@ -363,7 +367,8 @@ impl<'a, const O: u8> AM_W<'a, O> {
     }
 }
 #[doc = "Alpha Inverted This bit inverts the alpha value. Once the transfer has started, this bit is read-only.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum AI_A {
     #[doc = "0: Regular alpha"]
     RegularAlpha = 0,
@@ -413,7 +418,8 @@ impl<'a, const O: u8> AI_W<'a, O> {
     }
 }
 #[doc = "Red Blue Swap This bit allows to swap the R &amp; B to support BGR or ABGR color formats. Once the transfer has started, this bit is read-only.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RBS_A {
     #[doc = "0: No Red Blue Swap (RGB or ARGB)"]
     Regular = 0,

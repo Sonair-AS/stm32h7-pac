@@ -6,7 +6,8 @@ pub type W = crate::W<BFCRrs>;
 
 Value on reset: 7*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum BF2 {
     ///5: BF2 = 1 - constant alpha
@@ -69,7 +70,8 @@ where
 
 Value on reset: 6*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum BF1 {
     ///4: BF1 = constant alpha

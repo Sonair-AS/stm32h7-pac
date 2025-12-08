@@ -6,7 +6,8 @@ pub type W = crate::W<SWIER3rs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum SOFTWARE_INTERRUPT {
     ///1: Generates an interrupt request
     Pend = 1,

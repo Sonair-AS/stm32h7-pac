@@ -41,7 +41,8 @@ pub use PCS34_R as PCS35_R;
 #[doc = "Field `PCS35` writer - D3 Pending request clear input signal selection on Event input x = truncate ((n+64)/2)"]
 pub use PCS34_W as PCS35_W;
 #[doc = "D3 Pending request clear input signal selection on Event input x = truncate ((n+64)/2)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum PCS34_A {
     #[doc = "0: DMA ch6 event selected as D3 domain pendclear source"]

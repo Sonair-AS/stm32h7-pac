@@ -10,7 +10,8 @@ pub type DTR_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16, crate::Safe>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum SDTR {
     ///0: Positive deadtime on rising edge
     Positive = 0,
@@ -70,7 +71,8 @@ pub type DTPRSC_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum DTRSLK {
     ///0: Deadtime rising sign is writable
     Unlocked = 0,
@@ -126,7 +128,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum DTRLK {
     ///0: Deadtime rising value and sign is writable
     Unlocked = 0,
@@ -186,7 +189,8 @@ pub type DTF_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16, crate::Safe>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum SDTF {
     ///0: Positive deadtime on falling edge
     Positive = 0,
@@ -242,7 +246,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum DTFSLK {
     ///0: Deadtime falling sign is writable
     Unlocked = 0,
@@ -298,7 +303,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum DTFLK {
     ///0: Deadtime falling value and sign is writable
     Unlocked = 0,

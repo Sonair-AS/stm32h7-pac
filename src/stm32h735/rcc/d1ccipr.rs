@@ -35,7 +35,8 @@ impl From<crate::W<D1CCIPR_SPEC>> for W {
     }
 }
 #[doc = "FMC kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum FMCSEL_A {
     #[doc = "0: rcc_hclk3 selected as peripheral clock"]
@@ -120,7 +121,8 @@ pub use FMCSEL_R as OCTOSPISEL_R;
 #[doc = "Field `OCTOSPISEL` writer - QUADSPI kernel clock source selection"]
 pub use FMCSEL_W as OCTOSPISEL_W;
 #[doc = "SDMMC kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SDMMCSEL_A {
     #[doc = "0: pll1_q selected as peripheral clock"]
     Pll1Q = 0,
@@ -170,7 +172,8 @@ impl<'a, const O: u8> SDMMCSEL_W<'a, O> {
     }
 }
 #[doc = "per_ck clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum CKPERSEL_A {
     #[doc = "0: HSI selected as peripheral clock"]

@@ -41,7 +41,8 @@ pub use OC3M_3_R as OC4M_3_R;
 #[doc = "Field `OC4M_3` writer - Output Compare 2 mode - bit 3"]
 pub use OC3M_3_W as OC4M_3_W;
 #[doc = "Output Compare 1 mode - bit 3\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OC3M_3_A {
     #[doc = "0: Normal output compare mode (modes 0-7)"]
     Normal = 0,
@@ -101,7 +102,8 @@ pub use OC3M_R as OC4M_R;
 #[doc = "Field `OC4M` writer - OC4M"]
 pub use OC3M_W as OC4M_W;
 #[doc = "OC4PE\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OC4PE_A {
     #[doc = "0: Preload register on CCR4 disabled. New values written to CCR4 are taken into account immediately"]
     Disabled = 0,
@@ -155,7 +157,8 @@ pub type OC4FE_R = crate::BitReader<bool>;
 #[doc = "Field `OC4FE` writer - OC4FE"]
 pub type OC4FE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CCMR2_OUTPUT_SPEC, bool, O>;
 #[doc = "CC4S\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum CC4S_A {
     #[doc = "0: CC4 channel is configured as output"]
@@ -198,7 +201,8 @@ pub type OC3CE_R = crate::BitReader<bool>;
 #[doc = "Field `OC3CE` writer - OC3CE"]
 pub type OC3CE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CCMR2_OUTPUT_SPEC, bool, O>;
 #[doc = "OC3M\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum OC3M_A {
     #[doc = "0: The comparison between the output compare register TIMx_CCRy and the counter TIMx_CNT has no effect on the outputs / OpmMode1: Retriggerable OPM mode 1 - In up-counting mode, the channel is active until a trigger event is detected (on TRGI signal). In down-counting mode, the channel is inactive"]
@@ -329,7 +333,8 @@ impl<'a, const O: u8> OC3M_W<'a, O> {
     }
 }
 #[doc = "OC3PE\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OC3PE_A {
     #[doc = "0: Preload register on CCR3 disabled. New values written to CCR3 are taken into account immediately"]
     Disabled = 0,
@@ -383,7 +388,8 @@ pub type OC3FE_R = crate::BitReader<bool>;
 #[doc = "Field `OC3FE` writer - OC3FE"]
 pub type OC3FE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CCMR2_OUTPUT_SPEC, bool, O>;
 #[doc = "CC3S\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum CC3S_A {
     #[doc = "0: CC3 channel is configured as output"]

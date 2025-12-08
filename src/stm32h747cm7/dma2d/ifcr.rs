@@ -35,7 +35,8 @@ impl From<crate::W<IFCR_SPEC>> for W {
     }
 }
 #[doc = "Clear Transfer error interrupt flag Programming this bit to 1 clears the TEIF flag in the DMA2D_ISR register\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CTEIF_A {
     #[doc = "1: Clear the TEIF flag in the ISR register"]
     Clear = 1,
@@ -73,7 +74,8 @@ impl<'a, const O: u8> CTEIF_W<'a, O> {
     }
 }
 #[doc = "Clear transfer complete interrupt flag Programming this bit to 1 clears the TCIF flag in the DMA2D_ISR register\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CTCIF_A {
     #[doc = "1: Clear the TCIF flag in the ISR register"]
     Clear = 1,
@@ -111,7 +113,8 @@ impl<'a, const O: u8> CTCIF_W<'a, O> {
     }
 }
 #[doc = "Clear transfer watermark interrupt flag Programming this bit to 1 clears the TWIF flag in the DMA2D_ISR register\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CTWIF_A {
     #[doc = "1: Clear the TWIF flag in the ISR register"]
     Clear = 1,
@@ -149,7 +152,8 @@ impl<'a, const O: u8> CTWIF_W<'a, O> {
     }
 }
 #[doc = "Clear CLUT access error interrupt flag Programming this bit to 1 clears the CAEIF flag in the DMA2D_ISR register\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CAECIF_A {
     #[doc = "1: Clear the CAEIF flag in the ISR register"]
     Clear = 1,
@@ -187,7 +191,8 @@ impl<'a, const O: u8> CAECIF_W<'a, O> {
     }
 }
 #[doc = "Clear CLUT transfer complete interrupt flag Programming this bit to 1 clears the CTCIF flag in the DMA2D_ISR register\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CCTCIF_A {
     #[doc = "1: Clear the CTCIF flag in the ISR register"]
     Clear = 1,
@@ -225,7 +230,8 @@ impl<'a, const O: u8> CCTCIF_W<'a, O> {
     }
 }
 #[doc = "Clear configuration error interrupt flag Programming this bit to 1 clears the CEIF flag in the DMA2D_ISR register\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CCEIF_A {
     #[doc = "1: Clear the CEIF flag in the ISR register"]
     Clear = 1,

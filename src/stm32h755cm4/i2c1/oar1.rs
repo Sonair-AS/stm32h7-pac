@@ -10,7 +10,8 @@ pub type OA1_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16, crate::Safe>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum OA1MODE {
     ///0: Own address 1 is a 7-bit address
     Bit7 = 0,
@@ -66,7 +67,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum OA1EN {
     ///0: Own address 1 disabled. The received slave address OA1 is NACKed
     Disabled = 0,

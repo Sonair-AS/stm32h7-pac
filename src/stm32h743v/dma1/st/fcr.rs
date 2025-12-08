@@ -35,7 +35,8 @@ impl From<crate::W<FCR_SPEC>> for W {
     }
 }
 #[doc = "FIFO error interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum FEIE_A {
     #[doc = "0: FE interrupt disabled"]
     Disabled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> FEIE_W<'a, O> {
     }
 }
 #[doc = "FIFO status\n\nValue on reset: 4"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum FS_A {
     #[doc = "0: 0 < fifo_level < 1/4"]
@@ -155,7 +157,8 @@ impl FS_R {
     }
 }
 #[doc = "Direct mode disable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DMDIS_A {
     #[doc = "0: Direct mode is enabled"]
     Enabled = 0,
@@ -205,7 +208,8 @@ impl<'a, const O: u8> DMDIS_W<'a, O> {
     }
 }
 #[doc = "FIFO threshold selection\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum FTH_A {
     #[doc = "0: 1/4 full FIFO"]

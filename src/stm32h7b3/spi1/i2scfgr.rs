@@ -35,7 +35,8 @@ impl From<crate::W<I2SCFGR_SPEC>> for W {
     }
 }
 #[doc = "Master clock output enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MCKOE_A {
     #[doc = "0: Master clock output disabled"]
     Disabled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> MCKOE_W<'a, O> {
     }
 }
 #[doc = "Odd factor for the prescaler\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ODD_A {
     #[doc = "0: Real divider value is I2SDIV*2"]
     Even = 0,
@@ -139,7 +141,8 @@ pub type I2SDIV_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `I2SDIV` writer - I2S linear prescaler"]
 pub type I2SDIV_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, I2SCFGR_SPEC, u8, u8, 8, O>;
 #[doc = "Data format\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DATFMT_A {
     #[doc = "0: The data inside RXDR and TXDR are right aligned"]
     RightAligned = 0,
@@ -189,7 +192,8 @@ impl<'a, const O: u8> DATFMT_W<'a, O> {
     }
 }
 #[doc = "Fixed channel length in SLAVE\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WSINV_A {
     #[doc = "0: Word select inversion disabled"]
     Disabled = 0,
@@ -239,7 +243,8 @@ impl<'a, const O: u8> WSINV_W<'a, O> {
     }
 }
 #[doc = "Word select inversion\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum FIXCH_A {
     #[doc = "0: The channel length in slave mode is different from 16 or 32 bits (CHLEN not taken into account)"]
     NotFixed = 0,
@@ -289,7 +294,8 @@ impl<'a, const O: u8> FIXCH_W<'a, O> {
     }
 }
 #[doc = "Serial audio clock polarity\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CKPOL_A {
     #[doc = "0: Signals are sampled on rising and changed on falling clock edges"]
     SampleOnRising = 0,
@@ -339,7 +345,8 @@ impl<'a, const O: u8> CKPOL_W<'a, O> {
     }
 }
 #[doc = "Channel length (number of bits per audio channel)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CHLEN_A {
     #[doc = "0: 16 bit per channel"]
     Bits16 = 0,
@@ -389,7 +396,8 @@ impl<'a, const O: u8> CHLEN_W<'a, O> {
     }
 }
 #[doc = "Data length to be transferred\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum DATLEN_A {
     #[doc = "0: 16 bit data length"]
@@ -454,7 +462,8 @@ impl<'a, const O: u8> DATLEN_W<'a, O> {
     }
 }
 #[doc = "PCM frame synchronization\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PCMSYNC_A {
     #[doc = "0: Short PCM frame synchronization"]
     Short = 0,
@@ -504,7 +513,8 @@ impl<'a, const O: u8> PCMSYNC_W<'a, O> {
     }
 }
 #[doc = "I2S standard selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum I2SSTD_A {
     #[doc = "0: I2S Philips standard"]
@@ -583,7 +593,8 @@ impl<'a, const O: u8> I2SSTD_W<'a, O> {
     }
 }
 #[doc = "I2S configuration mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum I2SCFG_A {
     #[doc = "0: Slave, transmit"]
@@ -687,7 +698,8 @@ impl<'a, const O: u8> I2SCFG_W<'a, O> {
     }
 }
 #[doc = "I2S mode selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum I2SMOD_A {
     #[doc = "0: SPI mode selected"]
     Spi = 0,

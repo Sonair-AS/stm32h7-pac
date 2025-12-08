@@ -35,7 +35,8 @@ impl From<crate::W<CFGR_SPEC>> for W {
     }
 }
 #[doc = "System clock switch\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SW_A {
     #[doc = "0: HSI selected as system clock"]
@@ -113,7 +114,8 @@ impl<'a, const O: u8> SW_W<'a, O> {
     }
 }
 #[doc = "System clock switch status\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SWS_A {
     #[doc = "0: HSI oscillator used as system clock"]
@@ -191,7 +193,8 @@ impl<'a, const O: u8> SWS_W<'a, O> {
     }
 }
 #[doc = "System clock selection after a wake up from system Stop\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum STOPWUCK_A {
     #[doc = "0: HSI selected as wake up clock from system Stop"]
     Hsi = 0,
@@ -251,7 +254,8 @@ pub type RTCPRE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTCPRE` writer - HSE division factor for RTC clock"]
 pub type RTCPRE_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, CFGR_SPEC, u8, u8, 6, O>;
 #[doc = "High Resolution Timer clock prescaler selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HRTIMSEL_A {
     #[doc = "0: The HRTIM prescaler clock source is the same as other timers (rcc_timy_ker_ck)"]
     TimyKer = 0,
@@ -301,7 +305,8 @@ impl<'a, const O: u8> HRTIMSEL_W<'a, O> {
     }
 }
 #[doc = "Timers clocks prescaler selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TIMPRE_A {
     #[doc = "0: Timer kernel clock equal to 2x pclk by default"]
     DefaultX2 = 0,
@@ -355,7 +360,8 @@ pub type MCO1PRE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MCO1PRE` writer - MCO1 prescaler"]
 pub type MCO1PRE_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, CFGR_SPEC, u8, u8, 4, O>;
 #[doc = "Micro-controller clock output 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum MCO1_A {
     #[doc = "0: HSI selected for micro-controller clock output"]
@@ -450,7 +456,8 @@ pub type MCO2PRE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MCO2PRE` writer - MCO2 prescaler"]
 pub type MCO2PRE_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, CFGR_SPEC, u8, u8, 4, O>;
 #[doc = "Micro-controller clock output 2\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum MCO2_A {
     #[doc = "0: System clock selected for micro-controller clock output"]

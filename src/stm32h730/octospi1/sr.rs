@@ -4,7 +4,8 @@ pub type R = crate::R<SRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum TEF {
     ///0: This bit is cleared by writing 1 to CTEF
     Cleared = 0,
@@ -43,7 +44,8 @@ impl TEF_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum TCF {
     ///0: This bit is cleared by writing 1 to CTCF
     Cleared = 0,
@@ -82,7 +84,8 @@ impl TCF_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum FTF {
     ///0: It is cleared automatically as soon as the threshold condition is no longer true
     Cleared = 0,
@@ -121,7 +124,8 @@ impl FTF_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum SMF {
     ///0: It is cleared by writing 1 to CSMF
     Cleared = 0,
@@ -160,7 +164,8 @@ impl SMF_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum TOF {
     ///0: This bit is cleared by writing 1 to CTOF
     Cleared = 0,
@@ -199,7 +204,8 @@ impl TOF_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum BUSY {
     ///0: This bit is cleared automatically when the operation with the external device is finished and the FIFO is empty
     Cleared = 0,

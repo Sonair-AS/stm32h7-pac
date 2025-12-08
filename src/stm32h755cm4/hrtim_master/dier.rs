@@ -6,7 +6,8 @@ pub type W = crate::W<DIERrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CMP1IE {
     ///0: Interrupt disabled
     Disabled = 0,
@@ -74,7 +75,8 @@ pub use CMPIE_W as UPDIE_W;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CMP1DE {
     ///0: DMA request disabled
     Disabled = 0,

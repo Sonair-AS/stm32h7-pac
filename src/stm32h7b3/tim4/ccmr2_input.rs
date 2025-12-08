@@ -44,7 +44,8 @@ pub type IC4PSC_R = crate::FieldReader<u8, u8>;
 pub type IC4PSC_W<'a, const O: u8> =
     crate::FieldWriterSafe<'a, u32, CCMR2_INPUT_SPEC, u8, u8, 2, O>;
 #[doc = "Capture/Compare 4 selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum CC4S_A {
     #[doc = "1: CC4 channel is configured as input, IC4 is mapped on TI4"]
@@ -118,7 +119,8 @@ pub type IC3PSC_R = crate::FieldReader<u8, u8>;
 pub type IC3PSC_W<'a, const O: u8> =
     crate::FieldWriterSafe<'a, u32, CCMR2_INPUT_SPEC, u8, u8, 2, O>;
 #[doc = "Capture/compare 3 selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum CC3S_A {
     #[doc = "1: CC3 channel is configured as input, IC3 is mapped on TI3"]

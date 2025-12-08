@@ -419,7 +419,8 @@ pub static __INTERRUPTS: [Vector; 156] = [
 ];
 ///Enumeration of all the interrupts.
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Copy, Clone, PartialEq, Eq)]
 #[repr(u16)]
 pub enum Interrupt {
     ///0 - PVD and AVD through the EXTI line
@@ -731,6 +732,7 @@ unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#ADC1)
 pub type ADC1 = crate::Periph<adc1::RegisterBlock, 0x4002_2000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ADC1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADC1").finish()
@@ -742,6 +744,7 @@ pub mod adc1;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#ADC1)
 pub type ADC2 = crate::Periph<adc1::RegisterBlock, 0x4002_2100>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ADC2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADC2").finish()
@@ -753,6 +756,7 @@ pub use self::adc1 as adc2;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#ADC12_common)
 pub type ADC12_COMMON = crate::Periph<adc12_common::RegisterBlock, 0x4002_2300>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ADC12_COMMON {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADC12_COMMON").finish()
@@ -764,6 +768,7 @@ pub mod adc12_common;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#ADF)
 pub type ADF = crate::Periph<adf::RegisterBlock, 0x4002_f000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ADF {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADF").finish()
@@ -775,6 +780,7 @@ pub mod adf;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#CEC)
 pub type CEC = crate::Periph<cec::RegisterBlock, 0x4000_6c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for CEC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CEC").finish()
@@ -786,6 +792,7 @@ pub mod cec;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#CORDIC)
 pub type CORDIC = crate::Periph<cordic::RegisterBlock, 0x4800_4400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for CORDIC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORDIC").finish()
@@ -797,6 +804,7 @@ pub mod cordic;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#CRC)
 pub type CRC = crate::Periph<crc::RegisterBlock, 0x5802_4c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for CRC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CRC").finish()
@@ -808,6 +816,7 @@ pub mod crc;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#CRS)
 pub type CRS = crate::Periph<crs::RegisterBlock, 0x4000_8400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for CRS {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CRS").finish()
@@ -819,6 +828,7 @@ pub mod crs;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#CRYP)
 pub type CRYP = crate::Periph<cryp::RegisterBlock, 0x4802_0800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for CRYP {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CRYP").finish()
@@ -830,6 +840,7 @@ pub mod cryp;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#DBGMCU)
 pub type DBGMCU = crate::Periph<dbgmcu::RegisterBlock, 0x5c00_1000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DBGMCU {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBGMCU").finish()
@@ -841,6 +852,7 @@ pub mod dbgmcu;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#DCMIPP)
 pub type DCMIPP = crate::Periph<dcmipp::RegisterBlock, 0x5000_2000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DCMIPP {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCMIPP").finish()
@@ -852,6 +864,7 @@ pub mod dcmipp;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#DLYB1)
 pub type DLYB1 = crate::Periph<dlyb1::RegisterBlock, 0x5200_8000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DLYB1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DLYB1").finish()
@@ -863,6 +876,7 @@ pub mod dlyb1;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#DLYB1)
 pub type DLYB2 = crate::Periph<dlyb1::RegisterBlock, 0x4800_2800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DLYB2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DLYB2").finish()
@@ -874,6 +888,7 @@ pub use self::dlyb1 as dlyb2;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#DMA2D)
 pub type DMA2D = crate::Periph<dma2d::RegisterBlock, 0x5200_1000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DMA2D {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA2D").finish()
@@ -885,6 +900,7 @@ pub mod dma2d;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#DTS)
 pub type DTS = crate::Periph<dts::RegisterBlock, 0x5800_6800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DTS {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DTS").finish()
@@ -896,6 +912,7 @@ pub mod dts;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#ETH)
 pub type ETH = crate::Periph<eth::RegisterBlock, 0x4002_8000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ETH {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETH").finish()
@@ -907,6 +924,7 @@ pub mod eth;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#EXTI)
 pub type EXTI = crate::Periph<exti::RegisterBlock, 0x5800_0000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for EXTI {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXTI").finish()
@@ -918,6 +936,7 @@ pub mod exti;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#FDCAN1)
 pub type FDCAN1 = crate::Periph<fdcan1::RegisterBlock, 0x4000_a000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for FDCAN1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FDCAN1").finish()
@@ -929,6 +948,7 @@ pub mod fdcan1;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#FDCAN1)
 pub type FDCAN2 = crate::Periph<fdcan1::RegisterBlock, 0x4000_a400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for FDCAN2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FDCAN2").finish()
@@ -940,6 +960,7 @@ pub use self::fdcan1 as fdcan2;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#FLASH)
 pub type FLASH = crate::Periph<flash::RegisterBlock, 0x5200_2000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for FLASH {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FLASH").finish()
@@ -951,6 +972,7 @@ pub mod flash;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#FMC)
 pub type FMC = crate::Periph<fmc::RegisterBlock, 0x5200_4000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for FMC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FMC").finish()
@@ -962,6 +984,7 @@ pub mod fmc;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#GFXMMU)
 pub type GFXMMU = crate::Periph<gfxmmu::RegisterBlock, 0x5201_0000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GFXMMU {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GFXMMU").finish()
@@ -973,6 +996,7 @@ pub mod gfxmmu;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#GFXTIM)
 pub type GFXTIM = crate::Periph<gfxtim::RegisterBlock, 0x5000_4000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GFXTIM {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GFXTIM").finish()
@@ -984,6 +1008,7 @@ pub mod gfxtim;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#GPDMA)
 pub type GPDMA = crate::Periph<gpdma::RegisterBlock, 0x4002_1000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPDMA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPDMA").finish()
@@ -995,6 +1020,7 @@ pub mod gpdma;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#GPIOA)
 pub type GPIOA = crate::Periph<gpioa::RegisterBlock, 0x5802_0000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOA").finish()
@@ -1006,6 +1032,7 @@ pub mod gpioa;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#GPIOC)
 pub type GPIOC = crate::Periph<gpioc::RegisterBlock, 0x5802_0800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOC").finish()
@@ -1017,6 +1044,7 @@ pub mod gpioc;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#GPIOC)
 pub type GPIOD = crate::Periph<gpioc::RegisterBlock, 0x5802_0c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOD {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOD").finish()
@@ -1028,6 +1056,7 @@ pub use self::gpioc as gpiod;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#GPIOC)
 pub type GPIOE = crate::Periph<gpioc::RegisterBlock, 0x5802_1000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOE {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOE").finish()
@@ -1039,6 +1068,7 @@ pub use self::gpioc as gpioe;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#GPIOC)
 pub type GPIOF = crate::Periph<gpioc::RegisterBlock, 0x5802_1400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOF {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOF").finish()
@@ -1050,6 +1080,7 @@ pub use self::gpioc as gpiof;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#GPIOC)
 pub type GPIOG = crate::Periph<gpioc::RegisterBlock, 0x5802_1800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOG").finish()
@@ -1061,6 +1092,7 @@ pub use self::gpioc as gpiog;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#GPIOC)
 pub type GPIOH = crate::Periph<gpioc::RegisterBlock, 0x5802_1c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOH {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOH").finish()
@@ -1072,6 +1104,7 @@ pub use self::gpioc as gpioh;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#GPIOC)
 pub type GPIOM = crate::Periph<gpioc::RegisterBlock, 0x5802_3000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOM {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOM").finish()
@@ -1083,6 +1116,7 @@ pub use self::gpioc as gpiom;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#GPIOC)
 pub type GPION = crate::Periph<gpioc::RegisterBlock, 0x5802_3400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPION {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPION").finish()
@@ -1094,6 +1128,7 @@ pub use self::gpioc as gpion;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#GPIOC)
 pub type GPIOO = crate::Periph<gpioc::RegisterBlock, 0x5802_3800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOO {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOO").finish()
@@ -1105,6 +1140,7 @@ pub use self::gpioc as gpioo;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#GPIOC)
 pub type GPIOP = crate::Periph<gpioc::RegisterBlock, 0x5802_3c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOP {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOP").finish()
@@ -1116,6 +1152,7 @@ pub use self::gpioc as gpiop;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#HASH)
 pub type HASH = crate::Periph<hash::RegisterBlock, 0x4802_0400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for HASH {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HASH").finish()
@@ -1127,6 +1164,7 @@ pub mod hash;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#HPDMA)
 pub type HPDMA = crate::Periph<hpdma::RegisterBlock, 0x5200_0000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for HPDMA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HPDMA").finish()
@@ -1138,6 +1176,7 @@ pub mod hpdma;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#ICACHE)
 pub type ICACHE = crate::Periph<icache::RegisterBlock, 0x5201_5000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ICACHE {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE").finish()
@@ -1149,6 +1188,7 @@ pub mod icache;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#IWDG)
 pub type IWDG = crate::Periph<iwdg::RegisterBlock, 0x5800_4800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for IWDG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IWDG").finish()
@@ -1160,6 +1200,7 @@ pub mod iwdg;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#I2C1_I3C1)
 pub type I2C1_I3C1 = crate::Periph<i2c1_i3c1::RegisterBlock, 0x4000_5400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for I2C1_I3C1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C1_I3C1").finish()
@@ -1171,6 +1212,7 @@ pub mod i2c1_i3c1;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#I2C1_I3C1)
 pub type I2C2 = crate::Periph<i2c1_i3c1::RegisterBlock, 0x4000_5800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for I2C2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C2").finish()
@@ -1182,6 +1224,7 @@ pub use self::i2c1_i3c1 as i2c2;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#I2C1_I3C1)
 pub type I2C3 = crate::Periph<i2c1_i3c1::RegisterBlock, 0x4000_5c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for I2C3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C3").finish()
@@ -1193,6 +1236,7 @@ pub use self::i2c1_i3c1 as i2c3;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#JPEG)
 pub type JPEG = crate::Periph<jpeg::RegisterBlock, 0x5200_3000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for JPEG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("JPEG").finish()
@@ -1204,6 +1248,7 @@ pub mod jpeg;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#LPTIM1)
 pub type LPTIM1 = crate::Periph<lptim1::RegisterBlock, 0x4000_2400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPTIM1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPTIM1").finish()
@@ -1215,6 +1260,7 @@ pub mod lptim1;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#LPTIM1)
 pub type LPTIM2 = crate::Periph<lptim1::RegisterBlock, 0x5800_2400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPTIM2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPTIM2").finish()
@@ -1226,6 +1272,7 @@ pub use self::lptim1 as lptim2;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#LPTIM1)
 pub type LPTIM3 = crate::Periph<lptim1::RegisterBlock, 0x5800_2800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPTIM3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPTIM3").finish()
@@ -1237,6 +1284,7 @@ pub use self::lptim1 as lptim3;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#LPTIM4)
 pub type LPTIM4 = crate::Periph<lptim4::RegisterBlock, 0x5800_2c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPTIM4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPTIM4").finish()
@@ -1248,6 +1296,7 @@ pub mod lptim4;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#LPTIM4)
 pub type LPTIM5 = crate::Periph<lptim4::RegisterBlock, 0x5800_3000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPTIM5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPTIM5").finish()
@@ -1259,6 +1308,7 @@ pub use self::lptim4 as lptim5;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#LPUART1)
 pub type LPUART1 = crate::Periph<lpuart1::RegisterBlock, 0x5800_0c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPUART1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPUART1").finish()
@@ -1270,6 +1320,7 @@ pub mod lpuart1;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#LTDC)
 pub type LTDC = crate::Periph<ltdc::RegisterBlock, 0x5000_1000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LTDC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LTDC").finish()
@@ -1281,6 +1332,7 @@ pub mod ltdc;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#MCE1)
 pub type MCE1 = crate::Periph<mce1::RegisterBlock, 0x5200_b800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for MCE1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MCE1").finish()
@@ -1292,6 +1344,7 @@ pub mod mce1;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#MCE1)
 pub type MCE2 = crate::Periph<mce1::RegisterBlock, 0x5200_bc00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for MCE2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MCE2").finish()
@@ -1303,6 +1356,7 @@ pub use self::mce1 as mce2;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#MCE1)
 pub type MCE3 = crate::Periph<mce1::RegisterBlock, 0x5200_c000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for MCE3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MCE3").finish()
@@ -1314,6 +1368,7 @@ pub use self::mce1 as mce3;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#MDIOS)
 pub type MDIOS = crate::Periph<mdios::RegisterBlock, 0x4000_9400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for MDIOS {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MDIOS").finish()
@@ -1325,6 +1380,7 @@ pub mod mdios;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#OTG_HS)
 pub type OTG_HS = crate::Periph<otg_hs::RegisterBlock, 0x4004_0000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG_HS {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG_HS").finish()
@@ -1336,6 +1392,7 @@ pub mod otg_hs;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#OTG_HS)
 pub type OTG_FS = crate::Periph<otg_hs::RegisterBlock, 0x4008_0000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG_FS {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG_FS").finish()
@@ -1347,6 +1404,7 @@ pub use self::otg_hs as otg_fs;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#PKA)
 pub type PKA = crate::Periph<pka::RegisterBlock, 0x4802_2000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for PKA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PKA").finish()
@@ -1358,6 +1416,7 @@ pub mod pka;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#PSSI)
 pub type PSSI = crate::Periph<pssi::RegisterBlock, 0x4800_0400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for PSSI {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PSSI").finish()
@@ -1369,6 +1428,7 @@ pub mod pssi;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#PWR)
 pub type PWR = crate::Periph<pwr::RegisterBlock, 0x5802_4800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for PWR {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PWR").finish()
@@ -1380,6 +1440,7 @@ pub mod pwr;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#RAMCFG)
 pub type RAMCFG = crate::Periph<ramcfg::RegisterBlock, 0x5802_7000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RAMCFG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RAMCFG").finish()
@@ -1391,6 +1452,7 @@ pub mod ramcfg;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#RCC)
 pub type RCC = crate::Periph<rcc::RegisterBlock, 0x5802_4400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RCC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RCC").finish()
@@ -1402,6 +1464,7 @@ pub mod rcc;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#RNG)
 pub type RNG = crate::Periph<rng::RegisterBlock, 0x4802_0000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RNG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RNG").finish()
@@ -1413,6 +1476,7 @@ pub mod rng;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#RTC)
 pub type RTC = crate::Periph<rtc::RegisterBlock, 0x5800_4000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RTC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTC").finish()
@@ -1424,6 +1488,7 @@ pub mod rtc;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#SAES)
 pub type SAES = crate::Periph<saes::RegisterBlock, 0x4802_1000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SAES {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAES").finish()
@@ -1435,6 +1500,7 @@ pub mod saes;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#SAI1)
 pub type SAI1 = crate::Periph<sai1::RegisterBlock, 0x4200_5800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SAI1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAI1").finish()
@@ -1446,6 +1512,7 @@ pub mod sai1;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#SAI1)
 pub type SAI2 = crate::Periph<sai1::RegisterBlock, 0x4200_5c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SAI2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAI2").finish()
@@ -1457,6 +1524,7 @@ pub use self::sai1 as sai2;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#SBS)
 pub type SBS = crate::Periph<sbs::RegisterBlock, 0x5800_0400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SBS {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SBS").finish()
@@ -1468,6 +1536,7 @@ pub mod sbs;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#SDMMC1)
 pub type SDMMC1 = crate::Periph<sdmmc1::RegisterBlock, 0x5200_7000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SDMMC1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDMMC1").finish()
@@ -1479,6 +1548,7 @@ pub mod sdmmc1;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#SDMMC1)
 pub type SDMMC2 = crate::Periph<sdmmc1::RegisterBlock, 0x4800_2400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SDMMC2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDMMC2").finish()
@@ -1490,6 +1560,7 @@ pub use self::sdmmc1 as sdmmc2;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#SPDIFRX)
 pub type SPDIFRX = crate::Periph<spdifrx::RegisterBlock, 0x4000_4000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPDIFRX {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPDIFRX").finish()
@@ -1501,6 +1572,7 @@ pub mod spdifrx;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#SPI1)
 pub type SPI1 = crate::Periph<spi1::RegisterBlock, 0x4200_3000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI1").finish()
@@ -1512,6 +1584,7 @@ pub mod spi1;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#SPI1)
 pub type SPI2 = crate::Periph<spi1::RegisterBlock, 0x4000_3800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI2").finish()
@@ -1523,6 +1596,7 @@ pub use self::spi1 as spi2;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#SPI1)
 pub type SPI3 = crate::Periph<spi1::RegisterBlock, 0x4000_3c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI3").finish()
@@ -1534,6 +1608,7 @@ pub use self::spi1 as spi3;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#SPI1)
 pub type SPI4 = crate::Periph<spi1::RegisterBlock, 0x4200_3400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI4").finish()
@@ -1545,6 +1620,7 @@ pub use self::spi1 as spi4;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#SPI1)
 pub type SPI5 = crate::Periph<spi1::RegisterBlock, 0x4200_5000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI5").finish()
@@ -1556,6 +1632,7 @@ pub use self::spi1 as spi5;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#SPI1)
 pub type SPI6 = crate::Periph<spi1::RegisterBlock, 0x5800_1400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI6").finish()
@@ -1567,6 +1644,7 @@ pub use self::spi1 as spi6;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#TAMP)
 pub type TAMP = crate::Periph<tamp::RegisterBlock, 0x5800_4400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TAMP {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TAMP").finish()
@@ -1578,6 +1656,7 @@ pub mod tamp;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#TIM1)
 pub type TIM1 = crate::Periph<tim1::RegisterBlock, 0x4200_0000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM1").finish()
@@ -1589,6 +1668,7 @@ pub mod tim1;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#TIM2)
 pub type TIM2 = crate::Periph<tim2::RegisterBlock, 0x4000_0000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM2").finish()
@@ -1600,6 +1680,7 @@ pub mod tim2;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#TIM2)
 pub type TIM3 = crate::Periph<tim2::RegisterBlock, 0x4000_0400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM3").finish()
@@ -1611,6 +1692,7 @@ pub use self::tim2 as tim3;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#TIM2)
 pub type TIM4 = crate::Periph<tim2::RegisterBlock, 0x4000_0800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM4").finish()
@@ -1622,6 +1704,7 @@ pub use self::tim2 as tim4;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#TIM2)
 pub type TIM5 = crate::Periph<tim2::RegisterBlock, 0x4000_0c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM5").finish()
@@ -1633,6 +1716,7 @@ pub use self::tim2 as tim5;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#TIM6)
 pub type TIM6 = crate::Periph<tim6::RegisterBlock, 0x4000_1000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM6").finish()
@@ -1644,6 +1728,7 @@ pub mod tim6;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#TIM6)
 pub type TIM7 = crate::Periph<tim6::RegisterBlock, 0x4000_1400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM7").finish()
@@ -1655,6 +1740,7 @@ pub use self::tim6 as tim7;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#TIM9)
 pub type TIM9 = crate::Periph<tim9::RegisterBlock, 0x4200_4c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM9").finish()
@@ -1666,6 +1752,7 @@ pub mod tim9;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#TIM9)
 pub type TIM12 = crate::Periph<tim9::RegisterBlock, 0x4000_1800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM12").finish()
@@ -1677,6 +1764,7 @@ pub use self::tim9 as tim12;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#TIM13)
 pub type TIM13 = crate::Periph<tim13::RegisterBlock, 0x4000_1c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM13").finish()
@@ -1688,6 +1776,7 @@ pub mod tim13;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#TIM13)
 pub type TIM14 = crate::Periph<tim13::RegisterBlock, 0x4000_2000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM14 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM14").finish()
@@ -1699,6 +1788,7 @@ pub use self::tim13 as tim14;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#TIM15)
 pub type TIM15 = crate::Periph<tim15::RegisterBlock, 0x4200_4000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM15 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM15").finish()
@@ -1710,6 +1800,7 @@ pub mod tim15;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#TIM16)
 pub type TIM16 = crate::Periph<tim16::RegisterBlock, 0x4200_4400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM16 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM16").finish()
@@ -1721,6 +1812,7 @@ pub mod tim16;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#TIM16)
 pub type TIM17 = crate::Periph<tim16::RegisterBlock, 0x4200_4800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM17 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM17").finish()
@@ -1732,6 +1824,7 @@ pub use self::tim16 as tim17;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#UCPD)
 pub type UCPD = crate::Periph<ucpd::RegisterBlock, 0x4000_ec00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for UCPD {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UCPD").finish()
@@ -1743,6 +1836,7 @@ pub mod ucpd;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#USART1)
 pub type USART1 = crate::Periph<usart1::RegisterBlock, 0x4200_1000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for USART1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USART1").finish()
@@ -1754,6 +1848,7 @@ pub mod usart1;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#USART1)
 pub type USART2 = crate::Periph<usart1::RegisterBlock, 0x4000_4400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for USART2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USART2").finish()
@@ -1765,6 +1860,7 @@ pub use self::usart1 as usart2;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#USART1)
 pub type USART3 = crate::Periph<usart1::RegisterBlock, 0x4000_4800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for USART3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USART3").finish()
@@ -1776,6 +1872,7 @@ pub use self::usart1 as usart3;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#USART1)
 pub type UART4 = crate::Periph<usart1::RegisterBlock, 0x4000_4c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for UART4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART4").finish()
@@ -1787,6 +1884,7 @@ pub use self::usart1 as uart4;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#USART1)
 pub type UART5 = crate::Periph<usart1::RegisterBlock, 0x4000_5000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for UART5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART5").finish()
@@ -1798,6 +1896,7 @@ pub use self::usart1 as uart5;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#USART1)
 pub type UART7 = crate::Periph<usart1::RegisterBlock, 0x4000_7800>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for UART7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART7").finish()
@@ -1809,6 +1908,7 @@ pub use self::usart1 as uart7;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#USART1)
 pub type UART8 = crate::Periph<usart1::RegisterBlock, 0x4000_7c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for UART8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART8").finish()
@@ -1820,6 +1920,7 @@ pub use self::usart1 as uart8;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#VREFBUF)
 pub type VREFBUF = crate::Periph<vrefbuf::RegisterBlock, 0x5800_3c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for VREFBUF {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VREFBUF").finish()
@@ -1831,6 +1932,7 @@ pub mod vrefbuf;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#WWDG)
 pub type WWDG = crate::Periph<wwdg::RegisterBlock, 0x4000_2c00>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for WWDG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WWDG").finish()
@@ -1842,6 +1944,7 @@ pub mod wwdg;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#XSPI1)
 pub type XSPI1 = crate::Periph<xspi1::RegisterBlock, 0x5200_5000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for XSPI1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XSPI1").finish()
@@ -1853,6 +1956,7 @@ pub mod xspi1;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#XSPI1)
 pub type XSPI2 = crate::Periph<xspi1::RegisterBlock, 0x5200_a000>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for XSPI2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XSPI2").finish()
@@ -1864,6 +1968,7 @@ pub use self::xspi1 as xspi2;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#XSPIM1)
 pub type XSPIM1 = crate::Periph<xspim1::RegisterBlock, 0x5200_b400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for XSPIM1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XSPIM1").finish()
@@ -1875,6 +1980,7 @@ pub mod xspim1;
 ///
 ///See peripheral [structure](https://stm32-rs.github.io/stm32-rs/STM32H7S.html#GPIOB)
 pub type GPIOB = crate::Periph<gpiob::RegisterBlock, 0x5802_0400>;
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOB {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOB").finish()

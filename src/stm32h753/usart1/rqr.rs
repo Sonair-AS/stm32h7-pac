@@ -20,7 +20,8 @@ impl From<crate::W<RQR_SPEC>> for W {
     }
 }
 #[doc = "Transmit data flush request\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TXFRQ_AW {
     #[doc = "1: Set the TXE flags. This allows to discard the transmit data"]
     Discard = 1,
@@ -41,7 +42,8 @@ impl<'a, const O: u8> TXFRQ_W<'a, O> {
     }
 }
 #[doc = "Receive data flush request\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RXFRQ_AW {
     #[doc = "1: clears the RXNE flag. This allows to discard the received data without reading it, and avoid an overrun condition"]
     Discard = 1,
@@ -62,7 +64,8 @@ impl<'a, const O: u8> RXFRQ_W<'a, O> {
     }
 }
 #[doc = "Mute mode request\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MMRQ_AW {
     #[doc = "1: Puts the USART in mute mode and sets the RWU flag"]
     Mute = 1,
@@ -83,7 +86,8 @@ impl<'a, const O: u8> MMRQ_W<'a, O> {
     }
 }
 #[doc = "Send break request\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SBKRQ_AW {
     #[doc = "1: sets the SBKF flag and request to send a BREAK on the line, as soon as the transmit machine is available"]
     Break = 1,
@@ -104,7 +108,8 @@ impl<'a, const O: u8> SBKRQ_W<'a, O> {
     }
 }
 #[doc = "Auto baud rate request\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ABRRQ_AW {
     #[doc = "1: resets the ABRF flag in the USART_ISR and request an automatic baud rate measurement on the next received data frame"]
     Request = 1,

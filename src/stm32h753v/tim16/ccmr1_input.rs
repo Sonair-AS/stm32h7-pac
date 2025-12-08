@@ -35,7 +35,8 @@ impl From<crate::W<CCMR1_INPUT_SPEC>> for W {
     }
 }
 #[doc = "Input capture 1 filter\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum IC1F_A {
     #[doc = "0: No filter, sampling is done at fDTS"]
@@ -274,7 +275,8 @@ pub type IC1PSC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `IC1PSC` writer - Input capture 1 prescaler"]
 pub type IC1PSC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CCMR1_INPUT_SPEC, u8, u8, 2, O>;
 #[doc = "Capture/Compare 1 selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum CC1S_A {
     #[doc = "1: CC1 channel is configured as input, IC1 is mapped on TI1"]

@@ -35,7 +35,8 @@ impl From<crate::W<D3AMR_SPEC>> for W {
     }
 }
 #[doc = "BDMA and DMAMUX Autonomous mode enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum BDMAAMEN_A {
     #[doc = "0: Clock disabled in autonomous mode"]
     Disabled = 0,

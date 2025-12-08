@@ -6,7 +6,8 @@ pub type W = crate::W<SRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum DMAUDR1 {
     ///0: No DMA underrun error condition occurred for DAC channel x
     NoUnderrun = 0,
@@ -62,7 +63,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CAL_FLAG1 {
     ///0: Calibration trimming value is lower than the offset correction value
     Lower = 0,
@@ -101,7 +103,8 @@ impl CAL_FLAG_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum BWST1 {
     ///0: There is no write operation of DAC_SHSR1 ongoing: DAC_SHSR1 can be written
     Idle = 0,

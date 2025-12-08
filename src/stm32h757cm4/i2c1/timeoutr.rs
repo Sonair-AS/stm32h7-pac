@@ -10,7 +10,8 @@ pub type TIMEOUTA_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16, crate::Safe>
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum TIDLE {
     ///0: TIMEOUTA is used to detect SCL low timeout
     Disabled = 0,
@@ -66,7 +67,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum TIMOUTEN {
     ///0: SCL timeout detection is disabled
     Disabled = 0,
@@ -126,7 +128,8 @@ pub type TIMEOUTB_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16, crate::Safe>
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum TEXTEN {
     ///0: Extended clock timeout detection is disabled
     Disabled = 0,

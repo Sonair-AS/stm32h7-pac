@@ -35,7 +35,8 @@ impl From<crate::W<APB3ENR_SPEC>> for W {
     }
 }
 #[doc = "LTDC clock enable Provides the clock (ltdc_pclk, ltdc_aclk, ltdc_ker_ck) to the LTDC block. Set and reset by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LTDCEN_A {
     #[doc = "0: The selected clock is disabled"]
     Disabled = 0,

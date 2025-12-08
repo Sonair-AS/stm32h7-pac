@@ -35,7 +35,8 @@ impl From<crate::W<IER_SPEC>> for W {
     }
 }
 #[doc = "Direction change to down Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DOWNIE_A {
     #[doc = "0: DOWN interrupt disabled"]
     Disabled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> DOWNIE_W<'a, O> {
     }
 }
 #[doc = "Direction change to UP Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UPIE_A {
     #[doc = "0: UP interrupt disabled"]
     Disabled = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> UPIE_W<'a, O> {
     }
 }
 #[doc = "Autoreload register update OK Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ARROKIE_A {
     #[doc = "0: ARROK interrupt disabled"]
     Disabled = 0,
@@ -185,7 +188,8 @@ impl<'a, const O: u8> ARROKIE_W<'a, O> {
     }
 }
 #[doc = "Compare register update OK Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CMPOKIE_A {
     #[doc = "0: CMPOK interrupt disabled"]
     Disabled = 0,
@@ -235,7 +239,8 @@ impl<'a, const O: u8> CMPOKIE_W<'a, O> {
     }
 }
 #[doc = "External trigger valid edge Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EXTTRIGIE_A {
     #[doc = "0: EXTTRIG interrupt disabled"]
     Disabled = 0,
@@ -285,7 +290,8 @@ impl<'a, const O: u8> EXTTRIGIE_W<'a, O> {
     }
 }
 #[doc = "Autoreload match Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ARRMIE_A {
     #[doc = "0: ARRM interrupt disabled"]
     Disabled = 0,
@@ -335,7 +341,8 @@ impl<'a, const O: u8> ARRMIE_W<'a, O> {
     }
 }
 #[doc = "Compare match Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CMPMIE_A {
     #[doc = "0: CMPM interrupt disabled"]
     Disabled = 0,

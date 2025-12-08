@@ -35,7 +35,8 @@ impl From<crate::W<C1_AHB1LPENR_SPEC>> for W {
     }
 }
 #[doc = "DMA1 Clock Enable During CSleep Mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DMA1LPEN_A {
     #[doc = "0: The selected clock is disabled during csleep mode"]
     Disabled = 0,

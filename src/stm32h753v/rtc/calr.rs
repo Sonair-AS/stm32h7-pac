@@ -40,7 +40,8 @@ pub type CALM_R = crate::FieldReader<u16, u16>;
 pub type CALM_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, CALR_SPEC, u16, u16, 9, O>;
 #[doc = "Use a 16-second calibration cycle period When CALW16 is set to 1, the 16-second calibration cycle period is selected.This bit must not be set to 1 if CALW8=1. Note: CALM\\[0\\]
 is stuck at 0 when CALW16= 1. Refer to Section24.3.12: RTC smooth digital calibration.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CALW16_A {
     #[doc = "1: When CALW16 is set to ‘1’, the 16-second calibration cycle period is selected.This bit must not be set to ‘1’ if CALW8=1"]
     SixteenSecond = 1,
@@ -81,7 +82,8 @@ impl<'a, const O: u8> CALW16_W<'a, O> {
 }
 #[doc = "Use an 8-second calibration cycle period When CALW8 is set to 1, the 8-second calibration cycle period is selected. Note: CALM\\[1:0\\]
 are stuck at 00; when CALW8= 1. Refer to Section24.3.12: RTC smooth digital calibration.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CALW8_A {
     #[doc = "1: When CALW8 is set to ‘1’, the 8-second calibration cycle period is selected"]
     EightSecond = 1,
@@ -121,7 +123,8 @@ impl<'a, const O: u8> CALW8_W<'a, O> {
     }
 }
 #[doc = "Increase frequency of RTC by 488.5 ppm This feature is intended to be used in conjunction with CALM, which lowers the frequency of the calendar with a fine resolution. if the input frequency is 32768 Hz, the number of RTCCLK pulses added during a 32-second window is calculated as follows: (512 * CALP) - CALM. Refer to Section24.3.12: RTC smooth digital calibration.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CALP_A {
     #[doc = "0: No RTCCLK pulses are added"]
     NoChange = 0,

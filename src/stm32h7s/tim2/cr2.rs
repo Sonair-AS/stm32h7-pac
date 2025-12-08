@@ -6,7 +6,8 @@ pub type W = crate::W<CR2rs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CCDS {
     ///0: CCx DMA request sent when CCx event occurs
     OnCompare = 0,
@@ -66,7 +67,8 @@ pub type MMS_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum TI1S {
     ///0: The TIMx_CH1 pin is connected to TI1 input
     Normal = 0,

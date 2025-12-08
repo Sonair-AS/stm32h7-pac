@@ -35,7 +35,8 @@ impl From<crate::W<C1PR1_SPEC>> for W {
     }
 }
 #[doc = "CPU Event mask on Event input x\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PR0_A {
     #[doc = "0: No trigger request occurred"]
     NotPending = 0,
@@ -71,7 +72,8 @@ impl PR0_R {
     }
 }
 #[doc = "CPU Event mask on Event input x\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PR0_AW {
     #[doc = "1: Clears pending bit"]
     Clear = 1,

@@ -10,7 +10,8 @@ pub type W_W<'a, REG> = crate::FieldWriter<'a, REG, 7, u8, crate::Safe>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum EWIW {
     ///1: interrupt occurs whenever the counter reaches the value 0x40
     Enable = 1,
@@ -54,7 +55,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum WDGTB {
     ///0: Counter clock (PCLK1 div 4096) div 1

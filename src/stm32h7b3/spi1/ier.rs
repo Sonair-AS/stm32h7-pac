@@ -35,7 +35,8 @@ impl From<crate::W<IER_SPEC>> for W {
     }
 }
 #[doc = "Additional number of transactions reload interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TSERFIE_A {
     #[doc = "0: TSER loaded interrupt masked"]
     Masked = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> TSERFIE_W<'a, O> {
     }
 }
 #[doc = "Mode Fault interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MODFIE_A {
     #[doc = "0: Mode fault interrupt masked"]
     Masked = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> MODFIE_W<'a, O> {
     }
 }
 #[doc = "TIFRE interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TIFREIE_A {
     #[doc = "0: TI frame format error interrupt masked"]
     Masked = 0,
@@ -185,7 +188,8 @@ impl<'a, const O: u8> TIFREIE_W<'a, O> {
     }
 }
 #[doc = "CRC Interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CRCEIE_A {
     #[doc = "0: CRC error interrupt masked"]
     Masked = 0,
@@ -235,7 +239,8 @@ impl<'a, const O: u8> CRCEIE_W<'a, O> {
     }
 }
 #[doc = "OVR interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OVRIE_A {
     #[doc = "0: Overrun interrupt masked"]
     Masked = 0,
@@ -285,7 +290,8 @@ impl<'a, const O: u8> OVRIE_W<'a, O> {
     }
 }
 #[doc = "UDR interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UDRIE_A {
     #[doc = "0: Underrun interrupt masked"]
     Masked = 0,
@@ -335,7 +341,8 @@ impl<'a, const O: u8> UDRIE_W<'a, O> {
     }
 }
 #[doc = "TXTFIE interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TXTFIE_A {
     #[doc = "0: Transmission transfer filled interrupt masked"]
     Masked = 0,
@@ -385,7 +392,8 @@ impl<'a, const O: u8> TXTFIE_W<'a, O> {
     }
 }
 #[doc = "EOT, SUSP and TXC interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOTIE_A {
     #[doc = "0: End-of-transfer interrupt masked"]
     Masked = 0,
@@ -435,7 +443,8 @@ impl<'a, const O: u8> EOTIE_W<'a, O> {
     }
 }
 #[doc = "DXP interrupt enabled\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DXPIE_A {
     #[doc = "0: Duplex transfer complete interrupt masked"]
     Masked = 0,
@@ -485,7 +494,8 @@ impl<'a, const O: u8> DXPIE_W<'a, O> {
     }
 }
 #[doc = "TXP interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TXPIE_A {
     #[doc = "0: TX space available interrupt masked"]
     Masked = 0,
@@ -535,7 +545,8 @@ impl<'a, const O: u8> TXPIE_W<'a, O> {
     }
 }
 #[doc = "RXP Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RXPIE_A {
     #[doc = "0: RX data available interrupt masked"]
     Masked = 0,

@@ -14,7 +14,8 @@ impl From<crate::R<ISR_SPEC>> for R {
     }
 }
 #[doc = "Counter direction change up to down\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DOWN_A {
     #[doc = "1: Counter direction change up to down"]
     Set = 1,
@@ -43,7 +44,8 @@ impl DOWN_R {
     }
 }
 #[doc = "Counter direction change down to up\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UP_A {
     #[doc = "1: Counter direction change down to up"]
     Set = 1,
@@ -72,7 +74,8 @@ impl UP_R {
     }
 }
 #[doc = "Autoreload register update OK\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ARROK_A {
     #[doc = "1: Autoreload register update OK"]
     Set = 1,
@@ -101,7 +104,8 @@ impl ARROK_R {
     }
 }
 #[doc = "Compare register update OK\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CMPOK_A {
     #[doc = "1: Compare register update OK"]
     Set = 1,
@@ -130,7 +134,8 @@ impl CMPOK_R {
     }
 }
 #[doc = "External trigger edge event\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EXTTRIG_A {
     #[doc = "1: External trigger edge event"]
     Set = 1,
@@ -159,7 +164,8 @@ impl EXTTRIG_R {
     }
 }
 #[doc = "Autoreload match\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ARRM_A {
     #[doc = "1: Autoreload match"]
     Set = 1,
@@ -188,7 +194,8 @@ impl ARRM_R {
     }
 }
 #[doc = "Compare match\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CMPM_A {
     #[doc = "1: Compare match"]
     Set = 1,

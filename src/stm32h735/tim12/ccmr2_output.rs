@@ -41,7 +41,8 @@ pub use OC3M_3_R as OC4M_3_R;
 #[doc = "Field `OC4M_3` writer - Output Compare 2 mode - bit 3"]
 pub use OC3M_3_W as OC4M_3_W;
 #[doc = "Output Compare 1 mode - bit 3\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OC3M_3_A {
     #[doc = "0: Normal output compare mode (modes 0-7)"]
     Normal = 0,
@@ -117,7 +118,8 @@ pub type OC3CE_R = crate::BitReader<bool>;
 #[doc = "Field `OC3CE` writer - OC3CE"]
 pub type OC3CE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CCMR2_OUTPUT_SPEC, bool, O>;
 #[doc = "OC3M\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum OC3M_A {
     #[doc = "0: The comparison between the output compare register TIMx_CCRy and the counter TIMx_CNT has no effect on the outputs / OpmMode1: Retriggerable OPM mode 1 - In up-counting mode, the channel is active until a trigger event is detected (on TRGI signal). In down-counting mode, the channel is inactive"]

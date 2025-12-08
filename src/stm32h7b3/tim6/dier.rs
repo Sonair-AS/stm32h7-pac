@@ -35,7 +35,8 @@ impl From<crate::W<DIER_SPEC>> for W {
     }
 }
 #[doc = "Update DMA request enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UDE_A {
     #[doc = "0: Update DMA request disabled"]
     Disabled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> UDE_W<'a, O> {
     }
 }
 #[doc = "Update interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UIE_A {
     #[doc = "0: Update interrupt disabled"]
     Disabled = 0,

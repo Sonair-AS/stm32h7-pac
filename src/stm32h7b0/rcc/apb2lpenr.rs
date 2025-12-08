@@ -6,7 +6,8 @@ pub type W = crate::W<APB2LPENRrs>;
 
 Value on reset: 1*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum TIM1LPEN {
     ///0: The selected clock is disabled during csleep mode
     Disabled = 0,

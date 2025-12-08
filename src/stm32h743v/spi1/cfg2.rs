@@ -35,7 +35,8 @@ impl From<crate::W<CFG2_SPEC>> for W {
     }
 }
 #[doc = "Alternate function GPIOs control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum AFCNTR_A {
     #[doc = "0: Peripheral takes no control of GPIOs while disabled"]
     NotControlled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> AFCNTR_W<'a, O> {
     }
 }
 #[doc = "SS output management in master mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SSOM_A {
     #[doc = "0: SS is asserted until data transfer complete"]
     Asserted = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> SSOM_W<'a, O> {
     }
 }
 #[doc = "SS output enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SSOE_A {
     #[doc = "0: SS output is disabled in master mode"]
     Disabled = 0,
@@ -185,7 +188,8 @@ impl<'a, const O: u8> SSOE_W<'a, O> {
     }
 }
 #[doc = "SS input/output polarity\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SSIOP_A {
     #[doc = "0: Low level is active for SS signal"]
     ActiveLow = 0,
@@ -235,7 +239,8 @@ impl<'a, const O: u8> SSIOP_W<'a, O> {
     }
 }
 #[doc = "Software management of SS signal input\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SSM_A {
     #[doc = "0: Software slave management disabled"]
     Disabled = 0,
@@ -285,7 +290,8 @@ impl<'a, const O: u8> SSM_W<'a, O> {
     }
 }
 #[doc = "Clock polarity\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CPOL_A {
     #[doc = "0: CK to 0 when idle"]
     IdleLow = 0,
@@ -335,7 +341,8 @@ impl<'a, const O: u8> CPOL_W<'a, O> {
     }
 }
 #[doc = "Clock phase\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CPHA_A {
     #[doc = "0: The first clock transition is the first data capture edge"]
     FirstEdge = 0,
@@ -385,7 +392,8 @@ impl<'a, const O: u8> CPHA_W<'a, O> {
     }
 }
 #[doc = "Data frame format\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSBFRST_A {
     #[doc = "0: Data is transmitted/received with the MSB first"]
     Msbfirst = 0,
@@ -435,7 +443,8 @@ impl<'a, const O: u8> LSBFRST_W<'a, O> {
     }
 }
 #[doc = "SPI Master\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MASTER_A {
     #[doc = "0: Slave configuration"]
     Slave = 0,
@@ -485,7 +494,8 @@ impl<'a, const O: u8> MASTER_W<'a, O> {
     }
 }
 #[doc = "Serial Protocol\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SP_A {
     #[doc = "0: Motorola SPI protocol"]
@@ -537,7 +547,8 @@ impl<'a, const O: u8> SP_W<'a, O> {
     }
 }
 #[doc = "SPI Communication Mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum COMM_A {
     #[doc = "0: Full duplex"]
@@ -615,7 +626,8 @@ impl<'a, const O: u8> COMM_W<'a, O> {
     }
 }
 #[doc = "Swap functionality of MISO and MOSI pins\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum IOSWP_A {
     #[doc = "0: MISO and MOSI not swapped"]
     Disabled = 0,

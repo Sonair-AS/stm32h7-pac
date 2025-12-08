@@ -35,7 +35,8 @@ impl From<crate::W<AHB2LPENR_SPEC>> for W {
     }
 }
 #[doc = "digital camera interface peripheral clock enable during CSleep mode (DCMI or PSSI depending which IP is active) Set and reset by software.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DCMI_PSSILPEN_A {
     #[doc = "0: The selected clock is disabled during csleep mode"]
     Disabled = 0,

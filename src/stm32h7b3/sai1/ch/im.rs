@@ -35,7 +35,8 @@ impl From<crate::W<IM_SPEC>> for W {
     }
 }
 #[doc = "Overrun/underrun interrupt enable. This bit is set and cleared by software. When this bit is set, an interrupt is generated if the OVRUDR bit in the SAI_xSR register is set.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OVRUDRIE_A {
     #[doc = "0: Interrupt is disabled"]
     Disabled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> OVRUDRIE_W<'a, O> {
     }
 }
 #[doc = "Mute detection interrupt enable. This bit is set and cleared by software. When this bit is set, an interrupt is generated if the MUTEDET bit in the SAI_xSR register is set. This bit has a meaning only if the audio block is configured in receiver mode.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MUTEDETIE_A {
     #[doc = "0: Interrupt is disabled"]
     Disabled = 0,
@@ -136,7 +138,8 @@ impl<'a, const O: u8> MUTEDETIE_W<'a, O> {
 }
 #[doc = "Wrong clock configuration interrupt enable. This bit is set and cleared by software. This bit is taken into account only if the audio block is configured as a master (MODE\\[1\\]
 = 0) and NODIV = 0. It generates an interrupt if the WCKCFG flag in the SAI_xSR register is set. Note: This bit is used only in TDM mode and is meaningless in other modes.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WCKCFGIE_A {
     #[doc = "0: Interrupt is disabled"]
     Disabled = 0,
@@ -188,7 +191,8 @@ impl<'a, const O: u8> WCKCFGIE_W<'a, O> {
     }
 }
 #[doc = "FIFO request interrupt enable. This bit is set and cleared by software. When this bit is set, an interrupt is generated if the FREQ bit in the SAI_xSR register is set. Since the audio block defaults to operate as a transmitter after reset, the MODE bit must be configured before setting FREQIE to avoid a parasitic interruption in receiver mode,\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum FREQIE_A {
     #[doc = "0: Interrupt is disabled"]
     Disabled = 0,
@@ -239,7 +243,8 @@ impl<'a, const O: u8> FREQIE_W<'a, O> {
 }
 #[doc = "Codec not ready interrupt enable (AC97). This bit is set and cleared by software. When the interrupt is enabled, the audio block detects in the slot 0 (tag0) of the AC97 frame if the Codec connected to this line is ready or not. If it is not ready, the CNRDY flag in the SAI_xSR register is set and an interruption i generated. This bit has a meaning only if the AC97 mode is selected through PRTCFG\\[1:0\\]
 bits and the audio block is operates as a receiver.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CNRDYIE_A {
     #[doc = "0: Interrupt is disabled"]
     Disabled = 0,
@@ -291,7 +296,8 @@ impl<'a, const O: u8> CNRDYIE_W<'a, O> {
     }
 }
 #[doc = "Anticipated frame synchronization detection interrupt enable. This bit is set and cleared by software. When this bit is set, an interrupt will be generated if the AFSDET bit in the SAI_xSR register is set. This bit is meaningless in AC97, SPDIF mode or when the audio block operates as a master.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum AFSDETIE_A {
     #[doc = "0: Interrupt is disabled"]
     Disabled = 0,
@@ -341,7 +347,8 @@ impl<'a, const O: u8> AFSDETIE_W<'a, O> {
     }
 }
 #[doc = "Late frame synchronization detection interrupt enable. This bit is set and cleared by software. When this bit is set, an interrupt will be generated if the LFSDET bit is set in the SAI_xSR register. This bit is meaningless in AC97, SPDIF mode or when the audio block operates as a master.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LFSDETIE_A {
     #[doc = "0: Interrupt is disabled"]
     Disabled = 0,

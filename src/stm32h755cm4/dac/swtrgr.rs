@@ -4,7 +4,8 @@ pub type W = crate::W<SWTRGRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum SWTRIG1 {
     ///0: No trigger
     NoTrigger = 0,

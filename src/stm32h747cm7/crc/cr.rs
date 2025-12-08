@@ -35,7 +35,8 @@ impl From<crate::W<CR_SPEC>> for W {
     }
 }
 #[doc = "RESET bit\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RESET_AW {
     #[doc = "1: Resets the CRC calculation unit and sets the data register to 0xFFFF FFFF"]
     Reset = 1,
@@ -56,7 +57,8 @@ impl<'a, const O: u8> RESET_W<'a, O> {
     }
 }
 #[doc = "Polynomial size\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum POLYSIZE_A {
     #[doc = "0: 32-bit polynomial"]
@@ -135,7 +137,8 @@ impl<'a, const O: u8> POLYSIZE_W<'a, O> {
     }
 }
 #[doc = "Reverse input data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum REV_IN_A {
     #[doc = "0: Bit order not affected"]
@@ -213,7 +216,8 @@ impl<'a, const O: u8> REV_IN_W<'a, O> {
     }
 }
 #[doc = "Reverse output data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum REV_OUT_A {
     #[doc = "0: Bit order not affected"]
     Normal = 0,

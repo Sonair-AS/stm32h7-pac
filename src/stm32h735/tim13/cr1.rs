@@ -39,7 +39,8 @@ pub type UIFREMAP_R = crate::BitReader<bool>;
 #[doc = "Field `UIFREMAP` writer - UIF status bit remapping"]
 pub type UIFREMAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
 #[doc = "Clock division\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum CKD_A {
     #[doc = "0: t_DTS = t_CK_INT"]
@@ -104,7 +105,8 @@ impl<'a, const O: u8> CKD_W<'a, O> {
     }
 }
 #[doc = "Auto-reload preload enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ARPE_A {
     #[doc = "0: TIMx_APRR register is not buffered"]
     Disabled = 0,
@@ -162,7 +164,8 @@ pub type DIR_R = crate::BitReader<bool>;
 #[doc = "Field `DIR` writer - Direction"]
 pub type DIR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
 #[doc = "One-pulse mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OPM_A {
     #[doc = "0: Counter is not stopped at update event"]
     Disabled = 0,
@@ -212,7 +215,8 @@ impl<'a, const O: u8> OPM_W<'a, O> {
     }
 }
 #[doc = "Update request source\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum URS_A {
     #[doc = "0: Any of counter overflow/underflow, setting UG, or update through slave mode, generates an update interrupt or DMA request"]
     AnyEvent = 0,
@@ -262,7 +266,8 @@ impl<'a, const O: u8> URS_W<'a, O> {
     }
 }
 #[doc = "Update disable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UDIS_A {
     #[doc = "0: Update event enabled"]
     Enabled = 0,
@@ -312,7 +317,8 @@ impl<'a, const O: u8> UDIS_W<'a, O> {
     }
 }
 #[doc = "Counter enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CEN_A {
     #[doc = "0: Counter disabled"]
     Disabled = 0,

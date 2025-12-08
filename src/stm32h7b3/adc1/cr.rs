@@ -35,7 +35,8 @@ impl From<crate::W<CR_SPEC>> for W {
     }
 }
 #[doc = "ADC calibration\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADCAL_A {
     #[doc = "0: Calibration complete"]
     Complete = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> ADCAL_W<'a, O> {
     }
 }
 #[doc = "ADC differential mode for calibration\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADCALDIF_A {
     #[doc = "0: Calibration for single-ended mode"]
     SingleEnded = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> ADCALDIF_W<'a, O> {
     }
 }
 #[doc = "ADC deep power down enable\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DEEPPWD_A {
     #[doc = "0: ADC not in deep power down"]
     PowerUp = 0,
@@ -185,7 +188,8 @@ impl<'a, const O: u8> DEEPPWD_W<'a, O> {
     }
 }
 #[doc = "ADC voltage regulator enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADVREGEN_A {
     #[doc = "0: ADC voltage regulator disabled"]
     Disabled = 0,
@@ -265,7 +269,8 @@ pub use LINCALRDYW1_W as LINCALRDYW3_W;
 #[doc = "Field `LINCALRDYW2` writer - Linearity calibration ready Word 2"]
 pub use LINCALRDYW1_W as LINCALRDYW2_W;
 #[doc = "Linearity calibration ready Word 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LINCALRDYW1_A {
     #[doc = "0: LINCALFACT Word Read"]
     Reset = 0,
@@ -315,7 +320,8 @@ impl<'a, const O: u8> LINCALRDYW1_W<'a, O> {
     }
 }
 #[doc = "Linearity calibration\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADCALLIN_A {
     #[doc = "0: ADC calibration without linearaity calibration"]
     NoLinearity = 0,
@@ -365,7 +371,8 @@ impl<'a, const O: u8> ADCALLIN_W<'a, O> {
     }
 }
 #[doc = "Boost mode control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum BOOST_A {
     #[doc = "0: Boost mode used when ADC clock ≤ 6.25 MHz"]
@@ -451,7 +458,8 @@ pub use ADSTP_R as JADSTP_R;
 #[doc = "Field `JADSTP` writer - ADC group injected conversion stop"]
 pub use ADSTP_W as JADSTP_W;
 #[doc = "ADC group regular conversion stop\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADSTP_A {
     #[doc = "0: No stop command active"]
     NotStopping = 0,
@@ -487,7 +495,8 @@ impl ADSTP_R {
     }
 }
 #[doc = "ADC group regular conversion stop\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADSTP_AW {
     #[doc = "1: Stop the active conversion"]
     StopConversion = 1,
@@ -516,7 +525,8 @@ pub use ADSTART_R as JADSTART_R;
 #[doc = "Field `JADSTART` writer - ADC group injected conversion start"]
 pub use ADSTART_W as JADSTART_W;
 #[doc = "ADC group regular conversion start\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADSTART_A {
     #[doc = "0: No conversion ongoing"]
     NotActive = 0,
@@ -552,7 +562,8 @@ impl ADSTART_R {
     }
 }
 #[doc = "ADC group regular conversion start\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADSTART_AW {
     #[doc = "1: Start the ADC conversion (may be delayed for hardware triggers)"]
     StartConversion = 1,
@@ -573,7 +584,8 @@ impl<'a, const O: u8> ADSTART_W<'a, O> {
     }
 }
 #[doc = "ADC disable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADDIS_A {
     #[doc = "0: No disable command active"]
     NotDisabling = 0,
@@ -609,7 +621,8 @@ impl ADDIS_R {
     }
 }
 #[doc = "ADC disable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADDIS_AW {
     #[doc = "1: Disable the ADC"]
     Disable = 1,
@@ -630,7 +643,8 @@ impl<'a, const O: u8> ADDIS_W<'a, O> {
     }
 }
 #[doc = "ADC enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADEN_A {
     #[doc = "0: ADC disabled"]
     Disabled = 0,
@@ -666,7 +680,8 @@ impl ADEN_R {
     }
 }
 #[doc = "ADC enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADEN_AW {
     #[doc = "1: Enable the ADC"]
     Enabled = 1,

@@ -35,7 +35,8 @@ impl From<crate::W<BDCR_SPEC>> for W {
     }
 }
 #[doc = "LSE oscillator enabled\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSEON_A {
     #[doc = "0: LSE oscillator Off"]
     Off = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> LSEON_W<'a, O> {
     }
 }
 #[doc = "LSE oscillator ready\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSERDY_A {
     #[doc = "0: LSE oscillator not ready"]
     NotReady = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> LSERDY_W<'a, O> {
     }
 }
 #[doc = "LSE oscillator bypass\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSEBYP_A {
     #[doc = "0: LSE crystal oscillator not bypassed"]
     NotBypassed = 0,
@@ -185,7 +188,8 @@ impl<'a, const O: u8> LSEBYP_W<'a, O> {
     }
 }
 #[doc = "LSE oscillator driving capability\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum LSEDRV_A {
     #[doc = "0: Lowest LSE oscillator driving capability"]
@@ -263,7 +267,8 @@ impl<'a, const O: u8> LSEDRV_W<'a, O> {
     }
 }
 #[doc = "LSE clock security system enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSECSSON_A {
     #[doc = "0: Clock security system on 32 kHz oscillator off"]
     SecurityOff = 0,
@@ -313,7 +318,8 @@ impl<'a, const O: u8> LSECSSON_W<'a, O> {
     }
 }
 #[doc = "LSE clock security system failure detection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSECSSD_A {
     #[doc = "0: No failure detected on 32 kHz oscillator"]
     NoFailure = 0,
@@ -363,7 +369,8 @@ impl<'a, const O: u8> LSECSSD_W<'a, O> {
     }
 }
 #[doc = "RTC clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum RTCSEL_A {
     #[doc = "0: No clock"]
@@ -441,7 +448,8 @@ impl<'a, const O: u8> RTCSEL_W<'a, O> {
     }
 }
 #[doc = "RTC clock enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RTCEN_A {
     #[doc = "0: RTC clock disabled"]
     Disabled = 0,
@@ -491,7 +499,8 @@ impl<'a, const O: u8> RTCEN_W<'a, O> {
     }
 }
 #[doc = "VSwitch domain software reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum BDRST_A {
     #[doc = "1: Resets the entire VSW domain"]
     Reset = 1,

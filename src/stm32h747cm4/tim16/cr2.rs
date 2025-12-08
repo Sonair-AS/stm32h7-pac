@@ -35,7 +35,8 @@ impl From<crate::W<CR2_SPEC>> for W {
     }
 }
 #[doc = "Output Idle state 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OIS1N_A {
     #[doc = "0: OC1N=0 after a dead-time when MOE=0"]
     Low = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> OIS1N_W<'a, O> {
     }
 }
 #[doc = "Output Idle state 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OIS1_A {
     #[doc = "0: OC1=0 (after a dead-time if OC1N is implemented) when MOE=0"]
     Low = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> OIS1_W<'a, O> {
     }
 }
 #[doc = "Capture/compare DMA selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CCDS_A {
     #[doc = "0: CCx DMA request sent when CCx event occurs"]
     OnCompare = 0,
@@ -185,7 +188,8 @@ impl<'a, const O: u8> CCDS_W<'a, O> {
     }
 }
 #[doc = "Capture/compare control update selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CCUS_A {
     #[doc = "0: Capture/compare are updated only by setting the COMG bit"]
     Default = 0,
@@ -235,7 +239,8 @@ impl<'a, const O: u8> CCUS_W<'a, O> {
     }
 }
 #[doc = "Capture/compare preloaded control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CCPC_A {
     #[doc = "0: CCxE, CCxNE and OCxM bits are not preloaded"]
     NotPreloaded = 0,

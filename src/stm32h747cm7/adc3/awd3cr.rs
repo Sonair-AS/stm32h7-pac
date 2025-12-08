@@ -35,7 +35,8 @@ impl From<crate::W<AWD3CR_SPEC>> for W {
     }
 }
 #[doc = "ADC analog watchdog 3 monitored channel selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum AWD3CH0_A {
     #[doc = "0: Input channel not monitored by AWDx"]
     NotMonitored = 0,

@@ -35,7 +35,8 @@ impl From<crate::W<DIER_SPEC>> for W {
     }
 }
 #[doc = "Update interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UIE_A {
     #[doc = "0: Update interrupt disabled"]
     Disabled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> UIE_W<'a, O> {
     }
 }
 #[doc = "Capture/Compare 1 interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CC1IE_A {
     #[doc = "0: CC1 interrupt disabled"]
     Disabled = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> CC1IE_W<'a, O> {
     }
 }
 #[doc = "COM interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum COMIE_A {
     #[doc = "0: COM interrupt disabled"]
     Disabled = 0,
@@ -185,7 +188,8 @@ impl<'a, const O: u8> COMIE_W<'a, O> {
     }
 }
 #[doc = "Break interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum BIE_A {
     #[doc = "0: Break interrupt disabled"]
     Disabled = 0,
@@ -239,7 +243,8 @@ pub type UDE_R = crate::BitReader<bool>;
 #[doc = "Field `UDE` writer - Update DMA request enable"]
 pub type UDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIER_SPEC, bool, O>;
 #[doc = "Capture/Compare 1 DMA request enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CC1DE_A {
     #[doc = "0: CC1 DMA request disabled"]
     Disabled = 0,

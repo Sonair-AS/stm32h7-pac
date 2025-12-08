@@ -35,7 +35,8 @@ impl From<crate::W<D3CCIPR_SPEC>> for W {
     }
 }
 #[doc = "LPUART1 kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum LPUART1SEL_A {
     #[doc = "0: rcc_pclk_d3 selected as peripheral clock"]
@@ -140,7 +141,8 @@ impl<'a, const O: u8> LPUART1SEL_W<'a, O> {
     }
 }
 #[doc = "I2C4 kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum I2C4SEL_A {
     #[doc = "0: rcc_pclk4 selected as peripheral clock"]
@@ -219,7 +221,8 @@ impl<'a, const O: u8> I2C4SEL_W<'a, O> {
     }
 }
 #[doc = "LPTIM2 kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum LPTIM2SEL_A {
     #[doc = "0: rcc_pclk4 selected as peripheral clock"]
@@ -330,7 +333,8 @@ pub use LPTIM2SEL_R as LPTIM345SEL_R;
 #[doc = "Field `LPTIM345SEL` writer - LPTIM3,4,5 kernel clock source selection"]
 pub use LPTIM2SEL_W as LPTIM345SEL_W;
 #[doc = "SAR ADC kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum ADCSEL_A {
     #[doc = "0: pll2_p selected as peripheral clock"]
@@ -395,7 +399,8 @@ impl<'a, const O: u8> ADCSEL_W<'a, O> {
     }
 }
 #[doc = "Sub-Block A of SAI4 kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SAI4ASEL_A {
     #[doc = "0: pll1_q selected as peripheral clock"]
@@ -493,7 +498,8 @@ pub use SAI4ASEL_R as SAI4BSEL_R;
 #[doc = "Field `SAI4BSEL` writer - Sub-Block B of SAI4 kernel clock source selection"]
 pub use SAI4ASEL_W as SAI4BSEL_W;
 #[doc = "SPI6 kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SPI6SEL_A {
     #[doc = "0: rcc_pclk4 selected as peripheral clock"]

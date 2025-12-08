@@ -4,7 +4,8 @@ pub type R = crate::R<CIFRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum LSIRDYFR {
     ///0: No clock ready interrupt
     NotInterrupted = 0,

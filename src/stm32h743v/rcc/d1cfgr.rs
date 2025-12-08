@@ -35,7 +35,8 @@ impl From<crate::W<D1CFGR_SPEC>> for W {
     }
 }
 #[doc = "D1 domain AHB prescaler\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum HPRE_A {
     #[doc = "0: sys_ck not divided"]
@@ -178,7 +179,8 @@ impl<'a, const O: u8> HPRE_W<'a, O> {
     }
 }
 #[doc = "D1 domain APB3 prescaler\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum D1PPRE_A {
     #[doc = "0: rcc_hclk not divided"]

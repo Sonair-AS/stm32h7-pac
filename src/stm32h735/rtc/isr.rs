@@ -35,7 +35,8 @@ impl From<crate::W<ISR_SPEC>> for W {
     }
 }
 #[doc = "Alarm A write flag This bit is set by hardware when Alarm A values can be changed, after the ALRAE bit has been set to 0 in RTC_CR. It is cleared by hardware in initialization mode.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ALRAWF_A {
     #[doc = "0: Alarm update not allowed"]
     UpdateNotAllowed = 0,
@@ -75,7 +76,8 @@ pub use ALRAWF_A as ALRBWF_A;
 #[doc = "Field `ALRBWF` reader - Alarm B write flag This bit is set by hardware when Alarm B values can be changed, after the ALRBE bit has been set to 0 in RTC_CR. It is cleared by hardware in initialization mode."]
 pub use ALRAWF_R as ALRBWF_R;
 #[doc = "Wakeup timer write flag This bit is set by hardware up to 2 RTCCLK cycles after the WUTE bit has been set to 0 in RTC_CR, and is cleared up to 2 RTCCLK cycles after the WUTE bit has been set to 1. The wakeup timer values can be changed when WUTE bit is cleared and WUTWF is set.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WUTWF_A {
     #[doc = "0: Wakeup timer configuration update not allowed"]
     UpdateNotAllowed = 0,
@@ -111,7 +113,8 @@ impl WUTWF_R {
     }
 }
 #[doc = "Shift operation pending This flag is set by hardware as soon as a shift operation is initiated by a write to the RTC_SHIFTR register. It is cleared by hardware when the corresponding shift operation has been executed. Writing to the SHPF bit has no effect.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SHPF_A {
     #[doc = "0: No shift operation is pending"]
     NoShiftPending = 0,
@@ -147,7 +150,8 @@ impl SHPF_R {
     }
 }
 #[doc = "Initialization status flag This bit is set by hardware when the calendar year field is different from 0 (Backup domain reset state).\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum INITS_A {
     #[doc = "0: Calendar has not been initialized"]
     NotInitalized = 0,
@@ -183,7 +187,8 @@ impl INITS_R {
     }
 }
 #[doc = "Registers synchronization flag This bit is set by hardware each time the calendar registers are copied into the shadow registers (RTC_SSRx, RTC_TRx and RTC_DRx). This bit is cleared by hardware in initialization mode, while a shift operation is pending (SHPF=1), or when in bypass shadow register mode (BYPSHAD=1). This bit can also be cleared by software. It is cleared either by software or by hardware in initialization mode.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RSF_A {
     #[doc = "0: Calendar shadow registers not yet synchronized"]
     NotSynced = 0,
@@ -219,7 +224,8 @@ impl RSF_R {
     }
 }
 #[doc = "Registers synchronization flag This bit is set by hardware each time the calendar registers are copied into the shadow registers (RTC_SSRx, RTC_TRx and RTC_DRx). This bit is cleared by hardware in initialization mode, while a shift operation is pending (SHPF=1), or when in bypass shadow register mode (BYPSHAD=1). This bit can also be cleared by software. It is cleared either by software or by hardware in initialization mode.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RSF_AW {
     #[doc = "0: This flag is cleared by software by writing 0"]
     Clear = 0,
@@ -240,7 +246,8 @@ impl<'a, const O: u8> RSF_W<'a, O> {
     }
 }
 #[doc = "Initialization flag When this bit is set to 1, the RTC is in initialization state, and the time, date and prescaler registers can be updated.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum INITF_A {
     #[doc = "0: Calendar registers update is not allowed"]
     NotAllowed = 0,
@@ -276,7 +283,8 @@ impl INITF_R {
     }
 }
 #[doc = "Initialization mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum INIT_A {
     #[doc = "0: Free running mode"]
     FreeRunningMode = 0,
@@ -326,7 +334,8 @@ impl<'a, const O: u8> INIT_W<'a, O> {
     }
 }
 #[doc = "Alarm A flag This flag is set by hardware when the time/date registers (RTC_TR and RTC_DR) match the Alarm A register (RTC_ALRMAR). This flag is cleared by software by writing 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ALRAF_A {
     #[doc = "1: This flag is set by hardware when the time/date registers (RTC_TR and RTC_DR) match the Alarm A register (RTC_ALRMAR)"]
     Match = 1,
@@ -355,7 +364,8 @@ impl ALRAF_R {
     }
 }
 #[doc = "Alarm A flag This flag is set by hardware when the time/date registers (RTC_TR and RTC_DR) match the Alarm A register (RTC_ALRMAR). This flag is cleared by software by writing 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ALRAF_AW {
     #[doc = "0: This flag is cleared by software by writing 0"]
     Clear = 0,
@@ -376,7 +386,8 @@ impl<'a, const O: u8> ALRAF_W<'a, O> {
     }
 }
 #[doc = "Alarm B flag This flag is set by hardware when the time/date registers (RTC_TR and RTC_DR) match the Alarm B register (RTC_ALRMBR). This flag is cleared by software by writing 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ALRBF_A {
     #[doc = "1: This flag is set by hardware when the time/date registers (RTC_TR and RTC_DR) match the Alarm B register (RTC_ALRMBR)"]
     Match = 1,
@@ -405,7 +416,8 @@ impl ALRBF_R {
     }
 }
 #[doc = "Alarm B flag This flag is set by hardware when the time/date registers (RTC_TR and RTC_DR) match the Alarm B register (RTC_ALRMBR). This flag is cleared by software by writing 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ALRBF_AW {
     #[doc = "0: This flag is cleared by software by writing 0"]
     Clear = 0,
@@ -426,7 +438,8 @@ impl<'a, const O: u8> ALRBF_W<'a, O> {
     }
 }
 #[doc = "Wakeup timer flag This flag is set by hardware when the wakeup auto-reload counter reaches 0. This flag is cleared by software by writing 0. This flag must be cleared by software at least 1.5 RTCCLK periods before WUTF is set to 1 again.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WUTF_A {
     #[doc = "1: This flag is set by hardware when the wakeup auto-reload counter reaches 0"]
     Zero = 1,
@@ -455,7 +468,8 @@ impl WUTF_R {
     }
 }
 #[doc = "Wakeup timer flag This flag is set by hardware when the wakeup auto-reload counter reaches 0. This flag is cleared by software by writing 0. This flag must be cleared by software at least 1.5 RTCCLK periods before WUTF is set to 1 again.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WUTF_AW {
     #[doc = "0: This flag is cleared by software by writing 0"]
     Clear = 0,
@@ -476,7 +490,8 @@ impl<'a, const O: u8> WUTF_W<'a, O> {
     }
 }
 #[doc = "Time-stamp flag This flag is set by hardware when a time-stamp event occurs. This flag is cleared by software by writing 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TSF_A {
     #[doc = "1: This flag is set by hardware when a time-stamp event occurs"]
     TimestampEvent = 1,
@@ -505,7 +520,8 @@ impl TSF_R {
     }
 }
 #[doc = "Time-stamp flag This flag is set by hardware when a time-stamp event occurs. This flag is cleared by software by writing 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TSF_AW {
     #[doc = "0: This flag is cleared by software by writing 0"]
     Clear = 0,
@@ -526,7 +542,8 @@ impl<'a, const O: u8> TSF_W<'a, O> {
     }
 }
 #[doc = "Time-stamp overflow flag This flag is set by hardware when a time-stamp event occurs while TSF is already set. This flag is cleared by software by writing 0. It is recommended to check and then clear TSOVF only after clearing the TSF bit. Otherwise, an overflow might not be noticed if a time-stamp event occurs immediately before the TSF bit is cleared.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TSOVF_A {
     #[doc = "1: This flag is set by hardware when a time-stamp event occurs while TSF is already set"]
     Overflow = 1,
@@ -555,7 +572,8 @@ impl TSOVF_R {
     }
 }
 #[doc = "Time-stamp overflow flag This flag is set by hardware when a time-stamp event occurs while TSF is already set. This flag is cleared by software by writing 0. It is recommended to check and then clear TSOVF only after clearing the TSF bit. Otherwise, an overflow might not be noticed if a time-stamp event occurs immediately before the TSF bit is cleared.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TSOVF_AW {
     #[doc = "0: This flag is cleared by software by writing 0"]
     Clear = 0,
@@ -576,7 +594,8 @@ impl<'a, const O: u8> TSOVF_W<'a, O> {
     }
 }
 #[doc = "RTC_TAMP1 detection flag This flag is set by hardware when a tamper detection event is detected on the RTC_TAMP1 input. It is cleared by software writing 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TAMP1F_A {
     #[doc = "1: This flag is set by hardware when a tamper detection event is detected on the RTC_TAMPx input"]
     Tampered = 1,
@@ -605,7 +624,8 @@ impl TAMP1F_R {
     }
 }
 #[doc = "RTC_TAMP1 detection flag This flag is set by hardware when a tamper detection event is detected on the RTC_TAMP1 input. It is cleared by software writing 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TAMP1F_AW {
     #[doc = "0: Flag cleared by software writing 0"]
     Clear = 0,
@@ -642,7 +662,8 @@ pub use TAMP1F_W as TAMP2F_W;
 #[doc = "Field `TAMP3F` writer - RTC_TAMP3 detection flag This flag is set by hardware when a tamper detection event is detected on the RTC_TAMP3 input. It is cleared by software writing 0"]
 pub use TAMP1F_W as TAMP3F_W;
 #[doc = "Recalibration pending Flag The RECALPF status flag is automatically set to 1 when software writes to the RTC_CALR register, indicating that the RTC_CALR register is blocked. When the new calibration settings are taken into account, this bit returns to 0. Refer to Re-calibration on-the-fly.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RECALPF_A {
     #[doc = "1: The RECALPF status flag is automatically set to 1 when software writes to the RTC_CALR register, indicating that the RTC_CALR register is blocked. When the new calibration settings are taken into account, this bit returns to 0"]
     Pending = 1,
@@ -671,7 +692,8 @@ impl RECALPF_R {
     }
 }
 #[doc = "Internal tTime-stamp flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ITSF_A {
     #[doc = "1: This flag is set by hardware when a time-stamp on the internal event occurs"]
     Match = 1,
@@ -700,7 +722,8 @@ impl ITSF_R {
     }
 }
 #[doc = "Internal tTime-stamp flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ITSF_AW {
     #[doc = "0: This flag is cleared by software by writing 0, and must be cleared together with TSF bit by writing 0 in both bits"]
     Clear = 0,

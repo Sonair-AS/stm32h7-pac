@@ -4,7 +4,8 @@ pub type W = crate::W<EGRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum UG {
     ///1: Re-initializes the timer counter and generates an update of the registers.
     Update = 1,

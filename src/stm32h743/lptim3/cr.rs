@@ -35,7 +35,8 @@ impl From<crate::W<CR_SPEC>> for W {
     }
 }
 #[doc = "LPTIM Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ENABLE_A {
     #[doc = "0: LPTIM is disabled"]
     Disabled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> ENABLE_W<'a, O> {
     }
 }
 #[doc = "LPTIM start in single mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SNGSTRT_A {
     #[doc = "1: LPTIM start in Single mode"]
     Start = 1,
@@ -123,7 +125,8 @@ impl<'a, const O: u8> SNGSTRT_W<'a, O> {
     }
 }
 #[doc = "Timer start in continuous mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CNTSTRT_A {
     #[doc = "1: Timer start in Continuous mode"]
     Start = 1,

@@ -35,7 +35,8 @@ impl From<crate::W<AHB2RSTR_SPEC>> for W {
     }
 }
 #[doc = "digital camera interface block reset (DCMI or PSSI depending which IP is active) Set and reset by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DCMI_PSSIRST_A {
     #[doc = "1: Reset the selected module"]
     Reset = 1,

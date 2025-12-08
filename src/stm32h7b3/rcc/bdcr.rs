@@ -35,7 +35,8 @@ impl From<crate::W<BDCR_SPEC>> for W {
     }
 }
 #[doc = "LSE oscillator enabled Set and reset by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSEON_A {
     #[doc = "0: LSE oscillator Off"]
     Off = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> LSEON_W<'a, O> {
     }
 }
 #[doc = "LSE oscillator ready Set and reset by hardware to indicate when the LSE is stable. This bit needs 6 cycles of lse_ck clock to fall down after LSEON has been set to 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSERDY_A {
     #[doc = "0: LSE oscillator not ready"]
     NotReady = 0,
@@ -121,7 +123,8 @@ impl LSERDY_R {
     }
 }
 #[doc = "LSE oscillator bypass Set and reset by software to bypass oscillator in debug mode. This bit must not be written when the LSE is enabled (by LSEON) or ready (LSERDY = 1)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSEBYP_A {
     #[doc = "0: LSE crystal oscillator not bypassed"]
     NotBypassed = 0,
@@ -171,7 +174,8 @@ impl<'a, const O: u8> LSEBYP_W<'a, O> {
     }
 }
 #[doc = "LSE oscillator driving capability Set by software to select the driving capability of the LSE oscillator.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum LSEDRV_A {
     #[doc = "0: Lowest LSE oscillator driving capability"]
@@ -249,7 +253,8 @@ impl<'a, const O: u8> LSEDRV_W<'a, O> {
     }
 }
 #[doc = "LSE clock security system enable Set by software to enable the clock security system on 32 kHz oscillator. LSECSSON must be enabled after LSE is enabled (LSEON enabled) and ready (LSERDY set by hardware) and after RTCSEL is selected. Once enabled, this bit cannot be disabled, except after a LSE failure detection (LSECSSD = 1). In that case the software must disable LSECSSON.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSECSSON_A {
     #[doc = "0: Clock security system on 32 kHz oscillator off"]
     SecurityOff = 0,
@@ -299,7 +304,8 @@ impl<'a, const O: u8> LSECSSON_W<'a, O> {
     }
 }
 #[doc = "LSE clock security system failure detection Set by hardware to indicate when a failure has been detected by the clock security system on the external 32 kHz oscillator.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSECSSD_A {
     #[doc = "0: No failure detected on 32 kHz oscillator"]
     NoFailure = 0,
@@ -339,7 +345,8 @@ pub type LSEEXT_R = crate::BitReader<bool>;
 #[doc = "Field `LSEEXT` writer - low-speed external clock type in Bypass mode Set and reset by software to select the external clock type (analog or digital). The external clock must be enabled with the LSEON bit, to be used by the device. The LSEEXT bit can be written only if the LSE oscillator is disabled."]
 pub type LSEEXT_W<'a, const O: u8> = crate::BitWriter<'a, u32, BDCR_SPEC, bool, O>;
 #[doc = "RTC clock source selection Set by software to select the clock source for the RTC. These bits can be written only one time (except in case of failure detection on LSE). These bits must be written before LSECSSON is enabled. The VSWRST bit can be used to reset them, then it can be written one time again. If HSE is selected as RTC clock, this clock is lost when the system is in Stop mode or in case of a pin reset (NRST).\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum RTCSEL_A {
     #[doc = "0: No clock"]
@@ -417,7 +424,8 @@ impl<'a, const O: u8> RTCSEL_W<'a, O> {
     }
 }
 #[doc = "RTC clock enable Set and reset by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RTCEN_A {
     #[doc = "0: RTC clock disabled"]
     Disabled = 0,
@@ -467,7 +475,8 @@ impl<'a, const O: u8> RTCEN_W<'a, O> {
     }
 }
 #[doc = "VSwitch domain software reset Set and reset by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum VSWRST_A {
     #[doc = "1: Resets the entire VSW domain"]
     Reset = 1,

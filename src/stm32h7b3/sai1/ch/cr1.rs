@@ -35,7 +35,8 @@ impl From<crate::W<CR1_SPEC>> for W {
     }
 }
 #[doc = "SAIx audio block mode immediately\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum MODE_A {
     #[doc = "0: Master transmitter"]
@@ -113,7 +114,8 @@ impl<'a, const O: u8> MODE_W<'a, O> {
     }
 }
 #[doc = "Protocol configuration. These bits are set and cleared by software. These bits have to be configured when the audio block is disabled.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum PRTCFG_A {
     #[doc = "0: Free protocol. Free protocol allows to use the powerful configuration of the audio block to address a specific audio protocol"]
@@ -180,7 +182,8 @@ impl<'a, const O: u8> PRTCFG_W<'a, O> {
 #[doc = "Data size. These bits are set and cleared by software. These bits are ignored when the SPDIF protocols are selected (bit PRTCFG\\[1:0\\]), because the frame and the data size are fixed in such case. When the companding mode is selected through COMP\\[1:0\\]
 bits, DS\\[1:0\\]
 are ignored since the data size is fixed to 8 bits by the algorithm. These bits must be configured when the audio block is disabled.\n\nValue on reset: 2"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum DS_A {
     #[doc = "2: 8 bits"]
@@ -288,7 +291,8 @@ impl<'a, const O: u8> DS_W<'a, O> {
     }
 }
 #[doc = "Least significant bit first. This bit is set and cleared by software. It must be configured when the audio block is disabled. This bit has no meaning in AC97 audio protocol since AC97 data are always transferred with the MSB first. This bit has no meaning in SPDIF audio protocol since in SPDIF data are always transferred with LSB first.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSBFIRST_A {
     #[doc = "0: Data are transferred with MSB first"]
     MsbFirst = 0,
@@ -338,7 +342,8 @@ impl<'a, const O: u8> LSBFIRST_W<'a, O> {
     }
 }
 #[doc = "Clock strobing edge. This bit is set and cleared by software. It must be configured when the audio block is disabled. This bit has no meaning in SPDIF audio protocol.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CKSTR_A {
     #[doc = "0: Data strobing edge is falling edge of SCK"]
     FallingEdge = 0,
@@ -388,7 +393,8 @@ impl<'a, const O: u8> CKSTR_W<'a, O> {
     }
 }
 #[doc = "Synchronization enable. These bits are set and cleared by software. They must be configured when the audio sub-block is disabled. Note: The audio sub-block should be configured as asynchronous when SPDIF mode is enabled.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SYNCEN_A {
     #[doc = "0: audio sub-block in asynchronous mode"]
@@ -453,7 +459,8 @@ impl<'a, const O: u8> SYNCEN_W<'a, O> {
     }
 }
 #[doc = "Mono mode. This bit is set and cleared by software. It is meaningful only when the number of slots is equal to 2. When the mono mode is selected, slot 0 data are duplicated on slot 1 when the audio block operates as a transmitter. In reception mode, the slot1 is discarded and only the data received from slot 0 are stored. Refer to Section: Mono/stereo mode for more details.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MONO_A {
     #[doc = "0: Stereo mode"]
     Stereo = 0,
@@ -503,7 +510,8 @@ impl<'a, const O: u8> MONO_W<'a, O> {
     }
 }
 #[doc = "Output drive. This bit is set and cleared by software. Note: This bit has to be set before enabling the audio block and after the audio block configuration.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OUTDRIV_A {
     #[doc = "0: Audio block output driven when SAIEN is set"]
     OnStart = 0,
@@ -553,7 +561,8 @@ impl<'a, const O: u8> OUTDRIV_W<'a, O> {
     }
 }
 #[doc = "Audio block enable where x is A or B. This bit is set by software. To switch off the audio block, the application software must program this bit to 0 and poll the bit till it reads back 0, meaning that the block is completely disabled. Before setting this bit to 1, check that it is set to 0, otherwise the enable command will not be taken into account. This bit allows to control the state of SAIx audio block. If it is disabled when an audio frame transfer is ongoing, the ongoing transfer completes and the cell is fully disabled at the end of this audio frame transfer. Note: When SAIx block is configured in master mode, the clock must be present on the input of SAIx before setting SAIXEN bit.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SAIEN_A {
     #[doc = "0: SAI audio block disabled"]
     Disabled = 0,
@@ -604,7 +613,8 @@ impl<'a, const O: u8> SAIEN_W<'a, O> {
 }
 #[doc = "DMA enable. This bit is set and cleared by software. Note: Since the audio block defaults to operate as a transmitter after reset, the MODE\\[1:0\\]
 bits must be configured before setting DMAEN to avoid a DMA request in receiver mode.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DMAEN_A {
     #[doc = "0: DMA disabled"]
     Disabled = 0,
@@ -664,7 +674,8 @@ pub type OSR_R = crate::BitReader<bool>;
 #[doc = "Field `OSR` writer - Oversampling ratio for master clock"]
 pub type OSR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
 #[doc = "No fixed divider between MCLK and FS\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum NODIV_A {
     #[doc = "0: MCLK output is enabled. Forces the ratio between FS and MCLK to 256 or 512 according to the OSR value"]
     MasterClock = 0,

@@ -35,7 +35,8 @@ impl From<crate::W<PCSEL_SPEC>> for W {
     }
 }
 #[doc = "Channel x (VINP\\[i\\]) pre selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u32)]
 pub enum PCSEL_A {
     #[doc = "0: Input channel x is not pre-selected"]

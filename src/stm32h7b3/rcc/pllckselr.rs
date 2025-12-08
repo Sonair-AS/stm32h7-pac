@@ -35,7 +35,8 @@ impl From<crate::W<PLLCKSELR_SPEC>> for W {
     }
 }
 #[doc = "DIVMx and PLLs clock source selection Set and reset by software to select the PLL clock source. These bits can be written only when all PLLs are disabled. In order to save power, when no PLL is used, the value of PLLSRC must be set to '11â\u{80}\u{99}.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum PLLSRC_A {
     #[doc = "0: HSI selected as PLL clock"]

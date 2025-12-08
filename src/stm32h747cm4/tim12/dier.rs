@@ -79,7 +79,8 @@ pub type CC1IE_R = crate::BitReader<bool>;
 #[doc = "Field `CC1IE` writer - Capture/Compare 1 interrupt enable"]
 pub type CC1IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIER_SPEC, bool, O>;
 #[doc = "Update interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UIE_A {
     #[doc = "0: Update interrupt disabled"]
     Disabled = 0,

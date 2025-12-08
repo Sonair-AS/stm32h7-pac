@@ -35,7 +35,8 @@ impl From<crate::W<CSR_SPEC>> for W {
     }
 }
 #[doc = "LSI oscillator enable Set and reset by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSION_A {
     #[doc = "0: LSI oscillator Off"]
     Off = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> LSION_W<'a, O> {
     }
 }
 #[doc = "LSI oscillator ready Set and reset by hardware to indicate when the low-speed internal RC oscillator is stable. This bit needs 3 cycles of lsi_ck clock to fall down after LSION has been set to 0. This bit can be set even when LSION is not enabled if there is a request for LSI clock by the clock security system on LSE or by the low-speed watchdog or by the RTC.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSIRDY_A {
     #[doc = "0: LSI oscillator not ready"]
     NotReady = 0,

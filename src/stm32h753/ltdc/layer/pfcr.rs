@@ -35,7 +35,8 @@ impl From<crate::W<PFCR_SPEC>> for W {
     }
 }
 #[doc = "Pixel Format\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum PF_A {
     #[doc = "0: ARGB8888"]

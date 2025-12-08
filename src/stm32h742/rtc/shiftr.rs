@@ -6,7 +6,8 @@ pub type SUBFS_W<'a, REG> = crate::FieldWriter<'a, REG, 15, u16, crate::Safe>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum ADD1SW {
     ///1: Add one second to the clock/calendar
     Add1 = 1,

@@ -35,7 +35,8 @@ impl From<crate::W<IER_SPEC>> for W {
     }
 }
 #[doc = "Register Reload interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RRIE_A {
     #[doc = "0: Register reload interrupt disabled"]
     Disabled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> RRIE_W<'a, O> {
     }
 }
 #[doc = "Transfer Error Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TERRIE_A {
     #[doc = "0: Transfer error interrupt disabled"]
     Disabled = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> TERRIE_W<'a, O> {
     }
 }
 #[doc = "FIFO Underrun Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum FUIE_A {
     #[doc = "0: FIFO underrun interrupt disabled"]
     Disabled = 0,
@@ -185,7 +188,8 @@ impl<'a, const O: u8> FUIE_W<'a, O> {
     }
 }
 #[doc = "Line Interrupt Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LIE_A {
     #[doc = "0: Line interrupt disabled"]
     Disabled = 0,

@@ -6,7 +6,8 @@ pub type W = crate::W<HTCRrs>;
 
 Value on reset: 23118*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u32)]
 pub enum HTCFG {
     ///43636: Recommended value for RNG certification (0x0000_AA74)

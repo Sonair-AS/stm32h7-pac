@@ -132,7 +132,8 @@ pub use CTEIF0_W as CTEIF2_W;
 #[doc = "Field `CTEIF1` writer - Transfer error (TE) flag clear for channel x"]
 pub use CTEIF0_W as CTEIF1_W;
 #[doc = "Transfer error (TE) flag clear for channel x\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CTEIF0_AW {
     #[doc = "1: Clear the corresponding TEIFx flag"]
     Clear = 1,
@@ -153,7 +154,8 @@ impl<'a, const O: u8> CTEIF0_W<'a, O> {
     }
 }
 #[doc = "Half transfer (HT) flag clear for channel x\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CHTIF0_AW {
     #[doc = "1: Clear the corresponding HTIFx flag"]
     Clear = 1,
@@ -174,7 +176,8 @@ impl<'a, const O: u8> CHTIF0_W<'a, O> {
     }
 }
 #[doc = "Transfer complete (TC) flag clear for channel x\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CTCIF0_AW {
     #[doc = "1: Clear the corresponding TCIFx flag"]
     Clear = 1,
@@ -195,7 +198,8 @@ impl<'a, const O: u8> CTCIF0_W<'a, O> {
     }
 }
 #[doc = "Global interrupt flag clear for channel x\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CGIF0_AW {
     #[doc = "1: Clear the corresponding CGIFx flag"]
     Clear = 1,

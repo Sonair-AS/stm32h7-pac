@@ -35,7 +35,8 @@ impl From<crate::W<GCR_SPEC>> for W {
     }
 }
 #[doc = "Horizontal Synchronization Polarity\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HSPOL_A {
     #[doc = "0: Horizontal synchronization polarity is active low"]
     ActiveLow = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> HSPOL_W<'a, O> {
     }
 }
 #[doc = "Vertical Synchronization Polarity\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum VSPOL_A {
     #[doc = "0: Vertical synchronization polarity is active low"]
     ActiveLow = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> VSPOL_W<'a, O> {
     }
 }
 #[doc = "Data Enable Polarity\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DEPOL_A {
     #[doc = "0: Data enable polarity is active low"]
     ActiveLow = 0,
@@ -185,7 +188,8 @@ impl<'a, const O: u8> DEPOL_W<'a, O> {
     }
 }
 #[doc = "Pixel Clock Polarity\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PCPOL_A {
     #[doc = "0: Pixel clock on rising edge"]
     RisingEdge = 0,
@@ -235,7 +239,8 @@ impl<'a, const O: u8> PCPOL_W<'a, O> {
     }
 }
 #[doc = "Dither Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DEN_A {
     #[doc = "0: Dither disabled"]
     Disabled = 0,
@@ -291,7 +296,8 @@ pub type DGW_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DBW` reader - Dither Blue Width"]
 pub type DBW_R = crate::FieldReader<u8, u8>;
 #[doc = "LCD-TFT controller enable bit\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LTDCEN_A {
     #[doc = "0: LCD-TFT controller disabled"]
     Disabled = 0,

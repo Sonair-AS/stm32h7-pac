@@ -14,7 +14,8 @@ impl From<crate::R<CDSR_SPEC>> for R {
     }
 }
 #[doc = "Horizontal Synchronization display Status\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HSYNCS_A {
     #[doc = "0: Currently not in HSYNC phase"]
     NotActive = 0,
@@ -50,7 +51,8 @@ impl HSYNCS_R {
     }
 }
 #[doc = "Vertical Synchronization display Status\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum VSYNCS_A {
     #[doc = "0: Currently not in VSYNC phase"]
     NotActive = 0,
@@ -86,7 +88,8 @@ impl VSYNCS_R {
     }
 }
 #[doc = "Horizontal Data Enable display Status\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HDES_A {
     #[doc = "0: Currently not in horizontal Data Enable phase"]
     NotActive = 0,
@@ -122,7 +125,8 @@ impl HDES_R {
     }
 }
 #[doc = "Vertical Data Enable display Status\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum VDES_A {
     #[doc = "0: Currently not in vertical Data Enable phase"]
     NotActive = 0,

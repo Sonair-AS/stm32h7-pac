@@ -16,7 +16,8 @@ pub use crate::stm32h750::hrtim_master::isr::UPD_R;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CPT1 {
     ///0: No timer x capture reset interrupt occurred
     NoEvent = 0,
@@ -55,7 +56,8 @@ impl CPT_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum SET1 {
     ///0: No Tx output set interrupt occurred
     NoEvent = 0,
@@ -94,7 +96,8 @@ impl SET_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum RST1 {
     ///0: No Tx output reset interrupt occurred
     NoEvent = 0,
@@ -135,7 +138,8 @@ pub use RST1_R as RST2_R;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum RST {
     ///0: No TIMx counter reset/roll-over interrupt occurred
     NoEvent = 0,
@@ -174,7 +178,8 @@ impl RST_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum DLYPRT {
     ///0: Not in delayed idle or balanced idle mode
     Inactive = 0,
@@ -213,7 +218,8 @@ impl DLYPRT_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CPPSTAT {
     ///0: Signal applied on output 1 and output 2 forced inactive
     Output1active = 0,
@@ -252,7 +258,8 @@ impl CPPSTAT_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum IPPSTAT {
     ///0: Protection occurred when the output 1 was active and output 2 forced inactive
     Output1active = 0,
@@ -291,7 +298,8 @@ impl IPPSTAT_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum O1STAT {
     ///0: Output was inactive
     Inactive = 0,

@@ -35,7 +35,8 @@ impl From<crate::W<AHB2ENR_SPEC>> for W {
     }
 }
 #[doc = "digital camera interface peripheral clock enable (DCMI or PSSI depending which IP is active) Set and reset by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DCMI_PSSIEN_A {
     #[doc = "0: The selected clock is disabled"]
     Disabled = 0,

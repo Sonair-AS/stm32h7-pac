@@ -35,7 +35,8 @@ impl From<crate::W<APB1HENR_SPEC>> for W {
     }
 }
 #[doc = "clock recovery system peripheral clock enable Set and reset by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CRSEN_A {
     #[doc = "0: The selected clock is disabled"]
     Disabled = 0,

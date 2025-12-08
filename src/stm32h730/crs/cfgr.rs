@@ -14,7 +14,8 @@ pub type FELIM_W<'a, REG> = crate::FieldWriter<'a, REG, 8, u8, crate::Safe>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SYNCDIV {
     ///0: SYNC not divided
@@ -155,7 +156,8 @@ where
 
 Value on reset: 2*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SYNCSRC {
     ///0: GPIO AF (crs_sync_in_1) selected as SYNC signal source
@@ -231,7 +233,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum SYNCPOL {
     ///0: SYNC active on rising edge
     RisingEdge = 0,

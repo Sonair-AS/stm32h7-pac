@@ -12,7 +12,8 @@ pub use crate::stm32h7b0::tim1::smcr::SMS_W;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum TS {
     ///0: Internal Trigger 0 (ITR0)

@@ -35,7 +35,8 @@ impl From<crate::W<SWIER1_SPEC>> for W {
     }
 }
 #[doc = "Rising trigger event configuration bit of Configurable Event input\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SWIER0_A {
     #[doc = "1: Generates an interrupt request"]
     Pend = 1,

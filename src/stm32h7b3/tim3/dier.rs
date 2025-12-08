@@ -35,7 +35,8 @@ impl From<crate::W<DIER_SPEC>> for W {
     }
 }
 #[doc = "Trigger DMA request enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TDE_A {
     #[doc = "0: Trigger DMA request disabled"]
     Disabled = 0,
@@ -103,7 +104,8 @@ pub use CC1DE_W as CC3DE_W;
 #[doc = "Field `CC2DE` writer - Capture/Compare 2 DMA request enable"]
 pub use CC1DE_W as CC2DE_W;
 #[doc = "Capture/Compare 1 DMA request enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CC1DE_A {
     #[doc = "0: CCx DMA request disabled"]
     Disabled = 0,
@@ -153,7 +155,8 @@ impl<'a, const O: u8> CC1DE_W<'a, O> {
     }
 }
 #[doc = "Update DMA request enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UDE_A {
     #[doc = "0: Update DMA request disabled"]
     Disabled = 0,
@@ -203,7 +206,8 @@ impl<'a, const O: u8> UDE_W<'a, O> {
     }
 }
 #[doc = "Trigger interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TIE_A {
     #[doc = "0: Trigger interrupt disabled"]
     Disabled = 0,
@@ -271,7 +275,8 @@ pub use CC1IE_W as CC3IE_W;
 #[doc = "Field `CC2IE` writer - Capture/Compare 2 interrupt enable"]
 pub use CC1IE_W as CC2IE_W;
 #[doc = "Capture/Compare 1 interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CC1IE_A {
     #[doc = "0: CCx interrupt disabled"]
     Disabled = 0,
@@ -321,7 +326,8 @@ impl<'a, const O: u8> CC1IE_W<'a, O> {
     }
 }
 #[doc = "Update interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UIE_A {
     #[doc = "0: Update interrupt disabled"]
     Disabled = 0,

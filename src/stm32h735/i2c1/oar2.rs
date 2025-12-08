@@ -39,7 +39,8 @@ pub type OA2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OA2` writer - Interface address bits 7:1 of address Note: These bits can be written only when OA2EN=0."]
 pub type OA2_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, OAR2_SPEC, u8, u8, 7, O>;
 #[doc = "Own Address 2 masks Note: These bits can be written only when OA2EN=0. As soon as OA2MSK is not equal to 0, the reserved I2C addresses (0b0000xxx and 0b1111xxx) are not acknowledged even if the comparison matches.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum OA2MSK_A {
     #[doc = "0: No mask"]
@@ -195,7 +196,8 @@ are masked and don’t care. No comparison is done, and all (except reserved) 7-
     }
 }
 #[doc = "Own Address 2 enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OA2EN_A {
     #[doc = "0: Own address 2 disabled. The received slave address OA2 is NACKed"]
     Disabled = 0,

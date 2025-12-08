@@ -35,7 +35,8 @@ impl From<crate::W<INI6_FN_MOD_SPEC>> for W {
     }
 }
 #[doc = "Override ASIB read issuing capability\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum READ_ISS_OVERRIDE_A {
     #[doc = "0: Normal ASIB read issuing capability"]
     Normal = 0,
@@ -86,7 +87,8 @@ impl<'a, const O: u8> READ_ISS_OVERRIDE_W<'a, O> {
     }
 }
 #[doc = "Override ASIB write issuing capability\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WRITE_ISS_OVERRIDE_A {
     #[doc = "0: Normal ASIB write issuing capability"]
     Normal = 0,

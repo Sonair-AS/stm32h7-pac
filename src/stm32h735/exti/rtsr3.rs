@@ -35,7 +35,8 @@ impl From<crate::W<RTSR3_SPEC>> for W {
     }
 }
 #[doc = "Rising trigger event configuration bit of Configurable Event input x+64\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TR82_A {
     #[doc = "0: Rising edge trigger is disabled"]
     Disabled = 0,

@@ -20,7 +20,8 @@ impl From<crate::W<CLRFR_SPEC>> for W {
     }
 }
 #[doc = "Clear overrun / underrun. This bit is write only. Programming this bit to 1 clears the OVRUDR flag in the SAI_xSR register. Reading this bit always returns the value 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum COVRUDR_AW {
     #[doc = "1: Clears the OVRUDR flag"]
     Clear = 1,
@@ -41,7 +42,8 @@ impl<'a, const O: u8> COVRUDR_W<'a, O> {
     }
 }
 #[doc = "Mute detection flag. This bit is write only. Programming this bit to 1 clears the MUTEDET flag in the SAI_xSR register. Reading this bit always returns the value 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CMUTEDET_AW {
     #[doc = "1: Clears the MUTEDET flag"]
     Clear = 1,
@@ -63,7 +65,8 @@ impl<'a, const O: u8> CMUTEDET_W<'a, O> {
 }
 #[doc = "Clear wrong clock configuration flag. This bit is write only. Programming this bit to 1 clears the WCKCFG flag in the SAI_xSR register. This bit is used only when the audio block is set as master (MODE\\[1\\]
 = 0) and NODIV = 0 in the SAI_xCR1 register. Reading this bit always returns the value 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CWCKCFG_AW {
     #[doc = "1: Clears the WCKCFG flag"]
     Clear = 1,
@@ -85,7 +88,8 @@ impl<'a, const O: u8> CWCKCFG_W<'a, O> {
     }
 }
 #[doc = "Clear Codec not ready flag. This bit is write only. Programming this bit to 1 clears the CNRDY flag in the SAI_xSR register. This bit is used only when the AC97 audio protocol is selected in the SAI_xCR1 register. Reading this bit always returns the value 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CCNRDY_AW {
     #[doc = "1: Clears the CNRDY flag"]
     Clear = 1,
@@ -106,7 +110,8 @@ impl<'a, const O: u8> CCNRDY_W<'a, O> {
     }
 }
 #[doc = "Clear anticipated frame synchronization detection flag. This bit is write only. Programming this bit to 1 clears the AFSDET flag in the SAI_xSR register. It is not used in AC97or SPDIF mode. Reading this bit always returns the value 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CAFSDET_AW {
     #[doc = "1: Clears the AFSDET flag"]
     Clear = 1,
@@ -127,7 +132,8 @@ impl<'a, const O: u8> CAFSDET_W<'a, O> {
     }
 }
 #[doc = "Clear late frame synchronization detection flag. This bit is write only. Programming this bit to 1 clears the LFSDET flag in the SAI_xSR register. This bit is not used in AC97or SPDIF mode Reading this bit always returns the value 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CLFSDET_AW {
     #[doc = "1: Clears the LFSDET flag"]
     Clear = 1,

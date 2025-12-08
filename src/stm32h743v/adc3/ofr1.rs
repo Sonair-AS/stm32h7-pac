@@ -35,7 +35,8 @@ impl From<crate::W<OFR1_SPEC>> for W {
     }
 }
 #[doc = "Signed saturation enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SSATE_A {
     #[doc = "0: Offset is subtracted maintaining data integrity and extending result size (9-bit and 17-bit signed format)"]
     Disabled = 0,

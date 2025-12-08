@@ -4,7 +4,8 @@ pub type R = crate::R<CSRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum ADRDY_MST {
     ///0: ADC is not ready to start conversion
     NotReady = 0,
@@ -43,7 +44,8 @@ impl ADRDY_MST_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum EOSMP_MST {
     ///0: End of sampling phase no yet reached
     NotEnded = 0,
@@ -82,7 +84,8 @@ impl EOSMP_MST_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum EOC_MST {
     ///0: Regular conversion is not complete
     NotComplete = 0,
@@ -121,7 +124,8 @@ impl EOC_MST_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum EOS_MST {
     ///0: Regular sequence is not complete
     NotComplete = 0,
@@ -160,7 +164,8 @@ impl EOS_MST_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum OVR_MST {
     ///0: No overrun occurred
     NoOverrun = 0,
@@ -199,7 +204,8 @@ impl OVR_MST_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum JEOC_MST {
     ///0: Injected conversion is not complete
     NotComplete = 0,
@@ -238,7 +244,8 @@ impl JEOC_MST_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum JEOS_MST {
     ///0: Injected sequence is not complete
     NotComplete = 0,
@@ -277,7 +284,8 @@ impl JEOS_MST_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum AWD1_MST {
     ///0: No analog watchdog event occurred
     NoEvent = 0,
@@ -320,7 +328,8 @@ pub use AWD1_MST_R as AWD3_MST_R;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum JQOVF_MST {
     ///0: No injected context queue overflow has occurred
     NoOverflow = 0,

@@ -403,7 +403,8 @@ pub static __INTERRUPTS: [Vector; 163] = [
     Vector { _handler: TIM24 },
 ];
 #[doc = r"Enumeration of all the interrupts."]
-#[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Copy, Clone, PartialEq, Eq)]
 #[repr(u16)]
 pub enum Interrupt {
     #[doc = "0 - Window Watchdog interrupt"]
@@ -702,6 +703,7 @@ impl Deref for AC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for AC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AC").finish()
@@ -730,6 +732,7 @@ impl Deref for ADC1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ADC1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADC1").finish()
@@ -758,6 +761,7 @@ impl Deref for ADC3 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ADC3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADC3").finish()
@@ -786,6 +790,7 @@ impl Deref for ADC12_COMMON {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ADC12_COMMON {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADC12_COMMON").finish()
@@ -814,6 +819,7 @@ impl Deref for ADC3_COMMON {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ADC3_COMMON {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADC3_COMMON").finish()
@@ -842,6 +848,7 @@ impl Deref for AXI {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for AXI {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AXI").finish()
@@ -870,6 +877,7 @@ impl Deref for CAN_CCU {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for CAN_CCU {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CAN_CCU").finish()
@@ -898,6 +906,7 @@ impl Deref for CEC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for CEC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CEC").finish()
@@ -926,6 +935,7 @@ impl Deref for COMP1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for COMP1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("COMP1").finish()
@@ -954,6 +964,7 @@ impl Deref for CRC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for CRC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CRC").finish()
@@ -982,6 +993,7 @@ impl Deref for CRS {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for CRS {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CRS").finish()
@@ -1010,6 +1022,7 @@ impl Deref for CRYP {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for CRYP {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CRYP").finish()
@@ -1038,6 +1051,7 @@ impl Deref for DAC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DAC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DAC").finish()
@@ -1066,6 +1080,7 @@ impl Deref for DBGMCU {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DBGMCU {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBGMCU").finish()
@@ -1094,6 +1109,7 @@ impl Deref for DCMI {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DCMI {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCMI").finish()
@@ -1122,6 +1138,7 @@ impl Deref for DELAY_BLOCK_SDMMC1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DELAY_BLOCK_SDMMC1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DELAY_BLOCK_SDMMC1").finish()
@@ -1150,6 +1167,7 @@ impl Deref for DELAY_BLOCK_SDMMC2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DELAY_BLOCK_SDMMC2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DELAY_BLOCK_SDMMC2").finish()
@@ -1178,6 +1196,7 @@ impl Deref for DFSDM {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DFSDM {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DFSDM").finish()
@@ -1206,6 +1225,7 @@ impl Deref for DMA1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DMA1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA1").finish()
@@ -1234,6 +1254,7 @@ impl Deref for DMA2D {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DMA2D {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA2D").finish()
@@ -1262,6 +1283,7 @@ impl Deref for DMAMUX1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DMAMUX1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMAMUX1").finish()
@@ -1290,6 +1312,7 @@ impl Deref for DMAMUX2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DMAMUX2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMAMUX2").finish()
@@ -1318,6 +1341,7 @@ impl Deref for DELAY_BLOCK_OCTOSPI1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DELAY_BLOCK_OCTOSPI1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DELAY_BLOCK_OCTOSPI1").finish()
@@ -1346,6 +1370,7 @@ impl Deref for DELAY_BLOCK_OCTOSPI2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DELAY_BLOCK_OCTOSPI2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DELAY_BLOCK_OCTOSPI2").finish()
@@ -1374,6 +1399,7 @@ impl Deref for EXTI {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for EXTI {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXTI").finish()
@@ -1402,6 +1428,7 @@ impl Deref for ETHERNET_MAC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ETHERNET_MAC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETHERNET_MAC").finish()
@@ -1430,6 +1457,7 @@ impl Deref for FDCAN1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for FDCAN1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FDCAN1").finish()
@@ -1458,6 +1486,7 @@ impl Deref for FDCAN2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for FDCAN2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FDCAN2").finish()
@@ -1486,6 +1515,7 @@ impl Deref for FMC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for FMC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FMC").finish()
@@ -1514,6 +1544,7 @@ impl Deref for FPU_CPACR {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for FPU_CPACR {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FPU_CPACR").finish()
@@ -1542,6 +1573,7 @@ impl Deref for FLASH {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for FLASH {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FLASH").finish()
@@ -1570,6 +1602,7 @@ impl Deref for GPIOA {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOA").finish()
@@ -1598,6 +1631,7 @@ impl Deref for GPIOB {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOB {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOB").finish()
@@ -1626,6 +1660,7 @@ impl Deref for GPIOC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOC").finish()
@@ -1654,6 +1689,7 @@ impl Deref for GPIOD {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOD {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOD").finish()
@@ -1682,6 +1718,7 @@ impl Deref for GPIOE {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOE {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOE").finish()
@@ -1710,6 +1747,7 @@ impl Deref for GPIOF {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOF {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOF").finish()
@@ -1738,6 +1776,7 @@ impl Deref for GPIOG {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOG").finish()
@@ -1766,6 +1805,7 @@ impl Deref for GPIOH {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOH {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOH").finish()
@@ -1794,6 +1834,7 @@ impl Deref for GPIOJ {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOJ {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOJ").finish()
@@ -1822,6 +1863,7 @@ impl Deref for GPIOK {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOK {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOK").finish()
@@ -1850,6 +1892,7 @@ impl Deref for HSEM {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for HSEM {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HSEM").finish()
@@ -1878,6 +1921,7 @@ impl Deref for I2C1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for I2C1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C1").finish()
@@ -1906,6 +1950,7 @@ impl Deref for I2C2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for I2C2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C2").finish()
@@ -1934,6 +1979,7 @@ impl Deref for I2C3 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for I2C3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C3").finish()
@@ -1962,6 +2008,7 @@ impl Deref for I2C4 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for I2C4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C4").finish()
@@ -1990,6 +2037,7 @@ impl Deref for IWDG1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for IWDG1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IWDG1").finish()
@@ -2018,6 +2066,7 @@ impl Deref for LPTIM1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPTIM1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPTIM1").finish()
@@ -2046,6 +2095,7 @@ impl Deref for LPTIM2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPTIM2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPTIM2").finish()
@@ -2074,6 +2124,7 @@ impl Deref for LPTIM3 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPTIM3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPTIM3").finish()
@@ -2102,6 +2153,7 @@ impl Deref for LPTIM4 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPTIM4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPTIM4").finish()
@@ -2130,6 +2182,7 @@ impl Deref for LPTIM5 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPTIM5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPTIM5").finish()
@@ -2158,6 +2211,7 @@ impl Deref for LPUART1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPUART1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPUART1").finish()
@@ -2186,6 +2240,7 @@ impl Deref for LTDC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LTDC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LTDC").finish()
@@ -2214,6 +2269,7 @@ impl Deref for MDIOS {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for MDIOS {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MDIOS").finish()
@@ -2242,6 +2298,7 @@ impl Deref for MDMA {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for MDMA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MDMA").finish()
@@ -2270,6 +2327,7 @@ impl Deref for NVIC_STIR {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for NVIC_STIR {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("NVIC_STIR").finish()
@@ -2298,6 +2356,7 @@ impl Deref for OCTOSPI1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OCTOSPI1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OCTOSPI1").finish()
@@ -2326,6 +2385,7 @@ impl Deref for OCTOSPI2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OCTOSPI2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OCTOSPI2").finish()
@@ -2354,6 +2414,7 @@ impl Deref for OPAMP {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OPAMP {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OPAMP").finish()
@@ -2382,6 +2443,7 @@ impl Deref for OTG1_HS_DEVICE {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG1_HS_DEVICE {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG1_HS_DEVICE").finish()
@@ -2410,6 +2472,7 @@ impl Deref for OTG2_HS_DEVICE {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG2_HS_DEVICE {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG2_HS_DEVICE").finish()
@@ -2438,6 +2501,7 @@ impl Deref for OTG1_HS_GLOBAL {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG1_HS_GLOBAL {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG1_HS_GLOBAL").finish()
@@ -2466,6 +2530,7 @@ impl Deref for OTG1_HS_HOST {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG1_HS_HOST {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG1_HS_HOST").finish()
@@ -2494,6 +2559,7 @@ impl Deref for OTG2_HS_HOST {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG2_HS_HOST {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG2_HS_HOST").finish()
@@ -2522,6 +2588,7 @@ impl Deref for OTG1_HS_PWRCLK {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG1_HS_PWRCLK {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG1_HS_PWRCLK").finish()
@@ -2550,6 +2617,7 @@ impl Deref for OTG2_HS_PWRCLK {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG2_HS_PWRCLK {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG2_HS_PWRCLK").finish()
@@ -2578,6 +2646,7 @@ impl Deref for OCTOSPII_O_MANAGER {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OCTOSPII_O_MANAGER {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OCTOSPII_O_MANAGER").finish()
@@ -2606,6 +2675,7 @@ impl Deref for PF {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for PF {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PF").finish()
@@ -2634,6 +2704,7 @@ impl Deref for PWR {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for PWR {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PWR").finish()
@@ -2662,6 +2733,7 @@ impl Deref for RAMECC1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RAMECC1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RAMECC1").finish()
@@ -2690,6 +2762,7 @@ impl Deref for RAMECC2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RAMECC2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RAMECC2").finish()
@@ -2718,6 +2791,7 @@ impl Deref for RAMECC3 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RAMECC3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RAMECC3").finish()
@@ -2746,6 +2820,7 @@ impl Deref for RCC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RCC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RCC").finish()
@@ -2774,6 +2849,7 @@ impl Deref for RNG {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RNG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RNG").finish()
@@ -2802,6 +2878,7 @@ impl Deref for RTC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RTC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTC").finish()
@@ -2830,6 +2907,7 @@ impl Deref for SAI1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SAI1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAI1").finish()
@@ -2858,6 +2936,7 @@ impl Deref for SAI4 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SAI4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAI4").finish()
@@ -2886,6 +2965,7 @@ impl Deref for SCB_ACTRL {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SCB_ACTRL {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCB_ACTRL").finish()
@@ -2914,6 +2994,7 @@ impl Deref for SDMMC1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SDMMC1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDMMC1").finish()
@@ -2942,6 +3023,7 @@ impl Deref for SDMMC2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SDMMC2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDMMC2").finish()
@@ -2970,6 +3052,7 @@ impl Deref for SPDIFRX {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPDIFRX {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPDIFRX").finish()
@@ -2998,6 +3081,7 @@ impl Deref for SPI1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI1").finish()
@@ -3026,6 +3110,7 @@ impl Deref for SPI2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI2").finish()
@@ -3054,6 +3139,7 @@ impl Deref for SPI3 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI3").finish()
@@ -3082,6 +3168,7 @@ impl Deref for SPI4 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI4").finish()
@@ -3110,6 +3197,7 @@ impl Deref for SPI5 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI5").finish()
@@ -3138,6 +3226,7 @@ impl Deref for SPI6 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI6").finish()
@@ -3166,6 +3255,7 @@ impl Deref for STK {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for STK {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STK").finish()
@@ -3194,6 +3284,7 @@ impl Deref for SWPMI {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SWPMI {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SWPMI").finish()
@@ -3222,6 +3313,7 @@ impl Deref for SYSCFG {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SYSCFG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYSCFG").finish()
@@ -3250,6 +3342,7 @@ impl Deref for TIM1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM1").finish()
@@ -3278,6 +3371,7 @@ impl Deref for TIM2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM2").finish()
@@ -3306,6 +3400,7 @@ impl Deref for TIM3 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM3").finish()
@@ -3334,6 +3429,7 @@ impl Deref for TIM4 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM4").finish()
@@ -3362,6 +3458,7 @@ impl Deref for TIM5 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM5").finish()
@@ -3390,6 +3487,7 @@ impl Deref for TIM6 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM6").finish()
@@ -3418,6 +3516,7 @@ impl Deref for TIM7 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM7").finish()
@@ -3446,6 +3545,7 @@ impl Deref for TIM8 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM8").finish()
@@ -3474,6 +3574,7 @@ impl Deref for TIM12 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM12").finish()
@@ -3502,6 +3603,7 @@ impl Deref for TIM13 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM13").finish()
@@ -3530,6 +3632,7 @@ impl Deref for TIM14 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM14 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM14").finish()
@@ -3558,6 +3661,7 @@ impl Deref for TIM15 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM15 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM15").finish()
@@ -3586,6 +3690,7 @@ impl Deref for TIM16 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM16 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM16").finish()
@@ -3614,6 +3719,7 @@ impl Deref for TIM17 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM17 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM17").finish()
@@ -3642,6 +3748,7 @@ impl Deref for USART1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for USART1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USART1").finish()
@@ -3670,6 +3777,7 @@ impl Deref for USART2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for USART2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USART2").finish()
@@ -3698,6 +3806,7 @@ impl Deref for USART3 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for USART3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USART3").finish()
@@ -3726,6 +3835,7 @@ impl Deref for UART4 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for UART4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART4").finish()
@@ -3754,6 +3864,7 @@ impl Deref for UART5 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for UART5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART5").finish()
@@ -3782,6 +3893,7 @@ impl Deref for USART6 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for USART6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USART6").finish()
@@ -3810,6 +3922,7 @@ impl Deref for UART7 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for UART7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART7").finish()
@@ -3838,6 +3951,7 @@ impl Deref for UART8 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for UART8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART8").finish()
@@ -3866,6 +3980,7 @@ impl Deref for VREFBUF {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for VREFBUF {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VREFBUF").finish()
@@ -3894,6 +4009,7 @@ impl Deref for WWDG1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for WWDG1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WWDG1").finish()
@@ -3922,6 +4038,7 @@ impl Deref for ADC2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ADC2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADC2").finish()
@@ -3950,6 +4067,7 @@ impl Deref for BDMA {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for BDMA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BDMA").finish()
@@ -3978,6 +4096,7 @@ impl Deref for UART9 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for UART9 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART9").finish()
@@ -4006,6 +4125,7 @@ impl Deref for USART10 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for USART10 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USART10").finish()
@@ -4034,6 +4154,7 @@ impl Deref for TIM23 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM23 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM23").finish()
@@ -4062,6 +4183,7 @@ impl Deref for TIM24 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM24 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM24").finish()
@@ -4090,6 +4212,7 @@ impl Deref for CORDIC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for CORDIC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORDIC").finish()
@@ -4118,6 +4241,7 @@ impl Deref for FMAC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for FMAC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FMAC").finish()
@@ -4146,6 +4270,7 @@ impl Deref for DMA2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DMA2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA2").finish()
@@ -4174,6 +4299,7 @@ impl Deref for ETHERNET_DMA {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ETHERNET_DMA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETHERNET_DMA").finish()
@@ -4202,6 +4328,7 @@ impl Deref for ETHERNET_MTL {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ETHERNET_MTL {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETHERNET_MTL").finish()

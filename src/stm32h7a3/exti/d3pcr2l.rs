@@ -6,7 +6,8 @@ pub type W = crate::W<D3PCR2Lrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum PCS34 {
     ///0: DMA ch6 event selected as D3 domain pendclear source

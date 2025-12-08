@@ -35,7 +35,8 @@ impl From<crate::W<D3PMR3_SPEC>> for W {
     }
 }
 #[doc = "D3 Pending Mask on Event input x+64\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MR88_A {
     #[doc = "0: Interrupt request line is masked"]
     Masked = 0,

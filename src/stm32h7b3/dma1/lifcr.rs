@@ -80,7 +80,8 @@ pub use CTEIF0_W as CTEIF2_W;
 #[doc = "Field `CTEIF1` writer - Stream x clear transfer error interrupt flag (x = 3..0)"]
 pub use CTEIF0_W as CTEIF1_W;
 #[doc = "Stream x clear transfer complete interrupt flag (x = 3..0)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CTCIF0_AW {
     #[doc = "1: Clear the corresponding TCIFx flag"]
     Clear = 1,
@@ -101,7 +102,8 @@ impl<'a, const O: u8> CTCIF0_W<'a, O> {
     }
 }
 #[doc = "Stream x clear half transfer interrupt flag (x = 3..0)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CHTIF0_AW {
     #[doc = "1: Clear the corresponding HTIFx flag"]
     Clear = 1,
@@ -122,7 +124,8 @@ impl<'a, const O: u8> CHTIF0_W<'a, O> {
     }
 }
 #[doc = "Stream x clear transfer error interrupt flag (x = 3..0)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CTEIF0_AW {
     #[doc = "1: Clear the corresponding TEIFx flag"]
     Clear = 1,
@@ -143,7 +146,8 @@ impl<'a, const O: u8> CTEIF0_W<'a, O> {
     }
 }
 #[doc = "Stream x clear direct mode error interrupt flag (x = 3..0)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CDMEIF0_AW {
     #[doc = "1: Clear the corresponding DMEIFx flag"]
     Clear = 1,
@@ -164,7 +168,8 @@ impl<'a, const O: u8> CDMEIF0_W<'a, O> {
     }
 }
 #[doc = "Stream x clear FIFO error interrupt flag (x = 3..0)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CFEIF0_AW {
     #[doc = "1: Clear the corresponding CFEIFx flag"]
     Clear = 1,

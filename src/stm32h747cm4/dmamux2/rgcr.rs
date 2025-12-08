@@ -35,7 +35,8 @@ impl From<crate::W<RGCR_SPEC>> for W {
     }
 }
 #[doc = "DMA request trigger input selected\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SIG_ID_A {
     #[doc = "0: Signal `dmamux2_evt0` selected as trigger input"]
@@ -451,7 +452,8 @@ impl<'a, const O: u8> SIG_ID_W<'a, O> {
     }
 }
 #[doc = "Interrupt enable at trigger event overrun\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OIE_A {
     #[doc = "0: Trigger overrun interrupt disabled"]
     Disabled = 0,
@@ -501,7 +503,8 @@ impl<'a, const O: u8> OIE_W<'a, O> {
     }
 }
 #[doc = "DMA request generator channel enable/disable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum GE_A {
     #[doc = "0: DMA request generation disabled"]
     Disabled = 0,
@@ -551,7 +554,8 @@ impl<'a, const O: u8> GE_W<'a, O> {
     }
 }
 #[doc = "DMA request generator trigger event type selection Defines the trigger event on the selected DMA request trigger input\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum GPOL_A {
     #[doc = "0: No event, i.e. no detection nor generation"]

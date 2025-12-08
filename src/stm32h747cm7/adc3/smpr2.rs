@@ -89,7 +89,8 @@ pub use SMP10_W as SMP12_W;
 #[doc = "Field `SMP11` writer - ADC channel 11 sampling time selection"]
 pub use SMP10_W as SMP11_W;
 #[doc = "ADC channel 10 sampling time selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SMP10_A {
     #[doc = "0: 1.5 ADC clock cycles"]

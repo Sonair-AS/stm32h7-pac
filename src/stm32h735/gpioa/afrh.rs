@@ -35,7 +35,8 @@ impl From<crate::W<AFRH_SPEC>> for W {
     }
 }
 #[doc = "3:0\\]: Alternate function selection for port x pin y (y = 8..15) These bits are written by software to configure alternate function I/Os\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum AFR8_A {
     #[doc = "0: AF0"]

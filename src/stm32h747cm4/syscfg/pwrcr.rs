@@ -35,7 +35,8 @@ impl From<crate::W<PWRCR_SPEC>> for W {
     }
 }
 #[doc = "Overdrive enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ODEN_A {
     #[doc = "0: Overdrive mode disabled"]
     Disabled = 0,

@@ -6,7 +6,8 @@ pub type W = crate::W<SRCRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum IMR {
     ///0: This bit is set by software and cleared only by hardware after reload (it cannot be cleared through register write once it is set)
     NoEffect = 0,
@@ -62,7 +63,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum VBR {
     ///0: This bit is set by software and cleared only by hardware after reload (it cannot be cleared through register write once it is set)
     NoEffect = 0,

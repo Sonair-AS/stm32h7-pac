@@ -20,7 +20,8 @@ impl From<crate::W<ICR_SPEC>> for W {
     }
 }
 #[doc = "Address matched flag clear Writing 1 to this bit clears the ADDR flag in the I2C_ISR register. Writing 1 to this bit also clears the START bit in the I2C_CR2 register.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADDRCF_AW {
     #[doc = "1: Clears the ADDR flag in ISR register"]
     Clear = 1,
@@ -41,7 +42,8 @@ impl<'a, const O: u8> ADDRCF_W<'a, O> {
     }
 }
 #[doc = "Not Acknowledge flag clear Writing 1 to this bit clears the ACKF flag in I2C_ISR register.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum NACKCF_AW {
     #[doc = "1: Clears the NACK flag in ISR register"]
     Clear = 1,
@@ -62,7 +64,8 @@ impl<'a, const O: u8> NACKCF_W<'a, O> {
     }
 }
 #[doc = "Stop detection flag clear Writing 1 to this bit clears the STOPF flag in the I2C_ISR register.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum STOPCF_AW {
     #[doc = "1: Clears the STOP flag in ISR register"]
     Clear = 1,
@@ -83,7 +86,8 @@ impl<'a, const O: u8> STOPCF_W<'a, O> {
     }
 }
 #[doc = "Bus error flag clear Writing 1 to this bit clears the BERRF flag in the I2C_ISR register.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum BERRCF_AW {
     #[doc = "1: Clears the BERR flag in ISR register"]
     Clear = 1,
@@ -104,7 +108,8 @@ impl<'a, const O: u8> BERRCF_W<'a, O> {
     }
 }
 #[doc = "Arbitration Lost flag clear Writing 1 to this bit clears the ARLO flag in the I2C_ISR register.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ARLOCF_AW {
     #[doc = "1: Clears the ARLO flag in ISR register"]
     Clear = 1,
@@ -125,7 +130,8 @@ impl<'a, const O: u8> ARLOCF_W<'a, O> {
     }
 }
 #[doc = "Overrun/Underrun flag clear Writing 1 to this bit clears the OVR flag in the I2C_ISR register.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OVRCF_AW {
     #[doc = "1: Clears the OVR flag in ISR register"]
     Clear = 1,
@@ -146,7 +152,8 @@ impl<'a, const O: u8> OVRCF_W<'a, O> {
     }
 }
 #[doc = "PEC Error flag clear Writing 1 to this bit clears the PECERR flag in the I2C_ISR register. Note: If the SMBus feature is not supported, this bit is reserved and forced by hardware to 0. Please refer to Section25.3: I2C implementation.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PECCF_AW {
     #[doc = "1: Clears the PEC flag in ISR register"]
     Clear = 1,
@@ -167,7 +174,8 @@ impl<'a, const O: u8> PECCF_W<'a, O> {
     }
 }
 #[doc = "Timeout detection flag clear Writing 1 to this bit clears the TIMEOUT flag in the I2C_ISR register. Note: If the SMBus feature is not supported, this bit is reserved and forced by hardware to 0. Please refer to Section25.3: I2C implementation.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TIMOUTCF_AW {
     #[doc = "1: Clears the TIMOUT flag in ISR register"]
     Clear = 1,
@@ -188,7 +196,8 @@ impl<'a, const O: u8> TIMOUTCF_W<'a, O> {
     }
 }
 #[doc = "Alert flag clear Writing 1 to this bit clears the ALERT flag in the I2C_ISR register. Note: If the SMBus feature is not supported, this bit is reserved and forced by hardware to 0. Please refer to Section25.3: I2C implementation.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ALERTCF_AW {
     #[doc = "1: Clears the ALERT flag in ISR register"]
     Clear = 1,

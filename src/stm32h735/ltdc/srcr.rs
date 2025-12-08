@@ -35,7 +35,8 @@ impl From<crate::W<SRCR_SPEC>> for W {
     }
 }
 #[doc = "Vertical Blanking Reload\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum VBR_A {
     #[doc = "0: This bit is set by software and cleared only by hardware after reload (it cannot be cleared through register write once it is set)"]
     NoEffect = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> VBR_W<'a, O> {
     }
 }
 #[doc = "Immediate Reload\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum IMR_A {
     #[doc = "0: This bit is set by software and cleared only by hardware after reload (it cannot be cleared through register write once it is set)"]
     NoEffect = 0,

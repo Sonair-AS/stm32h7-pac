@@ -35,7 +35,8 @@ impl From<crate::W<IER_SPEC>> for W {
     }
 }
 #[doc = "ADC group injected contexts queue overflow interrupt\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JQOVFIE_A {
     #[doc = "0: Injected context queue overflow interrupt disabled"]
     Disabled = 0,
@@ -97,7 +98,8 @@ pub use AWD1IE_W as AWD3IE_W;
 #[doc = "Field `AWD2IE` writer - ADC analog watchdog 2 interrupt"]
 pub use AWD1IE_W as AWD2IE_W;
 #[doc = "ADC analog watchdog 1 interrupt\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum AWD1IE_A {
     #[doc = "0: Analog watchdog interrupt disabled"]
     Disabled = 0,
@@ -147,7 +149,8 @@ impl<'a, const O: u8> AWD1IE_W<'a, O> {
     }
 }
 #[doc = "ADC group injected end of sequence conversions interrupt\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JEOSIE_A {
     #[doc = "0: End of injected sequence interrupt disabled"]
     Disabled = 0,
@@ -197,7 +200,8 @@ impl<'a, const O: u8> JEOSIE_W<'a, O> {
     }
 }
 #[doc = "ADC group injected end of unitary conversion interrupt\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JEOCIE_A {
     #[doc = "0: End of injected conversion interrupt disabled"]
     Disabled = 0,
@@ -247,7 +251,8 @@ impl<'a, const O: u8> JEOCIE_W<'a, O> {
     }
 }
 #[doc = "ADC group regular overrun interrupt\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OVRIE_A {
     #[doc = "0: Overrun interrupt disabled"]
     Disabled = 0,
@@ -297,7 +302,8 @@ impl<'a, const O: u8> OVRIE_W<'a, O> {
     }
 }
 #[doc = "ADC group regular end of sequence conversions interrupt\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOSIE_A {
     #[doc = "0: End of regular sequence interrupt disabled"]
     Disabled = 0,
@@ -347,7 +353,8 @@ impl<'a, const O: u8> EOSIE_W<'a, O> {
     }
 }
 #[doc = "ADC group regular end of unitary conversion interrupt\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOCIE_A {
     #[doc = "0: End of regular conversion interrupt disabled"]
     Disabled = 0,
@@ -397,7 +404,8 @@ impl<'a, const O: u8> EOCIE_W<'a, O> {
     }
 }
 #[doc = "ADC group regular end of sampling interrupt\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOSMPIE_A {
     #[doc = "0: End of regular conversion sampling phase interrupt disabled"]
     Disabled = 0,
@@ -447,7 +455,8 @@ impl<'a, const O: u8> EOSMPIE_W<'a, O> {
     }
 }
 #[doc = "ADC ready interrupt\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADRDYIE_A {
     #[doc = "0: ADC ready interrupt disabled"]
     Disabled = 0,

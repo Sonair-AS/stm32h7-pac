@@ -20,7 +20,8 @@ impl From<crate::W<ICR_SPEC>> for W {
     }
 }
 #[doc = "Direction change to down Clear Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DOWNCF_AW {
     #[doc = "1: Direction change to down Clear Flag"]
     Clear = 1,
@@ -41,7 +42,8 @@ impl<'a, const O: u8> DOWNCF_W<'a, O> {
     }
 }
 #[doc = "Direction change to UP Clear Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UPCF_AW {
     #[doc = "1: Direction change to up Clear Flag"]
     Clear = 1,
@@ -62,7 +64,8 @@ impl<'a, const O: u8> UPCF_W<'a, O> {
     }
 }
 #[doc = "Autoreload register update OK Clear Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ARROKCF_AW {
     #[doc = "1: Autoreload register update OK Clear Flag"]
     Clear = 1,
@@ -83,7 +86,8 @@ impl<'a, const O: u8> ARROKCF_W<'a, O> {
     }
 }
 #[doc = "Compare register update OK Clear Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CMPOKCF_AW {
     #[doc = "1: Compare register update OK Clear Flag"]
     Clear = 1,
@@ -104,7 +108,8 @@ impl<'a, const O: u8> CMPOKCF_W<'a, O> {
     }
 }
 #[doc = "External trigger valid edge Clear Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EXTTRIGCF_AW {
     #[doc = "1: External trigger valid edge Clear Flag"]
     Clear = 1,
@@ -125,7 +130,8 @@ impl<'a, const O: u8> EXTTRIGCF_W<'a, O> {
     }
 }
 #[doc = "Autoreload match Clear Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ARRMCF_AW {
     #[doc = "1: Autoreload match Clear Flag"]
     Clear = 1,
@@ -146,7 +152,8 @@ impl<'a, const O: u8> ARRMCF_W<'a, O> {
     }
 }
 #[doc = "compare match Clear Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CMPMCF_AW {
     #[doc = "1: Compare match Clear Flag"]
     Clear = 1,

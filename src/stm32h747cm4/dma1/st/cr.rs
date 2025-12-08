@@ -41,7 +41,8 @@ pub use PBURST_R as MBURST_R;
 #[doc = "Field `MBURST` writer - Memory burst transfer configuration"]
 pub use PBURST_W as MBURST_W;
 #[doc = "Peripheral burst transfer configuration\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum PBURST_A {
     #[doc = "0: Single transfer"]
@@ -119,7 +120,8 @@ impl<'a, const O: u8> PBURST_W<'a, O> {
     }
 }
 #[doc = "Current target (only in double buffer mode)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CT_A {
     #[doc = "0: The current target memory is Memory 0"]
     Memory0 = 0,
@@ -169,7 +171,8 @@ impl<'a, const O: u8> CT_W<'a, O> {
     }
 }
 #[doc = "Double buffer mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DBM_A {
     #[doc = "0: No buffer switching at the end of transfer"]
     Disabled = 0,
@@ -219,7 +222,8 @@ impl<'a, const O: u8> DBM_W<'a, O> {
     }
 }
 #[doc = "Priority level\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum PL_A {
     #[doc = "0: Low"]
@@ -297,7 +301,8 @@ impl<'a, const O: u8> PL_W<'a, O> {
     }
 }
 #[doc = "Peripheral increment offset size\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PINCOS_A {
     #[doc = "0: The offset size for the peripheral address calculation is linked to the PSIZE"]
     Psize = 0,
@@ -353,7 +358,8 @@ pub use PSIZE_R as MSIZE_R;
 #[doc = "Field `MSIZE` writer - Memory data size"]
 pub use PSIZE_W as MSIZE_W;
 #[doc = "Peripheral data size\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum PSIZE_A {
     #[doc = "0: Byte (8-bit)"]
@@ -424,7 +430,8 @@ pub use PINC_R as MINC_R;
 #[doc = "Field `MINC` writer - Memory increment mode"]
 pub use PINC_W as MINC_W;
 #[doc = "Peripheral increment mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PINC_A {
     #[doc = "0: Address pointer is fixed"]
     Fixed = 0,
@@ -474,7 +481,8 @@ impl<'a, const O: u8> PINC_W<'a, O> {
     }
 }
 #[doc = "Circular mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CIRC_A {
     #[doc = "0: Circular mode disabled"]
     Disabled = 0,
@@ -524,7 +532,8 @@ impl<'a, const O: u8> CIRC_W<'a, O> {
     }
 }
 #[doc = "Data transfer direction\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum DIR_A {
     #[doc = "0: Peripheral-to-memory"]
@@ -589,7 +598,8 @@ impl<'a, const O: u8> DIR_W<'a, O> {
     }
 }
 #[doc = "Peripheral flow controller\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PFCTRL_A {
     #[doc = "0: The DMA is the flow controller"]
     Dma = 0,
@@ -639,7 +649,8 @@ impl<'a, const O: u8> PFCTRL_W<'a, O> {
     }
 }
 #[doc = "Transfer complete interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TCIE_A {
     #[doc = "0: TC interrupt disabled"]
     Disabled = 0,
@@ -689,7 +700,8 @@ impl<'a, const O: u8> TCIE_W<'a, O> {
     }
 }
 #[doc = "Half transfer interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HTIE_A {
     #[doc = "0: HT interrupt disabled"]
     Disabled = 0,
@@ -739,7 +751,8 @@ impl<'a, const O: u8> HTIE_W<'a, O> {
     }
 }
 #[doc = "Transfer error interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TEIE_A {
     #[doc = "0: TE interrupt disabled"]
     Disabled = 0,
@@ -789,7 +802,8 @@ impl<'a, const O: u8> TEIE_W<'a, O> {
     }
 }
 #[doc = "Direct mode error interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DMEIE_A {
     #[doc = "0: DME interrupt disabled"]
     Disabled = 0,
@@ -839,7 +853,8 @@ impl<'a, const O: u8> DMEIE_W<'a, O> {
     }
 }
 #[doc = "Stream enable / flag stream ready when read low\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EN_A {
     #[doc = "0: Stream disabled"]
     Disabled = 0,

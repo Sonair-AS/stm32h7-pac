@@ -35,7 +35,8 @@ impl From<crate::W<ISR_SPEC>> for W {
     }
 }
 #[doc = "ADC group injected contexts queue overflow flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JQOVF_A {
     #[doc = "0: No injected context queue overflow has occurred"]
     NoOverflow = 0,
@@ -71,7 +72,8 @@ impl JQOVF_R {
     }
 }
 #[doc = "ADC group injected contexts queue overflow flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JQOVF_AW {
     #[doc = "1: Clear injected context queue overflow flag"]
     Clear = 1,
@@ -108,7 +110,8 @@ pub use AWD1_W as AWD3_W;
 #[doc = "Field `AWD2` writer - ADC analog watchdog 2 flag"]
 pub use AWD1_W as AWD2_W;
 #[doc = "ADC analog watchdog 1 flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum AWD1_A {
     #[doc = "0: No analog watchdog event occurred"]
     NoEvent = 0,
@@ -144,7 +147,8 @@ impl AWD1_R {
     }
 }
 #[doc = "ADC analog watchdog 1 flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum AWD1_AW {
     #[doc = "1: Clear analog watchdog event occurred flag"]
     Clear = 1,
@@ -165,7 +169,8 @@ impl<'a, const O: u8> AWD1_W<'a, O> {
     }
 }
 #[doc = "ADC group injected end of sequence conversions flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JEOS_A {
     #[doc = "0: Injected sequence is not complete"]
     NotComplete = 0,
@@ -201,7 +206,8 @@ impl JEOS_R {
     }
 }
 #[doc = "ADC group injected end of sequence conversions flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JEOS_AW {
     #[doc = "1: Clear Injected sequence complete flag"]
     Clear = 1,
@@ -222,7 +228,8 @@ impl<'a, const O: u8> JEOS_W<'a, O> {
     }
 }
 #[doc = "ADC group injected end of unitary conversion flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JEOC_A {
     #[doc = "0: Injected conversion is not complete"]
     NotComplete = 0,
@@ -258,7 +265,8 @@ impl JEOC_R {
     }
 }
 #[doc = "ADC group injected end of unitary conversion flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum JEOC_AW {
     #[doc = "1: Clear injected conversion complete flag"]
     Clear = 1,
@@ -279,7 +287,8 @@ impl<'a, const O: u8> JEOC_W<'a, O> {
     }
 }
 #[doc = "ADC group regular overrun flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OVR_A {
     #[doc = "0: No overrun occurred"]
     NoOverrun = 0,
@@ -315,7 +324,8 @@ impl OVR_R {
     }
 }
 #[doc = "ADC group regular overrun flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OVR_AW {
     #[doc = "1: Clear overrun occurred flag"]
     Clear = 1,
@@ -336,7 +346,8 @@ impl<'a, const O: u8> OVR_W<'a, O> {
     }
 }
 #[doc = "ADC group regular end of sequence conversions flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOS_A {
     #[doc = "0: Regular sequence is not complete"]
     NotComplete = 0,
@@ -372,7 +383,8 @@ impl EOS_R {
     }
 }
 #[doc = "ADC group regular end of sequence conversions flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOS_AW {
     #[doc = "1: Clear regular sequence complete flag"]
     Clear = 1,
@@ -393,7 +405,8 @@ impl<'a, const O: u8> EOS_W<'a, O> {
     }
 }
 #[doc = "ADC group regular end of unitary conversion flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOC_A {
     #[doc = "0: Regular conversion is not complete"]
     NotComplete = 0,
@@ -429,7 +442,8 @@ impl EOC_R {
     }
 }
 #[doc = "ADC group regular end of unitary conversion flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOC_AW {
     #[doc = "1: Clear regular conversion complete flag"]
     Clear = 1,
@@ -450,7 +464,8 @@ impl<'a, const O: u8> EOC_W<'a, O> {
     }
 }
 #[doc = "ADC group regular end of sampling flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOSMP_A {
     #[doc = "0: End of sampling phase no yet reached"]
     NotEnded = 0,
@@ -486,7 +501,8 @@ impl EOSMP_R {
     }
 }
 #[doc = "ADC group regular end of sampling flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOSMP_AW {
     #[doc = "1: Clear end of sampling phase reached flag"]
     Clear = 1,
@@ -507,7 +523,8 @@ impl<'a, const O: u8> EOSMP_W<'a, O> {
     }
 }
 #[doc = "ADC ready flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADRDY_A {
     #[doc = "0: ADC is not ready to start conversion"]
     NotReady = 0,
@@ -543,7 +560,8 @@ impl ADRDY_R {
     }
 }
 #[doc = "ADC ready flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADRDY_AW {
     #[doc = "1: Clear ADC is ready to start conversion flag"]
     Clear = 1,

@@ -4,7 +4,8 @@ pub type R = crate::R<CDSRrs>;
 
 Value on reset: 1*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum VDES {
     ///0: Currently not in vertical Data Enable phase
     NotActive = 0,
@@ -43,7 +44,8 @@ impl VDES_R {
 
 Value on reset: 1*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum HDES {
     ///0: Currently not in horizontal Data Enable phase
     NotActive = 0,
@@ -82,7 +84,8 @@ impl HDES_R {
 
 Value on reset: 1*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum VSYNCS {
     ///0: Currently not in VSYNC phase
     NotActive = 0,
@@ -121,7 +124,8 @@ impl VSYNCS_R {
 
 Value on reset: 1*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum HSYNCS {
     ///0: Currently not in HSYNC phase
     NotActive = 0,

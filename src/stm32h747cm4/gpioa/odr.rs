@@ -35,7 +35,8 @@ impl From<crate::W<ODR_SPEC>> for W {
     }
 }
 #[doc = "Port output data bit These bits can be read and written by software. Note: For atomic bit set/reset, the OD bits can be individually set and/or reset by writing to the GPIOx_BSRR or GPIOx_BRR registers (x = A..F).\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ODR0_A {
     #[doc = "0: Set output to logic low"]
     Low = 0,

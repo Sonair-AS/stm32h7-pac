@@ -8,7 +8,8 @@ pub type COREID_R = crate::FieldReader;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum LOCKR {
     ///0: Semaphore is free
     Free = 0,

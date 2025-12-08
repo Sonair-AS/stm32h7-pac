@@ -35,7 +35,8 @@ impl From<crate::W<C2IMR3_SPEC>> for W {
     }
 }
 #[doc = "CPU2 interrupt Mask on Direct Event input x+64\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MR64_A {
     #[doc = "0: Interrupt request line is masked"]
     Masked = 0,

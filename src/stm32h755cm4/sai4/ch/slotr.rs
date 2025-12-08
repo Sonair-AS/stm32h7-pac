@@ -10,7 +10,8 @@ pub type FBOFF_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SLOTSZ {
     ///0: The slot size is equivalent to the data size (specified in DS\[3:0\] in the SAI_xCR1 register)
@@ -90,7 +91,8 @@ pub type NBSLOT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u16)]
 pub enum SLOTEN {
     ///0: Inactive slot

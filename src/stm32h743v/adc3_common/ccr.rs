@@ -35,7 +35,8 @@ impl From<crate::W<CCR_SPEC>> for W {
     }
 }
 #[doc = "Dual ADC mode selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum DUAL_A {
     #[doc = "0: Independent mode"]
@@ -169,7 +170,8 @@ pub type DELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DELAY` writer - Delay between 2 sampling phases"]
 pub type DELAY_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, CCR_SPEC, u8, u8, 4, O>;
 #[doc = "Dual ADC Mode Data Format\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum DAMDF_A {
     #[doc = "0: Without data packing, CDR/CDR2 not used"]
@@ -234,7 +236,8 @@ impl<'a, const O: u8> DAMDF_W<'a, O> {
     }
 }
 #[doc = "ADC clock mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum CKMODE_A {
     #[doc = "0: Use Kernel Clock adc_ker_ck_input divided by PRESC. Asynchronous to AHB clock"]
@@ -312,7 +315,8 @@ impl<'a, const O: u8> CKMODE_W<'a, O> {
     }
 }
 #[doc = "ADC prescaler\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum PRESC_A {
     #[doc = "0: adc_ker_ck_input not divided"]
@@ -494,7 +498,8 @@ impl<'a, const O: u8> PRESC_W<'a, O> {
     }
 }
 #[doc = "VREFINT enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum VREFEN_A {
     #[doc = "0: V_REFINT channel disabled"]
     Disabled = 0,
@@ -544,7 +549,8 @@ impl<'a, const O: u8> VREFEN_W<'a, O> {
     }
 }
 #[doc = "Temperature sensor enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum VSENSEEN_A {
     #[doc = "0: Temperature sensor channel disabled"]
     Disabled = 0,
@@ -594,7 +600,8 @@ impl<'a, const O: u8> VSENSEEN_W<'a, O> {
     }
 }
 #[doc = "VBAT enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum VBATEN_A {
     #[doc = "0: V_BAT channel disabled"]
     Disabled = 0,

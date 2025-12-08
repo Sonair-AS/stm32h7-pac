@@ -39,7 +39,8 @@ pub type DIVN1_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DIVN1` writer - Multiplication factor for PLL1 VCO"]
 pub type DIVN1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PLL1DIVR_SPEC, u16, u16, 9, O>;
 #[doc = "PLL1 DIVP division factor\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum DIVP1_A {
     #[doc = "0: pll_p_ck = vco_ck"]

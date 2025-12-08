@@ -35,7 +35,8 @@ impl From<crate::W<SR_SPEC>> for W {
     }
 }
 #[doc = "Update interrupt flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UIF_A {
     #[doc = "0: No update occurred"]
     Clear = 0,

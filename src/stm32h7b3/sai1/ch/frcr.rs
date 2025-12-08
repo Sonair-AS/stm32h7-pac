@@ -55,7 +55,8 @@ pub type FSDEF_R = crate::BitReader<bool>;
 #[doc = "Field `FSDEF` writer - Frame synchronization definition. This bit is set and cleared by software. When the bit is set, the number of slots defined in the SAI_xSLOTR register has to be even. It means that half of this number of slots will be dedicated to the left channel and the other slots for the right channel (e.g: this bit has to be set for I2S or MSB/LSB-justified protocols...). This bit is meaningless and is not used in AC97 or SPDIF audio block configuration. It must be configured when the audio block is disabled."]
 pub type FSDEF_W<'a, const O: u8> = crate::BitWriter<'a, u32, FRCR_SPEC, bool, O>;
 #[doc = "Frame synchronization polarity. This bit is set and cleared by software. It is used to configure the level of the start of frame on the FS signal. It is meaningless and is not used in AC97 or SPDIF audio block configuration. This bit must be configured when the audio block is disabled.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum FSPOL_A {
     #[doc = "0: FS is active low (falling edge)"]
     FallingEdge = 0,
@@ -105,7 +106,8 @@ impl<'a, const O: u8> FSPOL_W<'a, O> {
     }
 }
 #[doc = "Frame synchronization offset. This bit is set and cleared by software. It is meaningless and is not used in AC97 or SPDIF audio block configuration. This bit must be configured when the audio block is disabled.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum FSOFF_A {
     #[doc = "0: FS is asserted on the first bit of the slot 0"]
     OnFirst = 0,

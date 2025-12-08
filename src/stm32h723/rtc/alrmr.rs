@@ -14,7 +14,8 @@ pub type ST_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum MSK1 {
     ///0: Alarm set if the date/day match
     Mask = 0,
@@ -90,7 +91,8 @@ pub type HT_W<'a, REG> = crate::FieldWriter<'a, REG, 2, u8, crate::Safe>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum PM {
     ///0: AM or 24-hour format
     Am = 0,
@@ -158,7 +160,8 @@ pub type DT_W<'a, REG> = crate::FieldWriter<'a, REG, 2, u8, crate::Safe>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum WDSEL {
     ///0: DU\[3:0\] represents the date units
     DateUnits = 0,

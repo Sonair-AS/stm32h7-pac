@@ -6,7 +6,8 @@ pub type W = crate::W<CCMR2_INPUTrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CC3S {
     ///1: CC3 channel is configured as input, IC3 is mapped on TI3
@@ -94,7 +95,8 @@ pub use super::ccmr1_input::ICPSC_W;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CC4S {
     ///1: CC4 channel is configured as input, IC4 is mapped on TI4

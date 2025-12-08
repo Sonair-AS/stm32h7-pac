@@ -35,7 +35,8 @@ impl From<crate::W<APB2RSTR_SPEC>> for W {
     }
 }
 #[doc = "TIM1 block reset\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TIM1RST_A {
     #[doc = "1: Reset the selected module"]
     Reset = 1,

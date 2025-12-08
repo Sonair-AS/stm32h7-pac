@@ -35,7 +35,8 @@ impl From<crate::W<SRDAMR_SPEC>> for W {
     }
 }
 #[doc = "SmartRun domain DMA and DMAMUX Autonomous mode enable Set and reset by software. Refer to for additional information.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum BDMA2AMEN_A {
     #[doc = "0: Clock disabled in autonomous mode"]
     Disabled = 0,

@@ -35,7 +35,8 @@ impl From<crate::W<CR1_SPEC>> for W {
     }
 }
 #[doc = "Locking the AF configuration of associated IOs\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum IOLOCK_A {
     #[doc = "0: IO configuration unlocked"]
     Unlocked = 0,
@@ -71,7 +72,8 @@ impl IOLOCK_R {
     }
 }
 #[doc = "CRC calculation initialization pattern control for transmitter\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TCRCINI_A {
     #[doc = "0: All zeros TX CRC initialization pattern"]
     AllZeros = 0,
@@ -121,7 +123,8 @@ impl<'a, const O: u8> TCRCINI_W<'a, O> {
     }
 }
 #[doc = "CRC calculation initialization pattern control for receiver\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RCRCINI_A {
     #[doc = "0: All zeros RX CRC initialization pattern"]
     AllZeros = 0,
@@ -171,7 +174,8 @@ impl<'a, const O: u8> RCRCINI_W<'a, O> {
     }
 }
 #[doc = "32-bit CRC polynomial configuration\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CRC33_17_A {
     #[doc = "0: Full size (33/17 bit) CRC polynomial is not used"]
     Disabled = 0,
@@ -221,7 +225,8 @@ impl<'a, const O: u8> CRC33_17_W<'a, O> {
     }
 }
 #[doc = "Internal SS signal input level\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SSI_A {
     #[doc = "0: 0 is forced onto the SS signal and the I/O value of the SS pin is ignored"]
     SlaveSelected = 0,
@@ -271,7 +276,8 @@ impl<'a, const O: u8> SSI_W<'a, O> {
     }
 }
 #[doc = "Rx/Tx direction at Half-duplex mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HDDIR_A {
     #[doc = "0: Receiver in half duplex mode"]
     Receiver = 0,
@@ -321,7 +327,8 @@ impl<'a, const O: u8> HDDIR_W<'a, O> {
     }
 }
 #[doc = "Master SUSPend request\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CSUSP_AW {
     #[doc = "0: Do not request master suspend"]
     NotRequested = 0,
@@ -349,7 +356,8 @@ impl<'a, const O: u8> CSUSP_W<'a, O> {
     }
 }
 #[doc = "Master transfer start\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CSTART_A {
     #[doc = "0: Do not start master transfer"]
     NotStarted = 0,
@@ -399,7 +407,8 @@ impl<'a, const O: u8> CSTART_W<'a, O> {
     }
 }
 #[doc = "Master automatic SUSP in Receive mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MASRX_A {
     #[doc = "0: Automatic suspend in master receive-only mode disabled"]
     Disabled = 0,
@@ -449,7 +458,8 @@ impl<'a, const O: u8> MASRX_W<'a, O> {
     }
 }
 #[doc = "Serial Peripheral Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SPE_A {
     #[doc = "0: Peripheral disabled"]
     Disabled = 0,

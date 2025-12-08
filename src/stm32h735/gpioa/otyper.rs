@@ -35,7 +35,8 @@ impl From<crate::W<OTYPER_SPEC>> for W {
     }
 }
 #[doc = "Port x configuration bits (y = 0..15) These bits are written by software to configure the I/O output type.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OT0_A {
     #[doc = "0: Output push-pull (reset state)"]
     PushPull = 0,

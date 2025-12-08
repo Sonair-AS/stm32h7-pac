@@ -35,7 +35,8 @@ impl From<crate::W<D3PCR2H_SPEC>> for W {
     }
 }
 #[doc = "Pending request clear input signal selection on Event input x= truncate ((n+96)/2)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum PCS48_A {
     #[doc = "0: DMA ch6 event selected as D3 domain pendclear source"]

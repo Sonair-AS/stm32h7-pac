@@ -6,7 +6,8 @@ pub type W = crate::W<ICRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CLRJOVRFW {
     ///1: Writing ‘1’ clears the JOVRF bit in the DFSDM_FLTxISR register
     Clear = 1,
@@ -50,7 +51,8 @@ where
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CLRROVRFW {
     ///1: Writing ‘1’ clears the ROVRF bit in the DFSDM_FLTxISR register
     Clear = 1,

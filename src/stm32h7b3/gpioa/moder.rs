@@ -35,7 +35,8 @@ impl From<crate::W<MODER_SPEC>> for W {
     }
 }
 #[doc = "1:0\\]: Port x configuration bits (y = 0..15) These bits are written by software to configure the I/O mode.\n\nValue on reset: 3"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum MODER0_A {
     #[doc = "0: Input mode (reset state)"]

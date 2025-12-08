@@ -36,7 +36,8 @@ impl From<crate::W<CDCFGR1_SPEC>> for W {
 }
 #[doc = "CPU domain AHB prescaler Set and reset by software to control the division factor of rcc_hclk3 and rcc_aclk. Changing this division ratio has an impact on the frequency of all bus matrix clocks. 0xxx: rcc_hclk3 = sys_cdcpre_ck (default after reset) Note: The clocks are divided by the new prescaler factor from1 to 16 periods of the slowest APB clock among rcc_pclk\\[4:1\\]
 after HPRE update. Note: Note also that rcc_hclk3 = rcc_aclk.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum HPRE_A {
     #[doc = "0: sys_ck not divided"]
@@ -181,7 +182,8 @@ impl<'a, const O: u8> HPRE_W<'a, O> {
     }
 }
 #[doc = "CPU domain APB3 prescaler Set and reset by software to control the division factor of rcc_pclk3. The clock is divided by the new prescaler factor from 1 to 16 cycles of rcc_hclk3 after CDPPRE write. 0xx: rcc_pclk3 = rcc_hclk3 (default after reset)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum CDPPRE_A {
     #[doc = "0: rcc_hclk not divided"]

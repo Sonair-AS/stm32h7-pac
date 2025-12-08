@@ -35,7 +35,8 @@ impl From<crate::W<CR_SPEC>> for W {
     }
 }
 #[doc = "Start This bit can be used to launch the DMA2D according to the parameters loaded in the various configuration registers\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum START_A {
     #[doc = "1: Launch the DMA2D"]
     Start = 1,
@@ -73,7 +74,8 @@ impl<'a, const O: u8> START_W<'a, O> {
     }
 }
 #[doc = "Suspend This bit can be used to suspend the current transfer. This bit is set and reset by software. It is automatically reset by hardware when the START bit is reset.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SUSP_A {
     #[doc = "0: Transfer not suspended"]
     NotSuspended = 0,
@@ -123,7 +125,8 @@ impl<'a, const O: u8> SUSP_W<'a, O> {
     }
 }
 #[doc = "Abort This bit can be used to abort the current transfer. This bit is set by software and is automatically reset by hardware when the START bit is reset.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ABORT_A {
     #[doc = "1: Transfer abort requested"]
     AbortRequest = 1,
@@ -161,7 +164,8 @@ impl<'a, const O: u8> ABORT_W<'a, O> {
     }
 }
 #[doc = "Transfer error interrupt enable This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TEIE_A {
     #[doc = "0: TE interrupt disabled"]
     Disabled = 0,
@@ -211,7 +215,8 @@ impl<'a, const O: u8> TEIE_W<'a, O> {
     }
 }
 #[doc = "Transfer complete interrupt enable This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TCIE_A {
     #[doc = "0: TC interrupt disabled"]
     Disabled = 0,
@@ -261,7 +266,8 @@ impl<'a, const O: u8> TCIE_W<'a, O> {
     }
 }
 #[doc = "Transfer watermark interrupt enable This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TWIE_A {
     #[doc = "0: TW interrupt disabled"]
     Disabled = 0,
@@ -311,7 +317,8 @@ impl<'a, const O: u8> TWIE_W<'a, O> {
     }
 }
 #[doc = "CLUT access error interrupt enable This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CAEIE_A {
     #[doc = "0: CAE interrupt disabled"]
     Disabled = 0,
@@ -361,7 +368,8 @@ impl<'a, const O: u8> CAEIE_W<'a, O> {
     }
 }
 #[doc = "CLUT transfer complete interrupt enable This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CTCIE_A {
     #[doc = "0: CTC interrupt disabled"]
     Disabled = 0,
@@ -411,7 +419,8 @@ impl<'a, const O: u8> CTCIE_W<'a, O> {
     }
 }
 #[doc = "Configuration Error Interrupt Enable This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CEIE_A {
     #[doc = "0: CE interrupt disabled"]
     Disabled = 0,
@@ -461,7 +470,8 @@ impl<'a, const O: u8> CEIE_W<'a, O> {
     }
 }
 #[doc = "DMA2D mode This bit is set and cleared by software. It cannot be modified while a transfer is ongoing.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum MODE_A {
     #[doc = "0: Memory-to-memory (FG fetch only)"]

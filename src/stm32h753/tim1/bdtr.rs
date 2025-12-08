@@ -43,7 +43,8 @@ pub type LOCK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LOCK` writer - Lock configuration"]
 pub type LOCK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BDTR_SPEC, u8, u8, 2, O>;
 #[doc = "Off-state selection for Idle mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OSSI_A {
     #[doc = "0: When inactive, OC/OCN outputs are disabled"]
     Disabled = 0,
@@ -93,7 +94,8 @@ impl<'a, const O: u8> OSSI_W<'a, O> {
     }
 }
 #[doc = "Off-state selection for Run mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OSSR_A {
     #[doc = "0: When inactive, OC/OCN outputs are disabled"]
     Disabled = 0,
@@ -155,7 +157,8 @@ pub type AOE_R = crate::BitReader<bool>;
 #[doc = "Field `AOE` writer - Automatic output enable"]
 pub type AOE_W<'a, const O: u8> = crate::BitWriter<'a, u32, BDTR_SPEC, bool, O>;
 #[doc = "Main output enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MOE_A {
     #[doc = "0: OC/OCN are disabled or forced idle depending on OSSI"]
     DisabledIdle = 0,

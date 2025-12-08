@@ -14,7 +14,8 @@ impl From<crate::R<IDR_SPEC>> for R {
     }
 }
 #[doc = "Port input data bit (y = 0..15) These bits are read-only. They contain the input value of the corresponding I/O port.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum IDR0_A {
     #[doc = "0: Input is logic low"]
     Low = 0,

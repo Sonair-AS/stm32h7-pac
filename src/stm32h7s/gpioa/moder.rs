@@ -6,7 +6,8 @@ pub type W = crate::W<MODERrs>;
 
 Value on reset: 3*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum MODE {
     ///0: Input mode

@@ -35,7 +35,8 @@ impl From<crate::W<D2CFGR_SPEC>> for W {
     }
 }
 #[doc = "D2 domain APB1 prescaler\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum D2PPRE1_A {
     #[doc = "0: rcc_hclk not divided"]

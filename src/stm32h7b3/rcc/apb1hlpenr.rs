@@ -35,7 +35,8 @@ impl From<crate::W<APB1HLPENR_SPEC>> for W {
     }
 }
 #[doc = "clock recovery system peripheral clock enable during CSleep mode Set and reset by software.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CRSLPEN_A {
     #[doc = "0: The selected clock is disabled during csleep mode"]
     Disabled = 0,

@@ -35,7 +35,8 @@ impl From<crate::W<CCR_SPEC>> for W {
     }
 }
 #[doc = "Input DMA request line selected\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum DMAREQ_ID_A {
     #[doc = "0: No signal selected as request input"]
@@ -1557,7 +1558,8 @@ impl<'a, const O: u8> DMAREQ_ID_W<'a, O> {
     }
 }
 #[doc = "Interrupt enable at synchronization event overrun\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SOIE_A {
     #[doc = "0: Synchronization overrun interrupt disabled"]
     Disabled = 0,
@@ -1607,7 +1609,8 @@ impl<'a, const O: u8> SOIE_W<'a, O> {
     }
 }
 #[doc = "Event generation enable/disable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EGE_A {
     #[doc = "0: Event generation disabled"]
     Disabled = 0,
@@ -1657,7 +1660,8 @@ impl<'a, const O: u8> EGE_W<'a, O> {
     }
 }
 #[doc = "Synchronous operating mode enable/disable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SE_A {
     #[doc = "0: Synchronization disabled"]
     Disabled = 0,
@@ -1707,7 +1711,8 @@ impl<'a, const O: u8> SE_W<'a, O> {
     }
 }
 #[doc = "Synchronization event type selector Defines the synchronization event on the selected synchronization input:\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SPOL_A {
     #[doc = "0: No event, i.e. no synchronization nor detection"]
@@ -1789,7 +1794,8 @@ pub type NBREQ_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `NBREQ` writer - Number of DMA requests to forward Defines the number of DMA requests forwarded before output event is generated. In synchronous mode, it also defines the number of DMA requests to forward after a synchronization event, then stop forwarding. The actual number of DMA requests forwarded is NBREQ+1. Note: This field can only be written when both SE and EGE bits are reset."]
 pub type NBREQ_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, CCR_SPEC, u8, u8, 5, O>;
 #[doc = "Synchronization input selected\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SYNC_ID_A {
     #[doc = "0: Signal `dmamux1_evt0` selected as synchronization input"]

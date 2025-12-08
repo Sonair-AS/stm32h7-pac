@@ -126,7 +126,8 @@ pub use TEIF0_R as TEIF2_R;
 #[doc = "Field `TEIF1` reader - Transfer error (TE) flag for channel x"]
 pub use TEIF0_R as TEIF1_R;
 #[doc = "Transfer error (TE) flag for channel x\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TEIF0_A {
     #[doc = "0: No transfer error on channel x"]
     NoError = 0,
@@ -162,7 +163,8 @@ impl TEIF0_R {
     }
 }
 #[doc = "Half transfer (HT) flag for channel x\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HTIF0_A {
     #[doc = "0: No half transfer event on channel x"]
     NotHalf = 0,
@@ -198,7 +200,8 @@ impl HTIF0_R {
     }
 }
 #[doc = "Transfer complete (TC) flag for channel x\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TCIF0_A {
     #[doc = "0: No transfer complete event on channel x"]
     NotComplete = 0,
@@ -234,7 +237,8 @@ impl TCIF0_R {
     }
 }
 #[doc = "Global interrupt flag for channel x\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum GIF0_A {
     #[doc = "0: No TE, HT or TC event on channel x"]
     NoEvent = 0,

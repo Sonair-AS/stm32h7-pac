@@ -35,7 +35,8 @@ impl From<crate::W<CFG1_SPEC>> for W {
     }
 }
 #[doc = "Master baud rate\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum MBR_A {
     #[doc = "0: f_spi_ker_ck / 2"]
@@ -165,7 +166,8 @@ impl<'a, const O: u8> MBR_W<'a, O> {
     }
 }
 #[doc = "Hardware CRC computation enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CRCEN_A {
     #[doc = "0: CRC calculation disabled"]
     Disabled = 0,
@@ -219,7 +221,8 @@ pub type CRCSIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CRCSIZE` writer - Length of CRC frame to be transacted and compared"]
 pub type CRCSIZE_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, CFG1_SPEC, u8, u8, 5, O>;
 #[doc = "Tx DMA stream enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TXDMAEN_A {
     #[doc = "0: Tx buffer DMA disabled"]
     Disabled = 0,
@@ -269,7 +272,8 @@ impl<'a, const O: u8> TXDMAEN_W<'a, O> {
     }
 }
 #[doc = "Rx DMA stream enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RXDMAEN_A {
     #[doc = "0: Rx buffer DMA disabled"]
     Disabled = 0,
@@ -319,7 +323,8 @@ impl<'a, const O: u8> RXDMAEN_W<'a, O> {
     }
 }
 #[doc = "Detection of underrun condition at slave transmitter\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum UDRDET_A {
     #[doc = "0: Underrun is detected at begin of data frame"]
@@ -384,7 +389,8 @@ impl<'a, const O: u8> UDRDET_W<'a, O> {
     }
 }
 #[doc = "Behavior of slave transmitter at underrun condition\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum UDRCFG_A {
     #[doc = "0: Slave sends a constant underrun pattern"]
@@ -449,7 +455,8 @@ impl<'a, const O: u8> UDRCFG_W<'a, O> {
     }
 }
 #[doc = "threshold level\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum FTHLV_A {
     #[doc = "0: 1 frame"]

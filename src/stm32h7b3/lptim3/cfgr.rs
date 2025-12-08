@@ -35,7 +35,8 @@ impl From<crate::W<CFGR_SPEC>> for W {
     }
 }
 #[doc = "Encoder mode enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ENC_A {
     #[doc = "0: Encoder mode disabled"]
     Disabled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> ENC_W<'a, O> {
     }
 }
 #[doc = "counter mode enabled\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum COUNTMODE_A {
     #[doc = "0: The counter is incremented following each internal clock pulse"]
     Internal = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> COUNTMODE_W<'a, O> {
     }
 }
 #[doc = "Registers update mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PRELOAD_A {
     #[doc = "0: Registers are updated after each APB bus write access"]
     Immediate = 0,
@@ -185,7 +188,8 @@ impl<'a, const O: u8> PRELOAD_W<'a, O> {
     }
 }
 #[doc = "Waveform shape polarity\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WAVPOL_A {
     #[doc = "0: The LPTIM output reflects the compare results between LPTIM_ARR and LPTIM_CMP registers"]
     Positive = 0,
@@ -235,7 +239,8 @@ impl<'a, const O: u8> WAVPOL_W<'a, O> {
     }
 }
 #[doc = "Waveform shape\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WAVE_A {
     #[doc = "0: Deactivate Set-once mode, PWM / One Pulse waveform (depending on OPMODE bit)"]
     Inactive = 0,
@@ -285,7 +290,8 @@ impl<'a, const O: u8> WAVE_W<'a, O> {
     }
 }
 #[doc = "Timeout enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TIMOUT_A {
     #[doc = "0: A trigger event arriving when the timer is already started will be ignored"]
     Disabled = 0,
@@ -335,7 +341,8 @@ impl<'a, const O: u8> TIMOUT_W<'a, O> {
     }
 }
 #[doc = "Trigger enable and polarity\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum TRIGEN_A {
     #[doc = "0: Software trigger (counting start is initiated by software)"]
@@ -413,7 +420,8 @@ impl<'a, const O: u8> TRIGEN_W<'a, O> {
     }
 }
 #[doc = "Trigger selector\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum TRIGSEL_A {
     #[doc = "0: lptim_ext_trig0"]
@@ -544,7 +552,8 @@ impl<'a, const O: u8> TRIGSEL_W<'a, O> {
     }
 }
 #[doc = "Clock prescaler\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum PRESC_A {
     #[doc = "0: /1"]
@@ -674,7 +683,8 @@ impl<'a, const O: u8> PRESC_W<'a, O> {
     }
 }
 #[doc = "Configurable digital filter for trigger\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum TRGFLT_A {
     #[doc = "0: Any trigger active level change is considered as a valid trigger"]
@@ -752,7 +762,8 @@ impl<'a, const O: u8> TRGFLT_W<'a, O> {
     }
 }
 #[doc = "Configurable digital filter for external clock\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum CKFLT_A {
     #[doc = "0: Any external clock signal level change is considered as a valid transition"]
@@ -830,7 +841,8 @@ impl<'a, const O: u8> CKFLT_W<'a, O> {
     }
 }
 #[doc = "Clock Polarity\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum CKPOL_A {
     #[doc = "0: The rising edge is the active edge used for counting. If LPTIM is in encoder mode: Encoder sub-mode 1 is active."]
@@ -895,7 +907,8 @@ impl<'a, const O: u8> CKPOL_W<'a, O> {
     }
 }
 #[doc = "Clock selector\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CKSEL_A {
     #[doc = "0: LPTIM is clocked by internal clock source (APB clock or any of the embedded oscillators)"]
     Internal = 0,

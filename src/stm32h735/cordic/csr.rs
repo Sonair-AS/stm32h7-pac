@@ -35,7 +35,8 @@ impl From<crate::W<CSR_SPEC>> for W {
     }
 }
 #[doc = "Result ready flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RRDY_A {
     #[doc = "0: Results from computation are not read"]
     NotReady = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> RRDY_W<'a, O> {
     }
 }
 #[doc = "Width of input data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ARGSIZE_A {
     #[doc = "0: Use 32 bit input values"]
     Bits32 = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> ARGSIZE_W<'a, O> {
     }
 }
 #[doc = "Width of output data\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RESSIZE_A {
     #[doc = "0: Use 32 bit output values"]
     Bits32 = 0,
@@ -185,7 +188,8 @@ impl<'a, const O: u8> RESSIZE_W<'a, O> {
     }
 }
 #[doc = "Number of arguments expected by the WDATA register\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum NARGS_A {
     #[doc = "0: Only single argument write is needed for next calculation"]
     Num1 = 0,
@@ -235,7 +239,8 @@ impl<'a, const O: u8> NARGS_W<'a, O> {
     }
 }
 #[doc = "Number of results in the RDATA register\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum NRES_A {
     #[doc = "0: Only single result value will be returned. After a single read RRDY will be automatically cleared"]
     Num1 = 0,
@@ -285,7 +290,8 @@ impl<'a, const O: u8> NRES_W<'a, O> {
     }
 }
 #[doc = "Enable DMA write channel\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DMAWEN_A {
     #[doc = "0: No DMA channel writes are generated"]
     Disabled = 0,
@@ -335,7 +341,8 @@ impl<'a, const O: u8> DMAWEN_W<'a, O> {
     }
 }
 #[doc = "Enable DMA wread channel\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DMAREN_A {
     #[doc = "0: No DMA channel reads are generated"]
     Disabled = 0,
@@ -385,7 +392,8 @@ impl<'a, const O: u8> DMAREN_W<'a, O> {
     }
 }
 #[doc = "Enable interrupt\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum IEN_A {
     #[doc = "0: Disable interrupt request generation"]
     Disabled = 0,
@@ -439,7 +447,8 @@ pub type SCALE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCALE` writer - Scaling factor (2^-n for arguments, 2^n for results)"]
 pub type SCALE_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, CSR_SPEC, u8, u8, 3, O>;
 #[doc = "Precision required (number of iterations/cycles), where PRECISION = (number of iterations/4)\n\nValue on reset: 5"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum PRECISION_A {
     #[doc = "1: 4 iterations"]
@@ -661,7 +670,8 @@ impl<'a, const O: u8> PRECISION_W<'a, O> {
     }
 }
 #[doc = "Function\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum FUNC_A {
     #[doc = "0: Cosine function"]

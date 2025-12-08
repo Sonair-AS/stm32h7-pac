@@ -35,7 +35,8 @@ impl From<crate::W<LCKR_SPEC>> for W {
     }
 }
 #[doc = "Port x lock bit y (y= 0..15) These bits are read/write but can only be written when the LCKK bit is 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LCK0_A {
     #[doc = "0: Port configuration not locked"]
     Unlocked = 0,
@@ -183,7 +184,8 @@ WR LCKR\\[16\\]
 RD LCKR RD LCKR\\[16\\]
 = 1 (this read operation is optional but it confirms that the lock is active) Note: During the LOCK key write sequence, the value of LCK\\[15:0\\]
 must not change. Any error in the lock sequence aborts the lock. After the first lock sequence on any bit of the port, any read access on the LCKK bit will return 1 until the next MCU reset or peripheral reset.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LCKK_A {
     #[doc = "0: Port configuration lock key not active"]
     NotActive = 0,

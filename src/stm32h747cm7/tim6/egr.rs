@@ -20,7 +20,8 @@ impl From<crate::W<EGR_SPEC>> for W {
     }
 }
 #[doc = "Update generation\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UG_AW {
     #[doc = "1: Re-initializes the timer counter and generates an update of the registers."]
     Update = 1,

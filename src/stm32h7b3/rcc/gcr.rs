@@ -35,7 +35,8 @@ impl From<crate::W<GCR_SPEC>> for W {
     }
 }
 #[doc = "WWDG1 reset scope control\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WW1RSC_A {
     #[doc = "0: Clear WWDG1 scope control"]
     Clear = 0,

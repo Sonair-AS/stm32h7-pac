@@ -74,7 +74,8 @@ pub use TEIF0_R as TEIF2_R;
 #[doc = "Field `TEIF1` reader - Stream x transfer error interrupt flag (x=3..0)"]
 pub use TEIF0_R as TEIF1_R;
 #[doc = "Stream x transfer complete interrupt flag (x = 3..0)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TCIF0_A {
     #[doc = "0: No transfer complete event on stream x"]
     NotComplete = 0,
@@ -110,7 +111,8 @@ impl TCIF0_R {
     }
 }
 #[doc = "Stream x half transfer interrupt flag (x=3..0)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HTIF0_A {
     #[doc = "0: No half transfer event on stream x"]
     NotHalf = 0,
@@ -146,7 +148,8 @@ impl HTIF0_R {
     }
 }
 #[doc = "Stream x transfer error interrupt flag (x=3..0)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TEIF0_A {
     #[doc = "0: No transfer error on stream x"]
     NoError = 0,
@@ -182,7 +185,8 @@ impl TEIF0_R {
     }
 }
 #[doc = "Stream x direct mode error interrupt flag (x=3..0)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DMEIF0_A {
     #[doc = "0: No Direct Mode error on stream x"]
     NoError = 0,
@@ -218,7 +222,8 @@ impl DMEIF0_R {
     }
 }
 #[doc = "Stream x FIFO error interrupt flag (x=3..0)\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum FEIF0_A {
     #[doc = "0: No FIFO error event on stream x"]
     NoError = 0,

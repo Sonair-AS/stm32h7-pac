@@ -52,7 +52,8 @@ pub use EOTC_W as UDRC_W;
 #[doc = "Field `TXTFC` writer - Transmission Transfer Filled flag clear"]
 pub use EOTC_W as TXTFC_W;
 #[doc = "End Of Transfer flag clear\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOTC_AW {
     #[doc = "1: Clear interrupt flag"]
     Clear = 1,

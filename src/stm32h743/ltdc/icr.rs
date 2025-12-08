@@ -20,7 +20,8 @@ impl From<crate::W<ICR_SPEC>> for W {
     }
 }
 #[doc = "Clears Register Reload Interrupt Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CRRIF_AW {
     #[doc = "1: Clears the RRIF flag in the ISR register"]
     Clear = 1,
@@ -41,7 +42,8 @@ impl<'a, const O: u8> CRRIF_W<'a, O> {
     }
 }
 #[doc = "Clears the Transfer Error Interrupt Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CTERRIF_AW {
     #[doc = "1: Clears the TERRIF flag in the ISR register"]
     Clear = 1,
@@ -62,7 +64,8 @@ impl<'a, const O: u8> CTERRIF_W<'a, O> {
     }
 }
 #[doc = "Clears the FIFO Underrun Interrupt flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CFUIF_AW {
     #[doc = "1: Clears the FUIF flag in the ISR register"]
     Clear = 1,
@@ -83,7 +86,8 @@ impl<'a, const O: u8> CFUIF_W<'a, O> {
     }
 }
 #[doc = "Clears the Line Interrupt Flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CLIF_AW {
     #[doc = "1: Clears the LIF flag in the ISR register"]
     Clear = 1,

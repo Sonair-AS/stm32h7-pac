@@ -35,7 +35,8 @@ impl From<crate::W<D2CCIP1R_SPEC>> for W {
     }
 }
 #[doc = "SAI1 and DFSDM1 kernel Aclk clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SAI1SEL_A {
     #[doc = "0: pll1_q selected as peripheral clock"]
@@ -133,7 +134,8 @@ pub use SAI1SEL_R as SPI123SEL_R;
 #[doc = "Field `SPI123SEL` writer - SPI/I2S1,2 and 3 kernel clock source selection"]
 pub use SAI1SEL_W as SPI123SEL_W;
 #[doc = "SPI4 and 5 kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SPI45SEL_A {
     #[doc = "0: APB clock selected as peripheral clock"]
@@ -238,7 +240,8 @@ impl<'a, const O: u8> SPI45SEL_W<'a, O> {
     }
 }
 #[doc = "SPDIFRX kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SPDIFSEL_A {
     #[doc = "0: pll1_q selected as peripheral clock"]
@@ -317,7 +320,8 @@ impl<'a, const O: u8> SPDIFSEL_W<'a, O> {
     }
 }
 #[doc = "DFSDM1 kernel Clk clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DFSDM1SEL_A {
     #[doc = "0: rcc_pclk2 selected as peripheral clock"]
     RccPclk2 = 0,
@@ -367,7 +371,8 @@ impl<'a, const O: u8> DFSDM1SEL_W<'a, O> {
     }
 }
 #[doc = "FDCAN kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum FDCANSEL_A {
     #[doc = "0: HSE selected as peripheral clock"]
@@ -433,7 +438,8 @@ impl<'a, const O: u8> FDCANSEL_W<'a, O> {
     }
 }
 #[doc = "SWPMI kernel clock source selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SWPMISEL_A {
     #[doc = "0: pclk selected as peripheral clock"]
     Pclk = 0,

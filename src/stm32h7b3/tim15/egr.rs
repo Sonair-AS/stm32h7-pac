@@ -30,7 +30,8 @@ pub type CC2G_W<'a, const O: u8> = crate::BitWriter<'a, u32, EGR_SPEC, bool, O>;
 #[doc = "Field `CC1G` writer - Capture/compare 1 generation"]
 pub type CC1G_W<'a, const O: u8> = crate::BitWriter<'a, u32, EGR_SPEC, bool, O>;
 #[doc = "Update generation\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UG_AW {
     #[doc = "1: Re-initializes the timer counter and generates an update of the registers."]
     Update = 1,

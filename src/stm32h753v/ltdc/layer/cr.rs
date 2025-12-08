@@ -35,7 +35,8 @@ impl From<crate::W<CR_SPEC>> for W {
     }
 }
 #[doc = "Color Look-Up Table Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CLUTEN_A {
     #[doc = "0: Color look-up table disabled"]
     Disabled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> CLUTEN_W<'a, O> {
     }
 }
 #[doc = "Color Keying Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum COLKEN_A {
     #[doc = "0: Color keying disabled"]
     Disabled = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> COLKEN_W<'a, O> {
     }
 }
 #[doc = "Layer Enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LEN_A {
     #[doc = "0: Layer disabled"]
     Disabled = 0,

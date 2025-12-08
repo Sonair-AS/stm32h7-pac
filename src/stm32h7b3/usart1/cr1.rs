@@ -47,7 +47,8 @@ pub type FIFOEN_R = crate::BitReader<bool>;
 #[doc = "Field `FIFOEN` writer - FIFO mode enable"]
 pub type FIFOEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
 #[doc = "Word length\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum M1_A {
     #[doc = "0: Use M0 to set the data bits"]
     M0 = 0,
@@ -97,7 +98,8 @@ impl<'a, const O: u8> M1_W<'a, O> {
     }
 }
 #[doc = "End of Block interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOBIE_A {
     #[doc = "0: Interrupt is inhibited"]
     Disabled = 0,
@@ -147,7 +149,8 @@ impl<'a, const O: u8> EOBIE_W<'a, O> {
     }
 }
 #[doc = "Receiver timeout interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RTOIE_A {
     #[doc = "0: Interrupt is inhibited"]
     Disabled = 0,
@@ -197,7 +200,8 @@ impl<'a, const O: u8> RTOIE_W<'a, O> {
     }
 }
 #[doc = "Oversampling mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OVER8_A {
     #[doc = "0: Oversampling by 16"]
     Oversampling16 = 0,
@@ -247,7 +251,8 @@ impl<'a, const O: u8> OVER8_W<'a, O> {
     }
 }
 #[doc = "Character match interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CMIE_A {
     #[doc = "0: Interrupt is disabled"]
     Disabled = 0,
@@ -297,7 +302,8 @@ impl<'a, const O: u8> CMIE_W<'a, O> {
     }
 }
 #[doc = "Mute mode enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MME_A {
     #[doc = "0: Receiver in active mode permanently"]
     Disabled = 0,
@@ -347,7 +353,8 @@ impl<'a, const O: u8> MME_W<'a, O> {
     }
 }
 #[doc = "Word length\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum M0_A {
     #[doc = "0: 1 start bit, 8 data bits, n stop bits"]
     Bit8 = 0,
@@ -397,7 +404,8 @@ impl<'a, const O: u8> M0_W<'a, O> {
     }
 }
 #[doc = "Receiver wakeup method\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WAKE_A {
     #[doc = "0: Idle line"]
     Idle = 0,
@@ -447,7 +455,8 @@ impl<'a, const O: u8> WAKE_W<'a, O> {
     }
 }
 #[doc = "Parity control enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PCE_A {
     #[doc = "0: Parity control disabled"]
     Disabled = 0,
@@ -497,7 +506,8 @@ impl<'a, const O: u8> PCE_W<'a, O> {
     }
 }
 #[doc = "Parity selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PS_A {
     #[doc = "0: Even parity"]
     Even = 0,
@@ -547,7 +557,8 @@ impl<'a, const O: u8> PS_W<'a, O> {
     }
 }
 #[doc = "PE interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PEIE_A {
     #[doc = "0: Interrupt is disabled"]
     Disabled = 0,
@@ -597,7 +608,8 @@ impl<'a, const O: u8> PEIE_W<'a, O> {
     }
 }
 #[doc = "interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TXEIE_A {
     #[doc = "0: Interrupt is disabled"]
     Disabled = 0,
@@ -647,7 +659,8 @@ impl<'a, const O: u8> TXEIE_W<'a, O> {
     }
 }
 #[doc = "Transmission complete interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TCIE_A {
     #[doc = "0: Interrupt is disabled"]
     Disabled = 0,
@@ -697,7 +710,8 @@ impl<'a, const O: u8> TCIE_W<'a, O> {
     }
 }
 #[doc = "RXNE interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RXNEIE_A {
     #[doc = "0: Interrupt is disabled"]
     Disabled = 0,
@@ -747,7 +761,8 @@ impl<'a, const O: u8> RXNEIE_W<'a, O> {
     }
 }
 #[doc = "IDLE interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum IDLEIE_A {
     #[doc = "0: Interrupt is disabled"]
     Disabled = 0,
@@ -797,7 +812,8 @@ impl<'a, const O: u8> IDLEIE_W<'a, O> {
     }
 }
 #[doc = "Transmitter enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TE_A {
     #[doc = "0: Transmitter is disabled"]
     Disabled = 0,
@@ -847,7 +863,8 @@ impl<'a, const O: u8> TE_W<'a, O> {
     }
 }
 #[doc = "Receiver enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RE_A {
     #[doc = "0: Receiver is disabled"]
     Disabled = 0,
@@ -897,7 +914,8 @@ impl<'a, const O: u8> RE_W<'a, O> {
     }
 }
 #[doc = "USART enable in Stop mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UESM_A {
     #[doc = "0: USART not able to wake up the MCU from Stop mode"]
     Disabled = 0,
@@ -947,7 +965,8 @@ impl<'a, const O: u8> UESM_W<'a, O> {
     }
 }
 #[doc = "USART enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UE_A {
     #[doc = "0: UART is disabled"]
     Disabled = 0,

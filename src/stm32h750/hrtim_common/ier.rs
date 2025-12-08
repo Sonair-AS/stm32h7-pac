@@ -6,7 +6,8 @@ pub type W = crate::W<IERrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum FLT1IE {
     ///0: Fault interrupt disabled
     Disabled = 0,
@@ -82,7 +83,8 @@ pub use FLT1IE_W as SYSFLTIE_W;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum BMPERIE {
     ///0: Burst mode period interrupt disabled
     Disabled = 0,

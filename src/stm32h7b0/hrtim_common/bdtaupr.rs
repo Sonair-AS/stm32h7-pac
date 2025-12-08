@@ -6,7 +6,8 @@ pub type W = crate::W<BDTAUPRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CR {
     ///0: Register not updated by burst DMA access
     NotUpdated = 0,

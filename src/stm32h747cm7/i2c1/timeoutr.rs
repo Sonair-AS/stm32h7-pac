@@ -40,7 +40,8 @@ pub type TIMEOUTA_R = crate::FieldReader<u16, u16>;
 pub type TIMEOUTA_W<'a, const O: u8> =
     crate::FieldWriterSafe<'a, u32, TIMEOUTR_SPEC, u16, u16, 12, O>;
 #[doc = "Idle clock timeout detection Note: This bit can be written only when TIMOUTEN=0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TIDLE_A {
     #[doc = "0: TIMEOUTA is used to detect SCL low timeout"]
     Disabled = 0,
@@ -90,7 +91,8 @@ impl<'a, const O: u8> TIDLE_W<'a, O> {
     }
 }
 #[doc = "Clock timeout enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TIMOUTEN_A {
     #[doc = "0: SCL timeout detection is disabled"]
     Disabled = 0,
@@ -145,7 +147,8 @@ pub type TIMEOUTB_R = crate::FieldReader<u16, u16>;
 pub type TIMEOUTB_W<'a, const O: u8> =
     crate::FieldWriterSafe<'a, u32, TIMEOUTR_SPEC, u16, u16, 12, O>;
 #[doc = "Extended clock timeout enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TEXTEN_A {
     #[doc = "0: Extended clock timeout detection is disabled"]
     Disabled = 0,

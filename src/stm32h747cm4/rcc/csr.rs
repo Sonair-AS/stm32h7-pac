@@ -35,7 +35,8 @@ impl From<crate::W<CSR_SPEC>> for W {
     }
 }
 #[doc = "LSI oscillator enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSION_A {
     #[doc = "0: LSI oscillator Off"]
     Off = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> LSION_W<'a, O> {
     }
 }
 #[doc = "LSI oscillator ready\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum LSIRDY_A {
     #[doc = "0: LSI oscillator not ready"]
     NotReady = 0,

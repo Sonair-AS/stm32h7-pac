@@ -43,7 +43,8 @@ pub type ST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ST` writer - Second tens in BCD format"]
 pub type ST_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, ALRMR_SPEC, u8, u8, 3, O>;
 #[doc = "Alarm seconds mask\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MSK1_A {
     #[doc = "0: Alarm set if the date/day match"]
     Mask = 0,
@@ -115,7 +116,8 @@ pub type HT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `HT` writer - Hour tens in BCD format"]
 pub type HT_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, ALRMR_SPEC, u8, u8, 2, O>;
 #[doc = "AM/PM notation\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PM_A {
     #[doc = "0: AM or 24-hour format"]
     Am = 0,
@@ -179,7 +181,8 @@ pub type DT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DT` writer - Date tens in BCD format"]
 pub type DT_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, ALRMR_SPEC, u8, u8, 2, O>;
 #[doc = "Week day selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WDSEL_A {
     #[doc = "0: DU\\[3:0\\]
 represents the date units"]

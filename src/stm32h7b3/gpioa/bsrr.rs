@@ -20,7 +20,8 @@ impl From<crate::W<BSRR_SPEC>> for W {
     }
 }
 #[doc = "Port x set bit y (y= 0..15) These bits are write-only. A read to these bits returns the value 0x0000.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum BS0_AW {
     #[doc = "1: Sets the corresponding ODRx bit"]
     Set = 1,
@@ -101,7 +102,8 @@ pub use BS0_W as BS14_W;
 #[doc = "Field `BS15` writer - Port x set bit y (y= 0..15) These bits are write-only. A read to these bits returns the value 0x0000."]
 pub use BS0_W as BS15_W;
 #[doc = "Port x reset bit y (y = 0..15) These bits are write-only. A read to these bits returns the value 0x0000. Note: If both BSx and BRx are set, BSx has priority.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum BR0_AW {
     #[doc = "1: Resets the corresponding ODRx bit"]
     Reset = 1,

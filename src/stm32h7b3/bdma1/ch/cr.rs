@@ -35,7 +35,8 @@ impl From<crate::W<CR_SPEC>> for W {
     }
 }
 #[doc = "Channel enable This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EN_A {
     #[doc = "0: Channel disabled"]
     Disabled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> EN_W<'a, O> {
     }
 }
 #[doc = "Transfer complete interrupt enable This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TCIE_A {
     #[doc = "0: TC interrupt disabled"]
     Disabled = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> TCIE_W<'a, O> {
     }
 }
 #[doc = "Half transfer interrupt enable This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HTIE_A {
     #[doc = "0: HT interrupt disabled"]
     Disabled = 0,
@@ -185,7 +188,8 @@ impl<'a, const O: u8> HTIE_W<'a, O> {
     }
 }
 #[doc = "Transfer error interrupt enable This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TEIE_A {
     #[doc = "0: TE interrupt disabled"]
     Disabled = 0,
@@ -235,7 +239,8 @@ impl<'a, const O: u8> TEIE_W<'a, O> {
     }
 }
 #[doc = "Data transfer direction This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DIR_A {
     #[doc = "0: Peripheral-to-memory"]
     PeripheralToMemory = 0,
@@ -285,7 +290,8 @@ impl<'a, const O: u8> DIR_W<'a, O> {
     }
 }
 #[doc = "Circular mode This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CIRC_A {
     #[doc = "0: Circular mode disabled"]
     Disabled = 0,
@@ -335,7 +341,8 @@ impl<'a, const O: u8> CIRC_W<'a, O> {
     }
 }
 #[doc = "Peripheral increment mode This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PINC_A {
     #[doc = "0: Address pointer is fixed"]
     Fixed = 0,
@@ -391,7 +398,8 @@ pub use PINC_R as MINC_R;
 #[doc = "Field `MINC` writer - Memory increment mode This bit is set and cleared by software."]
 pub use PINC_W as MINC_W;
 #[doc = "Peripheral size These bits are set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum PSIZE_A {
     #[doc = "0: Byte (8-bit)"]
@@ -462,7 +470,8 @@ pub use PSIZE_R as MSIZE_R;
 #[doc = "Field `MSIZE` writer - Memory size These bits are set and cleared by software."]
 pub use PSIZE_W as MSIZE_W;
 #[doc = "Channel priority level These bits are set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum PL_A {
     #[doc = "0: Low"]
@@ -540,7 +549,8 @@ impl<'a, const O: u8> PL_W<'a, O> {
     }
 }
 #[doc = "Memory to memory mode This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MEM2MEM_A {
     #[doc = "0: Memory-to-memory mode disabled"]
     Disabled = 0,
@@ -590,7 +600,8 @@ impl<'a, const O: u8> MEM2MEM_W<'a, O> {
     }
 }
 #[doc = "Current target memory in double-buffer mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CT_A {
     #[doc = "0: The current target memory is Memory 0"]
     Memory0 = 0,
@@ -640,7 +651,8 @@ impl<'a, const O: u8> CT_W<'a, O> {
     }
 }
 #[doc = "Double-buffer mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DBM_A {
     #[doc = "0: No buffer switching at the end of transfer"]
     Disabled = 0,

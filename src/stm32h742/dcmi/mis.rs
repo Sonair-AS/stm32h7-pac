@@ -4,7 +4,8 @@ pub type R = crate::R<MISrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum FRAME_MIS {
     ///0: No interrupt is generated after a complete capture
     Disabled = 0,
@@ -43,7 +44,8 @@ impl FRAME_MIS_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum OVR_MIS {
     ///0: No interrupt is generated on overrun
     Disabled = 0,
@@ -82,7 +84,8 @@ impl OVR_MIS_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum ERR_MIS {
     ///0: No interrupt is generated on a synchronization error
     Disabled = 0,
@@ -121,7 +124,8 @@ impl ERR_MIS_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum VSYNC_MIS {
     ///0: No interrupt is generated on DCMI_VSYNC transitions
     Disabled = 0,
@@ -160,7 +164,8 @@ impl VSYNC_MIS_R {
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum LINE_MIS {
     ///0: No interrupt generation when the line is received
     Disabled = 0,

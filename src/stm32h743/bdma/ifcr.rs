@@ -20,7 +20,8 @@ impl From<crate::W<IFCR_SPEC>> for W {
     }
 }
 #[doc = "Channel x global interrupt clear This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CGIF1_AW {
     #[doc = "1: Clear the corresponding CGIFx flag"]
     Clear = 1,
@@ -41,7 +42,8 @@ impl<'a, const O: u8> CGIF1_W<'a, O> {
     }
 }
 #[doc = "Channel x transfer complete clear This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CTCIF1_AW {
     #[doc = "1: Clear the corresponding TCIFx flag"]
     Clear = 1,
@@ -62,7 +64,8 @@ impl<'a, const O: u8> CTCIF1_W<'a, O> {
     }
 }
 #[doc = "Channel x half transfer clear This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CHTIF1_AW {
     #[doc = "1: Clear the corresponding HTIFx flag"]
     Clear = 1,
@@ -83,7 +86,8 @@ impl<'a, const O: u8> CHTIF1_W<'a, O> {
     }
 }
 #[doc = "Channel x transfer error clear This bit is set and cleared by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CTEIF1_AW {
     #[doc = "1: Clear the corresponding TEIFx flag"]
     Clear = 1,

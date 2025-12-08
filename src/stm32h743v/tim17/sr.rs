@@ -51,7 +51,8 @@ pub type CC1IF_R = crate::BitReader<bool>;
 #[doc = "Field `CC1IF` writer - Capture/compare 1 interrupt flag"]
 pub type CC1IF_W<'a, const O: u8> = crate::BitWriter<'a, u32, SR_SPEC, bool, O>;
 #[doc = "Update interrupt flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UIF_A {
     #[doc = "0: No update occurred"]
     Clear = 0,

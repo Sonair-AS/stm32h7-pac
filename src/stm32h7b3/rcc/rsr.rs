@@ -35,7 +35,8 @@ impl From<crate::W<RSR_SPEC>> for W {
     }
 }
 #[doc = "remove reset flag Set and reset by software to reset the value of the reset flags.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RMVF_A {
     #[doc = "0: Not clearing the the reset flags"]
     NotActive = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> RMVF_W<'a, O> {
     }
 }
 #[doc = "CPU domain power-switch reset flag Reset by software by writing the RMVF bit. Set by hardware when a the CPU domain exits from DStop or after of power-on reset. Set also when the CPU domain exists DStop2 but only when a pad reset has occurred during DStop2 (PINRST bit also set by hardware)\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CDRSTF_A {
     #[doc = "0: No reset occoured for block"]
     NoResetOccoured = 0,

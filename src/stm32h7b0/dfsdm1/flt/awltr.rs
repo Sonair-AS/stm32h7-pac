@@ -6,7 +6,8 @@ pub type W = crate::W<AWLTRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum BKAWL0 {
     ///0: Break i signal is not assigned to an analog watchdog low threshold event
     NotAssigned = 0,

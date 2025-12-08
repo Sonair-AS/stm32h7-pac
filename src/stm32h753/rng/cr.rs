@@ -35,7 +35,8 @@ impl From<crate::W<CR_SPEC>> for W {
     }
 }
 #[doc = "Random number generator enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RNGEN_A {
     #[doc = "0: Random number generator is disabled"]
     Disabled = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> RNGEN_W<'a, O> {
     }
 }
 #[doc = "Interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum IE_A {
     #[doc = "0: RNG interrupt is disabled"]
     Disabled = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> IE_W<'a, O> {
     }
 }
 #[doc = "Clock error detection Note: The clock error detection can be used only when ck_rc48 or ck_pll1_q (ck_pll1_q = 48MHz) source is selected otherwise, CED bit must be equal to 1. The clock error detection cannot be enabled nor disabled on the fly when RNG peripheral is enabled, to enable or disable CED the RNG must be disabled.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CED_A {
     #[doc = "0: Clock error detection is enabled"]
     Enabled = 0,

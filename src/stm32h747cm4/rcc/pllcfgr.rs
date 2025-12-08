@@ -35,7 +35,8 @@ impl From<crate::W<PLLCFGR_SPEC>> for W {
     }
 }
 #[doc = "PLL1 fractional latch enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PLL1FRACEN_A {
     #[doc = "0: Reset latch to tranfer FRACN to the Sigma-Delta modulator"]
     Reset = 0,
@@ -85,7 +86,8 @@ impl<'a, const O: u8> PLL1FRACEN_W<'a, O> {
     }
 }
 #[doc = "PLL1 VCO selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum PLL1VCOSEL_A {
     #[doc = "0: VCO frequency range 192 to 836 MHz"]
     WideVco = 0,
@@ -135,7 +137,8 @@ impl<'a, const O: u8> PLL1VCOSEL_W<'a, O> {
     }
 }
 #[doc = "PLL1 input frequency range\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum PLL1RGE_A {
     #[doc = "0: Frequency is between 1 and 2 MHz"]
@@ -250,7 +253,8 @@ pub use PLL1VCOSEL_W as PLL2VCOSEL_W;
 #[doc = "Field `PLL3VCOSEL` writer - PLL3 VCO selection"]
 pub use PLL1VCOSEL_W as PLL3VCOSEL_W;
 #[doc = "PLL1 DIVP divider output enable\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DIVP1EN_A {
     #[doc = "0: Clock ouput is disabled"]
     Disabled = 0,

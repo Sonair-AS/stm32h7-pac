@@ -4,7 +4,8 @@ pub type R = crate::R<MISrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum OVR_MIS {
     ///0: No interrupt is generated when an overrun/underrun error occurs
     Disabled = 0,

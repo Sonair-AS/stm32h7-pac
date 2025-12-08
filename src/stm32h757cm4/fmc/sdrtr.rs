@@ -6,7 +6,8 @@ pub type W = crate::W<SDRTRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum CRE {
     ///1: Refresh Error Flag is cleared
     Clear = 1,
@@ -37,7 +38,8 @@ pub type COUNT_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16, crate::Safe>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 pub enum REIE {
     ///0: Interrupt is disabled
     Disabled = 0,

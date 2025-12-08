@@ -39,7 +39,8 @@ pub type OA1_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `OA1` writer - Interface address 7-bit addressing mode: dont care 10-bit addressing mode: bits 9:8 of address Note: These bits can be written only when OA1EN=0. OA1\\[7:1\\]: Interface address Bits 7:1 of address Note: These bits can be written only when OA1EN=0. OA1\\[0\\]: Interface address 7-bit addressing mode: dont care 10-bit addressing mode: bit 0 of address Note: This bit can be written only when OA1EN=0."]
 pub type OA1_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, OAR1_SPEC, u16, u16, 10, O>;
 #[doc = "Own Address 1 10-bit mode Note: This bit can be written only when OA1EN=0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OA1MODE_A {
     #[doc = "0: Own address 1 is a 7-bit address"]
     Bit7 = 0,
@@ -89,7 +90,8 @@ impl<'a, const O: u8> OA1MODE_W<'a, O> {
     }
 }
 #[doc = "Own Address 1 enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OA1EN_A {
     #[doc = "0: Own address 1 disabled. The received slave address OA1 is NACKed"]
     Disabled = 0,

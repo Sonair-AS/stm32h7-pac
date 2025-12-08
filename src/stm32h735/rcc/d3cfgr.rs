@@ -35,7 +35,8 @@ impl From<crate::W<D3CFGR_SPEC>> for W {
     }
 }
 #[doc = "D3 domain APB4 prescaler\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum D3PPRE_A {
     #[doc = "0: rcc_hclk not divided"]

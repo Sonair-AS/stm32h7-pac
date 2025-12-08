@@ -35,7 +35,8 @@ impl From<crate::W<CR_SPEC>> for W {
     }
 }
 #[doc = "Wakeup clock selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum WUCKSEL_A {
     #[doc = "0: RTC/16 clock is selected"]
@@ -139,7 +140,8 @@ impl<'a, const O: u8> WUCKSEL_W<'a, O> {
     }
 }
 #[doc = "Time-stamp event active edge TSE must be reset when TSEDGE is changed to avoid unwanted TSF setting.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TSEDGE_A {
     #[doc = "0: RTC_TS input rising edge generates a time-stamp event"]
     RisingEdge = 0,
@@ -189,7 +191,8 @@ impl<'a, const O: u8> TSEDGE_W<'a, O> {
     }
 }
 #[doc = "RTC_REFIN reference clock detection enable (50 or 60Hz) Note: PREDIV_S must be 0x00FF.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum REFCKON_A {
     #[doc = "0: RTC_REFIN detection disabled"]
     Disabled = 0,
@@ -239,7 +242,8 @@ impl<'a, const O: u8> REFCKON_W<'a, O> {
     }
 }
 #[doc = "Bypass the shadow registers Note: If the frequency of the APB clock is less than seven times the frequency of RTCCLK, BYPSHAD must be set to 1.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum BYPSHAD_A {
     #[doc = "0: Calendar values (when reading from RTC_SSR, RTC_TR, and RTC_DR) are taken from the shadow registers, which are updated once every two RTCCLK cycles"]
     ShadowReg = 0,
@@ -289,7 +293,8 @@ impl<'a, const O: u8> BYPSHAD_W<'a, O> {
     }
 }
 #[doc = "Hour format\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum FMT_A {
     #[doc = "0: 24 hour/day format"]
     TwentyFourHour = 0,
@@ -339,7 +344,8 @@ impl<'a, const O: u8> FMT_W<'a, O> {
     }
 }
 #[doc = "Alarm A enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ALRAE_A {
     #[doc = "0: Alarm A disabled"]
     Disabled = 0,
@@ -389,7 +395,8 @@ impl<'a, const O: u8> ALRAE_W<'a, O> {
     }
 }
 #[doc = "Alarm B enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ALRBE_A {
     #[doc = "0: Alarm B disabled"]
     Disabled = 0,
@@ -439,7 +446,8 @@ impl<'a, const O: u8> ALRBE_W<'a, O> {
     }
 }
 #[doc = "Wakeup timer enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WUTE_A {
     #[doc = "0: Wakeup timer disabled"]
     Disabled = 0,
@@ -489,7 +497,8 @@ impl<'a, const O: u8> WUTE_W<'a, O> {
     }
 }
 #[doc = "timestamp enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TSE_A {
     #[doc = "0: Timestamp disabled"]
     Disabled = 0,
@@ -539,7 +548,8 @@ impl<'a, const O: u8> TSE_W<'a, O> {
     }
 }
 #[doc = "Alarm A interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ALRAIE_A {
     #[doc = "0: Alarm A interrupt disabled"]
     Disabled = 0,
@@ -589,7 +599,8 @@ impl<'a, const O: u8> ALRAIE_W<'a, O> {
     }
 }
 #[doc = "Alarm B interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ALRBIE_A {
     #[doc = "0: Alarm B Interrupt disabled"]
     Disabled = 0,
@@ -639,7 +650,8 @@ impl<'a, const O: u8> ALRBIE_W<'a, O> {
     }
 }
 #[doc = "Wakeup timer interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum WUTIE_A {
     #[doc = "0: Wakeup timer interrupt disabled"]
     Disabled = 0,
@@ -689,7 +701,8 @@ impl<'a, const O: u8> WUTIE_W<'a, O> {
     }
 }
 #[doc = "Time-stamp interrupt enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TSIE_A {
     #[doc = "0: Time-stamp Interrupt disabled"]
     Disabled = 0,
@@ -739,7 +752,8 @@ impl<'a, const O: u8> TSIE_W<'a, O> {
     }
 }
 #[doc = "Add 1 hour (summer time change) When this bit is set outside initialization mode, 1 hour is added to the calendar time. This bit is always read as 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ADD1H_AW {
     #[doc = "1: Adds 1 hour to the current time. This can be used for summer time change outside initialization mode"]
     Add1 = 1,
@@ -760,7 +774,8 @@ impl<'a, const O: u8> ADD1H_W<'a, O> {
     }
 }
 #[doc = "Subtract 1 hour (winter time change) When this bit is set outside initialization mode, 1 hour is subtracted to the calendar time if the current hour is not 0. This bit is always read as 0. Setting this bit has no effect when current hour is 0.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SUB1H_AW {
     #[doc = "1: Subtracts 1 hour to the current time. This can be used for winter time change outside initialization mode"]
     Sub1 = 1,
@@ -781,7 +796,8 @@ impl<'a, const O: u8> SUB1H_W<'a, O> {
     }
 }
 #[doc = "Backup This bit can be written by the user to memorize whether the daylight saving time change has been performed or not.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum BKP_A {
     #[doc = "0: Daylight Saving Time change has not been performed"]
     DstNotChanged = 0,
@@ -831,7 +847,8 @@ impl<'a, const O: u8> BKP_W<'a, O> {
     }
 }
 #[doc = "Calibration output selection When COE=1, this bit selects which signal is output on RTC_CALIB. These frequencies are valid for RTCCLK at 32.768 kHz and prescalers at their default values (PREDIV_A=127 and PREDIV_S=255). Refer to Section24.3.15: Calibration clock output\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum COSEL_A {
     #[doc = "0: Calibration output is 512 Hz (with default prescaler setting)"]
     CalFreq512hz = 0,
@@ -881,7 +898,8 @@ impl<'a, const O: u8> COSEL_W<'a, O> {
     }
 }
 #[doc = "Output polarity This bit is used to configure the polarity of RTC_ALARM output\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum POL_A {
     #[doc = "0: The pin is high when ALRAF/ALRBF/WUTF is asserted (depending on OSEL\\[1:0\\])"]
     High = 0,
@@ -931,7 +949,8 @@ impl<'a, const O: u8> POL_W<'a, O> {
     }
 }
 #[doc = "Output selection These bits are used to select the flag to be routed to RTC_ALARM output\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum OSEL_A {
     #[doc = "0: Output disabled"]
@@ -1009,7 +1028,8 @@ impl<'a, const O: u8> OSEL_W<'a, O> {
     }
 }
 #[doc = "Calibration output enable This bit enables the RTC_CALIB output\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum COE_A {
     #[doc = "0: Calibration output disabled"]
     Disabled = 0,
@@ -1059,7 +1079,8 @@ impl<'a, const O: u8> COE_W<'a, O> {
     }
 }
 #[doc = "timestamp on internal event enable\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum ITSE_A {
     #[doc = "0: Internal event timestamp is disabled"]
     Disabled = 0,

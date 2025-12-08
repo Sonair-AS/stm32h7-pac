@@ -16,7 +16,8 @@ impl From<crate::R<SR_SPEC>> for R {
 #[doc = "Field `CTSIZE` reader - Number of data frames remaining in current TSIZE session"]
 pub type CTSIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "RxFIFO Word Not Empty\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RXWNE_A {
     #[doc = "0: Less than 32-bit data frame received"]
     LessThan32 = 0,
@@ -52,7 +53,8 @@ impl RXWNE_R {
     }
 }
 #[doc = "RxFIFO Packing LeVeL\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum RXPLVL_A {
     #[doc = "0: Zero frames beyond packing ratio available"]
@@ -106,7 +108,8 @@ impl RXPLVL_R {
     }
 }
 #[doc = "TxFIFO transmission complete\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TXC_A {
     #[doc = "0: Transmission ongoing"]
     Ongoing = 0,
@@ -142,7 +145,8 @@ impl TXC_R {
     }
 }
 #[doc = "SUSPend\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SUSP_A {
     #[doc = "0: Master not suspended"]
     NotSuspended = 0,
@@ -178,7 +182,8 @@ impl SUSP_R {
     }
 }
 #[doc = "Additional number of SPI data to be transacted was reload\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TSERF_A {
     #[doc = "0: Additional number of SPI data to be transacted not yet loaded"]
     NotLoaded = 0,
@@ -214,7 +219,8 @@ impl TSERF_R {
     }
 }
 #[doc = "Mode Fault\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum MODF_A {
     #[doc = "0: No mode fault detected"]
     NoFault = 0,
@@ -250,7 +256,8 @@ impl MODF_R {
     }
 }
 #[doc = "TI frame format error\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TIFRE_A {
     #[doc = "0: TI frame format error detected"]
     NoError = 0,
@@ -286,7 +293,8 @@ impl TIFRE_R {
     }
 }
 #[doc = "CRC Error\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum CRCE_A {
     #[doc = "0: No CRC error detected"]
     NoError = 0,
@@ -322,7 +330,8 @@ impl CRCE_R {
     }
 }
 #[doc = "Overrun\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum OVR_A {
     #[doc = "0: No overrun occurred"]
     NoOverrun = 0,
@@ -358,7 +367,8 @@ impl OVR_R {
     }
 }
 #[doc = "Underrun at slave transmission mode\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum UDR_A {
     #[doc = "0: No underrun occurred"]
     NoUnderrun = 0,
@@ -394,7 +404,8 @@ impl UDR_R {
     }
 }
 #[doc = "Transmission Transfer Filled\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TXTF_A {
     #[doc = "0: Transmission buffer incomplete"]
     NotCompleted = 0,
@@ -430,7 +441,8 @@ impl TXTF_R {
     }
 }
 #[doc = "End Of Transfer\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum EOT_A {
     #[doc = "0: Transfer ongoing or not started"]
     NotCompleted = 0,
@@ -466,7 +478,8 @@ impl EOT_R {
     }
 }
 #[doc = "Duplex Packet\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum DXP_A {
     #[doc = "0: Duplex packet unavailable: no space for transmission and/or no data received"]
     Unavailable = 0,
@@ -502,7 +515,8 @@ impl DXP_R {
     }
 }
 #[doc = "Tx-Packet space available\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum TXP_A {
     #[doc = "0: Tx buffer full"]
     Full = 0,
@@ -538,7 +552,8 @@ impl TXP_R {
     }
 }
 #[doc = "Rx-Packet available\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RXP_A {
     #[doc = "0: Rx buffer empty"]
     Empty = 0,

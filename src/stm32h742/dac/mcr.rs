@@ -6,7 +6,8 @@ pub type W = crate::W<MCRrs>;
 
 Value on reset: 0*/
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum MODE1 {
     ///0: Normal mode - DAC channelx is connected to external pin with Buffer enabled

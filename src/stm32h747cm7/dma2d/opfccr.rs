@@ -35,7 +35,8 @@ impl From<crate::W<OPFCCR_SPEC>> for W {
     }
 }
 #[doc = "Color mode These bits define the color format of the output image. These bits can only be written when data transfers are disabled. Once the transfer has started, they are read-only. others: meaningless\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum CM_A {
     #[doc = "0: ARGB8888"]
@@ -126,7 +127,8 @@ impl<'a, const O: u8> CM_W<'a, O> {
     }
 }
 #[doc = "Alpha Inverted This bit inverts the alpha value. Once the transfer has started, this bit is read-only.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum AI_A {
     #[doc = "0: Regular alpha"]
     RegularAlpha = 0,
@@ -176,7 +178,8 @@ impl<'a, const O: u8> AI_W<'a, O> {
     }
 }
 #[doc = "Red Blue Swap This bit allows to swap the R &amp; B to support BGR or ABGR color formats. Once the transfer has started, this bit is read-only.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum RBS_A {
     #[doc = "0: No Red Blue Swap (RGB or ARGB)"]
     Regular = 0,
@@ -226,7 +229,8 @@ impl<'a, const O: u8> RBS_W<'a, O> {
     }
 }
 #[doc = "Swap Bytes\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum SB_A {
     #[doc = "0: Regular byte order"]
     Regular = 0,

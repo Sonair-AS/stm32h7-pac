@@ -35,7 +35,8 @@ impl From<crate::W<SRDCCIPR_SPEC>> for W {
     }
 }
 #[doc = "LPUART1 kernel clock source selection Set and reset by software. others: reserved, the kernel clock is disabled\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum LPUART1SEL_A {
     #[doc = "0: rcc_pclk_d3 selected as peripheral clock"]
@@ -140,7 +141,8 @@ impl<'a, const O: u8> LPUART1SEL_W<'a, O> {
     }
 }
 #[doc = "I2C4 kernel clock source selection Set and reset by software.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum I2C4SEL_A {
     #[doc = "0: rcc_pclk4 selected as peripheral clock"]
@@ -219,7 +221,8 @@ impl<'a, const O: u8> I2C4SEL_W<'a, O> {
     }
 }
 #[doc = "LPTIM2 kernel clock source selection Set and reset by software. others: reserved, the kernel clock is disabled\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum LPTIM2SEL_A {
     #[doc = "0: rcc_pclk4 selected as peripheral clock"]
@@ -328,7 +331,8 @@ pub type LPTIM3SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LPTIM3SEL` writer - LPTIM3 kernel clock source selection Set and reset by software. others: reserved, the kernel clock is disabled"]
 pub type LPTIM3SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SRDCCIPR_SPEC, u8, u8, 3, O>;
 #[doc = "SAR ADC kernel clock source selection Set and reset by software. others: reserved, the kernel clock is disabled\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum ADCSEL_A {
     #[doc = "0: pll2_p selected as peripheral clock"]
@@ -397,7 +401,8 @@ pub type DFSDM2SEL_R = crate::BitReader<bool>;
 #[doc = "Field `DFSDM2SEL` writer - DFSDM2 kernel Clk clock source selection Set and reset by software. Note: The DFSDM2 Aclk clock source selection is done by SPI6SEL (see and )."]
 pub type DFSDM2SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRDCCIPR_SPEC, bool, O>;
 #[doc = "SPI6 kernel clock source selection Set and reset by software. others: reserved, the kernel clock is disabled\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum SPI6SEL_A {
     #[doc = "0: rcc_pclk4 selected as peripheral clock"]

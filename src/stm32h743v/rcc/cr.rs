@@ -35,7 +35,8 @@ impl From<crate::W<CR_SPEC>> for W {
     }
 }
 #[doc = "Internal high-speed clock enable\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HSION_A {
     #[doc = "0: Clock Off"]
     Off = 0,
@@ -91,7 +92,8 @@ pub use HSION_R as HSIKERON_R;
 #[doc = "Field `HSIKERON` writer - High Speed Internal clock enable in Stop mode"]
 pub use HSION_W as HSIKERON_W;
 #[doc = "HSI clock ready flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HSIRDY_A {
     #[doc = "0: Clock not ready"]
     NotReady = 0,
@@ -141,7 +143,8 @@ impl<'a, const O: u8> HSIRDY_W<'a, O> {
     }
 }
 #[doc = "HSI clock divider\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 #[repr(u8)]
 pub enum HSIDIV_A {
     #[doc = "0: No division"]
@@ -219,7 +222,8 @@ impl<'a, const O: u8> HSIDIV_W<'a, O> {
     }
 }
 #[doc = "HSI divider flag\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HSIDIVF_A {
     #[doc = "0: New HSIDIV ratio has not yet propagated to hsi_ck"]
     NotPropagated = 0,
@@ -323,7 +327,8 @@ pub use HSIRDY_W as D2CKRDY_W;
 #[doc = "Field `HSERDY` writer - HSE clock ready flag"]
 pub use HSIRDY_W as HSERDY_W;
 #[doc = "HSE clock bypass\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[cfg_attr(feature = "impl-debug", derive(Debug))]
+#[derive(Clone, Copy, PartialEq)]
 pub enum HSEBYP_A {
     #[doc = "0: HSE crystal oscillator not bypassed"]
     NotBypassed = 0,

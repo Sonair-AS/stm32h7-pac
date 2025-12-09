@@ -27,7 +27,7 @@ default-target = "thumbv7em-none-eabihf"
 targets = []
 
 [features]
-default = ["rt"]
+default = ["rt", "impl-debug"]
 rt = ["cortex-m-rt/device"]
 stm32h735 = []
 stm32h743 = []

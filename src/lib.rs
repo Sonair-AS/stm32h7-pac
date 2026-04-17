@@ -23,27 +23,26 @@
 mod generic;
 pub use self::generic::*;
 
-#[cfg(feature = "stm32h735")]
+#[cfg(all(feature = "stm32h735", not(feature = "certified_subset")))] // Submodule not feature gated, only available in non certified mode
 pub mod stm32h735;
 
-#[cfg(feature = "stm32h743")]
+#[cfg(all(feature = "stm32h743", not(feature = "certified_subset")))] // Submodule not feature gated, only available in non certified mode
 pub mod stm32h743;
 
 #[cfg(feature = "stm32h743v")]
 pub mod stm32h743v;
 
-#[cfg(feature = "stm32h747cm4")]
+#[cfg(all(feature = "stm32h747cm4", not(feature = "certified_subset")))] // Submodule not feature gated, only available in non certified mode
 pub mod stm32h747cm4;
 
-#[cfg(feature = "stm32h747cm7")]
+#[cfg(all(feature = "stm32h747cm7", not(feature = "certified_subset")))] // Submodule not feature gated, only available in non certified mode
 pub mod stm32h747cm7;
-
-#[cfg(feature = "stm32h753")]
+#[cfg(all(feature = "stm32h753", not(feature = "certified_subset")))] // Submodule not feature gated, only available in non certified mode
 pub mod stm32h753;
 
-#[cfg(feature = "stm32h753v")]
+#[cfg(all(feature = "stm32h753v", not(feature = "certified_subset")))] // Submodule not feature gated, only available in non certified mode
 pub mod stm32h753v;
 
-#[cfg(feature = "stm32h7b3")]
+#[cfg(all(feature = "stm32h7b3", not(feature = "certified_subset")))] // Submodule not feature gated, only available in non certified mode
 pub mod stm32h7b3;
 

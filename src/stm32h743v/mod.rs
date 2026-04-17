@@ -703,11 +703,14 @@ unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
         self as u16
     }
 }
+#[cfg(any(feature = "stm32h743v_comp", not(feature = "certified_subset")))]
 #[doc = "COMP1"]
 pub struct COMP1 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_comp", not(feature = "certified_subset")))]
 unsafe impl Send for COMP1 {}
+#[cfg(any(feature = "stm32h743v_comp", not(feature = "certified_subset")))]
 impl COMP1 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const comp1::RegisterBlock = 0x5800_3800 as *const _;
@@ -717,6 +720,7 @@ impl COMP1 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_comp", not(feature = "certified_subset")))]
 impl Deref for COMP1 {
     type Target = comp1::RegisterBlock;
     #[inline(always)]
@@ -724,19 +728,24 @@ impl Deref for COMP1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_comp", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for COMP1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("COMP1").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_comp", not(feature = "certified_subset")))]
 #[doc = "COMP1"]
 pub mod comp1;
+#[cfg(any(feature = "stm32h743v_crs", not(feature = "certified_subset")))]
 #[doc = "CRS"]
 pub struct CRS {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_crs", not(feature = "certified_subset")))]
 unsafe impl Send for CRS {}
+#[cfg(any(feature = "stm32h743v_crs", not(feature = "certified_subset")))]
 impl CRS {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const crs::RegisterBlock = 0x4000_8400 as *const _;
@@ -746,6 +755,7 @@ impl CRS {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_crs", not(feature = "certified_subset")))]
 impl Deref for CRS {
     type Target = crs::RegisterBlock;
     #[inline(always)]
@@ -753,19 +763,24 @@ impl Deref for CRS {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_crs", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for CRS {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CRS").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_crs", not(feature = "certified_subset")))]
 #[doc = "CRS"]
 pub mod crs;
+#[cfg(any(feature = "stm32h743v_dac", not(feature = "certified_subset")))]
 #[doc = "DAC"]
 pub struct DAC {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_dac", not(feature = "certified_subset")))]
 unsafe impl Send for DAC {}
+#[cfg(any(feature = "stm32h743v_dac", not(feature = "certified_subset")))]
 impl DAC {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const dac::RegisterBlock = 0x4000_7400 as *const _;
@@ -775,6 +790,7 @@ impl DAC {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_dac", not(feature = "certified_subset")))]
 impl Deref for DAC {
     type Target = dac::RegisterBlock;
     #[inline(always)]
@@ -782,19 +798,24 @@ impl Deref for DAC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_dac", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DAC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DAC").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_dac", not(feature = "certified_subset")))]
 #[doc = "DAC"]
 pub mod dac;
+#[cfg(any(feature = "stm32h743v_bdma", not(feature = "certified_subset")))]
 #[doc = "BDMA"]
 pub struct BDMA {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_bdma", not(feature = "certified_subset")))]
 unsafe impl Send for BDMA {}
+#[cfg(any(feature = "stm32h743v_bdma", not(feature = "certified_subset")))]
 impl BDMA {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const bdma::RegisterBlock = 0x5802_5400 as *const _;
@@ -804,6 +825,7 @@ impl BDMA {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_bdma", not(feature = "certified_subset")))]
 impl Deref for BDMA {
     type Target = bdma::RegisterBlock;
     #[inline(always)]
@@ -811,19 +833,24 @@ impl Deref for BDMA {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_bdma", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for BDMA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BDMA").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_bdma", not(feature = "certified_subset")))]
 #[doc = "BDMA"]
 pub mod bdma;
+#[cfg(any(feature = "stm32h743v_dma2d", not(feature = "certified_subset")))]
 #[doc = "DMA2D"]
 pub struct DMA2D {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_dma2d", not(feature = "certified_subset")))]
 unsafe impl Send for DMA2D {}
+#[cfg(any(feature = "stm32h743v_dma2d", not(feature = "certified_subset")))]
 impl DMA2D {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const dma2d::RegisterBlock = 0x5200_1000 as *const _;
@@ -833,6 +860,7 @@ impl DMA2D {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_dma2d", not(feature = "certified_subset")))]
 impl Deref for DMA2D {
     type Target = dma2d::RegisterBlock;
     #[inline(always)]
@@ -840,19 +868,24 @@ impl Deref for DMA2D {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_dma2d", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DMA2D {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA2D").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_dma2d", not(feature = "certified_subset")))]
 #[doc = "DMA2D"]
 pub mod dma2d;
+#[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
 #[doc = "DMAMUX"]
 pub struct DMAMUX2 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
 unsafe impl Send for DMAMUX2 {}
+#[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
 impl DMAMUX2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const dmamux2::RegisterBlock = 0x5802_5800 as *const _;
@@ -862,6 +895,7 @@ impl DMAMUX2 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
 impl Deref for DMAMUX2 {
     type Target = dmamux2::RegisterBlock;
     #[inline(always)]
@@ -869,19 +903,24 @@ impl Deref for DMAMUX2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DMAMUX2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMAMUX2").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
 #[doc = "DMAMUX"]
 pub mod dmamux2;
+#[cfg(any(feature = "stm32h743v_fmc", not(feature = "certified_subset")))]
 #[doc = "FMC"]
 pub struct FMC {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_fmc", not(feature = "certified_subset")))]
 unsafe impl Send for FMC {}
+#[cfg(any(feature = "stm32h743v_fmc", not(feature = "certified_subset")))]
 impl FMC {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const fmc::RegisterBlock = 0x5200_4000 as *const _;
@@ -891,6 +930,7 @@ impl FMC {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_fmc", not(feature = "certified_subset")))]
 impl Deref for FMC {
     type Target = fmc::RegisterBlock;
     #[inline(always)]
@@ -898,19 +938,24 @@ impl Deref for FMC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_fmc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for FMC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FMC").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_fmc", not(feature = "certified_subset")))]
 #[doc = "FMC"]
 pub mod fmc;
+#[cfg(any(feature = "stm32h743v_cec", not(feature = "certified_subset")))]
 #[doc = "CEC"]
 pub struct CEC {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_cec", not(feature = "certified_subset")))]
 unsafe impl Send for CEC {}
+#[cfg(any(feature = "stm32h743v_cec", not(feature = "certified_subset")))]
 impl CEC {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const cec::RegisterBlock = 0x4000_6c00 as *const _;
@@ -920,6 +965,7 @@ impl CEC {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_cec", not(feature = "certified_subset")))]
 impl Deref for CEC {
     type Target = cec::RegisterBlock;
     #[inline(always)]
@@ -927,19 +973,24 @@ impl Deref for CEC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_cec", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for CEC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CEC").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_cec", not(feature = "certified_subset")))]
 #[doc = "CEC"]
 pub mod cec;
+#[cfg(any(feature = "stm32h743v_hsem", not(feature = "certified_subset")))]
 #[doc = "HSEM"]
 pub struct HSEM {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_hsem", not(feature = "certified_subset")))]
 unsafe impl Send for HSEM {}
+#[cfg(any(feature = "stm32h743v_hsem", not(feature = "certified_subset")))]
 impl HSEM {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const hsem::RegisterBlock = 0x5802_6400 as *const _;
@@ -949,6 +1000,7 @@ impl HSEM {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_hsem", not(feature = "certified_subset")))]
 impl Deref for HSEM {
     type Target = hsem::RegisterBlock;
     #[inline(always)]
@@ -956,19 +1008,24 @@ impl Deref for HSEM {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_hsem", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for HSEM {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HSEM").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_hsem", not(feature = "certified_subset")))]
 #[doc = "HSEM"]
 pub mod hsem;
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 #[doc = "I2C"]
 pub struct I2C1 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 unsafe impl Send for I2C1 {}
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 impl I2C1 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const i2c1::RegisterBlock = 0x4000_5400 as *const _;
@@ -978,6 +1035,7 @@ impl I2C1 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 impl Deref for I2C1 {
     type Target = i2c1::RegisterBlock;
     #[inline(always)]
@@ -985,19 +1043,24 @@ impl Deref for I2C1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for I2C1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C1").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 #[doc = "I2C"]
 pub mod i2c1;
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 #[doc = "I2C"]
 pub struct I2C2 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 unsafe impl Send for I2C2 {}
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 impl I2C2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const i2c1::RegisterBlock = 0x4000_5800 as *const _;
@@ -1007,6 +1070,7 @@ impl I2C2 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 impl Deref for I2C2 {
     type Target = i2c1::RegisterBlock;
     #[inline(always)]
@@ -1014,19 +1078,24 @@ impl Deref for I2C2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for I2C2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C2").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 #[doc = "I2C"]
 pub use i2c1 as i2c2;
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 #[doc = "I2C"]
 pub struct I2C3 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 unsafe impl Send for I2C3 {}
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 impl I2C3 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const i2c1::RegisterBlock = 0x4000_5c00 as *const _;
@@ -1036,6 +1105,7 @@ impl I2C3 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 impl Deref for I2C3 {
     type Target = i2c1::RegisterBlock;
     #[inline(always)]
@@ -1043,19 +1113,24 @@ impl Deref for I2C3 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for I2C3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C3").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 #[doc = "I2C"]
 pub use i2c1 as i2c3;
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 #[doc = "I2C"]
 pub struct I2C4 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 unsafe impl Send for I2C4 {}
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 impl I2C4 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const i2c1::RegisterBlock = 0x5800_1c00 as *const _;
@@ -1065,6 +1140,7 @@ impl I2C4 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 impl Deref for I2C4 {
     type Target = i2c1::RegisterBlock;
     #[inline(always)]
@@ -1072,19 +1148,24 @@ impl Deref for I2C4 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for I2C4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C4").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
 #[doc = "I2C"]
 pub use i2c1 as i2c4;
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub struct GPIOA {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 unsafe impl Send for GPIOA {}
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl GPIOA {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const gpioa::RegisterBlock = 0x5802_0000 as *const _;
@@ -1094,6 +1175,7 @@ impl GPIOA {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl Deref for GPIOA {
     type Target = gpioa::RegisterBlock;
     #[inline(always)]
@@ -1101,19 +1183,24 @@ impl Deref for GPIOA {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOA").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub mod gpioa;
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub struct GPIOB {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 unsafe impl Send for GPIOB {}
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl GPIOB {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const gpioa::RegisterBlock = 0x5802_0400 as *const _;
@@ -1123,6 +1210,7 @@ impl GPIOB {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl Deref for GPIOB {
     type Target = gpioa::RegisterBlock;
     #[inline(always)]
@@ -1130,19 +1218,24 @@ impl Deref for GPIOB {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOB {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOB").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub use gpioa as gpiob;
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub struct GPIOC {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 unsafe impl Send for GPIOC {}
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl GPIOC {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const gpioa::RegisterBlock = 0x5802_0800 as *const _;
@@ -1152,6 +1245,7 @@ impl GPIOC {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl Deref for GPIOC {
     type Target = gpioa::RegisterBlock;
     #[inline(always)]
@@ -1159,19 +1253,24 @@ impl Deref for GPIOC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOC").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub use gpioa as gpioc;
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub struct GPIOD {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 unsafe impl Send for GPIOD {}
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl GPIOD {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const gpioa::RegisterBlock = 0x5802_0c00 as *const _;
@@ -1181,6 +1280,7 @@ impl GPIOD {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl Deref for GPIOD {
     type Target = gpioa::RegisterBlock;
     #[inline(always)]
@@ -1188,19 +1288,24 @@ impl Deref for GPIOD {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOD {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOD").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub use gpioa as gpiod;
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub struct GPIOE {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 unsafe impl Send for GPIOE {}
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl GPIOE {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const gpioa::RegisterBlock = 0x5802_1000 as *const _;
@@ -1210,6 +1315,7 @@ impl GPIOE {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl Deref for GPIOE {
     type Target = gpioa::RegisterBlock;
     #[inline(always)]
@@ -1217,19 +1323,24 @@ impl Deref for GPIOE {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOE {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOE").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub use gpioa as gpioe;
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub struct GPIOF {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 unsafe impl Send for GPIOF {}
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl GPIOF {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const gpioa::RegisterBlock = 0x5802_1400 as *const _;
@@ -1239,6 +1350,7 @@ impl GPIOF {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl Deref for GPIOF {
     type Target = gpioa::RegisterBlock;
     #[inline(always)]
@@ -1246,19 +1358,24 @@ impl Deref for GPIOF {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOF {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOF").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub use gpioa as gpiof;
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub struct GPIOG {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 unsafe impl Send for GPIOG {}
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl GPIOG {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const gpioa::RegisterBlock = 0x5802_1800 as *const _;
@@ -1268,6 +1385,7 @@ impl GPIOG {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl Deref for GPIOG {
     type Target = gpioa::RegisterBlock;
     #[inline(always)]
@@ -1275,19 +1393,24 @@ impl Deref for GPIOG {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOG").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub use gpioa as gpiog;
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub struct GPIOH {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 unsafe impl Send for GPIOH {}
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl GPIOH {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const gpioa::RegisterBlock = 0x5802_1c00 as *const _;
@@ -1297,6 +1420,7 @@ impl GPIOH {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl Deref for GPIOH {
     type Target = gpioa::RegisterBlock;
     #[inline(always)]
@@ -1304,19 +1428,24 @@ impl Deref for GPIOH {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOH {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOH").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub use gpioa as gpioh;
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub struct GPIOI {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 unsafe impl Send for GPIOI {}
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl GPIOI {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const gpioa::RegisterBlock = 0x5802_2000 as *const _;
@@ -1326,6 +1455,7 @@ impl GPIOI {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl Deref for GPIOI {
     type Target = gpioa::RegisterBlock;
     #[inline(always)]
@@ -1333,19 +1463,24 @@ impl Deref for GPIOI {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOI {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOI").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub use gpioa as gpioi;
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub struct GPIOJ {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 unsafe impl Send for GPIOJ {}
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl GPIOJ {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const gpioa::RegisterBlock = 0x5802_2400 as *const _;
@@ -1355,6 +1490,7 @@ impl GPIOJ {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl Deref for GPIOJ {
     type Target = gpioa::RegisterBlock;
     #[inline(always)]
@@ -1362,19 +1498,24 @@ impl Deref for GPIOJ {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOJ {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOJ").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub use gpioa as gpioj;
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub struct GPIOK {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 unsafe impl Send for GPIOK {}
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl GPIOK {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const gpioa::RegisterBlock = 0x5802_2800 as *const _;
@@ -1384,6 +1525,7 @@ impl GPIOK {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 impl Deref for GPIOK {
     type Target = gpioa::RegisterBlock;
     #[inline(always)]
@@ -1391,19 +1533,24 @@ impl Deref for GPIOK {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for GPIOK {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIOK").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
 #[doc = "GPIO"]
 pub use gpioa as gpiok;
+#[cfg(any(feature = "stm32h743v_jpeg", not(feature = "certified_subset")))]
 #[doc = "JPEG"]
 pub struct JPEG {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_jpeg", not(feature = "certified_subset")))]
 unsafe impl Send for JPEG {}
+#[cfg(any(feature = "stm32h743v_jpeg", not(feature = "certified_subset")))]
 impl JPEG {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const jpeg::RegisterBlock = 0x5200_3000 as *const _;
@@ -1413,6 +1560,7 @@ impl JPEG {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_jpeg", not(feature = "certified_subset")))]
 impl Deref for JPEG {
     type Target = jpeg::RegisterBlock;
     #[inline(always)]
@@ -1420,19 +1568,24 @@ impl Deref for JPEG {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_jpeg", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for JPEG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("JPEG").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_jpeg", not(feature = "certified_subset")))]
 #[doc = "JPEG"]
 pub mod jpeg;
+#[cfg(any(feature = "stm32h743v_mdma", not(feature = "certified_subset")))]
 #[doc = "MDMA"]
 pub struct MDMA {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_mdma", not(feature = "certified_subset")))]
 unsafe impl Send for MDMA {}
+#[cfg(any(feature = "stm32h743v_mdma", not(feature = "certified_subset")))]
 impl MDMA {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const mdma::RegisterBlock = 0x5200_0000 as *const _;
@@ -1442,6 +1595,7 @@ impl MDMA {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_mdma", not(feature = "certified_subset")))]
 impl Deref for MDMA {
     type Target = mdma::RegisterBlock;
     #[inline(always)]
@@ -1449,19 +1603,24 @@ impl Deref for MDMA {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_mdma", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for MDMA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MDMA").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_mdma", not(feature = "certified_subset")))]
 #[doc = "MDMA"]
 pub mod mdma;
+#[cfg(any(feature = "stm32h743v_quadspi", not(feature = "certified_subset")))]
 #[doc = "QUADSPI"]
 pub struct QUADSPI {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_quadspi", not(feature = "certified_subset")))]
 unsafe impl Send for QUADSPI {}
+#[cfg(any(feature = "stm32h743v_quadspi", not(feature = "certified_subset")))]
 impl QUADSPI {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const quadspi::RegisterBlock = 0x5200_5000 as *const _;
@@ -1471,6 +1630,7 @@ impl QUADSPI {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_quadspi", not(feature = "certified_subset")))]
 impl Deref for QUADSPI {
     type Target = quadspi::RegisterBlock;
     #[inline(always)]
@@ -1478,19 +1638,24 @@ impl Deref for QUADSPI {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_quadspi", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for QUADSPI {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("QUADSPI").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_quadspi", not(feature = "certified_subset")))]
 #[doc = "QUADSPI"]
 pub mod quadspi;
+#[cfg(any(feature = "stm32h743v_rng", not(feature = "certified_subset")))]
 #[doc = "RNG"]
 pub struct RNG {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_rng", not(feature = "certified_subset")))]
 unsafe impl Send for RNG {}
+#[cfg(any(feature = "stm32h743v_rng", not(feature = "certified_subset")))]
 impl RNG {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const rng::RegisterBlock = 0x4802_1800 as *const _;
@@ -1500,6 +1665,7 @@ impl RNG {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_rng", not(feature = "certified_subset")))]
 impl Deref for RNG {
     type Target = rng::RegisterBlock;
     #[inline(always)]
@@ -1507,19 +1673,24 @@ impl Deref for RNG {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_rng", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RNG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RNG").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_rng", not(feature = "certified_subset")))]
 #[doc = "RNG"]
 pub mod rng;
+#[cfg(any(feature = "stm32h743v_rtc", not(feature = "certified_subset")))]
 #[doc = "RTC"]
 pub struct RTC {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_rtc", not(feature = "certified_subset")))]
 unsafe impl Send for RTC {}
+#[cfg(any(feature = "stm32h743v_rtc", not(feature = "certified_subset")))]
 impl RTC {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const rtc::RegisterBlock = 0x5800_4000 as *const _;
@@ -1529,6 +1700,7 @@ impl RTC {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_rtc", not(feature = "certified_subset")))]
 impl Deref for RTC {
     type Target = rtc::RegisterBlock;
     #[inline(always)]
@@ -1536,19 +1708,24 @@ impl Deref for RTC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_rtc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RTC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTC").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_rtc", not(feature = "certified_subset")))]
 #[doc = "RTC"]
 pub mod rtc;
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 #[doc = "SAI"]
 pub struct SAI4 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 unsafe impl Send for SAI4 {}
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 impl SAI4 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const sai4::RegisterBlock = 0x5800_5400 as *const _;
@@ -1558,6 +1735,7 @@ impl SAI4 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 impl Deref for SAI4 {
     type Target = sai4::RegisterBlock;
     #[inline(always)]
@@ -1565,19 +1743,24 @@ impl Deref for SAI4 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SAI4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAI4").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 #[doc = "SAI"]
 pub mod sai4;
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 #[doc = "SAI"]
 pub struct SAI1 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 unsafe impl Send for SAI1 {}
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 impl SAI1 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const sai4::RegisterBlock = 0x4001_5800 as *const _;
@@ -1587,6 +1770,7 @@ impl SAI1 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 impl Deref for SAI1 {
     type Target = sai4::RegisterBlock;
     #[inline(always)]
@@ -1594,19 +1778,24 @@ impl Deref for SAI1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SAI1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAI1").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 #[doc = "SAI"]
 pub use sai4 as sai1;
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 #[doc = "SAI"]
 pub struct SAI2 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 unsafe impl Send for SAI2 {}
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 impl SAI2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const sai4::RegisterBlock = 0x4001_5c00 as *const _;
@@ -1616,6 +1805,7 @@ impl SAI2 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 impl Deref for SAI2 {
     type Target = sai4::RegisterBlock;
     #[inline(always)]
@@ -1623,19 +1813,24 @@ impl Deref for SAI2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SAI2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAI2").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 #[doc = "SAI"]
 pub use sai4 as sai2;
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 #[doc = "SAI"]
 pub struct SAI3 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 unsafe impl Send for SAI3 {}
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 impl SAI3 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const sai4::RegisterBlock = 0x4001_6000 as *const _;
@@ -1645,6 +1840,7 @@ impl SAI3 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 impl Deref for SAI3 {
     type Target = sai4::RegisterBlock;
     #[inline(always)]
@@ -1652,19 +1848,24 @@ impl Deref for SAI3 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SAI3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAI3").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
 #[doc = "SAI"]
 pub use sai4 as sai3;
+#[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
 #[doc = "SDMMC1"]
 pub struct SDMMC1 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
 unsafe impl Send for SDMMC1 {}
+#[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
 impl SDMMC1 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const sdmmc1::RegisterBlock = 0x5200_7000 as *const _;
@@ -1674,6 +1875,7 @@ impl SDMMC1 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
 impl Deref for SDMMC1 {
     type Target = sdmmc1::RegisterBlock;
     #[inline(always)]
@@ -1681,19 +1883,24 @@ impl Deref for SDMMC1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SDMMC1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDMMC1").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
 #[doc = "SDMMC1"]
 pub mod sdmmc1;
+#[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
 #[doc = "SDMMC1"]
 pub struct SDMMC2 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
 unsafe impl Send for SDMMC2 {}
+#[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
 impl SDMMC2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const sdmmc1::RegisterBlock = 0x4802_2400 as *const _;
@@ -1703,6 +1910,7 @@ impl SDMMC2 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
 impl Deref for SDMMC2 {
     type Target = sdmmc1::RegisterBlock;
     #[inline(always)]
@@ -1710,19 +1918,24 @@ impl Deref for SDMMC2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SDMMC2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDMMC2").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
 #[doc = "SDMMC1"]
 pub use sdmmc1 as sdmmc2;
+#[cfg(any(feature = "stm32h743v_vrefbuf", not(feature = "certified_subset")))]
 #[doc = "VREFBUF"]
 pub struct VREFBUF {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_vrefbuf", not(feature = "certified_subset")))]
 unsafe impl Send for VREFBUF {}
+#[cfg(any(feature = "stm32h743v_vrefbuf", not(feature = "certified_subset")))]
 impl VREFBUF {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const vrefbuf::RegisterBlock = 0x5800_3c00 as *const _;
@@ -1732,6 +1945,7 @@ impl VREFBUF {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_vrefbuf", not(feature = "certified_subset")))]
 impl Deref for VREFBUF {
     type Target = vrefbuf::RegisterBlock;
     #[inline(always)]
@@ -1739,19 +1953,24 @@ impl Deref for VREFBUF {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_vrefbuf", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for VREFBUF {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VREFBUF").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_vrefbuf", not(feature = "certified_subset")))]
 #[doc = "VREFBUF"]
 pub mod vrefbuf;
+#[cfg(any(feature = "stm32h743v_iwdg", not(feature = "certified_subset")))]
 #[doc = "IWDG"]
 pub struct IWDG {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_iwdg", not(feature = "certified_subset")))]
 unsafe impl Send for IWDG {}
+#[cfg(any(feature = "stm32h743v_iwdg", not(feature = "certified_subset")))]
 impl IWDG {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const iwdg::RegisterBlock = 0x5800_4800 as *const _;
@@ -1761,6 +1980,7 @@ impl IWDG {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_iwdg", not(feature = "certified_subset")))]
 impl Deref for IWDG {
     type Target = iwdg::RegisterBlock;
     #[inline(always)]
@@ -1768,19 +1988,24 @@ impl Deref for IWDG {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_iwdg", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for IWDG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IWDG").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_iwdg", not(feature = "certified_subset")))]
 #[doc = "IWDG"]
 pub mod iwdg;
+#[cfg(any(feature = "stm32h743v_wwdg", not(feature = "certified_subset")))]
 #[doc = "WWDG"]
 pub struct WWDG {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_wwdg", not(feature = "certified_subset")))]
 unsafe impl Send for WWDG {}
+#[cfg(any(feature = "stm32h743v_wwdg", not(feature = "certified_subset")))]
 impl WWDG {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const wwdg::RegisterBlock = 0x5000_3000 as *const _;
@@ -1790,6 +2015,7 @@ impl WWDG {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_wwdg", not(feature = "certified_subset")))]
 impl Deref for WWDG {
     type Target = wwdg::RegisterBlock;
     #[inline(always)]
@@ -1797,19 +2023,24 @@ impl Deref for WWDG {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_wwdg", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for WWDG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WWDG").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_wwdg", not(feature = "certified_subset")))]
 #[doc = "WWDG"]
 pub mod wwdg;
+#[cfg(any(feature = "stm32h743v_pwr", not(feature = "certified_subset")))]
 #[doc = "PWR"]
 pub struct PWR {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_pwr", not(feature = "certified_subset")))]
 unsafe impl Send for PWR {}
+#[cfg(any(feature = "stm32h743v_pwr", not(feature = "certified_subset")))]
 impl PWR {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const pwr::RegisterBlock = 0x5802_4800 as *const _;
@@ -1819,6 +2050,7 @@ impl PWR {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_pwr", not(feature = "certified_subset")))]
 impl Deref for PWR {
     type Target = pwr::RegisterBlock;
     #[inline(always)]
@@ -1826,19 +2058,24 @@ impl Deref for PWR {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_pwr", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for PWR {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PWR").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_pwr", not(feature = "certified_subset")))]
 #[doc = "PWR"]
 pub mod pwr;
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[doc = "Serial peripheral interface"]
 pub struct SPI1 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 unsafe impl Send for SPI1 {}
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 impl SPI1 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const spi1::RegisterBlock = 0x4001_3000 as *const _;
@@ -1848,6 +2085,7 @@ impl SPI1 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 impl Deref for SPI1 {
     type Target = spi1::RegisterBlock;
     #[inline(always)]
@@ -1855,19 +2093,24 @@ impl Deref for SPI1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI1").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[doc = "Serial peripheral interface"]
 pub mod spi1;
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[doc = "Serial peripheral interface"]
 pub struct SPI2 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 unsafe impl Send for SPI2 {}
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 impl SPI2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const spi1::RegisterBlock = 0x4000_3800 as *const _;
@@ -1877,6 +2120,7 @@ impl SPI2 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 impl Deref for SPI2 {
     type Target = spi1::RegisterBlock;
     #[inline(always)]
@@ -1884,19 +2128,24 @@ impl Deref for SPI2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI2").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[doc = "Serial peripheral interface"]
 pub use spi1 as spi2;
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[doc = "Serial peripheral interface"]
 pub struct SPI3 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 unsafe impl Send for SPI3 {}
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 impl SPI3 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const spi1::RegisterBlock = 0x4000_3c00 as *const _;
@@ -1906,6 +2155,7 @@ impl SPI3 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 impl Deref for SPI3 {
     type Target = spi1::RegisterBlock;
     #[inline(always)]
@@ -1913,19 +2163,24 @@ impl Deref for SPI3 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI3").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[doc = "Serial peripheral interface"]
 pub use spi1 as spi3;
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[doc = "Serial peripheral interface"]
 pub struct SPI4 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 unsafe impl Send for SPI4 {}
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 impl SPI4 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const spi1::RegisterBlock = 0x4001_3400 as *const _;
@@ -1935,6 +2190,7 @@ impl SPI4 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 impl Deref for SPI4 {
     type Target = spi1::RegisterBlock;
     #[inline(always)]
@@ -1942,19 +2198,24 @@ impl Deref for SPI4 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI4").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[doc = "Serial peripheral interface"]
 pub use spi1 as spi4;
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[doc = "Serial peripheral interface"]
 pub struct SPI5 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 unsafe impl Send for SPI5 {}
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 impl SPI5 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const spi1::RegisterBlock = 0x4001_5000 as *const _;
@@ -1964,6 +2225,7 @@ impl SPI5 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 impl Deref for SPI5 {
     type Target = spi1::RegisterBlock;
     #[inline(always)]
@@ -1971,19 +2233,24 @@ impl Deref for SPI5 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI5").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[doc = "Serial peripheral interface"]
 pub use spi1 as spi5;
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[doc = "Serial peripheral interface"]
 pub struct SPI6 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 unsafe impl Send for SPI6 {}
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 impl SPI6 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const spi1::RegisterBlock = 0x5800_1400 as *const _;
@@ -1993,6 +2260,7 @@ impl SPI6 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 impl Deref for SPI6 {
     type Target = spi1::RegisterBlock;
     #[inline(always)]
@@ -2000,19 +2268,24 @@ impl Deref for SPI6 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPI6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI6").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
 #[doc = "Serial peripheral interface"]
 pub use spi1 as spi6;
+#[cfg(any(feature = "stm32h743v_ltdc", not(feature = "certified_subset")))]
 #[doc = "LCD-TFT Controller"]
 pub struct LTDC {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_ltdc", not(feature = "certified_subset")))]
 unsafe impl Send for LTDC {}
+#[cfg(any(feature = "stm32h743v_ltdc", not(feature = "certified_subset")))]
 impl LTDC {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const ltdc::RegisterBlock = 0x5000_1000 as *const _;
@@ -2022,6 +2295,7 @@ impl LTDC {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_ltdc", not(feature = "certified_subset")))]
 impl Deref for LTDC {
     type Target = ltdc::RegisterBlock;
     #[inline(always)]
@@ -2029,19 +2303,24 @@ impl Deref for LTDC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_ltdc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LTDC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LTDC").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_ltdc", not(feature = "certified_subset")))]
 #[doc = "LCD-TFT Controller"]
 pub mod ltdc;
+#[cfg(any(feature = "stm32h743v_spdifrx", not(feature = "certified_subset")))]
 #[doc = "Receiver Interface"]
 pub struct SPDIFRX {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_spdifrx", not(feature = "certified_subset")))]
 unsafe impl Send for SPDIFRX {}
+#[cfg(any(feature = "stm32h743v_spdifrx", not(feature = "certified_subset")))]
 impl SPDIFRX {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const spdifrx::RegisterBlock = 0x4000_4000 as *const _;
@@ -2051,6 +2330,7 @@ impl SPDIFRX {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_spdifrx", not(feature = "certified_subset")))]
 impl Deref for SPDIFRX {
     type Target = spdifrx::RegisterBlock;
     #[inline(always)]
@@ -2058,19 +2338,24 @@ impl Deref for SPDIFRX {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_spdifrx", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SPDIFRX {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPDIFRX").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_spdifrx", not(feature = "certified_subset")))]
 #[doc = "Receiver Interface"]
 pub mod spdifrx;
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 #[doc = "Analog to Digital Converter"]
 pub struct ADC3 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 unsafe impl Send for ADC3 {}
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 impl ADC3 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const adc3::RegisterBlock = 0x5802_6000 as *const _;
@@ -2080,6 +2365,7 @@ impl ADC3 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 impl Deref for ADC3 {
     type Target = adc3::RegisterBlock;
     #[inline(always)]
@@ -2087,19 +2373,24 @@ impl Deref for ADC3 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ADC3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADC3").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 #[doc = "Analog to Digital Converter"]
 pub mod adc3;
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 #[doc = "Analog to Digital Converter"]
 pub struct ADC1 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 unsafe impl Send for ADC1 {}
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 impl ADC1 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const adc3::RegisterBlock = 0x4002_2000 as *const _;
@@ -2109,6 +2400,7 @@ impl ADC1 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 impl Deref for ADC1 {
     type Target = adc3::RegisterBlock;
     #[inline(always)]
@@ -2116,19 +2408,24 @@ impl Deref for ADC1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ADC1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADC1").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 #[doc = "Analog to Digital Converter"]
 pub use adc3 as adc1;
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 #[doc = "Analog to Digital Converter"]
 pub struct ADC2 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 unsafe impl Send for ADC2 {}
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 impl ADC2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const adc3::RegisterBlock = 0x4002_2100 as *const _;
@@ -2138,6 +2435,7 @@ impl ADC2 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 impl Deref for ADC2 {
     type Target = adc3::RegisterBlock;
     #[inline(always)]
@@ -2145,19 +2443,24 @@ impl Deref for ADC2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ADC2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADC2").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
 #[doc = "Analog to Digital Converter"]
 pub use adc3 as adc2;
+#[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
 #[doc = "Analog-to-Digital Converter"]
 pub struct ADC3_COMMON {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
 unsafe impl Send for ADC3_COMMON {}
+#[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
 impl ADC3_COMMON {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const adc3_common::RegisterBlock = 0x5802_6300 as *const _;
@@ -2167,6 +2470,7 @@ impl ADC3_COMMON {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
 impl Deref for ADC3_COMMON {
     type Target = adc3_common::RegisterBlock;
     #[inline(always)]
@@ -2174,19 +2478,24 @@ impl Deref for ADC3_COMMON {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ADC3_COMMON {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADC3_COMMON").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
 #[doc = "Analog-to-Digital Converter"]
 pub mod adc3_common;
+#[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
 #[doc = "Analog-to-Digital Converter"]
 pub struct ADC12_COMMON {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
 unsafe impl Send for ADC12_COMMON {}
+#[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
 impl ADC12_COMMON {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const adc3_common::RegisterBlock = 0x4002_2300 as *const _;
@@ -2196,6 +2505,7 @@ impl ADC12_COMMON {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
 impl Deref for ADC12_COMMON {
     type Target = adc3_common::RegisterBlock;
     #[inline(always)]
@@ -2203,19 +2513,24 @@ impl Deref for ADC12_COMMON {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ADC12_COMMON {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADC12_COMMON").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
 #[doc = "Analog-to-Digital Converter"]
 pub use adc3_common as adc12_common;
+#[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
 #[doc = "DMAMUX"]
 pub struct DMAMUX1 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
 unsafe impl Send for DMAMUX1 {}
+#[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
 impl DMAMUX1 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const dmamux1::RegisterBlock = 0x4002_0800 as *const _;
@@ -2225,6 +2540,7 @@ impl DMAMUX1 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
 impl Deref for DMAMUX1 {
     type Target = dmamux1::RegisterBlock;
     #[inline(always)]
@@ -2232,19 +2548,24 @@ impl Deref for DMAMUX1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DMAMUX1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMAMUX1").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
 #[doc = "DMAMUX"]
 pub mod dmamux1;
+#[cfg(any(feature = "stm32h743v_crc", not(feature = "certified_subset")))]
 #[doc = "Cryptographic processor"]
 pub struct CRC {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_crc", not(feature = "certified_subset")))]
 unsafe impl Send for CRC {}
+#[cfg(any(feature = "stm32h743v_crc", not(feature = "certified_subset")))]
 impl CRC {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const crc::RegisterBlock = 0x5802_4c00 as *const _;
@@ -2254,6 +2575,7 @@ impl CRC {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_crc", not(feature = "certified_subset")))]
 impl Deref for CRC {
     type Target = crc::RegisterBlock;
     #[inline(always)]
@@ -2261,19 +2583,24 @@ impl Deref for CRC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_crc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for CRC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CRC").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_crc", not(feature = "certified_subset")))]
 #[doc = "Cryptographic processor"]
 pub mod crc;
+#[cfg(any(feature = "stm32h743v_rcc", not(feature = "certified_subset")))]
 #[doc = "Reset and clock control"]
 pub struct RCC {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_rcc", not(feature = "certified_subset")))]
 unsafe impl Send for RCC {}
+#[cfg(any(feature = "stm32h743v_rcc", not(feature = "certified_subset")))]
 impl RCC {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const rcc::RegisterBlock = 0x5802_4400 as *const _;
@@ -2283,6 +2610,7 @@ impl RCC {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_rcc", not(feature = "certified_subset")))]
 impl Deref for RCC {
     type Target = rcc::RegisterBlock;
     #[inline(always)]
@@ -2290,19 +2618,24 @@ impl Deref for RCC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_rcc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RCC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RCC").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_rcc", not(feature = "certified_subset")))]
 #[doc = "Reset and clock control"]
 pub mod rcc;
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 #[doc = "Low power timer"]
 pub struct LPTIM1 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 unsafe impl Send for LPTIM1 {}
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 impl LPTIM1 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const lptim1::RegisterBlock = 0x4000_2400 as *const _;
@@ -2312,6 +2645,7 @@ impl LPTIM1 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 impl Deref for LPTIM1 {
     type Target = lptim1::RegisterBlock;
     #[inline(always)]
@@ -2319,19 +2653,24 @@ impl Deref for LPTIM1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPTIM1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPTIM1").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 #[doc = "Low power timer"]
 pub mod lptim1;
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 #[doc = "Low power timer"]
 pub struct LPTIM2 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 unsafe impl Send for LPTIM2 {}
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 impl LPTIM2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const lptim1::RegisterBlock = 0x5800_2400 as *const _;
@@ -2341,6 +2680,7 @@ impl LPTIM2 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 impl Deref for LPTIM2 {
     type Target = lptim1::RegisterBlock;
     #[inline(always)]
@@ -2348,19 +2688,24 @@ impl Deref for LPTIM2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPTIM2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPTIM2").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 #[doc = "Low power timer"]
 pub use lptim1 as lptim2;
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 #[doc = "Low power timer"]
 pub struct LPTIM3 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 unsafe impl Send for LPTIM3 {}
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 impl LPTIM3 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const lptim3::RegisterBlock = 0x5800_2800 as *const _;
@@ -2370,6 +2715,7 @@ impl LPTIM3 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 impl Deref for LPTIM3 {
     type Target = lptim3::RegisterBlock;
     #[inline(always)]
@@ -2377,19 +2723,24 @@ impl Deref for LPTIM3 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPTIM3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPTIM3").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 #[doc = "Low power timer"]
 pub mod lptim3;
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 #[doc = "Low power timer"]
 pub struct LPTIM4 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 unsafe impl Send for LPTIM4 {}
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 impl LPTIM4 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const lptim3::RegisterBlock = 0x5800_2c00 as *const _;
@@ -2399,6 +2750,7 @@ impl LPTIM4 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 impl Deref for LPTIM4 {
     type Target = lptim3::RegisterBlock;
     #[inline(always)]
@@ -2406,19 +2758,24 @@ impl Deref for LPTIM4 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPTIM4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPTIM4").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 #[doc = "Low power timer"]
 pub use lptim3 as lptim4;
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 #[doc = "Low power timer"]
 pub struct LPTIM5 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 unsafe impl Send for LPTIM5 {}
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 impl LPTIM5 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const lptim3::RegisterBlock = 0x5800_3000 as *const _;
@@ -2428,6 +2785,7 @@ impl LPTIM5 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 impl Deref for LPTIM5 {
     type Target = lptim3::RegisterBlock;
     #[inline(always)]
@@ -2435,19 +2793,24 @@ impl Deref for LPTIM5 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPTIM5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPTIM5").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
 #[doc = "Low power timer"]
 pub use lptim3 as lptim5;
+#[cfg(any(feature = "stm32h743v_lpuart", not(feature = "certified_subset")))]
 #[doc = "LPUART1"]
 pub struct LPUART1 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_lpuart", not(feature = "certified_subset")))]
 unsafe impl Send for LPUART1 {}
+#[cfg(any(feature = "stm32h743v_lpuart", not(feature = "certified_subset")))]
 impl LPUART1 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const lpuart1::RegisterBlock = 0x5800_0c00 as *const _;
@@ -2457,6 +2820,7 @@ impl LPUART1 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_lpuart", not(feature = "certified_subset")))]
 impl Deref for LPUART1 {
     type Target = lpuart1::RegisterBlock;
     #[inline(always)]
@@ -2464,19 +2828,24 @@ impl Deref for LPUART1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_lpuart", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for LPUART1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPUART1").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_lpuart", not(feature = "certified_subset")))]
 #[doc = "LPUART1"]
 pub mod lpuart1;
+#[cfg(any(feature = "stm32h743v_syscfg", not(feature = "certified_subset")))]
 #[doc = "System configuration controller"]
 pub struct SYSCFG {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_syscfg", not(feature = "certified_subset")))]
 unsafe impl Send for SYSCFG {}
+#[cfg(any(feature = "stm32h743v_syscfg", not(feature = "certified_subset")))]
 impl SYSCFG {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const syscfg::RegisterBlock = 0x5800_0400 as *const _;
@@ -2486,6 +2855,7 @@ impl SYSCFG {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_syscfg", not(feature = "certified_subset")))]
 impl Deref for SYSCFG {
     type Target = syscfg::RegisterBlock;
     #[inline(always)]
@@ -2493,19 +2863,24 @@ impl Deref for SYSCFG {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_syscfg", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SYSCFG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYSCFG").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_syscfg", not(feature = "certified_subset")))]
 #[doc = "System configuration controller"]
 pub mod syscfg;
+#[cfg(any(feature = "stm32h743v_exti", not(feature = "certified_subset")))]
 #[doc = "External interrupt/event controller"]
 pub struct EXTI {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_exti", not(feature = "certified_subset")))]
 unsafe impl Send for EXTI {}
+#[cfg(any(feature = "stm32h743v_exti", not(feature = "certified_subset")))]
 impl EXTI {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const exti::RegisterBlock = 0x5800_0000 as *const _;
@@ -2515,6 +2890,7 @@ impl EXTI {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_exti", not(feature = "certified_subset")))]
 impl Deref for EXTI {
     type Target = exti::RegisterBlock;
     #[inline(always)]
@@ -2522,19 +2898,24 @@ impl Deref for EXTI {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_exti", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for EXTI {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXTI").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_exti", not(feature = "certified_subset")))]
 #[doc = "External interrupt/event controller"]
 pub mod exti;
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 #[doc = "DELAY_Block_SDMMC1"]
 pub struct DELAY_BLOCK_SDMMC1 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 unsafe impl Send for DELAY_BLOCK_SDMMC1 {}
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 impl DELAY_BLOCK_SDMMC1 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const delay_block_sdmmc1::RegisterBlock = 0x5200_8000 as *const _;
@@ -2544,6 +2925,7 @@ impl DELAY_BLOCK_SDMMC1 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 impl Deref for DELAY_BLOCK_SDMMC1 {
     type Target = delay_block_sdmmc1::RegisterBlock;
     #[inline(always)]
@@ -2551,19 +2933,24 @@ impl Deref for DELAY_BLOCK_SDMMC1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DELAY_BLOCK_SDMMC1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DELAY_BLOCK_SDMMC1").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 #[doc = "DELAY_Block_SDMMC1"]
 pub mod delay_block_sdmmc1;
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 #[doc = "DELAY_Block_SDMMC1"]
 pub struct DELAY_BLOCK_QUADSPI {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 unsafe impl Send for DELAY_BLOCK_QUADSPI {}
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 impl DELAY_BLOCK_QUADSPI {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const delay_block_sdmmc1::RegisterBlock = 0x5200_6000 as *const _;
@@ -2573,6 +2960,7 @@ impl DELAY_BLOCK_QUADSPI {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 impl Deref for DELAY_BLOCK_QUADSPI {
     type Target = delay_block_sdmmc1::RegisterBlock;
     #[inline(always)]
@@ -2580,19 +2968,24 @@ impl Deref for DELAY_BLOCK_QUADSPI {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DELAY_BLOCK_QUADSPI {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DELAY_BLOCK_QUADSPI").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 #[doc = "DELAY_Block_SDMMC1"]
 pub use delay_block_sdmmc1 as delay_block_quadspi;
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 #[doc = "DELAY_Block_SDMMC1"]
 pub struct DELAY_BLOCK_SDMMC2 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 unsafe impl Send for DELAY_BLOCK_SDMMC2 {}
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 impl DELAY_BLOCK_SDMMC2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const delay_block_sdmmc1::RegisterBlock = 0x4802_2800 as *const _;
@@ -2602,6 +2995,7 @@ impl DELAY_BLOCK_SDMMC2 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 impl Deref for DELAY_BLOCK_SDMMC2 {
     type Target = delay_block_sdmmc1::RegisterBlock;
     #[inline(always)]
@@ -2609,19 +3003,24 @@ impl Deref for DELAY_BLOCK_SDMMC2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DELAY_BLOCK_SDMMC2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DELAY_BLOCK_SDMMC2").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
 #[doc = "DELAY_Block_SDMMC1"]
 pub use delay_block_sdmmc1 as delay_block_sdmmc2;
+#[cfg(any(feature = "stm32h743v_flash", not(feature = "certified_subset")))]
 #[doc = "Flash"]
 pub struct FLASH {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_flash", not(feature = "certified_subset")))]
 unsafe impl Send for FLASH {}
+#[cfg(any(feature = "stm32h743v_flash", not(feature = "certified_subset")))]
 impl FLASH {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const flash::RegisterBlock = 0x5200_2000 as *const _;
@@ -2631,6 +3030,7 @@ impl FLASH {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_flash", not(feature = "certified_subset")))]
 impl Deref for FLASH {
     type Target = flash::RegisterBlock;
     #[inline(always)]
@@ -2638,19 +3038,24 @@ impl Deref for FLASH {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_flash", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for FLASH {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FLASH").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_flash", not(feature = "certified_subset")))]
 #[doc = "Flash"]
 pub mod flash;
+#[cfg(any(feature = "stm32h743v_axi", not(feature = "certified_subset")))]
 #[doc = "AXI interconnect registers"]
 pub struct AXI {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_axi", not(feature = "certified_subset")))]
 unsafe impl Send for AXI {}
+#[cfg(any(feature = "stm32h743v_axi", not(feature = "certified_subset")))]
 impl AXI {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const axi::RegisterBlock = 0x5100_0000 as *const _;
@@ -2660,6 +3065,7 @@ impl AXI {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_axi", not(feature = "certified_subset")))]
 impl Deref for AXI {
     type Target = axi::RegisterBlock;
     #[inline(always)]
@@ -2667,19 +3073,24 @@ impl Deref for AXI {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_axi", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for AXI {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AXI").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_axi", not(feature = "certified_subset")))]
 #[doc = "AXI interconnect registers"]
 pub mod axi;
+#[cfg(any(feature = "stm32h743v_dcmi", not(feature = "certified_subset")))]
 #[doc = "Digital camera interface"]
 pub struct DCMI {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_dcmi", not(feature = "certified_subset")))]
 unsafe impl Send for DCMI {}
+#[cfg(any(feature = "stm32h743v_dcmi", not(feature = "certified_subset")))]
 impl DCMI {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const dcmi::RegisterBlock = 0x4802_0000 as *const _;
@@ -2689,6 +3100,7 @@ impl DCMI {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_dcmi", not(feature = "certified_subset")))]
 impl Deref for DCMI {
     type Target = dcmi::RegisterBlock;
     #[inline(always)]
@@ -2696,19 +3108,24 @@ impl Deref for DCMI {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_dcmi", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DCMI {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCMI").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_dcmi", not(feature = "certified_subset")))]
 #[doc = "Digital camera interface"]
 pub mod dcmi;
+#[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub struct OTG1_HS_GLOBAL {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
 unsafe impl Send for OTG1_HS_GLOBAL {}
+#[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
 impl OTG1_HS_GLOBAL {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const otg1_hs_global::RegisterBlock = 0x4004_0000 as *const _;
@@ -2718,6 +3135,7 @@ impl OTG1_HS_GLOBAL {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
 impl Deref for OTG1_HS_GLOBAL {
     type Target = otg1_hs_global::RegisterBlock;
     #[inline(always)]
@@ -2725,19 +3143,24 @@ impl Deref for OTG1_HS_GLOBAL {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG1_HS_GLOBAL {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG1_HS_GLOBAL").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub mod otg1_hs_global;
+#[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub struct OTG2_HS_GLOBAL {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
 unsafe impl Send for OTG2_HS_GLOBAL {}
+#[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
 impl OTG2_HS_GLOBAL {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const otg1_hs_global::RegisterBlock = 0x4008_0000 as *const _;
@@ -2747,6 +3170,7 @@ impl OTG2_HS_GLOBAL {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
 impl Deref for OTG2_HS_GLOBAL {
     type Target = otg1_hs_global::RegisterBlock;
     #[inline(always)]
@@ -2754,19 +3178,24 @@ impl Deref for OTG2_HS_GLOBAL {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG2_HS_GLOBAL {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG2_HS_GLOBAL").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub use otg1_hs_global as otg2_hs_global;
+#[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub struct OTG1_HS_HOST {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
 unsafe impl Send for OTG1_HS_HOST {}
+#[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
 impl OTG1_HS_HOST {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const otg1_hs_host::RegisterBlock = 0x4004_0400 as *const _;
@@ -2776,6 +3205,7 @@ impl OTG1_HS_HOST {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
 impl Deref for OTG1_HS_HOST {
     type Target = otg1_hs_host::RegisterBlock;
     #[inline(always)]
@@ -2783,19 +3213,24 @@ impl Deref for OTG1_HS_HOST {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG1_HS_HOST {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG1_HS_HOST").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub mod otg1_hs_host;
+#[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub struct OTG2_HS_HOST {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
 unsafe impl Send for OTG2_HS_HOST {}
+#[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
 impl OTG2_HS_HOST {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const otg1_hs_host::RegisterBlock = 0x4008_0400 as *const _;
@@ -2805,6 +3240,7 @@ impl OTG2_HS_HOST {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
 impl Deref for OTG2_HS_HOST {
     type Target = otg1_hs_host::RegisterBlock;
     #[inline(always)]
@@ -2812,19 +3248,24 @@ impl Deref for OTG2_HS_HOST {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG2_HS_HOST {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG2_HS_HOST").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub use otg1_hs_host as otg2_hs_host;
+#[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub struct OTG1_HS_DEVICE {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
 unsafe impl Send for OTG1_HS_DEVICE {}
+#[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
 impl OTG1_HS_DEVICE {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const otg1_hs_device::RegisterBlock = 0x4004_0800 as *const _;
@@ -2834,6 +3275,7 @@ impl OTG1_HS_DEVICE {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
 impl Deref for OTG1_HS_DEVICE {
     type Target = otg1_hs_device::RegisterBlock;
     #[inline(always)]
@@ -2841,19 +3283,24 @@ impl Deref for OTG1_HS_DEVICE {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG1_HS_DEVICE {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG1_HS_DEVICE").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub mod otg1_hs_device;
+#[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub struct OTG2_HS_DEVICE {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
 unsafe impl Send for OTG2_HS_DEVICE {}
+#[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
 impl OTG2_HS_DEVICE {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const otg1_hs_device::RegisterBlock = 0x4008_0800 as *const _;
@@ -2863,6 +3310,7 @@ impl OTG2_HS_DEVICE {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
 impl Deref for OTG2_HS_DEVICE {
     type Target = otg1_hs_device::RegisterBlock;
     #[inline(always)]
@@ -2870,19 +3318,24 @@ impl Deref for OTG2_HS_DEVICE {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG2_HS_DEVICE {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG2_HS_DEVICE").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub use otg1_hs_device as otg2_hs_device;
+#[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub struct OTG1_HS_PWRCLK {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
 unsafe impl Send for OTG1_HS_PWRCLK {}
+#[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
 impl OTG1_HS_PWRCLK {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const otg1_hs_pwrclk::RegisterBlock = 0x4004_0e00 as *const _;
@@ -2892,6 +3345,7 @@ impl OTG1_HS_PWRCLK {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
 impl Deref for OTG1_HS_PWRCLK {
     type Target = otg1_hs_pwrclk::RegisterBlock;
     #[inline(always)]
@@ -2899,19 +3353,24 @@ impl Deref for OTG1_HS_PWRCLK {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG1_HS_PWRCLK {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG1_HS_PWRCLK").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub mod otg1_hs_pwrclk;
+#[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub struct OTG2_HS_PWRCLK {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
 unsafe impl Send for OTG2_HS_PWRCLK {}
+#[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
 impl OTG2_HS_PWRCLK {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const otg1_hs_pwrclk::RegisterBlock = 0x4008_0e00 as *const _;
@@ -2921,6 +3380,7 @@ impl OTG2_HS_PWRCLK {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
 impl Deref for OTG2_HS_PWRCLK {
     type Target = otg1_hs_pwrclk::RegisterBlock;
     #[inline(always)]
@@ -2928,19 +3388,24 @@ impl Deref for OTG2_HS_PWRCLK {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OTG2_HS_PWRCLK {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG2_HS_PWRCLK").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
 #[doc = "USB 1 on the go high speed"]
 pub use otg1_hs_pwrclk as otg2_hs_pwrclk;
+#[cfg(any(feature = "stm32h743v_ethernet_dma", not(feature = "certified_subset")))]
 #[doc = "Ethernet: DMA mode register (DMA)"]
 pub struct ETHERNET_DMA {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_ethernet_dma", not(feature = "certified_subset")))]
 unsafe impl Send for ETHERNET_DMA {}
+#[cfg(any(feature = "stm32h743v_ethernet_dma", not(feature = "certified_subset")))]
 impl ETHERNET_DMA {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const ethernet_dma::RegisterBlock = 0x4002_9000 as *const _;
@@ -2950,6 +3415,7 @@ impl ETHERNET_DMA {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_ethernet_dma", not(feature = "certified_subset")))]
 impl Deref for ETHERNET_DMA {
     type Target = ethernet_dma::RegisterBlock;
     #[inline(always)]
@@ -2957,19 +3423,24 @@ impl Deref for ETHERNET_DMA {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_ethernet_dma", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ETHERNET_DMA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETHERNET_DMA").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_ethernet_dma", not(feature = "certified_subset")))]
 #[doc = "Ethernet: DMA mode register (DMA)"]
 pub mod ethernet_dma;
+#[cfg(any(feature = "stm32h743v_ethernet_mtl", not(feature = "certified_subset")))]
 #[doc = "Ethernet: MTL mode register (MTL)"]
 pub struct ETHERNET_MTL {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_ethernet_mtl", not(feature = "certified_subset")))]
 unsafe impl Send for ETHERNET_MTL {}
+#[cfg(any(feature = "stm32h743v_ethernet_mtl", not(feature = "certified_subset")))]
 impl ETHERNET_MTL {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const ethernet_mtl::RegisterBlock = 0x4002_8c00 as *const _;
@@ -2979,6 +3450,7 @@ impl ETHERNET_MTL {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_ethernet_mtl", not(feature = "certified_subset")))]
 impl Deref for ETHERNET_MTL {
     type Target = ethernet_mtl::RegisterBlock;
     #[inline(always)]
@@ -2986,19 +3458,24 @@ impl Deref for ETHERNET_MTL {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_ethernet_mtl", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ETHERNET_MTL {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETHERNET_MTL").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_ethernet_mtl", not(feature = "certified_subset")))]
 #[doc = "Ethernet: MTL mode register (MTL)"]
 pub mod ethernet_mtl;
+#[cfg(any(feature = "stm32h743v_ethernet_mac", not(feature = "certified_subset")))]
 #[doc = "Ethernet: media access control (MAC)"]
 pub struct ETHERNET_MAC {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_ethernet_mac", not(feature = "certified_subset")))]
 unsafe impl Send for ETHERNET_MAC {}
+#[cfg(any(feature = "stm32h743v_ethernet_mac", not(feature = "certified_subset")))]
 impl ETHERNET_MAC {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const ethernet_mac::RegisterBlock = 0x4002_8000 as *const _;
@@ -3008,6 +3485,7 @@ impl ETHERNET_MAC {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_ethernet_mac", not(feature = "certified_subset")))]
 impl Deref for ETHERNET_MAC {
     type Target = ethernet_mac::RegisterBlock;
     #[inline(always)]
@@ -3015,19 +3493,24 @@ impl Deref for ETHERNET_MAC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_ethernet_mac", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for ETHERNET_MAC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETHERNET_MAC").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_ethernet_mac", not(feature = "certified_subset")))]
 #[doc = "Ethernet: media access control (MAC)"]
 pub mod ethernet_mac;
+#[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
 #[doc = "DMA controller"]
 pub struct DMA1 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
 unsafe impl Send for DMA1 {}
+#[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
 impl DMA1 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const dma1::RegisterBlock = 0x4002_0000 as *const _;
@@ -3037,6 +3520,7 @@ impl DMA1 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
 impl Deref for DMA1 {
     type Target = dma1::RegisterBlock;
     #[inline(always)]
@@ -3044,19 +3528,24 @@ impl Deref for DMA1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DMA1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA1").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
 #[doc = "DMA controller"]
 pub mod dma1;
+#[cfg(any(feature = "stm32h743v_hrtim_master", not(feature = "certified_subset")))]
 #[doc = "High Resolution Timer: Master Timers"]
 pub struct HRTIM_MASTER {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_hrtim_master", not(feature = "certified_subset")))]
 unsafe impl Send for HRTIM_MASTER {}
+#[cfg(any(feature = "stm32h743v_hrtim_master", not(feature = "certified_subset")))]
 impl HRTIM_MASTER {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const hrtim_master::RegisterBlock = 0x4001_7400 as *const _;
@@ -3066,6 +3555,7 @@ impl HRTIM_MASTER {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_master", not(feature = "certified_subset")))]
 impl Deref for HRTIM_MASTER {
     type Target = hrtim_master::RegisterBlock;
     #[inline(always)]
@@ -3073,19 +3563,24 @@ impl Deref for HRTIM_MASTER {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_master", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for HRTIM_MASTER {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HRTIM_MASTER").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_master", not(feature = "certified_subset")))]
 #[doc = "High Resolution Timer: Master Timers"]
 pub mod hrtim_master;
+#[cfg(any(feature = "stm32h743v_hrtim_tima", not(feature = "certified_subset")))]
 #[doc = "High Resolution Timer: TIMA"]
 pub struct HRTIM_TIMA {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_hrtim_tima", not(feature = "certified_subset")))]
 unsafe impl Send for HRTIM_TIMA {}
+#[cfg(any(feature = "stm32h743v_hrtim_tima", not(feature = "certified_subset")))]
 impl HRTIM_TIMA {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const hrtim_tima::RegisterBlock = 0x4001_7480 as *const _;
@@ -3095,6 +3590,7 @@ impl HRTIM_TIMA {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_tima", not(feature = "certified_subset")))]
 impl Deref for HRTIM_TIMA {
     type Target = hrtim_tima::RegisterBlock;
     #[inline(always)]
@@ -3102,19 +3598,24 @@ impl Deref for HRTIM_TIMA {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_tima", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for HRTIM_TIMA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HRTIM_TIMA").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_tima", not(feature = "certified_subset")))]
 #[doc = "High Resolution Timer: TIMA"]
 pub mod hrtim_tima;
+#[cfg(any(feature = "stm32h743v_hrtim_timb", not(feature = "certified_subset")))]
 #[doc = "High Resolution Timer: TIMB"]
 pub struct HRTIM_TIMB {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_hrtim_timb", not(feature = "certified_subset")))]
 unsafe impl Send for HRTIM_TIMB {}
+#[cfg(any(feature = "stm32h743v_hrtim_timb", not(feature = "certified_subset")))]
 impl HRTIM_TIMB {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const hrtim_timb::RegisterBlock = 0x4001_7500 as *const _;
@@ -3124,6 +3625,7 @@ impl HRTIM_TIMB {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_timb", not(feature = "certified_subset")))]
 impl Deref for HRTIM_TIMB {
     type Target = hrtim_timb::RegisterBlock;
     #[inline(always)]
@@ -3131,19 +3633,24 @@ impl Deref for HRTIM_TIMB {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_timb", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for HRTIM_TIMB {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HRTIM_TIMB").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_timb", not(feature = "certified_subset")))]
 #[doc = "High Resolution Timer: TIMB"]
 pub mod hrtim_timb;
+#[cfg(any(feature = "stm32h743v_hrtim_timc", not(feature = "certified_subset")))]
 #[doc = "High Resolution Timer: TIMC"]
 pub struct HRTIM_TIMC {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_hrtim_timc", not(feature = "certified_subset")))]
 unsafe impl Send for HRTIM_TIMC {}
+#[cfg(any(feature = "stm32h743v_hrtim_timc", not(feature = "certified_subset")))]
 impl HRTIM_TIMC {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const hrtim_timc::RegisterBlock = 0x4001_7580 as *const _;
@@ -3153,6 +3660,7 @@ impl HRTIM_TIMC {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_timc", not(feature = "certified_subset")))]
 impl Deref for HRTIM_TIMC {
     type Target = hrtim_timc::RegisterBlock;
     #[inline(always)]
@@ -3160,19 +3668,24 @@ impl Deref for HRTIM_TIMC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_timc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for HRTIM_TIMC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HRTIM_TIMC").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_timc", not(feature = "certified_subset")))]
 #[doc = "High Resolution Timer: TIMC"]
 pub mod hrtim_timc;
+#[cfg(any(feature = "stm32h743v_hrtim_timd", not(feature = "certified_subset")))]
 #[doc = "High Resolution Timer: TIMD"]
 pub struct HRTIM_TIMD {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_hrtim_timd", not(feature = "certified_subset")))]
 unsafe impl Send for HRTIM_TIMD {}
+#[cfg(any(feature = "stm32h743v_hrtim_timd", not(feature = "certified_subset")))]
 impl HRTIM_TIMD {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const hrtim_timd::RegisterBlock = 0x4001_7600 as *const _;
@@ -3182,6 +3695,7 @@ impl HRTIM_TIMD {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_timd", not(feature = "certified_subset")))]
 impl Deref for HRTIM_TIMD {
     type Target = hrtim_timd::RegisterBlock;
     #[inline(always)]
@@ -3189,19 +3703,24 @@ impl Deref for HRTIM_TIMD {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_timd", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for HRTIM_TIMD {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HRTIM_TIMD").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_timd", not(feature = "certified_subset")))]
 #[doc = "High Resolution Timer: TIMD"]
 pub mod hrtim_timd;
+#[cfg(any(feature = "stm32h743v_hrtim_time", not(feature = "certified_subset")))]
 #[doc = "High Resolution Timer: TIME"]
 pub struct HRTIM_TIME {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_hrtim_time", not(feature = "certified_subset")))]
 unsafe impl Send for HRTIM_TIME {}
+#[cfg(any(feature = "stm32h743v_hrtim_time", not(feature = "certified_subset")))]
 impl HRTIM_TIME {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const hrtim_time::RegisterBlock = 0x4001_7680 as *const _;
@@ -3211,6 +3730,7 @@ impl HRTIM_TIME {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_time", not(feature = "certified_subset")))]
 impl Deref for HRTIM_TIME {
     type Target = hrtim_time::RegisterBlock;
     #[inline(always)]
@@ -3218,19 +3738,24 @@ impl Deref for HRTIM_TIME {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_time", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for HRTIM_TIME {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HRTIM_TIME").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_time", not(feature = "certified_subset")))]
 #[doc = "High Resolution Timer: TIME"]
 pub mod hrtim_time;
+#[cfg(any(feature = "stm32h743v_hrtim_common", not(feature = "certified_subset")))]
 #[doc = "High Resolution Timer: Common functions"]
 pub struct HRTIM_COMMON {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_hrtim_common", not(feature = "certified_subset")))]
 unsafe impl Send for HRTIM_COMMON {}
+#[cfg(any(feature = "stm32h743v_hrtim_common", not(feature = "certified_subset")))]
 impl HRTIM_COMMON {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const hrtim_common::RegisterBlock = 0x4001_7780 as *const _;
@@ -3240,6 +3765,7 @@ impl HRTIM_COMMON {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_common", not(feature = "certified_subset")))]
 impl Deref for HRTIM_COMMON {
     type Target = hrtim_common::RegisterBlock;
     #[inline(always)]
@@ -3247,19 +3773,24 @@ impl Deref for HRTIM_COMMON {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_common", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for HRTIM_COMMON {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HRTIM_COMMON").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_hrtim_common", not(feature = "certified_subset")))]
 #[doc = "High Resolution Timer: Common functions"]
 pub mod hrtim_common;
+#[cfg(any(feature = "stm32h743v_dfsdm", not(feature = "certified_subset")))]
 #[doc = "Digital filter for sigma delta modulators"]
 pub struct DFSDM {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_dfsdm", not(feature = "certified_subset")))]
 unsafe impl Send for DFSDM {}
+#[cfg(any(feature = "stm32h743v_dfsdm", not(feature = "certified_subset")))]
 impl DFSDM {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const dfsdm::RegisterBlock = 0x4001_7000 as *const _;
@@ -3269,6 +3800,7 @@ impl DFSDM {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_dfsdm", not(feature = "certified_subset")))]
 impl Deref for DFSDM {
     type Target = dfsdm::RegisterBlock;
     #[inline(always)]
@@ -3276,19 +3808,24 @@ impl Deref for DFSDM {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_dfsdm", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DFSDM {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DFSDM").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_dfsdm", not(feature = "certified_subset")))]
 #[doc = "Digital filter for sigma delta modulators"]
 pub mod dfsdm;
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General-purpose-timers"]
 pub struct TIM16 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 unsafe impl Send for TIM16 {}
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl TIM16 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const tim16::RegisterBlock = 0x4001_4400 as *const _;
@@ -3298,6 +3835,7 @@ impl TIM16 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl Deref for TIM16 {
     type Target = tim16::RegisterBlock;
     #[inline(always)]
@@ -3305,19 +3843,24 @@ impl Deref for TIM16 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM16 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM16").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General-purpose-timers"]
 pub mod tim16;
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General-purpose-timers"]
 pub struct TIM17 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 unsafe impl Send for TIM17 {}
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl TIM17 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const tim17::RegisterBlock = 0x4001_4800 as *const _;
@@ -3327,6 +3870,7 @@ impl TIM17 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl Deref for TIM17 {
     type Target = tim17::RegisterBlock;
     #[inline(always)]
@@ -3334,19 +3878,24 @@ impl Deref for TIM17 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM17 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM17").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General-purpose-timers"]
 pub mod tim17;
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub struct TIM15 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 unsafe impl Send for TIM15 {}
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl TIM15 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const tim15::RegisterBlock = 0x4001_4000 as *const _;
@@ -3356,6 +3905,7 @@ impl TIM15 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl Deref for TIM15 {
     type Target = tim15::RegisterBlock;
     #[inline(always)]
@@ -3363,19 +3913,24 @@ impl Deref for TIM15 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM15 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM15").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub mod tim15;
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub struct USART1 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 unsafe impl Send for USART1 {}
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl USART1 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const usart1::RegisterBlock = 0x4001_1000 as *const _;
@@ -3385,6 +3940,7 @@ impl USART1 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl Deref for USART1 {
     type Target = usart1::RegisterBlock;
     #[inline(always)]
@@ -3392,19 +3948,24 @@ impl Deref for USART1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for USART1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USART1").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub mod usart1;
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub struct USART2 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 unsafe impl Send for USART2 {}
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl USART2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const usart1::RegisterBlock = 0x4000_4400 as *const _;
@@ -3414,6 +3975,7 @@ impl USART2 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl Deref for USART2 {
     type Target = usart1::RegisterBlock;
     #[inline(always)]
@@ -3421,19 +3983,24 @@ impl Deref for USART2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for USART2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USART2").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub use usart1 as usart2;
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub struct USART3 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 unsafe impl Send for USART3 {}
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl USART3 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const usart1::RegisterBlock = 0x4000_4800 as *const _;
@@ -3443,6 +4010,7 @@ impl USART3 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl Deref for USART3 {
     type Target = usart1::RegisterBlock;
     #[inline(always)]
@@ -3450,19 +4018,24 @@ impl Deref for USART3 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for USART3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USART3").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub use usart1 as usart3;
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub struct UART4 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 unsafe impl Send for UART4 {}
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl UART4 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const usart1::RegisterBlock = 0x4000_4c00 as *const _;
@@ -3472,6 +4045,7 @@ impl UART4 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl Deref for UART4 {
     type Target = usart1::RegisterBlock;
     #[inline(always)]
@@ -3479,19 +4053,24 @@ impl Deref for UART4 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for UART4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART4").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub use usart1 as uart4;
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub struct UART5 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 unsafe impl Send for UART5 {}
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl UART5 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const usart1::RegisterBlock = 0x4000_5000 as *const _;
@@ -3501,6 +4080,7 @@ impl UART5 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl Deref for UART5 {
     type Target = usart1::RegisterBlock;
     #[inline(always)]
@@ -3508,19 +4088,24 @@ impl Deref for UART5 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for UART5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART5").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub use usart1 as uart5;
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub struct USART6 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 unsafe impl Send for USART6 {}
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl USART6 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const usart1::RegisterBlock = 0x4001_1400 as *const _;
@@ -3530,6 +4115,7 @@ impl USART6 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl Deref for USART6 {
     type Target = usart1::RegisterBlock;
     #[inline(always)]
@@ -3537,19 +4123,24 @@ impl Deref for USART6 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for USART6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USART6").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub use usart1 as usart6;
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub struct UART7 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 unsafe impl Send for UART7 {}
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl UART7 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const usart1::RegisterBlock = 0x4000_7800 as *const _;
@@ -3559,6 +4150,7 @@ impl UART7 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl Deref for UART7 {
     type Target = usart1::RegisterBlock;
     #[inline(always)]
@@ -3566,19 +4158,24 @@ impl Deref for UART7 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for UART7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART7").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub use usart1 as uart7;
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub struct UART8 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 unsafe impl Send for UART8 {}
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl UART8 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const usart1::RegisterBlock = 0x4000_7c00 as *const _;
@@ -3588,6 +4185,7 @@ impl UART8 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 impl Deref for UART8 {
     type Target = usart1::RegisterBlock;
     #[inline(always)]
@@ -3595,19 +4193,24 @@ impl Deref for UART8 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for UART8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART8").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
 #[doc = "Universal synchronous asynchronous receiver transmitter"]
 pub use usart1 as uart8;
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "Advanced-timers"]
 pub struct TIM1 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 unsafe impl Send for TIM1 {}
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl TIM1 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const tim1::RegisterBlock = 0x4001_0000 as *const _;
@@ -3617,6 +4220,7 @@ impl TIM1 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl Deref for TIM1 {
     type Target = tim1::RegisterBlock;
     #[inline(always)]
@@ -3624,19 +4228,24 @@ impl Deref for TIM1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM1").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "Advanced-timers"]
 pub mod tim1;
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "Advanced-timers"]
 pub struct TIM8 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 unsafe impl Send for TIM8 {}
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl TIM8 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const tim1::RegisterBlock = 0x4001_0400 as *const _;
@@ -3646,6 +4255,7 @@ impl TIM8 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl Deref for TIM8 {
     type Target = tim1::RegisterBlock;
     #[inline(always)]
@@ -3653,19 +4263,24 @@ impl Deref for TIM8 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM8").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "Advanced-timers"]
 pub use tim1 as tim8;
+#[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
 #[doc = "FDCAN1"]
 pub struct FDCAN1 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
 unsafe impl Send for FDCAN1 {}
+#[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
 impl FDCAN1 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const fdcan1::RegisterBlock = 0x4000_a000 as *const _;
@@ -3675,6 +4290,7 @@ impl FDCAN1 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
 impl Deref for FDCAN1 {
     type Target = fdcan1::RegisterBlock;
     #[inline(always)]
@@ -3682,19 +4298,24 @@ impl Deref for FDCAN1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for FDCAN1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FDCAN1").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
 #[doc = "FDCAN1"]
 pub mod fdcan1;
+#[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
 #[doc = "FDCAN1"]
 pub struct FDCAN2 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
 unsafe impl Send for FDCAN2 {}
+#[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
 impl FDCAN2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const fdcan1::RegisterBlock = 0x4000_a400 as *const _;
@@ -3704,6 +4325,7 @@ impl FDCAN2 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
 impl Deref for FDCAN2 {
     type Target = fdcan1::RegisterBlock;
     #[inline(always)]
@@ -3711,19 +4333,24 @@ impl Deref for FDCAN2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for FDCAN2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FDCAN2").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
 #[doc = "FDCAN1"]
 pub use fdcan1 as fdcan2;
+#[cfg(any(feature = "stm32h743v_can_ccu", not(feature = "certified_subset")))]
 #[doc = "CCU registers"]
 pub struct CAN_CCU {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_can_ccu", not(feature = "certified_subset")))]
 unsafe impl Send for CAN_CCU {}
+#[cfg(any(feature = "stm32h743v_can_ccu", not(feature = "certified_subset")))]
 impl CAN_CCU {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const can_ccu::RegisterBlock = 0x4000_a800 as *const _;
@@ -3733,6 +4360,7 @@ impl CAN_CCU {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_can_ccu", not(feature = "certified_subset")))]
 impl Deref for CAN_CCU {
     type Target = can_ccu::RegisterBlock;
     #[inline(always)]
@@ -3740,19 +4368,24 @@ impl Deref for CAN_CCU {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_can_ccu", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for CAN_CCU {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CAN_CCU").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_can_ccu", not(feature = "certified_subset")))]
 #[doc = "CCU registers"]
 pub mod can_ccu;
+#[cfg(any(feature = "stm32h743v_mdios", not(feature = "certified_subset")))]
 #[doc = "Management data input/output slave"]
 pub struct MDIOS {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_mdios", not(feature = "certified_subset")))]
 unsafe impl Send for MDIOS {}
+#[cfg(any(feature = "stm32h743v_mdios", not(feature = "certified_subset")))]
 impl MDIOS {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const mdios::RegisterBlock = 0x4000_9400 as *const _;
@@ -3762,6 +4395,7 @@ impl MDIOS {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_mdios", not(feature = "certified_subset")))]
 impl Deref for MDIOS {
     type Target = mdios::RegisterBlock;
     #[inline(always)]
@@ -3769,19 +4403,24 @@ impl Deref for MDIOS {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_mdios", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for MDIOS {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MDIOS").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_mdios", not(feature = "certified_subset")))]
 #[doc = "Management data input/output slave"]
 pub mod mdios;
+#[cfg(any(feature = "stm32h743v_opamp", not(feature = "certified_subset")))]
 #[doc = "Operational amplifiers"]
 pub struct OPAMP {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_opamp", not(feature = "certified_subset")))]
 unsafe impl Send for OPAMP {}
+#[cfg(any(feature = "stm32h743v_opamp", not(feature = "certified_subset")))]
 impl OPAMP {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const opamp::RegisterBlock = 0x4000_9000 as *const _;
@@ -3791,6 +4430,7 @@ impl OPAMP {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_opamp", not(feature = "certified_subset")))]
 impl Deref for OPAMP {
     type Target = opamp::RegisterBlock;
     #[inline(always)]
@@ -3798,19 +4438,24 @@ impl Deref for OPAMP {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_opamp", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for OPAMP {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OPAMP").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_opamp", not(feature = "certified_subset")))]
 #[doc = "Operational amplifiers"]
 pub mod opamp;
+#[cfg(any(feature = "stm32h743v_swpmi", not(feature = "certified_subset")))]
 #[doc = "Single Wire Protocol Master Interface"]
 pub struct SWPMI {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_swpmi", not(feature = "certified_subset")))]
 unsafe impl Send for SWPMI {}
+#[cfg(any(feature = "stm32h743v_swpmi", not(feature = "certified_subset")))]
 impl SWPMI {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const swpmi::RegisterBlock = 0x4000_8800 as *const _;
@@ -3820,6 +4465,7 @@ impl SWPMI {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_swpmi", not(feature = "certified_subset")))]
 impl Deref for SWPMI {
     type Target = swpmi::RegisterBlock;
     #[inline(always)]
@@ -3827,19 +4473,24 @@ impl Deref for SWPMI {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_swpmi", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SWPMI {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SWPMI").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_swpmi", not(feature = "certified_subset")))]
 #[doc = "Single Wire Protocol Master Interface"]
 pub mod swpmi;
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub struct TIM2 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 unsafe impl Send for TIM2 {}
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl TIM2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const tim2::RegisterBlock = 0x4000_0000 as *const _;
@@ -3849,6 +4500,7 @@ impl TIM2 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl Deref for TIM2 {
     type Target = tim2::RegisterBlock;
     #[inline(always)]
@@ -3856,19 +4508,24 @@ impl Deref for TIM2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM2").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub mod tim2;
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub struct TIM3 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 unsafe impl Send for TIM3 {}
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl TIM3 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const tim3::RegisterBlock = 0x4000_0400 as *const _;
@@ -3878,6 +4535,7 @@ impl TIM3 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl Deref for TIM3 {
     type Target = tim3::RegisterBlock;
     #[inline(always)]
@@ -3885,19 +4543,24 @@ impl Deref for TIM3 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM3").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub mod tim3;
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub struct TIM4 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 unsafe impl Send for TIM4 {}
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl TIM4 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const tim3::RegisterBlock = 0x4000_0800 as *const _;
@@ -3907,6 +4570,7 @@ impl TIM4 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl Deref for TIM4 {
     type Target = tim3::RegisterBlock;
     #[inline(always)]
@@ -3914,19 +4578,24 @@ impl Deref for TIM4 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM4").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub use tim3 as tim4;
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub struct TIM5 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 unsafe impl Send for TIM5 {}
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl TIM5 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const tim2::RegisterBlock = 0x4000_0c00 as *const _;
@@ -3936,6 +4605,7 @@ impl TIM5 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl Deref for TIM5 {
     type Target = tim2::RegisterBlock;
     #[inline(always)]
@@ -3943,19 +4613,24 @@ impl Deref for TIM5 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM5").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub use tim2 as tim5;
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub struct TIM12 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 unsafe impl Send for TIM12 {}
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl TIM12 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const tim12::RegisterBlock = 0x4000_1800 as *const _;
@@ -3965,6 +4640,7 @@ impl TIM12 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl Deref for TIM12 {
     type Target = tim12::RegisterBlock;
     #[inline(always)]
@@ -3972,19 +4648,24 @@ impl Deref for TIM12 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM12 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM12").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub mod tim12;
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub struct TIM13 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 unsafe impl Send for TIM13 {}
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl TIM13 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const tim13::RegisterBlock = 0x4000_1c00 as *const _;
@@ -3994,6 +4675,7 @@ impl TIM13 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl Deref for TIM13 {
     type Target = tim13::RegisterBlock;
     #[inline(always)]
@@ -4001,19 +4683,24 @@ impl Deref for TIM13 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM13 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM13").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub mod tim13;
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub struct TIM14 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 unsafe impl Send for TIM14 {}
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl TIM14 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const tim13::RegisterBlock = 0x4000_2000 as *const _;
@@ -4023,6 +4710,7 @@ impl TIM14 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl Deref for TIM14 {
     type Target = tim13::RegisterBlock;
     #[inline(always)]
@@ -4030,19 +4718,24 @@ impl Deref for TIM14 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM14 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM14").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "General purpose timers"]
 pub use tim13 as tim14;
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "Basic timers"]
 pub struct TIM6 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 unsafe impl Send for TIM6 {}
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl TIM6 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const tim6::RegisterBlock = 0x4000_1000 as *const _;
@@ -4052,6 +4745,7 @@ impl TIM6 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl Deref for TIM6 {
     type Target = tim6::RegisterBlock;
     #[inline(always)]
@@ -4059,19 +4753,24 @@ impl Deref for TIM6 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM6 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM6").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "Basic timers"]
 pub mod tim6;
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "Basic timers"]
 pub struct TIM7 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 unsafe impl Send for TIM7 {}
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl TIM7 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const tim6::RegisterBlock = 0x4000_1400 as *const _;
@@ -4081,6 +4780,7 @@ impl TIM7 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 impl Deref for TIM7 {
     type Target = tim6::RegisterBlock;
     #[inline(always)]
@@ -4088,19 +4788,24 @@ impl Deref for TIM7 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for TIM7 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIM7").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
 #[doc = "Basic timers"]
 pub use tim6 as tim7;
+#[cfg(any(feature = "stm32h743v_dbgmcu", not(feature = "certified_subset")))]
 #[doc = "Microcontroller Debug Unit"]
 pub struct DBGMCU {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_dbgmcu", not(feature = "certified_subset")))]
 unsafe impl Send for DBGMCU {}
+#[cfg(any(feature = "stm32h743v_dbgmcu", not(feature = "certified_subset")))]
 impl DBGMCU {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const dbgmcu::RegisterBlock = 0x5c00_1000 as *const _;
@@ -4110,6 +4815,7 @@ impl DBGMCU {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_dbgmcu", not(feature = "certified_subset")))]
 impl Deref for DBGMCU {
     type Target = dbgmcu::RegisterBlock;
     #[inline(always)]
@@ -4117,19 +4823,24 @@ impl Deref for DBGMCU {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_dbgmcu", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DBGMCU {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBGMCU").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_dbgmcu", not(feature = "certified_subset")))]
 #[doc = "Microcontroller Debug Unit"]
 pub mod dbgmcu;
+#[cfg(any(feature = "stm32h743v_stk", not(feature = "certified_subset")))]
 #[doc = "SysTick timer"]
 pub struct STK {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_stk", not(feature = "certified_subset")))]
 unsafe impl Send for STK {}
+#[cfg(any(feature = "stm32h743v_stk", not(feature = "certified_subset")))]
 impl STK {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const stk::RegisterBlock = 0xe000_e010 as *const _;
@@ -4139,6 +4850,7 @@ impl STK {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_stk", not(feature = "certified_subset")))]
 impl Deref for STK {
     type Target = stk::RegisterBlock;
     #[inline(always)]
@@ -4146,19 +4858,24 @@ impl Deref for STK {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_stk", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for STK {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STK").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_stk", not(feature = "certified_subset")))]
 #[doc = "SysTick timer"]
 pub mod stk;
+#[cfg(any(feature = "stm32h743v_nvic_stir", not(feature = "certified_subset")))]
 #[doc = "Nested vectored interrupt controller"]
 pub struct NVIC_STIR {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_nvic_stir", not(feature = "certified_subset")))]
 unsafe impl Send for NVIC_STIR {}
+#[cfg(any(feature = "stm32h743v_nvic_stir", not(feature = "certified_subset")))]
 impl NVIC_STIR {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const nvic_stir::RegisterBlock = 0xe000_ef00 as *const _;
@@ -4168,6 +4885,7 @@ impl NVIC_STIR {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_nvic_stir", not(feature = "certified_subset")))]
 impl Deref for NVIC_STIR {
     type Target = nvic_stir::RegisterBlock;
     #[inline(always)]
@@ -4175,19 +4893,24 @@ impl Deref for NVIC_STIR {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_nvic_stir", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for NVIC_STIR {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("NVIC_STIR").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_nvic_stir", not(feature = "certified_subset")))]
 #[doc = "Nested vectored interrupt controller"]
 pub mod nvic_stir;
+#[cfg(any(feature = "stm32h743v_fpu_cpacr", not(feature = "certified_subset")))]
 #[doc = "Floating point unit CPACR"]
 pub struct FPU_CPACR {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_fpu_cpacr", not(feature = "certified_subset")))]
 unsafe impl Send for FPU_CPACR {}
+#[cfg(any(feature = "stm32h743v_fpu_cpacr", not(feature = "certified_subset")))]
 impl FPU_CPACR {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const fpu_cpacr::RegisterBlock = 0xe000_ed88 as *const _;
@@ -4197,6 +4920,7 @@ impl FPU_CPACR {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_fpu_cpacr", not(feature = "certified_subset")))]
 impl Deref for FPU_CPACR {
     type Target = fpu_cpacr::RegisterBlock;
     #[inline(always)]
@@ -4204,19 +4928,24 @@ impl Deref for FPU_CPACR {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_fpu_cpacr", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for FPU_CPACR {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FPU_CPACR").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_fpu_cpacr", not(feature = "certified_subset")))]
 #[doc = "Floating point unit CPACR"]
 pub mod fpu_cpacr;
+#[cfg(any(feature = "stm32h743v_scb_actrl", not(feature = "certified_subset")))]
 #[doc = "System control block ACTLR"]
 pub struct SCB_ACTRL {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_scb_actrl", not(feature = "certified_subset")))]
 unsafe impl Send for SCB_ACTRL {}
+#[cfg(any(feature = "stm32h743v_scb_actrl", not(feature = "certified_subset")))]
 impl SCB_ACTRL {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const scb_actrl::RegisterBlock = 0xe000_e008 as *const _;
@@ -4226,6 +4955,7 @@ impl SCB_ACTRL {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_scb_actrl", not(feature = "certified_subset")))]
 impl Deref for SCB_ACTRL {
     type Target = scb_actrl::RegisterBlock;
     #[inline(always)]
@@ -4233,19 +4963,24 @@ impl Deref for SCB_ACTRL {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_scb_actrl", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for SCB_ACTRL {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCB_ACTRL").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_scb_actrl", not(feature = "certified_subset")))]
 #[doc = "System control block ACTLR"]
 pub mod scb_actrl;
+#[cfg(any(feature = "stm32h743v_pf", not(feature = "certified_subset")))]
 #[doc = "Processor features"]
 pub struct PF {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_pf", not(feature = "certified_subset")))]
 unsafe impl Send for PF {}
+#[cfg(any(feature = "stm32h743v_pf", not(feature = "certified_subset")))]
 impl PF {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const pf::RegisterBlock = 0xe000_ed78 as *const _;
@@ -4255,6 +4990,7 @@ impl PF {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_pf", not(feature = "certified_subset")))]
 impl Deref for PF {
     type Target = pf::RegisterBlock;
     #[inline(always)]
@@ -4262,19 +4998,24 @@ impl Deref for PF {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_pf", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for PF {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PF").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_pf", not(feature = "certified_subset")))]
 #[doc = "Processor features"]
 pub mod pf;
+#[cfg(any(feature = "stm32h743v_ac", not(feature = "certified_subset")))]
 #[doc = "Access control"]
 pub struct AC {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_ac", not(feature = "certified_subset")))]
 unsafe impl Send for AC {}
+#[cfg(any(feature = "stm32h743v_ac", not(feature = "certified_subset")))]
 impl AC {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const ac::RegisterBlock = 0xe000_ef90 as *const _;
@@ -4284,6 +5025,7 @@ impl AC {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_ac", not(feature = "certified_subset")))]
 impl Deref for AC {
     type Target = ac::RegisterBlock;
     #[inline(always)]
@@ -4291,19 +5033,24 @@ impl Deref for AC {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_ac", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for AC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AC").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_ac", not(feature = "certified_subset")))]
 #[doc = "Access control"]
 pub mod ac;
+#[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
 #[doc = "DMA controller"]
 pub struct DMA2 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
 unsafe impl Send for DMA2 {}
+#[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
 impl DMA2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const dma1::RegisterBlock = 0x4002_0400 as *const _;
@@ -4313,6 +5060,7 @@ impl DMA2 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
 impl Deref for DMA2 {
     type Target = dma1::RegisterBlock;
     #[inline(always)]
@@ -4320,19 +5068,24 @@ impl Deref for DMA2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for DMA2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA2").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
 #[doc = "DMA controller"]
 pub use dma1 as dma2;
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 #[doc = "RAM ECC monitoring"]
 pub struct RAMECC1 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 unsafe impl Send for RAMECC1 {}
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 impl RAMECC1 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const ramecc1::RegisterBlock = 0x5200_9000 as *const _;
@@ -4342,6 +5095,7 @@ impl RAMECC1 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 impl Deref for RAMECC1 {
     type Target = ramecc1::RegisterBlock;
     #[inline(always)]
@@ -4349,19 +5103,24 @@ impl Deref for RAMECC1 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RAMECC1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RAMECC1").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 #[doc = "RAM ECC monitoring"]
 pub mod ramecc1;
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 #[doc = "RAM ECC monitoring"]
 pub struct RAMECC2 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 unsafe impl Send for RAMECC2 {}
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 impl RAMECC2 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const ramecc1::RegisterBlock = 0x4802_3000 as *const _;
@@ -4371,6 +5130,7 @@ impl RAMECC2 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 impl Deref for RAMECC2 {
     type Target = ramecc1::RegisterBlock;
     #[inline(always)]
@@ -4378,19 +5138,24 @@ impl Deref for RAMECC2 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RAMECC2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RAMECC2").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 #[doc = "RAM ECC monitoring"]
 pub use ramecc1 as ramecc2;
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 #[doc = "RAM ECC monitoring"]
 pub struct RAMECC3 {
     _marker: PhantomData<*const ()>,
 }
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 unsafe impl Send for RAMECC3 {}
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 impl RAMECC3 {
     #[doc = r"Pointer to the register block"]
     pub const PTR: *const ramecc3::RegisterBlock = 0x5802_7000 as *const _;
@@ -4400,6 +5165,7 @@ impl RAMECC3 {
         Self::PTR
     }
 }
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 impl Deref for RAMECC3 {
     type Target = ramecc3::RegisterBlock;
     #[inline(always)]
@@ -4407,12 +5173,14 @@ impl Deref for RAMECC3 {
         unsafe { &*Self::PTR }
     }
 }
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 #[cfg(feature = "impl-debug")]
 impl core::fmt::Debug for RAMECC3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RAMECC3").finish()
     }
 }
+#[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
 #[doc = "RAM ECC monitoring"]
 pub mod ramecc3;
 #[no_mangle]
@@ -4420,260 +5188,388 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r"All the peripherals"]
 #[allow(non_snake_case)]
 pub struct Peripherals {
+    #[cfg(any(feature = "stm32h743v_comp", not(feature = "certified_subset")))]
     #[doc = "COMP1"]
     pub COMP1: COMP1,
+    #[cfg(any(feature = "stm32h743v_crs", not(feature = "certified_subset")))]
     #[doc = "CRS"]
     pub CRS: CRS,
+    #[cfg(any(feature = "stm32h743v_dac", not(feature = "certified_subset")))]
     #[doc = "DAC"]
     pub DAC: DAC,
+    #[cfg(any(feature = "stm32h743v_bdma", not(feature = "certified_subset")))]
     #[doc = "BDMA"]
     pub BDMA: BDMA,
+    #[cfg(any(feature = "stm32h743v_dma2d", not(feature = "certified_subset")))]
     #[doc = "DMA2D"]
     pub DMA2D: DMA2D,
+    #[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
     #[doc = "DMAMUX2"]
     pub DMAMUX2: DMAMUX2,
+    #[cfg(any(feature = "stm32h743v_fmc", not(feature = "certified_subset")))]
     #[doc = "FMC"]
     pub FMC: FMC,
+    #[cfg(any(feature = "stm32h743v_cec", not(feature = "certified_subset")))]
     #[doc = "CEC"]
     pub CEC: CEC,
+    #[cfg(any(feature = "stm32h743v_hsem", not(feature = "certified_subset")))]
     #[doc = "HSEM"]
     pub HSEM: HSEM,
+    #[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
     #[doc = "I2C1"]
     pub I2C1: I2C1,
+    #[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
     #[doc = "I2C2"]
     pub I2C2: I2C2,
+    #[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
     #[doc = "I2C3"]
     pub I2C3: I2C3,
+    #[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
     #[doc = "I2C4"]
     pub I2C4: I2C4,
+    #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
     #[doc = "GPIOA"]
     pub GPIOA: GPIOA,
+    #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
     #[doc = "GPIOB"]
     pub GPIOB: GPIOB,
+    #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
     #[doc = "GPIOC"]
     pub GPIOC: GPIOC,
+    #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
     #[doc = "GPIOD"]
     pub GPIOD: GPIOD,
+    #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
     #[doc = "GPIOE"]
     pub GPIOE: GPIOE,
+    #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
     #[doc = "GPIOF"]
     pub GPIOF: GPIOF,
+    #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
     #[doc = "GPIOG"]
     pub GPIOG: GPIOG,
+    #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
     #[doc = "GPIOH"]
     pub GPIOH: GPIOH,
+    #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
     #[doc = "GPIOI"]
     pub GPIOI: GPIOI,
+    #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
     #[doc = "GPIOJ"]
     pub GPIOJ: GPIOJ,
+    #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
     #[doc = "GPIOK"]
     pub GPIOK: GPIOK,
+    #[cfg(any(feature = "stm32h743v_jpeg", not(feature = "certified_subset")))]
     #[doc = "JPEG"]
     pub JPEG: JPEG,
+    #[cfg(any(feature = "stm32h743v_mdma", not(feature = "certified_subset")))]
     #[doc = "MDMA"]
     pub MDMA: MDMA,
+    #[cfg(any(feature = "stm32h743v_quadspi", not(feature = "certified_subset")))]
     #[doc = "QUADSPI"]
     pub QUADSPI: QUADSPI,
+    #[cfg(any(feature = "stm32h743v_rng", not(feature = "certified_subset")))]
     #[doc = "RNG"]
     pub RNG: RNG,
+    #[cfg(any(feature = "stm32h743v_rtc", not(feature = "certified_subset")))]
     #[doc = "RTC"]
     pub RTC: RTC,
+    #[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
     #[doc = "SAI4"]
     pub SAI4: SAI4,
+    #[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
     #[doc = "SAI1"]
     pub SAI1: SAI1,
+    #[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
     #[doc = "SAI2"]
     pub SAI2: SAI2,
+    #[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
     #[doc = "SAI3"]
     pub SAI3: SAI3,
+    #[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
     #[doc = "SDMMC1"]
     pub SDMMC1: SDMMC1,
+    #[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
     #[doc = "SDMMC2"]
     pub SDMMC2: SDMMC2,
+    #[cfg(any(feature = "stm32h743v_vrefbuf", not(feature = "certified_subset")))]
     #[doc = "VREFBUF"]
     pub VREFBUF: VREFBUF,
+    #[cfg(any(feature = "stm32h743v_iwdg", not(feature = "certified_subset")))]
     #[doc = "IWDG"]
     pub IWDG: IWDG,
+    #[cfg(any(feature = "stm32h743v_wwdg", not(feature = "certified_subset")))]
     #[doc = "WWDG"]
     pub WWDG: WWDG,
+    #[cfg(any(feature = "stm32h743v_pwr", not(feature = "certified_subset")))]
     #[doc = "PWR"]
     pub PWR: PWR,
+    #[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
     #[doc = "SPI1"]
     pub SPI1: SPI1,
+    #[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
     #[doc = "SPI2"]
     pub SPI2: SPI2,
+    #[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
     #[doc = "SPI3"]
     pub SPI3: SPI3,
+    #[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
     #[doc = "SPI4"]
     pub SPI4: SPI4,
+    #[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
     #[doc = "SPI5"]
     pub SPI5: SPI5,
+    #[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
     #[doc = "SPI6"]
     pub SPI6: SPI6,
+    #[cfg(any(feature = "stm32h743v_ltdc", not(feature = "certified_subset")))]
     #[doc = "LTDC"]
     pub LTDC: LTDC,
+    #[cfg(any(feature = "stm32h743v_spdifrx", not(feature = "certified_subset")))]
     #[doc = "SPDIFRX"]
     pub SPDIFRX: SPDIFRX,
+    #[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
     #[doc = "ADC3"]
     pub ADC3: ADC3,
+    #[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
     #[doc = "ADC1"]
     pub ADC1: ADC1,
+    #[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
     #[doc = "ADC2"]
     pub ADC2: ADC2,
+    #[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
     #[doc = "ADC3_COMMON"]
     pub ADC3_COMMON: ADC3_COMMON,
+    #[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
     #[doc = "ADC12_COMMON"]
     pub ADC12_COMMON: ADC12_COMMON,
+    #[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
     #[doc = "DMAMUX1"]
     pub DMAMUX1: DMAMUX1,
+    #[cfg(any(feature = "stm32h743v_crc", not(feature = "certified_subset")))]
     #[doc = "CRC"]
     pub CRC: CRC,
+    #[cfg(any(feature = "stm32h743v_rcc", not(feature = "certified_subset")))]
     #[doc = "RCC"]
     pub RCC: RCC,
+    #[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
     #[doc = "LPTIM1"]
     pub LPTIM1: LPTIM1,
+    #[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
     #[doc = "LPTIM2"]
     pub LPTIM2: LPTIM2,
+    #[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
     #[doc = "LPTIM3"]
     pub LPTIM3: LPTIM3,
+    #[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
     #[doc = "LPTIM4"]
     pub LPTIM4: LPTIM4,
+    #[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
     #[doc = "LPTIM5"]
     pub LPTIM5: LPTIM5,
+    #[cfg(any(feature = "stm32h743v_lpuart", not(feature = "certified_subset")))]
     #[doc = "LPUART1"]
     pub LPUART1: LPUART1,
+    #[cfg(any(feature = "stm32h743v_syscfg", not(feature = "certified_subset")))]
     #[doc = "SYSCFG"]
     pub SYSCFG: SYSCFG,
+    #[cfg(any(feature = "stm32h743v_exti", not(feature = "certified_subset")))]
     #[doc = "EXTI"]
     pub EXTI: EXTI,
+    #[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
     #[doc = "DELAY_BLOCK_SDMMC1"]
     pub DELAY_BLOCK_SDMMC1: DELAY_BLOCK_SDMMC1,
+    #[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
     #[doc = "DELAY_BLOCK_QUADSPI"]
     pub DELAY_BLOCK_QUADSPI: DELAY_BLOCK_QUADSPI,
+    #[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
     #[doc = "DELAY_BLOCK_SDMMC2"]
     pub DELAY_BLOCK_SDMMC2: DELAY_BLOCK_SDMMC2,
+    #[cfg(any(feature = "stm32h743v_flash", not(feature = "certified_subset")))]
     #[doc = "FLASH"]
     pub FLASH: FLASH,
+    #[cfg(any(feature = "stm32h743v_axi", not(feature = "certified_subset")))]
     #[doc = "AXI"]
     pub AXI: AXI,
+    #[cfg(any(feature = "stm32h743v_dcmi", not(feature = "certified_subset")))]
     #[doc = "DCMI"]
     pub DCMI: DCMI,
+    #[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
     #[doc = "OTG1_HS_GLOBAL"]
     pub OTG1_HS_GLOBAL: OTG1_HS_GLOBAL,
+    #[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
     #[doc = "OTG2_HS_GLOBAL"]
     pub OTG2_HS_GLOBAL: OTG2_HS_GLOBAL,
+    #[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
     #[doc = "OTG1_HS_HOST"]
     pub OTG1_HS_HOST: OTG1_HS_HOST,
+    #[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
     #[doc = "OTG2_HS_HOST"]
     pub OTG2_HS_HOST: OTG2_HS_HOST,
+    #[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
     #[doc = "OTG1_HS_DEVICE"]
     pub OTG1_HS_DEVICE: OTG1_HS_DEVICE,
+    #[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
     #[doc = "OTG2_HS_DEVICE"]
     pub OTG2_HS_DEVICE: OTG2_HS_DEVICE,
+    #[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
     #[doc = "OTG1_HS_PWRCLK"]
     pub OTG1_HS_PWRCLK: OTG1_HS_PWRCLK,
+    #[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
     #[doc = "OTG2_HS_PWRCLK"]
     pub OTG2_HS_PWRCLK: OTG2_HS_PWRCLK,
+    #[cfg(any(feature = "stm32h743v_ethernet_dma", not(feature = "certified_subset")))]
     #[doc = "ETHERNET_DMA"]
     pub ETHERNET_DMA: ETHERNET_DMA,
+    #[cfg(any(feature = "stm32h743v_ethernet_mtl", not(feature = "certified_subset")))]
     #[doc = "ETHERNET_MTL"]
     pub ETHERNET_MTL: ETHERNET_MTL,
+    #[cfg(any(feature = "stm32h743v_ethernet_mac", not(feature = "certified_subset")))]
     #[doc = "ETHERNET_MAC"]
     pub ETHERNET_MAC: ETHERNET_MAC,
+    #[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
     #[doc = "DMA1"]
     pub DMA1: DMA1,
+    #[cfg(any(feature = "stm32h743v_hrtim_master", not(feature = "certified_subset")))]
     #[doc = "HRTIM_MASTER"]
     pub HRTIM_MASTER: HRTIM_MASTER,
+    #[cfg(any(feature = "stm32h743v_hrtim_tima", not(feature = "certified_subset")))]
     #[doc = "HRTIM_TIMA"]
     pub HRTIM_TIMA: HRTIM_TIMA,
+    #[cfg(any(feature = "stm32h743v_hrtim_timb", not(feature = "certified_subset")))]
     #[doc = "HRTIM_TIMB"]
     pub HRTIM_TIMB: HRTIM_TIMB,
+    #[cfg(any(feature = "stm32h743v_hrtim_timc", not(feature = "certified_subset")))]
     #[doc = "HRTIM_TIMC"]
     pub HRTIM_TIMC: HRTIM_TIMC,
+    #[cfg(any(feature = "stm32h743v_hrtim_timd", not(feature = "certified_subset")))]
     #[doc = "HRTIM_TIMD"]
     pub HRTIM_TIMD: HRTIM_TIMD,
+    #[cfg(any(feature = "stm32h743v_hrtim_time", not(feature = "certified_subset")))]
     #[doc = "HRTIM_TIME"]
     pub HRTIM_TIME: HRTIM_TIME,
+    #[cfg(any(feature = "stm32h743v_hrtim_common", not(feature = "certified_subset")))]
     #[doc = "HRTIM_COMMON"]
     pub HRTIM_COMMON: HRTIM_COMMON,
+    #[cfg(any(feature = "stm32h743v_dfsdm", not(feature = "certified_subset")))]
     #[doc = "DFSDM"]
     pub DFSDM: DFSDM,
+    #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
     #[doc = "TIM16"]
     pub TIM16: TIM16,
+    #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
     #[doc = "TIM17"]
     pub TIM17: TIM17,
+    #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
     #[doc = "TIM15"]
     pub TIM15: TIM15,
+    #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
     #[doc = "USART1"]
     pub USART1: USART1,
+    #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
     #[doc = "USART2"]
     pub USART2: USART2,
+    #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
     #[doc = "USART3"]
     pub USART3: USART3,
+    #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
     #[doc = "UART4"]
     pub UART4: UART4,
+    #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
     #[doc = "UART5"]
     pub UART5: UART5,
+    #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
     #[doc = "USART6"]
     pub USART6: USART6,
+    #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
     #[doc = "UART7"]
     pub UART7: UART7,
+    #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
     #[doc = "UART8"]
     pub UART8: UART8,
+    #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
     #[doc = "TIM1"]
     pub TIM1: TIM1,
+    #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
     #[doc = "TIM8"]
     pub TIM8: TIM8,
+    #[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
     #[doc = "FDCAN1"]
     pub FDCAN1: FDCAN1,
+    #[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
     #[doc = "FDCAN2"]
     pub FDCAN2: FDCAN2,
+    #[cfg(any(feature = "stm32h743v_can_ccu", not(feature = "certified_subset")))]
     #[doc = "CAN_CCU"]
     pub CAN_CCU: CAN_CCU,
+    #[cfg(any(feature = "stm32h743v_mdios", not(feature = "certified_subset")))]
     #[doc = "MDIOS"]
     pub MDIOS: MDIOS,
+    #[cfg(any(feature = "stm32h743v_opamp", not(feature = "certified_subset")))]
     #[doc = "OPAMP"]
     pub OPAMP: OPAMP,
+    #[cfg(any(feature = "stm32h743v_swpmi", not(feature = "certified_subset")))]
     #[doc = "SWPMI"]
     pub SWPMI: SWPMI,
+    #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
     #[doc = "TIM2"]
     pub TIM2: TIM2,
+    #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
     #[doc = "TIM3"]
     pub TIM3: TIM3,
+    #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
     #[doc = "TIM4"]
     pub TIM4: TIM4,
+    #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
     #[doc = "TIM5"]
     pub TIM5: TIM5,
+    #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
     #[doc = "TIM12"]
     pub TIM12: TIM12,
+    #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
     #[doc = "TIM13"]
     pub TIM13: TIM13,
+    #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
     #[doc = "TIM14"]
     pub TIM14: TIM14,
+    #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
     #[doc = "TIM6"]
     pub TIM6: TIM6,
+    #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
     #[doc = "TIM7"]
     pub TIM7: TIM7,
+    #[cfg(any(feature = "stm32h743v_dbgmcu", not(feature = "certified_subset")))]
     #[doc = "DBGMCU"]
     pub DBGMCU: DBGMCU,
+    #[cfg(any(feature = "stm32h743v_stk", not(feature = "certified_subset")))]
     #[doc = "STK"]
     pub STK: STK,
+    #[cfg(any(feature = "stm32h743v_nvic_stir", not(feature = "certified_subset")))]
     #[doc = "NVIC_STIR"]
     pub NVIC_STIR: NVIC_STIR,
+    #[cfg(any(feature = "stm32h743v_fpu_cpacr", not(feature = "certified_subset")))]
     #[doc = "FPU_CPACR"]
     pub FPU_CPACR: FPU_CPACR,
+    #[cfg(any(feature = "stm32h743v_scb_actrl", not(feature = "certified_subset")))]
     #[doc = "SCB_ACTRL"]
     pub SCB_ACTRL: SCB_ACTRL,
+    #[cfg(any(feature = "stm32h743v_pf", not(feature = "certified_subset")))]
     #[doc = "PF"]
     pub PF: PF,
+    #[cfg(any(feature = "stm32h743v_ac", not(feature = "certified_subset")))]
     #[doc = "AC"]
     pub AC: AC,
+    #[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
     #[doc = "DMA2"]
     pub DMA2: DMA2,
+    #[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
     #[doc = "RAMECC1"]
     pub RAMECC1: RAMECC1,
+    #[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
     #[doc = "RAMECC2"]
     pub RAMECC2: RAMECC2,
+    #[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
     #[doc = "RAMECC3"]
     pub RAMECC3: RAMECC3,
 }
@@ -4694,387 +5590,515 @@ impl Peripherals {
     pub unsafe fn steal() -> Self {
         DEVICE_PERIPHERALS = true;
         Peripherals {
+            #[cfg(any(feature = "stm32h743v_comp", not(feature = "certified_subset")))]
             COMP1: COMP1 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_crs", not(feature = "certified_subset")))]
             CRS: CRS {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_dac", not(feature = "certified_subset")))]
             DAC: DAC {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_bdma", not(feature = "certified_subset")))]
             BDMA: BDMA {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_dma2d", not(feature = "certified_subset")))]
             DMA2D: DMA2D {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
             DMAMUX2: DMAMUX2 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_fmc", not(feature = "certified_subset")))]
             FMC: FMC {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_cec", not(feature = "certified_subset")))]
             CEC: CEC {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_hsem", not(feature = "certified_subset")))]
             HSEM: HSEM {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
             I2C1: I2C1 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
             I2C2: I2C2 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
             I2C3: I2C3 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_i2c", not(feature = "certified_subset")))]
             I2C4: I2C4 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
             GPIOA: GPIOA {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
             GPIOB: GPIOB {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
             GPIOC: GPIOC {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
             GPIOD: GPIOD {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
             GPIOE: GPIOE {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
             GPIOF: GPIOF {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
             GPIOG: GPIOG {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
             GPIOH: GPIOH {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
             GPIOI: GPIOI {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
             GPIOJ: GPIOJ {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_gpio", not(feature = "certified_subset")))]
             GPIOK: GPIOK {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_jpeg", not(feature = "certified_subset")))]
             JPEG: JPEG {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_mdma", not(feature = "certified_subset")))]
             MDMA: MDMA {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_quadspi", not(feature = "certified_subset")))]
             QUADSPI: QUADSPI {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_rng", not(feature = "certified_subset")))]
             RNG: RNG {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_rtc", not(feature = "certified_subset")))]
             RTC: RTC {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
             SAI4: SAI4 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
             SAI1: SAI1 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
             SAI2: SAI2 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_sai", not(feature = "certified_subset")))]
             SAI3: SAI3 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
             SDMMC1: SDMMC1 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_sdmmc", not(feature = "certified_subset")))]
             SDMMC2: SDMMC2 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_vrefbuf", not(feature = "certified_subset")))]
             VREFBUF: VREFBUF {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_iwdg", not(feature = "certified_subset")))]
             IWDG: IWDG {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_wwdg", not(feature = "certified_subset")))]
             WWDG: WWDG {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_pwr", not(feature = "certified_subset")))]
             PWR: PWR {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
             SPI1: SPI1 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
             SPI2: SPI2 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
             SPI3: SPI3 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
             SPI4: SPI4 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
             SPI5: SPI5 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_spi", not(feature = "certified_subset")))]
             SPI6: SPI6 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_ltdc", not(feature = "certified_subset")))]
             LTDC: LTDC {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_spdifrx", not(feature = "certified_subset")))]
             SPDIFRX: SPDIFRX {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
             ADC3: ADC3 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
             ADC1: ADC1 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_adc", not(feature = "certified_subset")))]
             ADC2: ADC2 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
             ADC3_COMMON: ADC3_COMMON {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_adc_common", not(feature = "certified_subset")))]
             ADC12_COMMON: ADC12_COMMON {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_dmamux", not(feature = "certified_subset")))]
             DMAMUX1: DMAMUX1 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_crc", not(feature = "certified_subset")))]
             CRC: CRC {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_rcc", not(feature = "certified_subset")))]
             RCC: RCC {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
             LPTIM1: LPTIM1 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
             LPTIM2: LPTIM2 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
             LPTIM3: LPTIM3 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
             LPTIM4: LPTIM4 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_lptim", not(feature = "certified_subset")))]
             LPTIM5: LPTIM5 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_lpuart", not(feature = "certified_subset")))]
             LPUART1: LPUART1 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_syscfg", not(feature = "certified_subset")))]
             SYSCFG: SYSCFG {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_exti", not(feature = "certified_subset")))]
             EXTI: EXTI {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
             DELAY_BLOCK_SDMMC1: DELAY_BLOCK_SDMMC1 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
             DELAY_BLOCK_QUADSPI: DELAY_BLOCK_QUADSPI {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_delay_block_sdmmc", not(feature = "certified_subset")))]
             DELAY_BLOCK_SDMMC2: DELAY_BLOCK_SDMMC2 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_flash", not(feature = "certified_subset")))]
             FLASH: FLASH {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_axi", not(feature = "certified_subset")))]
             AXI: AXI {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_dcmi", not(feature = "certified_subset")))]
             DCMI: DCMI {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
             OTG1_HS_GLOBAL: OTG1_HS_GLOBAL {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_otg_hs_global", not(feature = "certified_subset")))]
             OTG2_HS_GLOBAL: OTG2_HS_GLOBAL {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
             OTG1_HS_HOST: OTG1_HS_HOST {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_otg_hs_host", not(feature = "certified_subset")))]
             OTG2_HS_HOST: OTG2_HS_HOST {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
             OTG1_HS_DEVICE: OTG1_HS_DEVICE {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_otg_hs_device", not(feature = "certified_subset")))]
             OTG2_HS_DEVICE: OTG2_HS_DEVICE {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
             OTG1_HS_PWRCLK: OTG1_HS_PWRCLK {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_otg_hs_pwrclk", not(feature = "certified_subset")))]
             OTG2_HS_PWRCLK: OTG2_HS_PWRCLK {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_ethernet_dma", not(feature = "certified_subset")))]
             ETHERNET_DMA: ETHERNET_DMA {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_ethernet_mtl", not(feature = "certified_subset")))]
             ETHERNET_MTL: ETHERNET_MTL {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_ethernet_mac", not(feature = "certified_subset")))]
             ETHERNET_MAC: ETHERNET_MAC {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
             DMA1: DMA1 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_hrtim_master", not(feature = "certified_subset")))]
             HRTIM_MASTER: HRTIM_MASTER {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_hrtim_tima", not(feature = "certified_subset")))]
             HRTIM_TIMA: HRTIM_TIMA {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_hrtim_timb", not(feature = "certified_subset")))]
             HRTIM_TIMB: HRTIM_TIMB {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_hrtim_timc", not(feature = "certified_subset")))]
             HRTIM_TIMC: HRTIM_TIMC {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_hrtim_timd", not(feature = "certified_subset")))]
             HRTIM_TIMD: HRTIM_TIMD {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_hrtim_time", not(feature = "certified_subset")))]
             HRTIM_TIME: HRTIM_TIME {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_hrtim_common", not(feature = "certified_subset")))]
             HRTIM_COMMON: HRTIM_COMMON {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_dfsdm", not(feature = "certified_subset")))]
             DFSDM: DFSDM {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
             TIM16: TIM16 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
             TIM17: TIM17 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
             TIM15: TIM15 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
             USART1: USART1 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
             USART2: USART2 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
             USART3: USART3 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
             UART4: UART4 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
             UART5: UART5 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
             USART6: USART6 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
             UART7: UART7 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_usart", not(feature = "certified_subset")))]
             UART8: UART8 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
             TIM1: TIM1 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
             TIM8: TIM8 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
             FDCAN1: FDCAN1 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_fdcan", not(feature = "certified_subset")))]
             FDCAN2: FDCAN2 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_can_ccu", not(feature = "certified_subset")))]
             CAN_CCU: CAN_CCU {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_mdios", not(feature = "certified_subset")))]
             MDIOS: MDIOS {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_opamp", not(feature = "certified_subset")))]
             OPAMP: OPAMP {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_swpmi", not(feature = "certified_subset")))]
             SWPMI: SWPMI {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
             TIM2: TIM2 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
             TIM3: TIM3 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
             TIM4: TIM4 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
             TIM5: TIM5 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
             TIM12: TIM12 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
             TIM13: TIM13 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
             TIM14: TIM14 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
             TIM6: TIM6 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_tim", not(feature = "certified_subset")))]
             TIM7: TIM7 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_dbgmcu", not(feature = "certified_subset")))]
             DBGMCU: DBGMCU {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_stk", not(feature = "certified_subset")))]
             STK: STK {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_nvic_stir", not(feature = "certified_subset")))]
             NVIC_STIR: NVIC_STIR {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_fpu_cpacr", not(feature = "certified_subset")))]
             FPU_CPACR: FPU_CPACR {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_scb_actrl", not(feature = "certified_subset")))]
             SCB_ACTRL: SCB_ACTRL {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_pf", not(feature = "certified_subset")))]
             PF: PF {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_ac", not(feature = "certified_subset")))]
             AC: AC {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_dma", not(feature = "certified_subset")))]
             DMA2: DMA2 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
             RAMECC1: RAMECC1 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
             RAMECC2: RAMECC2 {
                 _marker: PhantomData,
             },
+            #[cfg(any(feature = "stm32h743v_ramecc", not(feature = "certified_subset")))]
             RAMECC3: RAMECC3 {
                 _marker: PhantomData,
             },

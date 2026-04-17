@@ -40,10 +40,103 @@ stm32h7b3 = []
 
 impl-debug = []
 
+# Peripheral features for stm32h743v
+stm32h743v_ac = ['stm32h743v']
+stm32h743v_adc = ['stm32h743v']
+stm32h743v_adc_common = ['stm32h743v']
+stm32h743v_axi = ['stm32h743v']
+stm32h743v_bdma = ['stm32h743v']
+stm32h743v_can_ccu = ['stm32h743v']
+stm32h743v_cec = ['stm32h743v']
+stm32h743v_comp = ['stm32h743v']
+stm32h743v_crc = ['stm32h743v']
+stm32h743v_crs = ['stm32h743v']
+stm32h743v_dac = ['stm32h743v']
+stm32h743v_dbgmcu = ['stm32h743v']
+stm32h743v_dcmi = ['stm32h743v']
+stm32h743v_delay_block_sdmmc = ['stm32h743v']
+stm32h743v_dfsdm = ['stm32h743v']
+stm32h743v_dma = ['stm32h743v']
+stm32h743v_dma2d = ['stm32h743v']
+stm32h743v_dmamux = ['stm32h743v']
+stm32h743v_ethernet_dma = ['stm32h743v']
+stm32h743v_ethernet_mac = ['stm32h743v']
+stm32h743v_ethernet_mtl = ['stm32h743v']
+stm32h743v_exti = ['stm32h743v']
+stm32h743v_fdcan = ['stm32h743v']
+stm32h743v_flash = ['stm32h743v']
+stm32h743v_fmc = ['stm32h743v']
+stm32h743v_fpu_cpacr = ['stm32h743v']
+stm32h743v_gpio = ['stm32h743v']
+stm32h743v_hrtim_common = ['stm32h743v']
+stm32h743v_hrtim_master = ['stm32h743v']
+stm32h743v_hrtim_tima = ['stm32h743v']
+stm32h743v_hrtim_timb = ['stm32h743v']
+stm32h743v_hrtim_timc = ['stm32h743v']
+stm32h743v_hrtim_timd = ['stm32h743v']
+stm32h743v_hrtim_time = ['stm32h743v']
+stm32h743v_hsem = ['stm32h743v']
+stm32h743v_i2c = ['stm32h743v']
+stm32h743v_iwdg = ['stm32h743v']
+stm32h743v_jpeg = ['stm32h743v']
+stm32h743v_lptim = ['stm32h743v']
+stm32h743v_lpuart = ['stm32h743v']
+stm32h743v_ltdc = ['stm32h743v']
+stm32h743v_mdios = ['stm32h743v']
+stm32h743v_mdma = ['stm32h743v']
+stm32h743v_nvic_stir = ['stm32h743v']
+stm32h743v_opamp = ['stm32h743v']
+stm32h743v_otg_hs_device = ['stm32h743v']
+stm32h743v_otg_hs_global = ['stm32h743v']
+stm32h743v_otg_hs_host = ['stm32h743v']
+stm32h743v_otg_hs_pwrclk = ['stm32h743v']
+stm32h743v_pf = ['stm32h743v']
+stm32h743v_pwr = ['stm32h743v']
+stm32h743v_quadspi = ['stm32h743v']
+stm32h743v_ramecc = ['stm32h743v']
+stm32h743v_rcc = ['stm32h743v']
+stm32h743v_rng = ['stm32h743v']
+stm32h743v_rtc = ['stm32h743v']
+stm32h743v_sai = ['stm32h743v']
+stm32h743v_scb_actrl = ['stm32h743v']
+stm32h743v_sdmmc = ['stm32h743v']
+stm32h743v_spdifrx = ['stm32h743v']
+stm32h743v_spi = ['stm32h743v']
+stm32h743v_stk = ['stm32h743v']
+stm32h743v_swpmi = ['stm32h743v']
+stm32h743v_syscfg = ['stm32h743v']
+stm32h743v_tim = ['stm32h743v']
+stm32h743v_usart = ['stm32h743v']
+stm32h743v_vrefbuf = ['stm32h743v']
+stm32h743v_wwdg = ['stm32h743v']
+
 certified_subset = [
     "bare-metal/certified_subset",
     "cortex-m/certified_subset",
     "cortex-m-rt/certified_subset",
+
+    "stm32h743v_pwr",
+    "stm32h743v_rcc",
+    "stm32h743v_flash",
+    "stm32h743v_ramecc",
+    "stm32h743v_crc",
+    "stm32h743v_gpio",
+    "stm32h743v_syscfg",
+    "stm32h743v_exti",
+    "stm32h743v_adc",
+    "stm32h743v_adc_common",
+    "stm32h743v_spi",
+    "stm32h743v_bdma",
+    "stm32h743v_dma",
+    "stm32h743v_dma2d",
+    "stm32h743v_dmamux",
+    "stm32h743v_ethernet_dma",
+    "stm32h743v_mdma",
+    "stm32h743v_iwdg",
+    "stm32h743v_dac",
+    "stm32h743v_usart",
+    "stm32h743v_tim",
+    "stm32h743v_lptim",
 ]
 
 [lints.rust]

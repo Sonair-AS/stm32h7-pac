@@ -5184,6 +5184,7 @@ impl core::fmt::Debug for RAMECC3 {
 #[doc = "RAM ECC monitoring"]
 pub mod ramecc3;
 #[no_mangle]
+// DEVICE_PERIPHERALS is used to ensure that the Peripherals object is only borrowed to one owner.
 static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r"All the peripherals"]
 #[allow(non_snake_case)]
